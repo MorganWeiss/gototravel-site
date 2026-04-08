@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Trip — Go To Travel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: #0a0a14; color: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px; }
+    .card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 40px; max-width: 400px; width: 100%; text-align: center; }
+    .icon { font-size: 64px; margin-bottom: 24px; }
+    h1 { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    p { color: rgba(255,255,255,0.5); font-size: 15px; line-height: 1.6; margin-bottom: 32px; font-weight: 300; }
+    .btn {
+      display: block; width: 100%; padding: 16px;
+      background: linear-gradient(135deg, #0ea5e9, #6366f1);
+      color: white; border: none; border-radius: 100px;
+      font-size: 16px; font-weight: 500; cursor: pointer;
+      text-decoration: none; margin-bottom: 12px;
+    }
+    .btn-secondary {
+      display: block; width: 100%; padding: 16px;
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+      color: white; border-radius: 100px;
+      font-size: 16px; font-weight: 500;
+      text-decoration: none;
+    }
+    .logo { font-family: 'Fraunces', serif; font-size: 18px; font-weight: 700;
+      background: linear-gradient(135deg, #0ea5e9, #6366f1);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; margin-bottom: 32px; display: block;
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="logo">Go To Travel</a>
+  <div class="card">
+    <div class="icon">✈</div>
+    <h1>You've been invited to a trip!</h1>
+    <p>Open the Go To Travel app to view the trip and collaborate. Don't have the app yet? Download it from TestFlight.</p>
+    <a id="deeplink" class="btn" href="#">Open in Go To Travel</a>
+    <a href="https://testflight.apple.com/join/HXVp8DH9" class="btn-secondary">Download Go To Travel</a>
+  </div>
+
+  <script>
+    // Get token from URL path e.g. /join/TOKEN
+    const token = window.location.pathname.split('/join/')[1];
+    if (token) {
+      const deepLink = `com.gotravelplanner.app://join/${token}`;
+      document.getElementById('deeplink').href = deepLink;
+      // Auto-attempt to open app after short delay
+      setTimeout(() => { window.location.href = deepLink; }, 500);
+    }
+  </script>
+</body>
+</html>

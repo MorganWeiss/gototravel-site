@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "ZJGM435P3G.com.gotravelplanner.app",
+        "paths": ["/join/*"]
+      }
+    ]
+  }
+}
