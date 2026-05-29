@@ -1,595 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Go To Travel — AI Trip Planner</title>
-  <meta name="description" content="Plan your perfect trip in seconds. AI-powered itineraries for solo travelers, couples, friends, and families."/>
-  <meta property="og:title" content="Go To Travel — AI Trip Planner"/>
-  <meta property="og:description" content="Plan your perfect trip in seconds. AI-powered day-by-day itineraries."/>
-  <meta property="og:url" content="https://gotravelplanner.io"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go To Travel · AI Trip Planner — Join the Waitlist</title>
+  <meta name="description" content="Go To Travel is the AI trip planner built around your people. Family-friendly trips, adventurous couples' escapes, seamless group travel. Take the quiz to find your traveler type and join the waitlist." />
+  <meta name="keywords" content="AI trip planner, AI travel planner, family trip planner, couples travel planner, group trip planner, travel itinerary app, AI itinerary generator" />
+  <meta property="og:title" content="Go To Travel · AI Trip Planner that knows your people" />
+  <meta property="og:description" content="The AI trip planner built around who you travel with. Family trips that work for kids, adventurous escapes for two, group trips without the chaos. Find your traveler type and join the waitlist." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#52927A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Go To Travel — AI Trip Planner",
+    "applicationCategory": "TravelApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "AI trip planner that builds personalized travel itineraries around your family, your budget, and your travel style.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --sky: #0ea5e9;
-      --sky-dark: #0369a1;
-      --indigo: #6366f1;
-      --ink: #0a0a14;
-      --ink-soft: #1e1e2e;
-      --slate: #64748b;
-      --mist: #f1f5f9;
-      --white: #ffffff;
-      --radius: 20px;
+      /* Calmer sage palette — desaturated, softer, less "hulk" */
+      --green:#6BAA8C;        /* was #469870 — lighter, softer */
+      --green-dk:#52927A;     /* main brand surface */
+      --green-lt:#9CCBB1;     /* highlights / accent text */
+      --green-soft:#3D6F5C;   /* deep brand */
+      /* Travel accents */
+      --ocean:#3E8DAE;        /* slightly softened */
+      --teal:#4FB5A5;
+      --sky:#8FD2E8;
+      --sun:#FF9E5B;
+      --sun-dk:#E07A38;
+      --sand:#F6D9A8;
+      --gold:#F0B429;
+      /* Surfaces — quieter background */
+      --deep:#0E2820;
+      --deep2:#143028;
+      --card:rgba(255,255,255,0.055);
+      --border:rgba(255,255,255,0.11);
+      --text:#EEF6F1;
+      --muted:#A6BFB6;
+      --radius:22px;
     }
+    *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
+    html{ scroll-behavior:smooth; }
+    body{ font-family:'Inter',system-ui,sans-serif; background:var(--deep); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    .glass{ background:var(--card); backdrop-filter:blur(16px) saturate(135%); -webkit-backdrop-filter:blur(16px) saturate(135%); border:1px solid var(--border); }
+    .gradient-text{ background:linear-gradient(105deg,var(--sand) 0%,var(--sun) 40%,var(--green-lt) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+    .btn-primary{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      background:linear-gradient(135deg,var(--green),var(--green-dk)); color:#fff; font-weight:700; font-size:1rem;
+      padding:16px 30px; border-radius:100px; border:none; cursor:pointer;
+      transition:transform 120ms ease-out,box-shadow 120ms ease-out;
+      box-shadow:0 4px 18px rgba(107,170,140,0.32);
+      text-decoration:none; white-space:nowrap;
+    }
+    .btn-primary:hover{ transform:scale(1.02); box-shadow:0 8px 26px rgba(107,170,140,0.42); }
+    .btn-primary:active{ transform:scale(0.97); }
+    .btn-ghost{
+      display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.06); color:var(--text);
+      font-weight:600; font-size:0.85rem; padding:12px 22px; border-radius:100px; border:1px solid var(--border);
+      cursor:pointer; transition:background 120ms,transform 120ms; text-decoration:none;
+    }
+    .btn-ghost:hover{ background:rgba(255,255,255,0.12); transform:scale(1.01); }
 
-    html { scroll-behavior: smooth; }
+    .logo{ display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--text); }
+    .logo-mark{ width:38px; height:38px; border-radius:12px; flex-shrink:0; background:var(--green-dk); display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(82,146,122,0.35); }
+    .logo-mark svg{ width:26px; height:26px; }
+    .logo-text{ font-weight:800; font-size:1.14rem; letter-spacing:-0.02em; }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--ink);
-      color: var(--white);
-      overflow-x: hidden;
-    }
+    nav{ position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:14px 40px; }
+    @media (max-width:600px){ nav{ padding:12px 18px; } .nav-cta{ display:none; } }
 
-    /* NAV */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 20px 48px;
-      background: rgba(10,10,20,0.7);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+    .hero{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:118px 24px 70px; position:relative; overflow:hidden; }
+    .hero::before{
+      content:""; position:absolute; inset:0; z-index:0;
+      background:
+        radial-gradient(ellipse 90% 55% at 50% -12%, rgba(156,203,177,0.20) 0%, transparent 60%),
+        radial-gradient(ellipse 70% 50% at 82% 26%, rgba(143,210,232,0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 70% at 10% 92%, rgba(255,158,91,0.12) 0%, transparent 60%),
+        linear-gradient(180deg,var(--deep) 0%,var(--deep2) 100%);
     }
-    .nav-logo {
-      font-family: 'Fraunces', serif;
-      font-size: 22px;
-      font-weight: 700;
-      background: linear-gradient(135deg, var(--sky), var(--indigo));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-decoration: none;
-    }
-    .nav-links { display: flex; align-items: center; gap: 32px; }
-    .nav-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 15px; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--white); }
-    .nav-cta {
-      background: linear-gradient(135deg, var(--sky), var(--indigo));
-      color: white; border: none; padding: 10px 24px;
-      border-radius: 100px; font-size: 15px; font-weight: 500;
-      cursor: pointer; text-decoration: none; transition: opacity 0.2s;
-    }
-    .nav-cta:hover { opacity: 0.85; }
+    .hero>*{ position:relative; z-index:1; }
+    .hero-logo{ width:72px; height:72px; border-radius:20px; background:var(--green-dk); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; box-shadow:0 6px 22px rgba(82,146,122,0.4); animation:floaty 5s ease-in-out infinite; }
+    .hero-logo svg{ width:48px; height:48px; }
+    .hero-badge{ display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.06); border:1px solid var(--border); color:var(--green-lt); font-size:0.8rem; font-weight:600; padding:8px 16px; border-radius:100px; margin-bottom:22px; animation:fadeUp 0.6s ease-out both; }
+    .hero h1{ font-size:clamp(2.6rem,7vw,5rem); font-weight:900; line-height:1.04; letter-spacing:-0.045em; max-width:860px; animation:fadeUp 0.6s 0.1s ease-out both; }
+    .hero-tagline{ font-size:0.95rem; font-weight:600; color:var(--green-lt); letter-spacing:0.02em; margin-top:16px; animation:fadeUp 0.6s 0.15s ease-out both; }
+    .hero-sub{ font-size:clamp(1.05rem,2.6vw,1.26rem); color:var(--muted); max-width:580px; line-height:1.6; margin-top:14px; animation:fadeUp 0.6s 0.2s ease-out both; }
+    .hero-sub strong{ color:var(--text); font-weight:600; }
 
-    /* HERO */
-    .hero {
-      min-height: 100vh;
-      display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align: center;
-      padding: 120px 24px 80px;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-glow {
-      position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
-      width: 800px; height: 800px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-glow-2 {
-      position: absolute; bottom: -100px; right: -100px;
-      width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(99,102,241,0.15); border: 1px solid rgba(99,102,241,0.3);
-      color: #a5b4fc; padding: 6px 16px; border-radius: 100px;
-      font-size: 13px; font-weight: 500; margin-bottom: 32px;
-      animation: fadeUp 0.6s ease both;
-    }
-    .hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: #a5b4fc; display: inline-block; }
-    .hero h1 {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(48px, 8vw, 96px);
-      font-weight: 700;
-      line-height: 1.0;
-      letter-spacing: -2px;
-      margin-bottom: 24px;
-      animation: fadeUp 0.6s 0.1s ease both;
-    }
-    .hero h1 em {
-      font-style: italic;
-      font-weight: 300;
-      background: linear-gradient(135deg, var(--sky), var(--indigo));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-sub {
-      font-size: clamp(16px, 2.5vw, 20px);
-      color: rgba(255,255,255,0.55);
-      max-width: 560px;
-      line-height: 1.7;
-      margin-bottom: 48px;
-      font-weight: 300;
-      animation: fadeUp 0.6s 0.2s ease both;
-    }
-    .hero-actions {
-      display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
-      margin-bottom: 80px;
-      animation: fadeUp 0.6s 0.3s ease both;
-    }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: linear-gradient(135deg, var(--sky), var(--indigo));
-      color: white; text-decoration: none;
-      padding: 16px 32px; border-radius: 100px;
-      font-size: 16px; font-weight: 500;
-      box-shadow: 0 0 40px rgba(99,102,241,0.3);
-      transition: all 0.3s;
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(99,102,241,0.4); }
-    .btn-secondary {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
-      color: white; text-decoration: none;
-      padding: 16px 32px; border-radius: 100px;
-      font-size: 16px; font-weight: 500;
-      transition: all 0.3s;
-    }
-    .btn-secondary:hover { background: rgba(255,255,255,0.12); }
+    .form-wrap{ margin-top:32px; width:100%; max-width:500px; animation:fadeUp 0.6s 0.35s ease-out both; }
+    .form-row{ display:flex; gap:8px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.16); border-radius:100px; padding:7px 7px 7px 22px; align-items:center; }
+    .form-row input{ flex:1; background:transparent; border:none; outline:none; color:var(--text); font-size:1rem; font-family:inherit; min-width:0; }
+    .form-row input::placeholder{ color:var(--muted); }
+    .form-note{ font-size:0.78rem; color:var(--muted); margin-top:12px; text-align:center; }
+    .form-note a{ color:var(--green-lt); text-decoration:none; }
+    .form-success{ display:none; flex-direction:column; align-items:center; gap:8px; padding:22px; background:rgba(79,181,165,0.14); border:1px solid rgba(79,181,165,0.32); border-radius:var(--radius); color:#9FE3D2; font-weight:600; }
 
-    /* Phone mockup */
-    .phone-wrap {
-      position: relative; display: inline-block;
-      animation: fadeUp 0.8s 0.4s ease both;
+    /* Store buttons */
+    .store-row{ display:flex; gap:14px; margin-top:24px; flex-wrap:wrap; justify-content:center; animation:fadeUp 0.6s 0.45s ease-out both; }
+    .store-btn{
+      display:inline-flex; align-items:center; gap:12px;
+      background:#000; color:#fff; border:1px solid rgba(255,255,255,0.10);
+      padding:10px 20px 10px 16px; border-radius:14px; text-decoration:none;
+      cursor:pointer; transition:transform 140ms ease-out, background 140ms; font-family:inherit;
+      position:relative; min-width:175px;
     }
-    .phone {
-      width: 280px;
-      background: var(--ink-soft);
-      border-radius: 44px;
-      border: 2px solid rgba(255,255,255,0.1);
-      padding: 16px;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.05);
-      position: relative;
+    .store-btn:hover{ transform:translateY(-2px); background:#181818; }
+    .store-btn:active{ transform:translateY(0); }
+    .store-btn .store-icon{ width:30px; height:30px; flex-shrink:0; }
+    .store-btn .store-text{ display:flex; flex-direction:column; align-items:flex-start; line-height:1.1; text-align:left; }
+    .store-btn .store-small{ font-size:0.65rem; opacity:0.85; letter-spacing:0.01em; }
+    .store-btn .store-big{ font-size:1.05rem; font-weight:700; letter-spacing:-0.01em; margin-top:1px; }
+    .soon-pill{
+      position:absolute; top:-7px; right:-7px;
+      background:linear-gradient(135deg, var(--sun), var(--sun-dk)); color:#fff;
+      font-size:0.55rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase;
+      padding:3px 7px; border-radius:100px; box-shadow:0 3px 10px rgba(224,122,56,0.45);
     }
-    .phone-inner {
-      border-radius: 32px;
-      overflow: hidden;
-      background: linear-gradient(135deg, #0f172a, #1e1b4b);
-      height: 500px;
-      display: flex; flex-direction: column;
-      padding: 20px;
-    }
-    .phone-status { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
-    .phone-time { font-size: 13px; font-weight: 600; }
-    .phone-icons { display: flex; gap: 4px; align-items: center; }
-    .phone-bar { width: 3px; background: white; border-radius: 1px; }
-    .phone-notch {
-      position: absolute; top: 16px; left: 50%; transform: translateX(-50%);
-      width: 100px; height: 28px; background: var(--ink-soft);
-      border-radius: 0 0 16px 16px;
-    }
-    .mock-header {
-      font-family: 'Fraunces', serif;
-      font-size: 20px; font-weight: 700;
-      background: linear-gradient(135deg, var(--sky), var(--indigo));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-      margin-bottom: 4px;
-    }
-    .mock-greeting { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
-    .mock-sub { font-size: 12px; color: rgba(255,255,255,0.5); margin-bottom: 20px; }
-    .mock-card {
-      border-radius: 16px; overflow: hidden;
-      background: linear-gradient(135deg, rgba(14,165,233,0.3), rgba(99,102,241,0.3));
-      border: 1px solid rgba(255,255,255,0.1);
-      margin-bottom: 12px;
-    }
-    .mock-card-img {
-      height: 120px;
-      background: linear-gradient(135deg, #0ea5e9, #6366f1);
-      display: flex; align-items: flex-end; padding: 12px;
-    }
-    .mock-card-title { font-size: 14px; font-weight: 700; }
-    .mock-card-body { padding: 12px; }
-    .mock-card-meta { font-size: 11px; color: rgba(255,255,255,0.5); }
-    .mock-tabs {
-      margin-top: auto;
-      display: flex; justify-content: space-around;
-      padding: 12px 0 4px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    .mock-tab { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 10px; color: rgba(255,255,255,0.4); }
-    .mock-tab.active { color: var(--sky); }
-    .mock-tab-icon { width: 20px; height: 20px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; }
-    .mock-fab {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--sky), var(--indigo));
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; margin-top: -12px;
-      box-shadow: 0 4px 20px rgba(99,102,241,0.4);
-    }
+    .store-divider{ display:flex; align-items:center; gap:10px; margin-top:18px; font-size:0.78rem; color:var(--muted); }
+    .store-divider::before, .store-divider::after{ content:""; flex:1; height:1px; background:var(--border); }
+    @media (max-width:520px){ .store-btn{ min-width:0; flex:1 1 calc(50% - 7px); } }
 
-    /* TRAVELERS */
-    .travelers {
-      padding: 24px 48px;
-      display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;
-      animation: fadeUp 0.6s 0.5s ease both;
-    }
-    .traveler-pill {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      padding: 8px 20px; border-radius: 100px; font-size: 14px; color: rgba(255,255,255,0.6);
-    }
+    .social-strip{ display:flex; align-items:center; gap:10px; margin-top:26px; font-size:0.85rem; color:var(--muted); animation:fadeUp 0.6s 0.5s ease-out both; flex-wrap:wrap; justify-content:center; }
+    .avatar-stack{ display:flex; }
+    .avatar-stack span{ width:30px; height:30px; border-radius:50%; border:2px solid var(--deep); margin-left:-9px; overflow:hidden; background:#234; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700; color:#fff; }
+    .avatar-stack span:first-child{ margin-left:0; }
+    .stars{ color:var(--gold); letter-spacing:-2px; }
 
-    /* SECTION */
-    section { padding: 100px 24px; }
-    .section-inner { max-width: 1100px; margin: 0 auto; }
-    .section-label {
-      font-size: 12px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--sky); margin-bottom: 16px;
-    }
-    .section-title {
-      font-family: 'Fraunces', serif;
-      font-size: clamp(36px, 5vw, 60px);
-      font-weight: 700; line-height: 1.1;
-      letter-spacing: -1px; margin-bottom: 20px;
-    }
-    .section-title em { font-style: italic; font-weight: 300; color: rgba(255,255,255,0.5); }
-    .section-sub { font-size: 18px; color: rgba(255,255,255,0.5); max-width: 500px; line-height: 1.7; font-weight: 300; }
+    section{ padding:84px 24px; }
+    .section-label{ font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--green-lt); margin-bottom:14px; text-align:center; }
+    .section-h2{ font-size:clamp(2rem,4.5vw,3rem); font-weight:800; letter-spacing:-0.03em; line-height:1.1; max-width:760px; margin:0 auto; text-align:center; }
+    .section-sub{ color:var(--muted); font-size:1.05rem; line-height:1.65; max-width:560px; margin:18px auto 0; text-align:center; }
 
-    /* FEATURES */
-    .features-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px; margin-top: 64px;
-    }
-    .feature-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: var(--radius);
-      padding: 36px;
-      transition: all 0.3s;
-      position: relative; overflow: hidden;
-    }
-    .feature-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(99,102,241,0.5), transparent);
-      opacity: 0; transition: opacity 0.3s;
-    }
-    .feature-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.12); transform: translateY(-4px); }
-    .feature-card:hover::before { opacity: 1; }
-    .feature-icon {
-      width: 52px; height: 52px; border-radius: 14px;
-      background: linear-gradient(135deg, rgba(14,165,233,0.15), rgba(99,102,241,0.15));
-      border: 1px solid rgba(99,102,241,0.2);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; margin-bottom: 24px;
-    }
-    .feature-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
-    .feature-desc { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7; font-weight: 300; }
+    /* Quiz */
+    .quiz-section{ background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(156,203,177,0.12), transparent 65%), linear-gradient(180deg,var(--deep2),var(--deep)); }
+    .quiz-wrap{ max-width:660px; margin:40px auto 0; }
+    .quiz-card{ border-radius:26px; padding:34px 30px; box-shadow:0 16px 50px rgba(0,0,0,0.32); }
+    .quiz-progress{ height:6px; border-radius:100px; background:rgba(255,255,255,0.09); overflow:hidden; margin-bottom:26px; }
+    .quiz-progress span{ display:block; height:100%; background:linear-gradient(90deg,var(--green),var(--sky)); width:0%; transition:width 350ms ease-out; }
+    .quiz-q{ font-size:1.4rem; font-weight:800; letter-spacing:-0.02em; text-align:center; margin-bottom:6px; }
+    .quiz-hint{ font-size:0.85rem; color:var(--muted); text-align:center; margin-bottom:24px; }
+    .quiz-options{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+    .quiz-opt{ position:relative; display:flex; flex-direction:column; gap:3px; text-align:left; background:rgba(255,255,255,0.04); border:1.5px solid var(--border); border-radius:16px; padding:16px; cursor:pointer; transition:all 140ms ease-out; font-family:inherit; color:var(--text); }
+    .quiz-opt:hover{ background:rgba(255,255,255,0.09); transform:translateY(-2px); }
+    .quiz-opt.selected{ border-color:var(--green); background:rgba(107,170,140,0.13); }
+    .quiz-opt .o-emoji{ font-size:1.5rem; transition:transform 200ms ease-out; }
+    .quiz-opt:hover .o-emoji{ transform:scale(1.15); }
+    .quiz-opt .o-label{ font-weight:700; font-size:0.98rem; }
+    .quiz-opt .o-desc{ font-size:0.77rem; color:var(--muted); line-height:1.4; }
+    .quiz-opt.selected::after{ content:"✓"; position:absolute; top:12px; right:14px; color:var(--green-lt); font-weight:800; font-size:0.9rem; }
+    .quiz-nav{ display:flex; justify-content:space-between; align-items:center; margin-top:22px; }
+    .quiz-back{ background:none; border:none; color:var(--muted); font-size:0.9rem; cursor:pointer; font-family:inherit; padding:8px; }
+    .quiz-back:hover{ color:var(--text); }
+    .quiz-back:disabled{ opacity:0; pointer-events:none; }
+    .quiz-result{ text-align:center; display:none; }
+    .quiz-result .badge-big{ width:90px; height:90px; border-radius:26px; margin:0 auto 18px; display:flex; align-items:center; justify-content:center; font-size:2.7rem; background:linear-gradient(135deg, rgba(156,203,177,0.24), rgba(143,210,232,0.18)); border:1px solid var(--border); animation:pop 0.5s ease-out; }
+    .quiz-result h3{ font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-lt); margin-bottom:8px; }
+    .quiz-result .type-name{ font-size:2.1rem; font-weight:900; letter-spacing:-0.03em; margin-bottom:12px; }
+    .quiz-result .type-desc{ font-size:1rem; color:var(--muted); line-height:1.6; max-width:460px; margin:0 auto 26px; }
 
-    /* HOW IT WORKS */
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 48px; margin-top: 64px; }
-    .step { position: relative; }
-    .step-num {
-      font-family: 'Fraunces', serif; font-size: 72px; font-weight: 700;
-      color: rgba(255,255,255,0.04); line-height: 1; margin-bottom: -16px;
-    }
-    .step-title { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; margin-bottom: 12px; }
-    .step-desc { font-size: 15px; color: rgba(255,255,255,0.5); line-height: 1.7; font-weight: 300; }
+    /* Persona cards */
+    .personas{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; max-width:1040px; margin:48px auto 0; }
+    .persona{ border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; transition:transform 200ms ease-out, box-shadow 200ms ease-out; }
+    .persona:hover{ transform:translateY(-6px); box-shadow:0 14px 38px rgba(0,0,0,0.32); }
+    .persona-top{ height:150px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
+    .persona-top .big-emoji{ font-size:3.4rem; position:relative; z-index:1; transition:transform 320ms ease-out; }
+    .persona:hover .persona-top .big-emoji{ transform:scale(1.16) rotate(-6deg); }
+    .persona-body{ padding:22px 22px 26px; background:var(--card); border:1px solid var(--border); border-top:none; flex:1; }
+    .persona .tag{ display:inline-block; font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:5px 11px; border-radius:100px; margin-bottom:12px; }
+    .persona h3{ font-size:1.22rem; font-weight:800; letter-spacing:-0.02em; margin-bottom:10px; line-height:1.22; }
+    .persona p{ font-size:0.92rem; color:var(--muted); line-height:1.6; }
 
-    /* PRICING */
-    .pricing-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px; margin-top: 64px; max-width: 900px;
-    }
-    .pricing-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.07);
-      border-radius: var(--radius); padding: 40px;
-      position: relative; transition: all 0.3s;
-    }
-    .pricing-card.featured {
-      background: linear-gradient(135deg, rgba(14,165,233,0.1), rgba(99,102,241,0.1));
-      border-color: rgba(99,102,241,0.3);
-    }
-    .pricing-card.featured::before {
-      content: 'Most Popular';
-      position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
-      background: linear-gradient(135deg, var(--sky), var(--indigo));
-      color: white; font-size: 12px; font-weight: 500;
-      padding: 4px 16px; border-radius: 100px;
-    }
-    .pricing-name { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.5); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 2px; }
-    .pricing-price { font-family: 'Fraunces', serif; font-size: 52px; font-weight: 700; line-height: 1; margin-bottom: 8px; }
-    .pricing-price span { font-size: 18px; font-weight: 300; color: rgba(255,255,255,0.5); }
-    .pricing-desc { font-size: 14px; color: rgba(255,255,255,0.4); margin-bottom: 32px; font-weight: 300; }
-    .pricing-features { list-style: none; margin-bottom: 32px; }
-    .pricing-features li { font-size: 14px; color: rgba(255,255,255,0.7); padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; align-items: center; gap: 10px; }
-    .pricing-features li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--sky); flex-shrink: 0; }
-    .pricing-btn {
-      display: block; text-align: center; text-decoration: none;
-      padding: 14px; border-radius: 100px; font-size: 15px; font-weight: 500;
-      transition: all 0.3s;
-    }
-    .pricing-btn.outline { border: 1px solid rgba(255,255,255,0.15); color: white; }
-    .pricing-btn.outline:hover { background: rgba(255,255,255,0.05); }
-    .pricing-btn.filled { background: linear-gradient(135deg, var(--sky), var(--indigo)); color: white; box-shadow: 0 0 30px rgba(99,102,241,0.3); }
-    .pricing-btn.filled:hover { box-shadow: 0 0 50px rgba(99,102,241,0.4); transform: translateY(-1px); }
+    .who{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px; max-width:820px; margin:44px auto 0; }
+    .who-card{ border-radius:18px; padding:24px 16px; text-align:center; transition:transform 180ms ease-out; }
+    .who-card:hover{ transform:translateY(-4px); }
+    .who-card .e{ font-size:1.9rem; display:block; margin-bottom:10px; }
+    .who-card .n{ font-size:0.95rem; font-weight:600; }
 
-    /* CTA */
-    .cta-section {
-      text-align: center; padding: 120px 24px;
-      background: linear-gradient(135deg, rgba(14,165,233,0.05), rgba(99,102,241,0.05));
-      border-top: 1px solid rgba(255,255,255,0.05);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .cta-section h2 { font-family: 'Fraunces', serif; font-size: clamp(36px, 5vw, 64px); font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; }
-    .cta-section p { font-size: 18px; color: rgba(255,255,255,0.5); margin-bottom: 48px; font-weight: 300; }
+    .testimonials{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:960px; margin:48px auto 0; }
+    .testi-card{ border-radius:var(--radius); padding:26px; }
+    .testi-stars{ color:var(--gold); font-size:0.8rem; margin-bottom:12px; }
+    .testi-text{ font-size:0.95rem; line-height:1.65; margin-bottom:18px; }
+    .testi-author{ display:flex; align-items:center; gap:10px; }
+    .testi-avatar{ width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; color:white; }
+    .testi-name{ font-size:0.85rem; font-weight:600; }
+    .testi-handle{ font-size:0.75rem; color:var(--muted); }
 
-    /* FOOTER */
-    footer {
-      padding: 60px 48px 40px;
-      display: flex; flex-direction: column; align-items: center; gap: 32px;
+    /* ── SOCIAL SECTION (big & prominent) ── */
+    .social-section{ background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(156,203,177,0.10), transparent 70%), var(--deep2); padding:84px 24px; }
+    .social-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:780px; margin:44px auto 0; }
+    .social-card{
+      border-radius:var(--radius); padding:32px 28px;
+      display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px;
+      text-decoration:none; color:var(--text); cursor:pointer;
+      transition:transform 220ms ease-out, box-shadow 220ms ease-out;
+      position:relative; overflow:hidden;
     }
-    .footer-logo { font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700;
-      background: linear-gradient(135deg, var(--sky), var(--indigo));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    .social-card:hover{ transform:translateY(-6px); box-shadow:0 18px 44px rgba(0,0,0,0.4); }
+    .social-card .platform-icon{
+      width:74px; height:74px; border-radius:22px;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 8px 24px rgba(0,0,0,0.3);
+      transition:transform 300ms ease-out;
     }
-    .footer-links { display: flex; gap: 32px; }
-    .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 14px; transition: color 0.2s; }
-    .footer-links a:hover { color: rgba(255,255,255,0.8); }
-    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.2); }
+    .social-card:hover .platform-icon{ transform:scale(1.08) rotate(-4deg); }
+    .social-card.instagram .platform-icon{
+      background:linear-gradient(135deg, #FEDA77 0%, #F58529 25%, #DD2A7B 55%, #8134AF 85%, #515BD4 100%);
+    }
+    .social-card.tiktok .platform-icon{ background:#000; position:relative; }
+    .social-card .platform-icon svg{ width:42px; height:42px; }
+    .social-card .platform-name{ font-size:1.4rem; font-weight:800; letter-spacing:-0.02em; display:flex; align-items:center; gap:8px; }
+    .social-card .handle{ font-size:1rem; color:var(--green-lt); font-weight:600; }
+    .social-card .sub-text{ font-size:0.88rem; color:var(--muted); line-height:1.55; max-width:280px; }
+    .social-card .follow-btn{
+      margin-top:6px;
+      display:inline-flex; align-items:center; gap:6px;
+      padding:11px 24px; border-radius:100px; font-weight:700; font-size:0.92rem;
+      color:#fff; transition:transform 120ms;
+    }
+    .social-card:hover .follow-btn{ transform:scale(1.04); }
+    .social-card.instagram .follow-btn{ background:linear-gradient(135deg, #F58529, #DD2A7B 60%, #8134AF); box-shadow:0 4px 18px rgba(221,42,123,0.4); }
+    .social-card.tiktok .follow-btn{ background:#000; border:1px solid rgba(255,255,255,0.25); box-shadow:0 4px 18px rgba(0,0,0,0.5); }
+    .social-cta-strip{
+      max-width:780px; margin:24px auto 0;
+      text-align:center; font-size:0.92rem; color:var(--muted);
+      padding:18px; background:rgba(255,255,255,0.03); border:1px dashed var(--border); border-radius:16px;
+    }
+    .social-cta-strip strong{ color:var(--text); }
 
-    /* ANIMATIONS */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+    .cta-section{ text-align:center; max-width:660px; margin:0 auto; padding:96px 24px; }
+    .cta-section h2{ font-size:clamp(2.2rem,5.5vw,3.5rem); font-weight:900; letter-spacing:-0.045em; line-height:1.08; margin-bottom:18px; }
+    .cta-section p{ color:var(--muted); font-size:1.05rem; line-height:1.65; margin-bottom:34px; }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
-      nav { padding: 16px 24px; }
-      .nav-links { display: none; }
-      .hero { padding: 100px 24px 60px; }
-      .phone { width: 240px; }
-      .phone-inner { height: 420px; }
-      section { padding: 60px 24px; }
-      footer { padding: 40px 24px 32px; }
-      .footer-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+    footer{ text-align:center; padding:34px 24px; border-top:1px solid var(--border); color:var(--muted); font-size:0.8rem; }
+    footer a{ color:var(--muted); text-decoration:none; }
+    footer a:hover{ color:var(--text); }
+    .footer-links{ display:flex; justify-content:center; gap:24px; margin-bottom:12px; flex-wrap:wrap; }
+    .footer-seo{ max-width:680px; margin:14px auto 0; font-size:0.72rem; line-height:1.6; color:rgba(166,191,182,0.5); }
+
+    /* Modal */
+    .modal-overlay{ position:fixed; inset:0; z-index:200; background:rgba(11,38,32,0.72); backdrop-filter:blur(10px); display:none; align-items:center; justify-content:center; padding:20px; animation:fadeIn 0.25s ease-out; }
+    .modal-overlay.open{ display:flex; }
+    .modal-card{ background:linear-gradient(180deg,var(--deep2),var(--deep)); border:1px solid var(--border); border-radius:26px; padding:32px 28px; max-width:460px; width:100%; box-shadow:0 20px 50px rgba(0,0,0,0.5); animation:popIn 0.3s ease-out; position:relative; }
+    .modal-close{ position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%; border:none; background:rgba(255,255,255,0.06); color:var(--muted); font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 140ms, color 140ms; }
+    .modal-close:hover{ background:rgba(255,255,255,0.12); color:var(--text); }
+    .modal-icon{ width:64px; height:64px; border-radius:18px; background:var(--green-dk); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; box-shadow:0 4px 18px rgba(82,146,122,0.4); }
+    .modal-icon svg{ width:40px; height:40px; }
+    .modal-card h3{ font-size:1.5rem; font-weight:800; letter-spacing:-0.02em; text-align:center; margin-bottom:8px; }
+    .modal-card .sub{ font-size:0.95rem; color:var(--muted); text-align:center; line-height:1.6; margin-bottom:22px; }
+    .modal-card .sub .plat{ color:var(--green-lt); font-weight:600; }
+
+    @keyframes fadeUp{ from{ opacity:0; transform:translateY(20px);} to{ opacity:1; transform:translateY(0);} }
+    @keyframes fadeIn{ from{ opacity:0;} to{ opacity:1;} }
+    @keyframes popIn{ from{ opacity:0; transform:scale(0.92);} to{ opacity:1; transform:scale(1);} }
+    @keyframes pop{ 0%{ transform:scale(0.6); opacity:0;} 60%{ transform:scale(1.08);} 100%{ transform:scale(1); opacity:1;} }
+    @keyframes floaty{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-7px);} }
+    @media (max-width:640px){
+      .form-row{ flex-direction:column; border-radius:var(--radius); padding:12px; }
+      .form-row input{ padding:6px 10px; text-align:center; }
+      .form-row .btn-primary{ width:100%; }
+      .personas,.testimonials,.social-cards{ grid-template-columns:1fr; }
+      .quiz-options{ grid-template-columns:1fr; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <a href="/" class="nav-logo">Go To Travel</a>
-    <div class="nav-links">
-      <a href="#features">Features</a>
-      <a href="#how-it-works">How it works</a>
-      <a href="#pricing">Pricing</a>
-      <a href="privacy.html">Privacy</a>
-    </div>
-    <a href="https://testflight.apple.com/join/HXVp8DH9" class="nav-cta">Download Beta</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="gtt-globe" viewBox="0 0 48 48">
+      <circle cx="24" cy="24" r="17" fill="none" stroke="#fff" stroke-width="2"/>
+      <ellipse cx="24" cy="24" rx="7" ry="17" fill="none" stroke="#fff" stroke-width="1.6"/>
+      <line x1="7" y1="24" x2="41" y2="24" stroke="#fff" stroke-width="1.6"/>
+      <line x1="9.5" y1="15" x2="38.5" y2="15" stroke="#fff" stroke-width="1.4"/>
+      <line x1="9.5" y1="33" x2="38.5" y2="33" stroke="#fff" stroke-width="1.4"/>
+      <path d="M15 30 Q24 16 33 21" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+      <circle cx="15" cy="30" r="2.4" fill="#fff"/>
+      <circle cx="33" cy="21" r="2.4" fill="#fff"/>
+      <path d="M30 16 l4 1 -1 4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="apple-logo" viewBox="0 0 24 24">
+      <path fill="#fff" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+    </symbol>
+    <symbol id="googleplay-logo" viewBox="0 0 24 24">
+      <path fill="#00C2FF" d="M3.5 2.5v19l10-9.5z"/>
+      <path fill="#FFD700" d="M13.5 12L17 8.5 6 2.5z"/>
+      <path fill="#FF3D3D" d="M13.5 12L6 21.5l11-6z"/>
+      <path fill="#00D26B" d="M13.5 12L17 15.5l3.5-2c1.3-.8 1.3-2.2 0-3l-3.5-2z"/>
+    </symbol>
+    <!-- Instagram logo (camera) -->
+    <symbol id="ig-logo" viewBox="0 0 24 24">
+      <path fill="#fff" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9a3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 5.4a4.44 4.44 0 1 0 0 8.88 4.44 4.44 0 0 0 0-8.88zm0 7.32a2.88 2.88 0 1 1 0-5.76 2.88 2.88 0 0 1 0 5.76zm5.65-7.5a1.04 1.04 0 1 1-2.08 0 1.04 1.04 0 0 1 2.08 0z"/>
+    </symbol>
+    <!-- TikTok logo (music note) -->
+    <symbol id="tt-logo" viewBox="0 0 24 24">
+      <path fill="#25F4EE" d="M16.6 5.82c-1.34-.87-2.18-2.4-2.18-4.13h-2.99v13.65a2.5 2.5 0 1 1-1.77-2.4V9.85a5.6 5.6 0 1 0 4.76 5.54V9.4a7.42 7.42 0 0 0 4.5 1.54V7.97a4.36 4.36 0 0 1-2.32-2.15z"/>
+      <path fill="#FE2C55" d="M17.6 5.82c-1.34-.87-2.18-2.4-2.18-4.13h-2.99v13.65a2.5 2.5 0 1 1-1.77-2.4V9.85a5.6 5.6 0 1 0 4.76 5.54V9.4a7.42 7.42 0 0 0 4.5 1.54V7.97a4.36 4.36 0 0 1-2.32-2.15z" transform="translate(-1 0)" opacity="0.8"/>
+      <path fill="#fff" d="M16.1 5.82c-1.34-.87-2.18-2.4-2.18-4.13h-2.99v13.65a2.5 2.5 0 1 1-1.77-2.4V9.85a5.6 5.6 0 1 0 4.76 5.54V9.4a7.42 7.42 0 0 0 4.5 1.54V7.97a4.36 4.36 0 0 1-2.32-2.15z"/>
+    </symbol>
+  </svg>
+
+  <nav class="glass">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><svg><use href="#gtt-globe"/></svg></span>
+      <span class="logo-text">Go To Travel</span>
+    </a>
+    <a href="#quiz" class="btn-primary nav-cta" style="padding:10px 22px;font-size:0.875rem;">Find your traveler type</a>
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-glow"></div>
-    <div class="hero-glow-2"></div>
+  <section class="hero" id="top">
+    <div class="hero-logo"><svg><use href="#gtt-globe"/></svg></div>
+    <div class="hero-badge">🌍 AI Trip Planner · now in beta</div>
+    <h1>Finally, a trip planner<br />that knows <span class="gradient-text">your people.</span></h1>
+    <p class="hero-tagline">The AI Trip Planner built around how you travel</p>
+    <p class="hero-sub">
+      Family trips that actually work for the kids. Couples' escapes for the adventurous ones.
+      Group trips without the chaos. <strong>Built around who you travel with</strong> — be first in line.
+    </p>
 
-    <div class="hero-badge">
-      <span></span>
-      Now available on TestFlight
+    <div class="form-wrap">
+      <div class="form-row" id="formRow">
+        <input type="email" id="emailInput" placeholder="Enter your email" autocomplete="email" />
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+        <button class="btn-primary" onclick="handleSubmit('formRow','successMsg','emailInput')">Get early access</button>
+      </div>
+      <div class="form-success" id="successMsg">
+        <span style="font-size:1.6rem;">🌴</span>
+        <span>You're on the list — adventure incoming.</span>
+        <a href="#quiz" class="btn-ghost" style="margin-top:6px;">Find your traveler type →</a>
+      </div>
+      <p class="form-note">Free early access · No spam, ever · Or <a href="#quiz">take the 30-second quiz</a></p>
+
+      <div class="store-divider">or get notified when it's live</div>
+      <div class="store-row">
+        <button class="store-btn" onclick="openPlatformModal('iOS')" aria-label="Get notified for iOS launch">
+          <span class="soon-pill">Coming soon</span>
+          <svg class="store-icon"><use href="#apple-logo"/></svg>
+          <span class="store-text"><span class="store-small">Download on the</span><span class="store-big">App Store</span></span>
+        </button>
+        <button class="store-btn" onclick="openPlatformModal('Android')" aria-label="Get notified for Android launch">
+          <span class="soon-pill">Coming soon</span>
+          <svg class="store-icon"><use href="#googleplay-logo"/></svg>
+          <span class="store-text"><span class="store-small">Get it on</span><span class="store-big">Google Play</span></span>
+        </button>
+      </div>
     </div>
 
-    <h1>Your next trip,<br/><em>planned instantly.</em></h1>
-    <p class="hero-sub">AI-powered day-by-day itineraries for solo travelers, couples, friends, and families. Just tell us where, when, and what you love.</p>
+    <div class="social-strip">
+      <div class="avatar-stack">
+        <span style="background:linear-gradient(135deg,#9CCBB1,#52927A);">S</span>
+        <span style="background:linear-gradient(135deg,#4FB5A5,#3E8DAE);">M</span>
+        <span style="background:linear-gradient(135deg,#8FD2E8,#3E8DAE);">A</span>
+        <span style="background:linear-gradient(135deg,#FF9E5B,#E07A38);">J</span>
+      </div>
+      <span class="stars">★★★★★</span>
+      <span>Travelers are already lining up</span>
+    </div>
+  </section>
 
-    <div class="hero-actions">
-      <a href="https://testflight.apple.com/join/HXVp8DH9" class="btn-primary">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        Get it on TestFlight
+  <!-- QUIZ -->
+  <section id="quiz" class="quiz-section">
+    <div class="section-label">⭐ The traveler quiz</div>
+    <h2 class="section-h2">What kind of traveler are you?</h2>
+    <p class="section-sub">Four quick taps. Discover your traveler type — and we'll set your trips to match the moment you join.</p>
+
+    <div class="quiz-wrap">
+      <div class="quiz-card glass">
+        <div class="quiz-progress"><span id="quizBar"></span></div>
+        <div id="quizBody"></div>
+        <div class="quiz-result" id="quizResult">
+          <div class="badge-big" id="resultEmoji">🧭</div>
+          <h3>You're a</h3>
+          <div class="type-name gradient-text" id="resultName">Trailblazer</div>
+          <p class="type-desc" id="resultDesc"></p>
+          <div class="form-wrap" style="margin:0 auto;">
+            <div class="form-row" id="formRowQuiz">
+              <input type="email" id="emailInputQuiz" placeholder="Enter your email to save your type" autocomplete="email" />
+              <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+              <button class="btn-primary" onclick="handleQuizSubmit()">Save &amp; join</button>
+            </div>
+            <div class="form-success" id="successMsgQuiz">
+              <span style="font-size:1.6rem;">🌴</span>
+              <span id="quizSuccessText">You're in! Your traveler type is saved for launch.</span>
+            </div>
+            <p class="form-note">We'll set your trips to match — you can always change it in the app.</p>
+          </div>
+          <button class="quiz-back" style="margin-top:14px;" onclick="restartQuiz()">↺ Retake the quiz</button>
+        </div>
+        <div class="quiz-nav" id="quizNav">
+          <button class="quiz-back" id="quizBackBtn" onclick="quizBack()" disabled>← Back</button>
+          <span style="font-size:0.8rem;color:var(--muted);" id="quizStep">1 of 4</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONA CARDS -->
+  <section style="background:linear-gradient(180deg,var(--deep2),var(--deep));">
+    <div class="section-label">However you travel</div>
+    <h2 class="section-h2">One planner. Every kind of trip.</h2>
+    <p class="section-sub">The AI shapes the trip around the version of you that's going — and who's coming along.</p>
+
+    <div class="personas">
+      <div class="persona">
+        <div class="persona-top" style="background:linear-gradient(135deg, rgba(156,203,177,0.30), rgba(82,146,122,0.14));">
+          <span class="big-emoji">👨‍👩‍👧‍👦</span>
+        </div>
+        <div class="persona-body">
+          <span class="tag" style="background:rgba(156,203,177,0.88); color:#0a2418;">For families</span>
+          <h3>Family trips, finally fun for everyone 🧸</h3>
+          <p>Kid-friendly restaurants, the right parks, days that fit little legs and nap times. The smoothest family trip you've planned yet.</p>
+        </div>
+      </div>
+      <div class="persona">
+        <div class="persona-top" style="background:linear-gradient(135deg, rgba(79,181,165,0.30), rgba(62,141,174,0.14));">
+          <span class="big-emoji">🧗</span>
+        </div>
+        <div class="persona-body">
+          <span class="tag" style="background:rgba(79,181,165,0.90); color:#06241f;">For couples</span>
+          <h3>Adventurous escapes, just the two of you ❤️‍🔥</h3>
+          <p>Curated restaurants and the kind of activities you'll actually remember — as adventurous, or as easy, as you both want it.</p>
+        </div>
+      </div>
+      <div class="persona">
+        <div class="persona-top" style="background:linear-gradient(135deg, rgba(143,210,232,0.30), rgba(255,158,91,0.16));">
+          <span class="big-emoji">🥂</span>
+        </div>
+        <div class="persona-body">
+          <span class="tag" style="background:rgba(143,210,232,0.92); color:#06283a;">For groups</span>
+          <h3>Group trips without the chaos 🗺️</h3>
+          <p>Plan it together, end the confusion, and make sure everyone knows where and when to show up for lunch. Big groups, zero stress.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY YOU'LL LOVE IT -->
+  <section style="background:linear-gradient(180deg,var(--deep),var(--deep2));">
+    <div class="section-label">Why you'll love it</div>
+    <h2 class="section-h2">Travel planning, finally off your plate</h2>
+    <p class="section-sub">No more 40 open tabs, abandoned spreadsheets, or group chats that go nowhere. Just a trip that comes together — and feels like it was made for you.</p>
+    <div class="who">
+      <div class="who-card glass" style="border-top:3px solid var(--green-lt);"><span class="e">👨‍👩‍👧‍👦</span><span class="n">Families</span></div>
+      <div class="who-card glass" style="border-top:3px solid var(--teal);"><span class="e">💑</span><span class="n">Couples</span></div>
+      <div class="who-card glass" style="border-top:3px solid var(--sky);"><span class="e">🥂</span><span class="n">Friend groups</span></div>
+      <div class="who-card glass" style="border-top:3px solid var(--sun);"><span class="e">🌍</span><span class="n">Solo travelers</span></div>
+    </div>
+  </section>
+
+  <!-- ⭐⭐⭐ BIG SOCIAL SECTION ⭐⭐⭐ -->
+  <section id="social" class="social-section">
+    <div class="section-label">🤳 Join the journey</div>
+    <h2 class="section-h2">Follow us for the inside scoop</h2>
+    <p class="section-sub">Daily travel inspiration, behind-the-scenes of the build, and early access drops. Be part of the community before launch day.</p>
+
+    <div class="social-cards">
+      <a href="https://www.instagram.com/gototravelapp" target="_blank" rel="noopener" class="social-card instagram glass" aria-label="Follow Go To Travel on Instagram">
+        <div class="platform-icon"><svg><use href="#ig-logo"/></svg></div>
+        <div class="platform-name">Instagram <span>📸</span></div>
+        <div class="handle">@gototravelapp</div>
+        <div class="sub-text">Trip inspiration, traveler stories, and the corners of the world we can't stop talking about.</div>
+        <div class="follow-btn">Follow on Instagram →</div>
       </a>
-      <a href="#features" class="btn-secondary">See features</a>
+      <a href="https://www.tiktok.com/@gototravelapp" target="_blank" rel="noopener" class="social-card tiktok glass" aria-label="Follow Go To Travel on TikTok">
+        <div class="platform-icon"><svg><use href="#tt-logo"/></svg></div>
+        <div class="platform-name">TikTok <span>🎬</span></div>
+        <div class="handle">@gototravelapp</div>
+        <div class="sub-text">Trip ideas, planning hacks, and the kind of "save for later" content your wishlist was made for.</div>
+        <div class="follow-btn">Follow on TikTok →</div>
+      </a>
     </div>
 
-    <!-- Phone mockup -->
-    <div class="phone-wrap">
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-inner">
-          <div class="phone-status">
-            <span class="phone-time">9:41</span>
-            <div class="phone-icons">
-              <div class="phone-bar" style="height:8px"></div>
-              <div class="phone-bar" style="height:11px"></div>
-              <div class="phone-bar" style="height:14px"></div>
-            </div>
-          </div>
-          <div class="mock-header">Go To Travel</div>
-          <div class="mock-greeting">Hey, Morgan</div>
-          <div class="mock-sub">Your next adventure awaits.</div>
-          <div class="mock-card">
-            <div class="mock-card-img" style="background: linear-gradient(135deg,#0369a1,#4338ca)">
-              <div>
-                <div class="mock-card-title">Kyoto, Japan</div>
-                <div style="font-size:11px;opacity:0.7">Apr 12 - Apr 17 · 5 days</div>
-              </div>
-            </div>
-            <div class="mock-card-body">
-              <div class="mock-card-meta">Breakfast · Fushimi Inari · Lunch · Arashiyama</div>
-            </div>
-          </div>
-          <div class="mock-tabs">
-            <div class="mock-tab active">
-              <div class="mock-tab-icon" style="background:rgba(14,165,233,0.2)">
-                <svg width="10" height="10" fill="#0ea5e9" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="#0ea5e9" stroke-width="2"/><line x1="16" y1="2" x2="16" y2="6" stroke="#0ea5e9" stroke-width="2"/><line x1="8" y1="2" x2="8" y2="6" stroke="#0ea5e9" stroke-width="2"/></svg>
-              </div>
-              Trips
-            </div>
-            <div class="mock-tab" style="margin-top:-8px">
-              <div class="mock-fab">+</div>
-              New
-            </div>
-            <div class="mock-tab">
-              <div class="mock-tab-icon">
-                <svg width="10" height="10" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-              </div>
-              Explore
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="travelers">
-      <div class="traveler-pill">Solo travelers</div>
-      <div class="traveler-pill">Couples</div>
-      <div class="traveler-pill">Friends groups</div>
-      <div class="traveler-pill">Families</div>
+    <div class="social-cta-strip">
+      💌 <strong>Follow + tag us</strong> in your travel posts — early followers get exclusive sneak peeks and we'll feature the best trips on the app at launch.
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section id="features">
-    <div class="section-inner">
-      <div class="section-label">Features</div>
-      <h2 class="section-title">Everything you need<br/><em>to plan perfectly.</em></h2>
-      <p class="section-sub">From destination inspiration to day-by-day schedules — Go To Travel handles it all.</p>
+  <!-- REVIEWS -->
+  <section>
+    <div class="section-label">Early reviews</div>
+    <h2 class="section-h2">The first travelers are hooked</h2>
+    <div class="testimonials">
+      <div class="testi-card glass">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Honestly the first time planning a family trip didn't end in a fight. Every day just fit the kids — and we did the whole thing together in one sitting."</p>
+        <div class="testi-author"><div class="testi-avatar" style="background:var(--green-dk);">S</div><div><div class="testi-name">Sarah M.</div><div class="testi-handle">Family travel · beta tester</div></div></div>
+      </div>
+      <div class="testi-card glass">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Our anniversary trip felt completely us — the restaurants, the hikes, all of it. Like someone who knew our taste planned the whole thing."</p>
+        <div class="testi-author"><div class="testi-avatar" style="background:var(--teal);">M</div><div><div class="testi-name">Maya &amp; Dan</div><div class="testi-handle">Couple's escape · beta tester</div></div></div>
+      </div>
+      <div class="testi-card glass">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Eight of us, one trip, zero chaos. Everyone finally knew where to be and when. I sent the plan to a friend and she copied the whole thing."</p>
+        <div class="testi-author"><div class="testi-avatar" style="background:var(--ocean);">A</div><div><div class="testi-name">Anna K.</div><div class="testi-handle">Group traveler · beta tester</div></div></div>
+      </div>
+    </div>
+  </section>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">✨</div>
-          <div class="feature-title">AI-powered itineraries</div>
-          <div class="feature-desc">Generate a complete day-by-day plan with meals, activities, and local gems in under 30 seconds. Powered by Google Gemini.</div>
+  <!-- FINAL CTA -->
+  <section style="background:radial-gradient(ellipse 70% 60% at 50% 0%, rgba(156,203,177,0.14), transparent 60%), var(--deep);">
+    <div class="cta-section">
+      <div class="hero-badge" style="margin:0 auto 24px;">🚀 Doors open soon</div>
+      <h2>Your next trip is<br /><span class="gradient-text">already waiting.</span></h2>
+      <p>Join the waitlist for the AI Trip Planner built around your people. Be among the first to plan a trip the new way — however you travel.</p>
+      <div class="form-wrap" style="margin:0 auto;">
+        <div class="form-row" id="formRow2">
+          <input type="email" id="emailInput2" placeholder="Enter your email" autocomplete="email" />
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+          <button class="btn-primary" onclick="handleSubmit('formRow2','successMsg2','emailInput2')">Get early access</button>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🗺️</div>
-          <div class="feature-title">Let's be adventurous</div>
-          <div class="feature-desc">Don't know where to go? Tell us your budget and days — our AI picks the perfect destination based on your location and interests.</div>
+        <div class="form-success" id="successMsg2"><span style="font-size:1.6rem;">🌴</span><span>You're in. See you at launch!</span></div>
+        <p class="form-note">Free early access · No spam, ever</p>
+
+        <div class="store-divider">or pick your platform</div>
+        <div class="store-row">
+          <button class="store-btn" onclick="openPlatformModal('iOS')" aria-label="Get notified for iOS launch">
+            <span class="soon-pill">Coming soon</span>
+            <svg class="store-icon"><use href="#apple-logo"/></svg>
+            <span class="store-text"><span class="store-small">Download on the</span><span class="store-big">App Store</span></span>
+          </button>
+          <button class="store-btn" onclick="openPlatformModal('Android')" aria-label="Get notified for Android launch">
+            <span class="soon-pill">Coming soon</span>
+            <svg class="store-icon"><use href="#googleplay-logo"/></svg>
+            <span class="store-text"><span class="store-small">Get it on</span><span class="store-big">Google Play</span></span>
+          </button>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">👥</div>
-          <div class="feature-title">Plan together</div>
-          <div class="feature-desc">Invite friends or a partner to collaborate. Suggest changes, accept or reject edits — everyone stays in sync.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔄</div>
-          <div class="feature-title">Swap & customize</div>
-          <div class="feature-desc">Don't like a suggestion? Swap it for something different, search for a specific place, or remove slots entirely.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📱</div>
-          <div class="feature-title">Import from TikTok</div>
-          <div class="feature-desc">Saw a travel video you loved? Paste the link and we'll extract all the places mentioned and add them to your plan.</div>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎯</div>
-          <div class="feature-title">Personalized for you</div>
-          <div class="feature-desc">Solo, couple, friends, or family — the app adapts to your travel style, interests, and budget from the moment you sign up.</div>
+      </div>
+
+      <div style="margin-top:30px;">
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:14px;">Already love the brand? Come hang out 👇</p>
+        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
+          <a href="https://www.instagram.com/gototravelapp" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(221,42,123,0.4);">
+            <svg style="width:16px;height:16px;"><use href="#ig-logo"/></svg> Instagram @gototravelapp
+          </a>
+          <a href="https://www.tiktok.com/@gototravelapp" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(254,44,85,0.4);">
+            <svg style="width:16px;height:16px;"><use href="#tt-logo"/></svg> TikTok @gototravelapp
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
-  <section id="how-it-works" style="background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-    <div class="section-inner">
-      <div class="section-label">How it works</div>
-      <h2 class="section-title">Three steps to<br/><em>your perfect trip.</em></h2>
-
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <div class="step-title">Tell us about yourself</div>
-          <div class="step-desc">Quick onboarding quiz — your travel style, interests, and home base. Takes 60 seconds.</div>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <div class="step-title">Pick your trip</div>
-          <div class="step-desc">Choose a destination or let AI surprise you. Set your dates and budget. That's it.</div>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <div class="step-title">Get your plan</div>
-          <div class="step-desc">A full itinerary with breakfast spots, activities, restaurants, and evening plans — ready in seconds.</div>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <div class="step-title">Refine & share</div>
-          <div class="step-desc">Swap anything you don't love, invite collaborators, and hit the road with confidence.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRICING -->
-  <section id="pricing">
-    <div class="section-inner">
-      <div class="section-label">Pricing</div>
-      <h2 class="section-title">Simple, honest<br/><em>pricing.</em></h2>
-      <p class="section-sub">Start free. Upgrade when you're ready to plan more.</p>
-
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-name">Free</div>
-          <div class="pricing-price">$0<span>/month</span></div>
-          <div class="pricing-desc">Perfect for trying it out</div>
-          <ul class="pricing-features">
-            <li>2 trips per month</li>
-            <li>AI itinerary generation</li>
-            <li>Swap & customize slots</li>
-            <li>Explore destinations</li>
-          </ul>
-          <a href="https://testflight.apple.com/join/HXVp8DH9" class="pricing-btn outline">Get started free</a>
-        </div>
-
-        <div class="pricing-card featured">
-          <div class="pricing-name">Explorer</div>
-          <div class="pricing-price">$4.99<span>/month</span></div>
-          <div class="pricing-desc">For the frequent traveler</div>
-          <ul class="pricing-features">
-            <li>Unlimited trips</li>
-            <li>Trip collaboration</li>
-            <li>Social import (TikTok/Instagram)</li>
-            <li>Map view</li>
-            <li>Priority AI generation</li>
-          </ul>
-          <a href="https://testflight.apple.com/join/HXVp8DH9" class="pricing-btn filled">Start free trial</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div class="cta-section">
-    <h2>Ready to plan your<br/>next adventure?</h2>
-    <p>Join the beta — free to download on TestFlight.</p>
-    <a href="https://testflight.apple.com/join/HXVp8DH9" class="btn-primary" style="display:inline-flex">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-      Download on TestFlight
-    </a>
-  </div>
-
-  <!-- FOOTER -->
   <footer>
-    <div class="footer-logo">Go To Travel</div>
+    <div style="margin-bottom:18px;"><span class="logo" style="justify-content:center;"><span class="logo-mark" style="width:30px;height:30px;border-radius:9px;"><svg><use href="#gtt-globe"/></svg></span><span class="logo-text" style="font-size:1rem;">Go To Travel</span></span></div>
     <div class="footer-links">
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="mailto:hello@gotravelplanner.io">Contact</a>
+      <a href="mailto:hello@gototravelplanner.io">hello@gototravelplanner.io</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms.html">Terms</a>
+      <a href="https://www.instagram.com/gototravelapp" target="_blank">Instagram</a>
+      <a href="https://www.tiktok.com/@gototravelapp" target="_blank">TikTok</a>
     </div>
-    <div class="footer-copy">© 2026 Go To Travel. All rights reserved.</div>
+    <p>© 2026 Go To Travel · gototravelplanner.io</p>
+    <p class="footer-seo">Go To Travel is an AI trip planner and travel itinerary app that builds personalized, day-by-day trips around your family, your budget, and your travel style — for family vacations, couples' getaways, group trips, and solo adventures.</p>
   </footer>
 
+  <!-- PLATFORM MODAL -->
+  <div class="modal-overlay" id="platformModal" onclick="if(event.target===this) closePlatformModal()">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closePlatformModal()" aria-label="Close">✕</button>
+      <div class="modal-icon"><svg><use href="#gtt-globe"/></svg></div>
+      <h3 id="modalTitle">We're almost there!</h3>
+      <p class="sub">Go To Travel is launching on <span class="plat" id="modalPlatform">iOS</span> soon. Drop your email and we'll let you know the moment it's live — and you'll skip the queue for early access.</p>
+      <div class="form-wrap" style="margin:0 auto;">
+        <div class="form-row" id="formRowModal">
+          <input type="email" id="emailInputModal" placeholder="Enter your email" autocomplete="email" />
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
+          <button class="btn-primary" onclick="handleModalSubmit()">Notify me</button>
+        </div>
+        <div class="form-success" id="successMsgModal"><span style="font-size:1.6rem;">🌴</span><span id="modalSuccessText">You're on the list!</span></div>
+        <p class="form-note">No spam, ever · Unsubscribe anytime</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function isValidEmail(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
+    async function saveEmail(email, extra){
+      // Routes through the public join-waitlist edge function. The
+      // Supabase anon key is intentionally NOT used here; the table is
+      // RLS-locked with no policies, so the function (with the service
+      // role) is the only write path. Honeypot field name === 'website'.
+      const FN_URL = 'https://zkwamqtnaegvlptzdqxn.supabase.co/functions/v1/join-waitlist';
+      const params = new URLSearchParams(window.location.search);
+      const utm = {
+        utm_source:   params.get('utm_source')   || null,
+        utm_medium:   params.get('utm_medium')   || null,
+        utm_campaign: params.get('utm_campaign') || null,
+      };
+      try {
+        const res = await fetch(FN_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, ...utm, ...(extra||{}) }),
+        });
+        if (!res.ok) {
+          // The success UI has already flipped optimistically — don't
+          // re-flip it here. Just log so failures are visible in
+          // console + the edge function logs.
+          const data = await res.json().catch(()=>({}));
+          console.error('[waitlist] save failed:', res.status, data);
+        }
+      } catch (e) {
+        console.error('[waitlist] network error:', e);
+      }
+      if(typeof gtag!=='undefined'){ gtag('event','sign_up',{ method: extra?.platform ? 'store_button' : (extra?.traveler_type ? 'quiz' : 'waitlist'), platform: extra?.platform || null }); }
+    }
+    // Read the honeypot value for a given form row. Real users never
+    // touch the hidden input; bots scrape every field, fill them all,
+    // and trip the silent-accept branch on the server.
+    function honeypotFor(rowId){ return document.querySelector(`#${rowId} input[name="website"]`)?.value || ''; }
+    function flagInvalid(input){ input.style.color='#FF9E5B'; const ph=input.placeholder; input.value=''; input.placeholder='Please enter a valid email'; setTimeout(()=>{ input.style.color=''; input.placeholder=ph; },2000); }
+    function handleSubmit(rowId,msgId,inputId){ const row=document.getElementById(rowId),msg=document.getElementById(msgId),input=document.getElementById(inputId); const email=input.value.trim(); if(!isValidEmail(email)){ flagInvalid(input); return; } saveEmail(email,{ website: honeypotFor(rowId) }); row.style.display='none'; msg.style.display='flex'; }
+    ['emailInput','emailInput2'].forEach(id=>{ const el=document.getElementById(id); if(el) el.addEventListener('keydown',e=>{ if(e.key==='Enter'){ id==='emailInput'?handleSubmit('formRow','successMsg','emailInput'):handleSubmit('formRow2','successMsg2','emailInput2'); }}); });
+
+    let currentPlatform='iOS';
+    function openPlatformModal(platform){
+      currentPlatform=platform;
+      document.getElementById('modalPlatform').textContent=platform;
+      document.getElementById('modalTitle').textContent = platform==='iOS' ? "iOS launch is almost here!" : "Android coming soon!";
+      document.getElementById('formRowModal').style.display='flex';
+      document.getElementById('successMsgModal').style.display='none';
+      document.getElementById('emailInputModal').value='';
+      document.getElementById('platformModal').classList.add('open');
+      document.body.style.overflow='hidden';
+      setTimeout(()=>document.getElementById('emailInputModal').focus(), 100);
+    }
+    function closePlatformModal(){ document.getElementById('platformModal').classList.remove('open'); document.body.style.overflow=''; }
+    function handleModalSubmit(){
+      const input=document.getElementById('emailInputModal'); const email=input.value.trim();
+      if(!isValidEmail(email)){ flagInvalid(input); return; }
+      saveEmail(email,{ platform: currentPlatform.toLowerCase(), source:'store_button', website: honeypotFor('formRowModal') });
+      document.getElementById('modalSuccessText').textContent = `You're in! We'll email you the moment ${currentPlatform} launches.`;
+      document.getElementById('formRowModal').style.display='none';
+      document.getElementById('successMsgModal').style.display='flex';
+    }
+    document.getElementById('emailInputModal')?.addEventListener('keydown',e=>{ if(e.key==='Enter') handleModalSubmit(); });
+    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closePlatformModal(); });
+
+    const QUESTIONS=[
+      { key:"group_type", q:"Who's usually coming along?", hint:"Pick the trip you plan most often.", multi:false,
+        options:[ {v:"family",emoji:"👨‍👩‍👧‍👦",label:"Family",desc:"Kids included"},{v:"couple",emoji:"💑",label:"Just us two",desc:"Me + partner"},{v:"friends",emoji:"🥂",label:"The group",desc:"Friends, 3+"},{v:"solo",emoji:"🌍",label:"Solo",desc:"Just me"} ]},
+      { key:"travel_style", q:"What's your travel style?", hint:"How you like to spend on a trip.", multi:false,
+        options:[ {v:"budget",emoji:"🎒",label:"Smart & savvy",desc:"Great value, hidden gems"},{v:"comfortable",emoji:"✨",label:"Comfortable",desc:"Top-rated, trusted faves"},{v:"luxury",emoji:"🥂",label:"Luxe",desc:"4–5 star, fine dining"},{v:"ultra",emoji:"👑",label:"No compromises",desc:"Private tours, VIP only"} ]},
+      { key:"adventure_level", q:"What's your ideal pace?", hint:"How full do you like your days?", multi:false,
+        options:[ {v:"relaxed",emoji:"🌅",label:"Relaxed",desc:"Slow mornings, downtime"},{v:"balanced",emoji:"⚖️",label:"Balanced",desc:"A mix of go and chill"},{v:"active",emoji:"🥾",label:"Active",desc:"Packed, always moving"},{v:"thrill",emoji:"🪂",label:"Thrill",desc:"Off the beaten path"} ]},
+      { key:"interests", q:"What makes a trip for you?", hint:"Pick up to 3.", multi:true, max:3,
+        options:[ {v:"food",emoji:"🍴",label:"Food",desc:"Eat your way around"},{v:"culture",emoji:"🏛️",label:"Culture",desc:"Museums, history, art"},{v:"nature",emoji:"🌲",label:"Nature",desc:"Outdoors & scenery"},{v:"beach",emoji:"🏖️",label:"Beach",desc:"Sun, sand, sea"},{v:"nightlife",emoji:"🌃",label:"Nightlife",desc:"Bars & late nights"},{v:"family_fun",emoji:"🎡",label:"Family fun",desc:"Parks & kid-friendly"} ]},
+    ];
+    const answers={}; let qi=0;
+    function renderQuestion(){
+      const body=document.getElementById('quizBody'),result=document.getElementById('quizResult'),nav=document.getElementById('quizNav');
+      result.style.display='none'; body.style.display='block'; nav.style.display='flex';
+      const Q=QUESTIONS[qi]; const sel=answers[Q.key];
+      document.getElementById('quizBar').style.width=((qi)/QUESTIONS.length*100)+'%';
+      document.getElementById('quizStep').textContent=(qi+1)+' of '+QUESTIONS.length;
+      document.getElementById('quizBackBtn').disabled=qi===0;
+      let html=`<div class="quiz-q">${Q.q}</div><div class="quiz-hint">${Q.hint}</div><div class="quiz-options">`;
+      Q.options.forEach(o=>{ const isSel=Q.multi?(Array.isArray(sel)&&sel.includes(o.v)):sel===o.v;
+        html+=`<button class="quiz-opt ${isSel?'selected':''}" onclick="pick('${Q.key}','${o.v}',${Q.multi},${Q.max||0})"><span class="o-emoji">${o.emoji}</span><span class="o-label">${o.label}</span><span class="o-desc">${o.desc}</span></button>`; });
+      html+=`</div>`;
+      if(Q.multi){ html+=`<div style="text-align:center;margin-top:18px;"><button class="btn-primary" onclick="nextQ()" style="padding:13px 30px;">Continue</button></div>`; }
+      body.innerHTML=html;
+    }
+    function pick(key,val,multi,max){ if(multi){ const cur=Array.isArray(answers[key])?answers[key]:[]; if(cur.includes(val)) answers[key]=cur.filter(x=>x!==val); else { if(cur.length>=max) return; answers[key]=[...cur,val]; } renderQuestion(); } else { answers[key]=val; renderQuestion(); setTimeout(nextQ,220); } }
+    function nextQ(){ if(qi<QUESTIONS.length-1){ qi++; renderQuestion(); } else { showResult(); } }
+    function quizBack(){ if(qi>0){ qi--; renderQuestion(); } }
+    function restartQuiz(){ qi=0; Object.keys(answers).forEach(k=>delete answers[k]); renderQuestion(); }
+    const TYPE_BY_STYLE={
+      budget:{name:"Explorer",emoji:"🧭",desc:"You travel for the find — street eats, hidden gems, and the spots no guidebook lists. We'll fill your trips with smart, high-value picks."},
+      comfortable:{name:"Trailblazer",emoji:"🗺️",desc:"Comfort meets adventure. You want top-rated places and trusted favorites, with room to wander. We'll plan trips that hit the sweet spot."},
+      luxury:{name:"Visionary",emoji:"✨",desc:"Premium, no compromises. Fine dining, standout stays, experiences worth remembering. We'll craft trips that feel effortless and elevated."},
+      ultra:{name:"Visionary",emoji:"👑",desc:"Nothing but the best. Private tours, VIP tables, the extraordinary. We'll build trips around experiences most people never see."},
+    };
+    function showResult(){
+      const style=answers.travel_style||"comfortable"; const t=TYPE_BY_STYLE[style];
+      document.getElementById('quizBar').style.width='100%';
+      document.getElementById('quizBody').style.display='none';
+      document.getElementById('quizNav').style.display='none';
+      document.getElementById('resultEmoji').textContent=t.emoji;
+      document.getElementById('resultName').textContent=t.name;
+      const groupLine={ family:"Perfect for your family trips — kid-friendly spots and days that fit little legs.", couple:"Ideal for your escapes for two — curated just for the both of you.", friends:"Built for your group trips — everyone aligned, zero chaos.", solo:"Made for your solo adventures — shaped entirely around you." }[answers.group_type||"couple"];
+      document.getElementById('resultDesc').textContent=t.desc+" "+groupLine;
+      document.getElementById('quizResult').style.display='block';
+    }
+    function handleQuizSubmit(){
+      const input=document.getElementById('emailInputQuiz'); const email=input.value.trim();
+      if(!isValidEmail(email)){ flagInvalid(input); return; }
+      const style=answers.travel_style||"comfortable"; const traveler_type=TYPE_BY_STYLE[style].name;
+      saveEmail(email,{ source:'quiz', group_type:answers.group_type||null, travel_style:answers.travel_style||null, adventure_level:answers.adventure_level||null, interests:answers.interests||[], traveler_type, website: honeypotFor('formRowQuiz') });
+      document.getElementById('quizSuccessText').textContent=`You're in! We've saved you as a ${traveler_type}.`;
+      document.getElementById('formRowQuiz').style.display='none';
+      document.getElementById('successMsgQuiz').style.display='flex';
+    }
+    document.getElementById('emailInputQuiz')?.addEventListener('keydown',e=>{ if(e.key==='Enter') handleQuizSubmit(); });
+    renderQuestion();
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener('click',e=>{ const t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }}); });
+  </script>
 </body>
 </html>
