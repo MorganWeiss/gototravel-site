@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Go To Travel · AI Trip Planner — Join the Waitlist</title>
-  <meta name="description" content="Go To Travel is the AI trip planner built around your people. Family-friendly trips, adventurous couples' escapes, seamless group travel. Take the quiz to find your traveler type and join the waitlist." />
+  <title>Go To Travel — Turn your saves into an actual trip</title>
+  <meta name="description" content="Drop in the places you've saved. We find the real spots, build the days, and get your crew to agree. Then you go." />
+  <link rel="canonical" href="https://gototravelapp.com/" />
   <meta name="keywords" content="AI trip planner, AI travel planner, family trip planner, couples travel planner, group trip planner, travel itinerary app, AI itinerary generator" />
-  <meta property="og:title" content="Go To Travel · AI Trip Planner that knows your people" />
-  <meta property="og:description" content="The AI trip planner built around who you travel with. Family trips that work for kids, adventurous escapes for two, group trips without the chaos. Find your traveler type and join the waitlist." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gototravelapp.com/" />
+  <meta property="og:site_name" content="Go To Travel" />
+  <meta property="og:title" content="Go To Travel — Turn your saves into an actual trip" />
+  <meta property="og:description" content="Drop in the places you've saved. We find the real spots, build the days, and get your crew to agree. Then you go." />
+  <meta property="og:image" content="https://gototravelapp.com/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Go To Travel: Your TikTok saves deserve an actual trip." />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="theme-color" content="#0E1714" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -577,6 +584,11 @@
 
   <script>
   (() => {
+    // ── W7 pixels. [PLACEHOLDER: Pavan to provide both pixel IDs] — while a value is
+    // still the placeholder, that pixel never loads and its events no-op.
+    const TIKTOK_PIXEL_ID = '[PLACEHOLDER]';
+    const META_PIXEL_ID = '[PLACEHOLDER]';
+
     const $ = id => document.getElementById(id);
     const article = w => /^[aeiou]/i.test(w) ? 'an' : 'a';
     const params = new URLSearchParams(location.search);
@@ -586,9 +598,29 @@
     };
 
     const DAY = 864e5;
+    // Events go to whichever pixels are loaded (no page-analytics tool is installed).
     function track(name, params = {}){
       if (MOCK) console.info('[track]', name, JSON.stringify(params));
+      window.fbq?.('trackCustom', name, params);
+      window.ttq?.track(name, params);
     }
+    function trackSignup(source){
+      track('signup', { source });
+      window.fbq?.('track', 'CompleteRegistration', { source });
+      window.ttq?.track('CompleteRegistration', { source });
+    }
+    const isSet = id => !!id && !id.startsWith('[');
+    function loadPixels(){ // official base snippets, only for configured IDs
+      if (isSet(META_PIXEL_ID)){
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', META_PIXEL_ID); fbq('track', 'PageView');
+      }
+      if (isSet(TIKTOK_PIXEL_ID)){
+        !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=d.createElement("script");n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=d.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};ttq.load(TIKTOK_PIXEL_ID);ttq.page();}(window,document,'ttq');
+      }
+    }
+    // Deferred: after the load event, when the main thread is idle.
+    addEventListener('load', () => (window.requestIdleCallback || setTimeout)(loadPixels, { timeout:3000 }));
 
     // ── Referral (W6, partial). No referral codes exist in the backend yet, so the
     // section says "Coming soon". An inbound ?ref= is still kept for 30 days and sent
@@ -646,6 +678,7 @@
         const data = await saveEmail(payload);
         store.set(SIGNED_KEY, { source, t: Date.now() });
         markSignedUp(form, data.position);
+        trackSignup(source);
         form.parentElement.querySelector('.done').focus();
       } catch (x) {
         console.error('[waitlist] save failed:', x);
@@ -705,7 +738,7 @@
     };
     const GROUP_LINE = { family:"Perfect for your family trips — kid-friendly spots and days that fit little legs.", couple:"Ideal for your escapes for two — curated just for the both of you.", friends:"Built for your group trips — everyone aligned, zero chaos.", solo:"Made for your solo adventures — shaped entirely around you." };
     const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
-    const answers = {}; let qi = 0, advancing = false;
+    const answers = {}; let qi = 0, advancing = false, quizStarted = false;
     const quizPayload = () => ({
       group_type: answers.group_type || null, travel_style: answers.travel_style || null,
       adventure_level: answers.adventure_level || null, interests: answers.interests || [],
@@ -733,6 +766,7 @@
         return;
       }
       if (advancing) return;
+      if (qi === 0 && !quizStarted){ quizStarted = true; track('quiz_start'); }
       answers[Q.key] = v;
       $('quizBody').querySelectorAll('.opt').forEach(o => o.setAttribute('aria-pressed', o === btn));
       advancing = true;
@@ -748,6 +782,7 @@
       $('quizResult').hidden = false;
       $('resultName').focus({ preventScroll:true });
       setShareType(t.name);
+      track('quiz_complete', { traveler_type: t.name });
     }
 
     // ── Share my type (W5) ──
