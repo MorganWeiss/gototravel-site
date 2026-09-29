@@ -260,6 +260,26 @@
     .foot-links a:hover{ color:var(--cream); text-decoration:underline; }
     .copy{ margin-top:8px; padding-inline:8px; }
 
+    /* W4 popup: bottom sheet on mobile, centered card on desktop (native <dialog>) */
+    .sheet{ padding:0; border:0; width:100%; max-width:100%; max-height:92dvh; margin:auto 0 0; border-radius:24px 24px 0 0; background:var(--surface); color:var(--cream); overflow:auto; box-shadow:0 -20px 60px rgba(0,0,0,.5); }
+    .sheet::backdrop{ background:rgba(14,23,20,.75); }
+    .sheet-in{ position:relative; padding:28px 20px calc(20px + env(safe-area-inset-bottom)); }
+    .x{ position:absolute; top:12px; right:12px; width:44px; height:44px; display:grid; place-items:center; border:0; border-radius:50%; background:var(--surface-2); color:var(--cream); cursor:pointer; }
+    .pill-kit{ background:var(--sunset); color:var(--sunset-ink); border:0; padding:6px 12px; font-size:.75rem; font-weight:700; letter-spacing:.08em; }
+    .kit-h{ font-size:clamp(1.75rem,7.5vw,2.25rem); margin-top:14px; padding-right:40px; }
+    .kit-sub{ color:var(--text-soft); margin-top:12px; }
+    .checks{ display:grid; gap:10px; margin:14px 0 20px; }
+    .checks li{ display:flex; align-items:flex-start; gap:10px; }
+    .checks .i{ color:var(--green-bright); margin-top:2px; }
+    .sheet .signup-row{ flex-direction:column; }
+    .maybe{ display:block; margin:6px auto 0; }
+    .sheet:has(.done:not([hidden])) .maybe{ display:none; }
+    .sheet .fine{ text-align:center; margin-top:4px; }
+    html:has(.sheet[open]){ overflow:hidden; }
+    @media (prefers-reduced-motion:no-preference){ .sheet[open]{ animation:sheet-up .28s ease-out; } }
+    @keyframes sheet-up{ from{ transform:translateY(24px); opacity:0; } }
+    @media (min-width:640px){ .sheet{ margin:auto; max-width:440px; border-radius:24px; } .sheet-in{ padding:36px 32px 28px; } }
+
     @media (min-width:960px){ section{ padding-block:112px; } .wrap{ padding-inline:32px; } .final{ padding-top:32px; } }
   </style>
 </head>
@@ -278,6 +298,7 @@
       <path d="M30 16 l4 1 -1 4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
     <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
     <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
     <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><path d="m2 2 20 20"/></symbol>
@@ -519,6 +540,35 @@
     </div>
   </footer>
 
+  <!-- W4 popup: Group Trip Survival Kit -->
+  <dialog id="kit" class="sheet" role="dialog" aria-modal="true" aria-labelledby="kit-h">
+    <div class="sheet-in">
+      <button type="button" class="x" data-close aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+      <p class="pill pill-kit">FREE KIT</p>
+      <h2 class="kit-h" id="kit-h">Your group chat called. It wants a trip.</h2>
+      <p class="kit-sub">Get the Group Trip Survival Kit, free in your inbox:</p>
+      <ul class="checks">
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>A private budget-check template (no awkward money talk)</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>The &ldquo;decide in 10 minutes&rdquo; voting script</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>12 no-drama rules for trips with friends</li>
+      </ul>
+      <div class="signup-wrap">
+        <form class="signup" data-source="popup_kit" novalidate>
+          <label class="sr-only" for="email-kit">Email address</label>
+          <div class="signup-row">
+            <input class="input" id="email-kit" type="email" name="email" autocomplete="email" placeholder="Enter your email" aria-describedby="err-kit" required />
+            <button class="btn btn-sunset" type="submit">Send me the kit</button>
+          </div>
+          <p class="err" id="err-kit" role="alert"></p>
+          <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+        </form>
+        <p class="done" tabindex="-1" role="status" hidden><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span></span></p>
+      </div>
+      <button type="button" class="link-btn maybe" data-close>Maybe later</button>
+      <p class="fine">Also joins you to the beta waitlist · Unsubscribe anytime</p>
+    </div>
+  </dialog>
+
   <script>
   (() => {
     const $ = id => document.getElementById(id);
@@ -528,6 +578,11 @@
       get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
       set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
     };
+
+    const DAY = 864e5;
+    function track(name, params = {}){
+      if (MOCK) console.info('[track]', name, JSON.stringify(params));
+    }
 
     // ── Waitlist (W3). All forms post to the existing join-waitlist edge
     // function -> public.waitlist (upsert on email, so re-submits don't dupe).
@@ -590,6 +645,33 @@
       f.elements.email.addEventListener('input', () => { f.querySelector('.err').textContent = ''; f.elements.email.removeAttribute('aria-invalid'); });
     });
     if (store.get(SIGNED_KEY)) markSignedUp(null);
+
+    // ── Kit popup (W4): after 10 s AND (45% scroll OR desktop exit intent).
+    // Once per visitor: shown/dismissed -> quiet for 14 days; signed up -> never.
+    const kit = $('kit'), POPUP_KEY = 'gtt_popup_at';
+    let waited = false, intent = false, shown = false, lastFocus = null;
+    function maybeShowKit(){
+      if (shown || !waited || !intent || store.get(SIGNED_KEY)) return;
+      const at = store.get(POPUP_KEY);
+      if (at && Date.now() - at < 14 * DAY) return;
+      if (document.activeElement?.matches('input')) return; // don't interrupt someone typing; retried on next scroll
+      shown = true; lastFocus = document.activeElement;
+      store.set(POPUP_KEY, Date.now());
+      kit.showModal();
+      track('popup_shown');
+    }
+    setTimeout(() => { waited = true; maybeShowKit(); }, 10000);
+    addEventListener('scroll', () => {
+      const max = document.documentElement.scrollHeight - innerHeight;
+      if (max > 0 && scrollY / max >= 0.45){ intent = true; maybeShowKit(); }
+    }, { passive:true });
+    if (matchMedia('(hover:hover) and (pointer:fine)').matches)
+      document.addEventListener('mouseout', e => { if (!e.relatedTarget && e.clientY <= 0){ intent = true; maybeShowKit(); } });
+    kit.addEventListener('click', e => { if (e.target === kit || e.target.closest('[data-close]')) kit.close(); }); // e.target === kit: backdrop tap
+    kit.addEventListener('close', () => {
+      if (!store.get(SIGNED_KEY)){ store.set(POPUP_KEY, Date.now()); track('popup_dismissed'); }
+      lastFocus?.focus?.({ preventScroll:true });
+    });
 
     // ── Traveler quiz (logic unchanged from v1; restyled, emoji removed) ──
     const QUESTIONS = [
