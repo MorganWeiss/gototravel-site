@@ -209,7 +209,8 @@
     .type-name:focus{ outline:none; }
     .result .desc{ color:var(--text-soft); margin:14px auto 0; max-width:30em; }
     .result .signup-wrap{ margin:24px auto 0; max-width:540px; text-align:left; }
-    .share-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px; }
+    .share-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:20px auto 0; max-width:540px; }
+    .share-row .btn{ flex:1 1 200px; }
 
     /* 2.7 Tips */
     .tips{ display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding-inline:20px; margin:32px -20px 0; padding:10px 20px 20px; scrollbar-width:none; }
@@ -276,6 +277,8 @@
     .sheet:has(.done:not([hidden])) .maybe{ display:none; }
     .sheet .fine{ text-align:center; margin-top:4px; }
     html:has(.sheet[open]){ overflow:hidden; }
+    .toast{ position:fixed; left:50%; bottom:calc(24px + env(safe-area-inset-bottom)); z-index:60; transform:translateX(-50%); padding:12px 20px; border-radius:999px; background:var(--cream); color:var(--ink); font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,.4); opacity:0; pointer-events:none; transition:opacity .2s ease; }
+    .toast.on{ opacity:1; }
     @media (prefers-reduced-motion:no-preference){ .sheet[open]{ animation:sheet-up .28s ease-out; } }
     @keyframes sheet-up{ from{ transform:translateY(24px); opacity:0; } }
     @media (min-width:640px){ .sheet{ margin:auto; max-width:440px; border-radius:24px; } .sheet-in{ padding:36px 32px 28px; } }
@@ -446,6 +449,7 @@
             </div>
             <div class="share-row">
               <button type="button" class="btn btn-ghost" id="shareBtn"><svg class="i" aria-hidden="true"><use href="#i-share"/></svg>Share my type</button>
+              <a class="btn btn-ghost" id="saveImg" href="/share/trailblazer.png" download><svg class="i" aria-hidden="true"><use href="#i-download"/></svg>Save image</a>
             </div>
             <button type="button" class="link-btn" id="retakeBtn">Retake the quiz</button>
           </div>
@@ -539,6 +543,8 @@
       <p class="copy">© 2026 Go To Travel</p>
     </div>
   </footer>
+
+  <p class="toast" id="toast" role="status" aria-live="polite"></p>
 
   <!-- W4 popup: Group Trip Survival Kit -->
   <dialog id="kit" class="sheet" role="dialog" aria-modal="true" aria-labelledby="kit-h">
@@ -734,7 +740,42 @@
       $('resultDesc').textContent = t.desc + ' ' + GROUP_LINE[answers.group_type || 'couple'];
       $('quizResult').hidden = false;
       $('resultName').focus({ preventScroll:true });
+      setShareType(t.name);
     }
+
+    // ── Share my type (W5) ──
+    let shareType = 'Trailblazer', shareFile = null, toastTimer;
+    function toast(msg){
+      const el = $('toast'); el.textContent = msg; el.classList.add('on');
+      clearTimeout(toastTimer); toastTimer = setTimeout(() => { el.classList.remove('on'); el.textContent = ''; }, 2400);
+    }
+    function setShareType(name){
+      const slug = name.toLowerCase(), img = `/share/${slug}.png`;
+      shareType = name; shareFile = null;
+      $('saveImg').href = img; $('saveImg').download = `go-to-travel-${slug}.png`;
+      // Phones: prefetch so "Save image" can open the share sheet (Save Image / Instagram)
+      // synchronously inside the tap. Desktop just downloads via the link.
+      if (matchMedia('(pointer:coarse)').matches)
+        fetch(img).then(r => r.blob()).then(b => { if (shareType === name) shareFile = new File([b], `go-to-travel-${slug}.png`, { type:'image/png' }); }).catch(x => console.error('[share] image prefetch failed:', x));
+    }
+    $('shareBtn').addEventListener('click', async () => {
+      const url = `https://gototravelapp.com/?type=${encodeURIComponent(shareType)}&utm_source=share&utm_medium=quiz`;
+      const text = `I'm ${article(shareType)} ${shareType} traveler. What are you?`;
+      track('share_click', { traveler_type: shareType, via: 'link' });
+      if (navigator.share){
+        try { await navigator.share({ text, url }); return; }
+        catch (x) { if (x.name === 'AbortError') return; console.error('[share] share sheet failed, copying instead:', x); }
+      }
+      try { await navigator.clipboard.writeText(url); toast('Link copied'); }
+      catch (x) { console.error('[share] copy failed:', x); }
+    });
+    $('saveImg').addEventListener('click', e => {
+      track('share_click', { traveler_type: shareType, via: 'image' });
+      if (shareFile && navigator.canShare?.({ files:[shareFile] })){
+        e.preventDefault();
+        navigator.share({ files:[shareFile] }).catch(x => { if (x.name !== 'AbortError') console.error('[share] image share failed:', x); });
+      }
+    });
     $('quizBody').addEventListener('click', e => { const b = e.target.closest('.opt'); if (b) pick(b); });
     $('quizNext').addEventListener('click', nextQ);
     $('quizBackBtn').addEventListener('click', () => { if (qi > 0){ qi--; renderQuestion(true); } });
