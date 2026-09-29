@@ -590,6 +590,13 @@
       if (MOCK) console.info('[track]', name, JSON.stringify(params));
     }
 
+    // ── Referral (W6, partial). No referral codes exist in the backend yet, so the
+    // section says "Coming soon". An inbound ?ref= is still kept for 30 days and sent
+    // as referred_by (the current function ignores it until the backend lands).
+    const REF_KEY = 'gtt_ref';
+    if (params.get('ref')) store.set(REF_KEY, { code: params.get('ref').slice(0, 64), t: Date.now() });
+    const referredBy = () => { const r = store.get(REF_KEY); return r && Date.now() - r.t < 30 * DAY ? r.code : null; };
+
     // ── Waitlist (W3). All forms post to the existing join-waitlist edge
     // function -> public.waitlist (upsert on email, so re-submits don't dupe).
     const FN_URL = 'https://zkwamqtnaegvlptzdqxn.supabase.co/functions/v1/join-waitlist';
@@ -631,7 +638,7 @@
       err.textContent = ''; input.removeAttribute('aria-invalid'); btn.disabled = true;
       const source = form.dataset.source;
       const payload = {
-        email, source, website: form.elements.website.value,
+        email, source, website: form.elements.website.value, referred_by: referredBy(),
         utm_source: params.get('utm_source'), utm_medium: params.get('utm_medium'), utm_campaign: params.get('utm_campaign'),
         ...(source === 'quiz' ? quizPayload() : {}),
       };
