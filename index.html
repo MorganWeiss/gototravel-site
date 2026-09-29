@@ -13,7 +13,8 @@
   <meta name="theme-color" content="#52927A" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=DM+Sans:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=DM+Sans:wght@400;600;700&display=swap" /></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -26,37 +27,39 @@
   }
   </script>
   <style>
-    :root {
-      /* Calmer sage palette — desaturated, softer, less "hulk" */
-      --green:#6BAA8C;        /* was #469870 — lighter, softer */
-      --green-dk:#52927A;     /* main brand surface */
-      --green-lt:#9CCBB1;     /* highlights / accent text */
-      --green-soft:#3D6F5C;   /* deep brand */
-      /* Travel accents */
-      --ocean:#3E8DAE;        /* slightly softened */
-      --teal:#4FB5A5;
-      --sky:#8FD2E8;
-      --sun:#FF9E5B;
-      --sun-dk:#E07A38;
-      --sand:#F6D9A8;
-      --gold:#F0B429;
-      /* Surfaces — quieter background */
-      --deep:#0E2820;
-      --deep2:#143028;
-      --card:rgba(255,255,255,0.055);
-      --border:rgba(255,255,255,0.11);
-      --text:#EEF6F1;
-      --muted:#A6BFB6;
-      --radius:22px;
+    /* ── Design foundation (web v2, W1) ──────────────────────────────
+       Size-adjusted local fallbacks so the swap to the web fonts doesn't
+       shift layout. Metrics measured from the served woff2 vs Arial. */
+    @font-face{ font-family:"DM Sans Fallback"; src:local("Arial"),local("ArialMT"); size-adjust:105.56%; ascent-override:93.98%; descent-override:29.37%; line-gap-override:0%; }
+    @font-face{ font-family:"Bricolage Fallback"; src:local("Arial Bold"),local("Arial-BoldMT"); font-weight:800; size-adjust:103.5%; ascent-override:89.86%; descent-override:26.09%; line-gap-override:0%; }
+    :root{
+      --ink:#0E1714; --surface:#16221E; --surface-2:#1E2D28; --line:#2A3B35;
+      --cream:#F4EFE6; --cream-line:#E4DCCB;
+      --text-muted:#A8B3AE; --text-soft:#C9D1CD; --text-body-light:#4A534F;
+      --brand-green:#52927A; --green-bright:#5FB08F; --green-deep:#3E7A63;
+      --sunset:#F2A93B; --sunset-ink:#1A1206;
+      --display:"Bricolage Grotesque","Bricolage Fallback",system-ui,sans-serif;
+      --body:"DM Sans","DM Sans Fallback",system-ui,sans-serif;
+      /* legacy names still used by the v1 sections until W2 replaces them */
+      --green:var(--brand-green); --green-dk:var(--brand-green); --green-lt:var(--green-bright); --green-soft:var(--green-deep);
+      --ocean:var(--brand-green); --teal:var(--green-bright); --sky:var(--green-bright);
+      --sun:var(--sunset); --sun-dk:var(--sunset); --sand:var(--cream); --gold:var(--sunset);
+      --deep:var(--ink); --deep2:var(--surface); --card:var(--surface); --border:var(--line);
+      --text:var(--cream); --muted:var(--text-muted); --radius:20px;
     }
     *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
     html{ scroll-behavior:smooth; }
-    body{ font-family:'Inter',system-ui,sans-serif; background:var(--deep); color:var(--text); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    body{ font-family:var(--body); background:var(--ink); color:var(--cream); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3{ font-family:var(--display); font-weight:800; letter-spacing:-0.03em; line-height:1.02; }
+    :focus-visible{ outline:3px solid var(--sunset); outline-offset:3px; }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:52px; padding:0 24px; border:0; border-radius:14px; font:700 1rem/1 var(--body); cursor:pointer; text-decoration:none; }
+    .btn-sunset{ background:var(--sunset); color:var(--sunset-ink); }
+    .btn-dark{ background:var(--ink); color:var(--cream); }
     .glass{ background:var(--card); backdrop-filter:blur(16px) saturate(135%); -webkit-backdrop-filter:blur(16px) saturate(135%); border:1px solid var(--border); }
     .gradient-text{ background:linear-gradient(105deg,var(--sand) 0%,var(--sun) 40%,var(--green-lt) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
     .btn-primary{
       display:inline-flex; align-items:center; justify-content:center; gap:8px;
-      background:linear-gradient(135deg,var(--green),var(--green-dk)); color:#fff; font-weight:700; font-size:1rem;
+      background:var(--sunset); color:var(--sunset-ink); font-weight:700; font-size:1rem;
       padding:16px 30px; border-radius:100px; border:none; cursor:pointer;
       transition:transform 120ms ease-out,box-shadow 120ms ease-out;
       box-shadow:0 4px 18px rgba(107,170,140,0.32);
