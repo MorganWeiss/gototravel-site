@@ -1,0 +1,4 @@
+# Repo-only files: QA screenshots, image generators, build report. Not part of the site.
+qa/
+tools/
+WEB_V2_REPORT.md
