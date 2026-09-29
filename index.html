@@ -10,7 +10,7 @@
   <meta property="og:description" content="The AI trip planner built around who you travel with. Family trips that work for kids, adventurous escapes for two, group trips without the chaos. Find your traveler type and join the waitlist." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200&q=80" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="theme-color" content="#52927A" />
+  <meta name="theme-color" content="#0E1714" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@800&family=DM+Sans:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -27,7 +27,7 @@
   }
   </script>
   <style>
-    /* ── Design foundation (web v2, W1) ──────────────────────────────
+    /* ── Design foundation (W1) ─────────────────────────────────────
        Size-adjusted local fallbacks so the swap to the web fonts doesn't
        shift layout. Metrics measured from the served woff2 vs Arial. */
     @font-face{ font-family:"DM Sans Fallback"; src:local("Arial"),local("ArialMT"); size-adjust:105.56%; ascent-override:93.98%; descent-override:29.37%; line-gap-override:0%; }
@@ -40,240 +40,227 @@
       --sunset:#F2A93B; --sunset-ink:#1A1206;
       --display:"Bricolage Grotesque","Bricolage Fallback",system-ui,sans-serif;
       --body:"DM Sans","DM Sans Fallback",system-ui,sans-serif;
-      /* legacy names still used by the v1 sections until W2 replaces them */
-      --green:var(--brand-green); --green-dk:var(--brand-green); --green-lt:var(--green-bright); --green-soft:var(--green-deep);
-      --ocean:var(--brand-green); --teal:var(--green-bright); --sky:var(--green-bright);
-      --sun:var(--sunset); --sun-dk:var(--sunset); --sand:var(--cream); --gold:var(--sunset);
-      --deep:var(--ink); --deep2:var(--surface); --card:var(--surface); --border:var(--line);
-      --text:var(--cream); --muted:var(--text-muted); --radius:20px;
     }
-    *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-    html{ scroll-behavior:smooth; }
-    body{ font-family:var(--body); background:var(--ink); color:var(--cream); overflow-x:hidden; -webkit-font-smoothing:antialiased; }
+    *,*::before,*::after{ box-sizing:border-box; }
+    html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+    @media (prefers-reduced-motion:reduce){ html{ scroll-behavior:auto; } *,*::before{ animation:none!important; transition:none!important; } }
+    body{ margin:0; font:400 1rem/1.55 var(--body); background:var(--ink); color:var(--cream); -webkit-font-smoothing:antialiased; overflow-x:clip; }
+    h1,h2,h3,p,ul,ol{ margin:0; }
+    ul,ol{ padding:0; list-style:none; }
     h1,h2,h3{ font-family:var(--display); font-weight:800; letter-spacing:-0.03em; line-height:1.02; }
+    a{ color:inherit; }
     :focus-visible{ outline:3px solid var(--sunset); outline-offset:3px; }
-    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:52px; padding:0 24px; border:0; border-radius:14px; font:700 1rem/1 var(--body); cursor:pointer; text-decoration:none; }
+    .light :focus-visible, .cta-card :focus-visible{ outline-color:var(--ink); }
+    [id]{ scroll-margin-top:84px; }
+    [hidden]{ display:none!important; }
+    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
+    .i{ width:20px; height:20px; flex:none; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .wrap{ max-width:1200px; margin-inline:auto; padding-inline:20px; }
+    .narrow{ max-width:760px; }
+    .center{ text-align:center; }
+    section{ padding-block:72px; }
+    .light{ background:var(--cream); color:var(--ink); }
+    /* Eyebrows are 19px bold = WCAG "large text": green-deep on cream is 4.40:1 (passes 3:1, would fail 4.5:1 at small sizes). */
+    .eyebrow{ font:700 1.1875rem/1.2 var(--body); letter-spacing:-0.01em; color:var(--green-bright); margin-bottom:12px; }
+    .light .eyebrow{ color:var(--green-deep); }
+    .h2{ font-size:clamp(2.125rem,8.6vw,3.5rem); }
+    .lede{ font-size:1.0625rem; color:var(--text-soft); margin-top:16px; max-width:36em; }
+    .center .lede{ margin-inline:auto; }
+
+    .btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:52px; padding:0 24px; border:0; border-radius:14px; font:700 1rem/1.1 var(--body); cursor:pointer; text-decoration:none; transition:transform .12s ease, filter .12s ease; }
+    .btn:hover{ filter:brightness(1.06); }
+    .btn:active{ transform:scale(.98); }
+    .btn:disabled{ opacity:.6; cursor:progress; }
     .btn-sunset{ background:var(--sunset); color:var(--sunset-ink); }
     .btn-dark{ background:var(--ink); color:var(--cream); }
-    .glass{ background:var(--card); backdrop-filter:blur(16px) saturate(135%); -webkit-backdrop-filter:blur(16px) saturate(135%); border:1px solid var(--border); }
-    .gradient-text{ background:linear-gradient(105deg,var(--sand) 0%,var(--sun) 40%,var(--green-lt) 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-    .btn-primary{
-      display:inline-flex; align-items:center; justify-content:center; gap:8px;
-      background:var(--sunset); color:var(--sunset-ink); font-weight:700; font-size:1rem;
-      padding:16px 30px; border-radius:100px; border:none; cursor:pointer;
-      transition:transform 120ms ease-out,box-shadow 120ms ease-out;
-      box-shadow:0 4px 18px rgba(107,170,140,0.32);
-      text-decoration:none; white-space:nowrap;
+    .btn-ghost{ background:transparent; color:var(--cream); border:1.5px solid var(--text-muted); }
+    .link-btn{ background:none; border:0; color:var(--text-muted); font:600 .9375rem var(--body); min-height:44px; padding:0 12px; cursor:pointer; text-decoration:underline; text-underline-offset:3px; }
+    .link-btn:disabled{ visibility:hidden; }
+    .pill{ display:inline-flex; align-items:center; gap:8px; border-radius:999px; padding:8px 14px; font-size:.875rem; font-weight:600; background:var(--surface); border:1px solid var(--line); color:var(--text-soft); }
+    .pill-dashed{ background:transparent; border:1.5px dashed var(--text-muted); color:var(--text-muted); }
+    .dot{ width:8px; height:8px; border-radius:50%; background:var(--green-bright); box-shadow:0 0 0 4px rgba(95,176,143,.22); }
+
+    /* Email forms */
+    .signup-row{ display:flex; flex-direction:column; gap:10px; }
+    .input{ width:100%; min-height:52px; padding:0 16px; border-radius:14px; border:1.5px solid var(--line); background:var(--surface); color:var(--cream); font:400 1rem var(--body); }
+    .input::placeholder{ color:var(--text-muted); }
+    .input:focus-visible{ outline-offset:1px; }
+    .input[aria-invalid="true"]{ border-color:var(--sunset); }
+    .err{ color:var(--sunset); font-size:.9375rem; font-weight:700; margin-top:8px; }
+    .err:empty{ display:none; }
+    .fine{ font-size:.875rem; color:var(--text-muted); margin-top:12px; }
+    .done{ display:flex; align-items:center; gap:10px; min-height:52px; padding:12px 16px; border-radius:14px; border:1.5px solid var(--green-bright); background:var(--surface); font-weight:700; }
+    .done .i{ color:var(--green-bright); }
+    .done:focus{ outline:none; }
+    .hp{ position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden; }
+    .light .input, .cta-card .input{ background:var(--cream); color:var(--ink); }
+    .light .input{ border-color:var(--text-body-light); }
+    .cta-card .input{ border-color:var(--sunset-ink); }
+    .light .input::placeholder, .cta-card .input::placeholder{ color:var(--text-body-light); }
+    .light .err, .cta-card .err{ color:var(--sunset-ink); }
+    .light .done{ background:transparent; border-color:var(--green-deep); }
+    .light .done .i{ color:var(--green-deep); }
+    .cta-card .done{ background:transparent; border-color:var(--sunset-ink); }
+    .cta-card .done .i{ color:var(--sunset-ink); }
+    @media (min-width:640px){ .signup-row{ flex-direction:row; } .signup-row .input{ flex:1; } .signup-row .btn{ flex:none; } }
+
+    /* 2.1 Header */
+    .site-header{ position:sticky; top:0; z-index:50; background:rgba(14,23,20,.9); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); }
+    .header-in{ display:flex; align-items:center; gap:16px; min-height:64px; }
+    .logo{ display:inline-flex; align-items:center; gap:10px; min-height:44px; text-decoration:none; font:800 1.125rem var(--display); letter-spacing:-0.02em; }
+    .logo-tile{ width:36px; height:36px; border-radius:10px; background:var(--brand-green); display:grid; place-items:center; flex:none; }
+    .logo-tile svg{ width:24px; height:24px; }
+    .nav{ display:none; }
+    .join-pill{ margin-left:auto; display:inline-flex; align-items:center; min-height:44px; padding:0 18px; border-radius:999px; background:var(--sunset); color:var(--sunset-ink); font-weight:700; text-decoration:none; }
+    @media (min-width:900px){
+      .nav{ display:flex; gap:4px; margin-left:auto; }
+      .nav a{ display:inline-flex; align-items:center; min-height:44px; padding:0 12px; color:var(--text-soft); font-weight:600; text-decoration:none; }
+      .nav a:hover{ color:var(--cream); }
+      .join-pill{ margin-left:8px; }
     }
-    .btn-primary:hover{ transform:scale(1.02); box-shadow:0 8px 26px rgba(107,170,140,0.42); }
-    .btn-primary:active{ transform:scale(0.97); }
-    .btn-ghost{
-      display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.06); color:var(--text);
-      font-weight:600; font-size:0.85rem; padding:12px 22px; border-radius:100px; border:1px solid var(--border);
-      cursor:pointer; transition:background 120ms,transform 120ms; text-decoration:none;
-    }
-    .btn-ghost:hover{ background:rgba(255,255,255,0.12); transform:scale(1.01); }
 
-    .logo{ display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--text); }
-    .logo-mark{ width:38px; height:38px; border-radius:12px; flex-shrink:0; background:var(--green-dk); display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(82,146,122,0.35); }
-    .logo-mark svg{ width:26px; height:26px; }
-    .logo-text{ font-weight:800; font-size:1.14rem; letter-spacing:-0.02em; }
+    /* 2.2 Hero */
+    .hero{ padding-block:36px 72px; }
+    .hero-grid{ display:grid; gap:56px; align-items:center; }
+    .hero h1{ font-size:clamp(2.75rem,11.5vw,5rem); line-height:1; letter-spacing:-0.035em; margin-top:20px; }
+    .hl{ color:var(--sunset); }
+    .hero-sub{ font-size:1.125rem; color:var(--text-soft); margin-top:18px; max-width:32em; }
+    .hero .signup-wrap{ margin-top:28px; max-width:540px; }
+    .text-link{ display:inline-flex; align-items:center; min-height:44px; margin-top:4px; font-weight:700; text-decoration:underline; text-decoration-color:var(--sunset); text-decoration-thickness:2px; text-underline-offset:4px; }
+    @media (min-width:960px){ .hero{ padding-block:72px 112px; } .hero-grid{ grid-template-columns:1.15fr .85fr; gap:64px; } .phone{ width:330px; } }
 
-    nav{ position:fixed; top:0; left:0; right:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:14px 40px; }
-    @media (max-width:600px){ nav{ padding:12px 18px; } .nav-cta{ display:none; } }
+    /* Phone mock: "The Drop" (pure HTML/CSS, no image weight) */
+    .phone{ width:min(300px,80vw); margin-inline:auto; padding:10px; border-radius:46px; background:var(--surface-2); box-shadow:0 0 0 1px var(--line), 0 40px 80px -24px rgba(0,0,0,.7); }
+    .screen{ border-radius:36px; background:var(--cream); color:var(--ink); padding:12px 16px 18px; }
+    .ph-status{ display:flex; justify-content:space-between; align-items:center; font-size:.75rem; font-weight:700; padding:4px 8px 14px; }
+    .ph-notch{ width:72px; height:20px; border-radius:999px; background:var(--ink); }
+    .ph-title{ font:800 1.75rem/1 var(--display); letter-spacing:-0.03em; }
+    .ph-sub{ font-size:.8125rem; color:var(--text-body-light); margin-top:4px; }
+    .ph-paste{ display:flex; align-items:center; gap:8px; margin-top:14px; padding:10px 12px; border:1.5px dashed var(--text-body-light); border-radius:14px; font-size:.75rem; color:var(--text-body-light); }
+    .ph-paste .i{ width:16px; height:16px; }
+    .ph-list{ display:grid; gap:8px; margin-top:12px; }
+    .ph-list li{ display:flex; align-items:center; gap:10px; padding:9px; border:1px solid var(--cream-line); border-radius:14px; }
+    .ph-thumb{ width:38px; height:38px; border-radius:10px; display:grid; place-items:center; flex:none; background:var(--ink); color:var(--sunset); }
+    .ph-list li:nth-child(2) .ph-thumb{ background:var(--brand-green); color:var(--ink); }
+    .ph-list li:nth-child(3) .ph-thumb{ background:var(--sunset); color:var(--sunset-ink); }
+    .ph-list li:nth-child(4) .ph-thumb{ background:var(--green-deep); color:var(--cream); }
+    .ph-thumb .i{ width:18px; height:18px; }
+    .ph-list b{ display:block; font-size:.8125rem; line-height:1.2; }
+    .ph-list small{ font-size:.6875rem; color:var(--text-body-light); }
+    .ph-ok{ margin-left:auto; color:var(--green-deep); width:18px; height:18px; }
+    .ph-cta{ display:flex; align-items:center; justify-content:center; min-height:46px; margin-top:14px; border-radius:14px; background:var(--sunset); color:var(--sunset-ink); font-weight:700; font-size:.9375rem; }
 
-    .hero{ min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:118px 24px 70px; position:relative; overflow:hidden; }
-    .hero::before{
-      content:""; position:absolute; inset:0; z-index:0;
-      background:
-        radial-gradient(ellipse 90% 55% at 50% -12%, rgba(156,203,177,0.20) 0%, transparent 60%),
-        radial-gradient(ellipse 70% 50% at 82% 26%, rgba(143,210,232,0.14) 0%, transparent 60%),
-        radial-gradient(ellipse 80% 70% at 10% 92%, rgba(255,158,91,0.12) 0%, transparent 60%),
-        linear-gradient(180deg,var(--deep) 0%,var(--deep2) 100%);
-    }
-    .hero>*{ position:relative; z-index:1; }
-    .hero-logo{ width:72px; height:72px; border-radius:20px; background:var(--green-dk); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; box-shadow:0 6px 22px rgba(82,146,122,0.4); animation:floaty 5s ease-in-out infinite; }
-    .hero-logo svg{ width:48px; height:48px; }
-    .hero-badge{ display:inline-flex; align-items:center; gap:8px; background:rgba(255,255,255,0.06); border:1px solid var(--border); color:var(--green-lt); font-size:0.8rem; font-weight:600; padding:8px 16px; border-radius:100px; margin-bottom:22px; animation:fadeUp 0.6s ease-out both; }
-    .hero h1{ font-size:clamp(2.6rem,7vw,5rem); font-weight:900; line-height:1.04; letter-spacing:-0.045em; max-width:860px; animation:fadeUp 0.6s 0.1s ease-out both; }
-    .hero-tagline{ font-size:0.95rem; font-weight:600; color:var(--green-lt); letter-spacing:0.02em; margin-top:16px; animation:fadeUp 0.6s 0.15s ease-out both; }
-    .hero-sub{ font-size:clamp(1.05rem,2.6vw,1.26rem); color:var(--muted); max-width:580px; line-height:1.6; margin-top:14px; animation:fadeUp 0.6s 0.2s ease-out both; }
-    .hero-sub strong{ color:var(--text); font-weight:600; }
+    /* 2.3 How it works */
+    .steps{ display:grid; gap:14px; margin-top:36px; }
+    .step{ padding:24px; border-radius:22px; border:1.5px solid var(--cream-line); }
+    .step-n{ width:44px; height:44px; border-radius:12px; background:var(--ink); color:var(--sunset); display:grid; place-items:center; font:800 1.375rem/1 var(--display); }
+    .step h3{ font-size:1.5rem; margin-top:18px; }
+    .step p{ color:var(--text-body-light); margin-top:8px; }
+    @media (min-width:960px){ .steps{ grid-template-columns:repeat(3,1fr); gap:20px; } }
 
-    .form-wrap{ margin-top:32px; width:100%; max-width:500px; animation:fadeUp 0.6s 0.35s ease-out both; }
-    .form-row{ display:flex; gap:8px; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.16); border-radius:100px; padding:7px 7px 7px 22px; align-items:center; }
-    .form-row input{ flex:1; background:transparent; border:none; outline:none; color:var(--text); font-size:1rem; font-family:inherit; min-width:0; }
-    .form-row input::placeholder{ color:var(--muted); }
-    .form-note{ font-size:0.78rem; color:var(--muted); margin-top:12px; text-align:center; }
-    .form-note a{ color:var(--green-lt); text-decoration:none; }
-    .form-success{ display:none; flex-direction:column; align-items:center; gap:8px; padding:22px; background:rgba(79,181,165,0.14); border:1px solid rgba(79,181,165,0.32); border-radius:var(--radius); color:#9FE3D2; font-weight:600; }
+    /* 2.4 Crew mode */
+    .crew-grid{ display:grid; gap:40px; }
+    .chat{ display:grid; gap:14px; padding:20px; border-radius:24px; background:var(--surface); border:1px solid var(--line); }
+    .msg{ max-width:80%; }
+    .msg.me{ justify-self:end; text-align:right; }
+    .bubble{ display:inline-block; padding:10px 14px; border-radius:18px 18px 18px 6px; background:var(--surface-2); font-weight:600; }
+    .me .bubble{ background:var(--brand-green); color:var(--ink); border-radius:18px 18px 6px 18px; }
+    .meta, .seen{ font-size:.8125rem; color:var(--text-muted); margin-top:4px; }
+    .seen{ text-align:right; margin-top:0; }
+    .stat{ display:flex; align-items:center; gap:18px; margin-top:32px; }
+    .stat-n{ font:800 clamp(4rem,19vw,6.5rem)/.9 var(--display); letter-spacing:-0.045em; color:var(--sunset); }
+    .stat p{ color:var(--text-soft); font-size:1.0625rem; }
+    .cards3{ display:grid; gap:14px; margin-top:40px; }
+    .card{ padding:24px; border-radius:22px; background:var(--surface); border:1px solid var(--line); }
+    .ic{ width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background:var(--surface-2); color:var(--green-bright); }
+    .card h3{ font-size:1.375rem; margin-top:16px; }
+    .card p{ color:var(--text-soft); margin-top:8px; }
+    .fn{ margin-top:28px; font-size:.8125rem; color:var(--text-muted); }
+    .fn a{ text-underline-offset:3px; }
+    @media (min-width:960px){ .crew-grid{ grid-template-columns:1fr 1fr; gap:64px; align-items:center; } .cards3{ grid-template-columns:repeat(3,1fr); gap:20px; } }
 
-    /* Store buttons */
-    .store-row{ display:flex; gap:14px; margin-top:24px; flex-wrap:wrap; justify-content:center; animation:fadeUp 0.6s 0.45s ease-out both; }
-    .store-btn{
-      display:inline-flex; align-items:center; gap:12px;
-      background:#000; color:#fff; border:1px solid rgba(255,255,255,0.10);
-      padding:10px 20px 10px 16px; border-radius:14px; text-decoration:none;
-      cursor:pointer; transition:transform 140ms ease-out, background 140ms; font-family:inherit;
-      position:relative; min-width:175px;
-    }
-    .store-btn:hover{ transform:translateY(-2px); background:#181818; }
-    .store-btn:active{ transform:translateY(0); }
-    .store-btn .store-icon{ width:30px; height:30px; flex-shrink:0; }
-    .store-btn .store-text{ display:flex; flex-direction:column; align-items:flex-start; line-height:1.1; text-align:left; }
-    .store-btn .store-small{ font-size:0.65rem; opacity:0.85; letter-spacing:0.01em; }
-    .store-btn .store-big{ font-size:1.05rem; font-weight:700; letter-spacing:-0.01em; margin-top:1px; }
-    .soon-pill{
-      position:absolute; top:-7px; right:-7px;
-      background:linear-gradient(135deg, var(--sun), var(--sun-dk)); color:#fff;
-      font-size:0.55rem; font-weight:800; letter-spacing:0.08em; text-transform:uppercase;
-      padding:3px 7px; border-radius:100px; box-shadow:0 3px 10px rgba(224,122,56,0.45);
-    }
-    .store-divider{ display:flex; align-items:center; gap:10px; margin-top:18px; font-size:0.78rem; color:var(--muted); }
-    .store-divider::before, .store-divider::after{ content:""; flex:1; height:1px; background:var(--border); }
-    @media (max-width:520px){ .store-btn{ min-width:0; flex:1 1 calc(50% - 7px); } }
+    /* 2.5 AI strip */
+    .ai{ background:var(--surface); border-block:1px solid var(--line); }
+    .ai .h2{ margin-top:18px; }
+    .tags{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:24px; }
+    .tags li{ padding:10px 18px; border-radius:999px; background:var(--surface-2); border:1px solid var(--line); font-weight:700; }
 
-    .social-strip{ display:flex; align-items:center; gap:10px; margin-top:26px; font-size:0.85rem; color:var(--muted); animation:fadeUp 0.6s 0.5s ease-out both; flex-wrap:wrap; justify-content:center; }
-    .avatar-stack{ display:flex; }
-    .avatar-stack span{ width:30px; height:30px; border-radius:50%; border:2px solid var(--deep); margin-left:-9px; overflow:hidden; background:#234; display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700; color:#fff; }
-    .avatar-stack span:first-child{ margin-left:0; }
-    .stars{ color:var(--gold); letter-spacing:-2px; }
+    /* 2.6 Quiz */
+    .quiz-card{ margin-top:32px; padding:22px; border-radius:24px; background:var(--surface); border:1px solid var(--line); }
+    .quiz-top{ display:flex; align-items:center; gap:14px; margin-bottom:22px; }
+    .bar{ flex:1; height:8px; border-radius:999px; background:var(--surface-2); overflow:hidden; }
+    .bar span{ display:block; height:100%; width:0; background:var(--sunset); border-radius:inherit; transition:width .3s ease; }
+    .step-txt{ font-size:.875rem; font-weight:700; color:var(--text-muted); white-space:nowrap; }
+    .quiz-q{ font-size:1.5rem; letter-spacing:-0.02em; }
+    .quiz-q:focus{ outline:none; }
+    .quiz-hint{ color:var(--text-muted); margin-top:6px; font-size:.9375rem; }
+    .opts{ display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; }
+    .opt{ position:relative; display:flex; flex-direction:column; gap:4px; min-height:92px; padding:14px 30px 14px 14px; text-align:left; border-radius:16px; border:1.5px solid var(--line); background:var(--surface-2); color:var(--cream); font:inherit; cursor:pointer; transition:border-color .12s ease; }
+    .opt:hover{ border-color:var(--text-muted); }
+    .opt b{ font-size:1rem; line-height:1.25; }
+    .opt small{ font-size:.8125rem; line-height:1.35; color:var(--text-muted); }
+    .opt .i{ display:none; position:absolute; top:12px; right:10px; width:18px; height:18px; color:var(--sunset); }
+    .opt[aria-pressed="true"]{ border-color:var(--sunset); background:rgba(242,169,59,.1); }
+    .opt[aria-pressed="true"] .i{ display:block; }
+    .quiz-nav{ display:flex; justify-content:space-between; align-items:center; gap:10px; margin-top:14px; }
+    .result{ text-align:center; }
+    .type-lead{ font-weight:700; color:var(--green-bright); font-size:1.1875rem; }
+    .type-name{ font:800 clamp(3rem,14vw,4.5rem)/1 var(--display); letter-spacing:-0.035em; color:var(--sunset); margin-top:4px; }
+    .type-name:focus{ outline:none; }
+    .result .desc{ color:var(--text-soft); margin:14px auto 0; max-width:30em; }
+    .result .signup-wrap{ margin:24px auto 0; max-width:540px; text-align:left; }
+    .share-row{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px; }
 
-    section{ padding:84px 24px; }
-    .section-label{ font-size:0.75rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--green-lt); margin-bottom:14px; text-align:center; }
-    .section-h2{ font-size:clamp(2rem,4.5vw,3rem); font-weight:800; letter-spacing:-0.03em; line-height:1.1; max-width:760px; margin:0 auto; text-align:center; }
-    .section-sub{ color:var(--muted); font-size:1.05rem; line-height:1.65; max-width:560px; margin:18px auto 0; text-align:center; }
+    /* 2.7 Tips */
+    .tips{ display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding-inline:20px; margin:32px -20px 0; padding:10px 20px 20px; scrollbar-width:none; }
+    .tips::-webkit-scrollbar{ display:none; }
+    .tip{ flex:0 0 80%; max-width:340px; scroll-snap-align:start; display:flex; flex-direction:column; gap:10px; min-height:230px; padding:24px; border-radius:22px; border:1.5px solid var(--cream-line); }
+    .tip.meme{ background:var(--ink); color:var(--cream); border-color:var(--ink); transform:rotate(-2deg); }
+    .tag{ align-self:flex-start; padding:5px 10px; border-radius:999px; background:var(--ink); color:var(--cream); font-size:.75rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+    .meme .tag{ background:var(--sunset); color:var(--sunset-ink); }
+    .tip h3{ font-size:1.5rem; }
+    .tip p{ color:var(--text-body-light); }
+    .meme p{ color:var(--cream); font-size:1.125rem; font-weight:600; }
+    .tips-form{ margin-top:24px; max-width:560px; }
+    .form-label{ display:block; margin-bottom:12px; font:800 1.25rem/1.2 var(--display); letter-spacing:-0.02em; }
+    @media (min-width:960px){ .tips{ display:grid; grid-template-columns:repeat(3,1fr); overflow:visible; margin-inline:0; padding-inline:0; } .tip{ max-width:none; } }
 
-    /* Quiz */
-    .quiz-section{ background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(156,203,177,0.12), transparent 65%), linear-gradient(180deg,var(--deep2),var(--deep)); }
-    .quiz-wrap{ max-width:660px; margin:40px auto 0; }
-    .quiz-card{ border-radius:26px; padding:34px 30px; box-shadow:0 16px 50px rgba(0,0,0,0.32); }
-    .quiz-progress{ height:6px; border-radius:100px; background:rgba(255,255,255,0.09); overflow:hidden; margin-bottom:26px; }
-    .quiz-progress span{ display:block; height:100%; background:linear-gradient(90deg,var(--green),var(--sky)); width:0%; transition:width 350ms ease-out; }
-    .quiz-q{ font-size:1.4rem; font-weight:800; letter-spacing:-0.02em; text-align:center; margin-bottom:6px; }
-    .quiz-hint{ font-size:0.85rem; color:var(--muted); text-align:center; margin-bottom:24px; }
-    .quiz-options{ display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-    .quiz-opt{ position:relative; display:flex; flex-direction:column; gap:3px; text-align:left; background:rgba(255,255,255,0.04); border:1.5px solid var(--border); border-radius:16px; padding:16px; cursor:pointer; transition:all 140ms ease-out; font-family:inherit; color:var(--text); }
-    .quiz-opt:hover{ background:rgba(255,255,255,0.09); transform:translateY(-2px); }
-    .quiz-opt.selected{ border-color:var(--green); background:rgba(107,170,140,0.13); }
-    .quiz-opt .o-emoji{ font-size:1.5rem; transition:transform 200ms ease-out; }
-    .quiz-opt:hover .o-emoji{ transform:scale(1.15); }
-    .quiz-opt .o-label{ font-weight:700; font-size:0.98rem; }
-    .quiz-opt .o-desc{ font-size:0.77rem; color:var(--muted); line-height:1.4; }
-    .quiz-opt.selected::after{ content:"✓"; position:absolute; top:12px; right:14px; color:var(--green-lt); font-weight:800; font-size:0.9rem; }
-    .quiz-nav{ display:flex; justify-content:space-between; align-items:center; margin-top:22px; }
-    .quiz-back{ background:none; border:none; color:var(--muted); font-size:0.9rem; cursor:pointer; font-family:inherit; padding:8px; }
-    .quiz-back:hover{ color:var(--text); }
-    .quiz-back:disabled{ opacity:0; pointer-events:none; }
-    .quiz-result{ text-align:center; display:none; }
-    .quiz-result .badge-big{ width:90px; height:90px; border-radius:26px; margin:0 auto 18px; display:flex; align-items:center; justify-content:center; font-size:2.7rem; background:linear-gradient(135deg, rgba(156,203,177,0.24), rgba(143,210,232,0.18)); border:1px solid var(--border); animation:pop 0.5s ease-out; }
-    .quiz-result h3{ font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--green-lt); margin-bottom:8px; }
-    .quiz-result .type-name{ font-size:2.1rem; font-weight:900; letter-spacing:-0.03em; margin-bottom:12px; }
-    .quiz-result .type-desc{ font-size:1rem; color:var(--muted); line-height:1.6; max-width:460px; margin:0 auto 26px; }
+    /* 2.8 Referral teaser */
+    .stamp{ width:172px; height:172px; margin:0 auto 32px; display:grid; place-content:center; gap:4px; text-align:center; border-radius:50%; border:3px dashed var(--sunset); box-shadow:inset 0 0 0 7px var(--ink), inset 0 0 0 9px var(--sunset); color:var(--sunset); font-family:var(--display); font-weight:800; transform:rotate(-10deg); }
+    .stamp span{ font-size:.75rem; letter-spacing:.12em; }
+    .stamp strong{ font-size:1.125rem; line-height:1.05; letter-spacing:.02em; }
+    .dots{ display:flex; justify-content:center; gap:36px; margin-top:28px; }
+    .dots li{ position:relative; width:40px; height:40px; border-radius:50%; border:2px dashed var(--text-muted); }
+    .dots li:first-child{ background:var(--sunset); border-color:var(--sunset); border-style:solid; }
+    .dots li+li::before{ content:""; position:absolute; right:calc(100% + 2px); top:50%; width:34px; border-top:2px dashed var(--line); }
+    .refer .pill-dashed{ margin-top:20px; }
 
-    /* Persona cards */
-    .personas{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px; max-width:1040px; margin:48px auto 0; }
-    .persona{ border-radius:var(--radius); overflow:hidden; display:flex; flex-direction:column; transition:transform 200ms ease-out, box-shadow 200ms ease-out; }
-    .persona:hover{ transform:translateY(-6px); box-shadow:0 14px 38px rgba(0,0,0,0.32); }
-    .persona-top{ height:150px; display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden; }
-    .persona-top .big-emoji{ font-size:3.4rem; position:relative; z-index:1; transition:transform 320ms ease-out; }
-    .persona:hover .persona-top .big-emoji{ transform:scale(1.16) rotate(-6deg); }
-    .persona-body{ padding:22px 22px 26px; background:var(--card); border:1px solid var(--border); border-top:none; flex:1; }
-    .persona .tag{ display:inline-block; font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:5px 11px; border-radius:100px; margin-bottom:12px; }
-    .persona h3{ font-size:1.22rem; font-weight:800; letter-spacing:-0.02em; margin-bottom:10px; line-height:1.22; }
-    .persona p{ font-size:0.92rem; color:var(--muted); line-height:1.6; }
+    /* 2.10 FAQ */
+    #faq{ padding-top:0; }
+    .faq{ display:grid; gap:12px; margin-top:20px; }
+    details{ background:var(--surface); border:1px solid var(--line); border-radius:18px; }
+    summary{ display:flex; justify-content:space-between; align-items:center; gap:16px; min-height:60px; padding:16px 20px; font-weight:700; font-size:1.0625rem; cursor:pointer; list-style:none; border-radius:18px; }
+    summary::-webkit-details-marker{ display:none; }
+    summary::after{ content:"+"; font:800 1.5rem/1 var(--display); color:var(--sunset); transition:transform .2s ease; }
+    details[open] summary::after{ transform:rotate(45deg); }
+    details p{ padding:0 20px 20px; color:var(--text-soft); }
+    .ph{ padding:1px 6px; border-radius:6px; background:var(--sunset); color:var(--sunset-ink); font-weight:700; }
 
-    .who{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px; max-width:820px; margin:44px auto 0; }
-    .who-card{ border-radius:18px; padding:24px 16px; text-align:center; transition:transform 180ms ease-out; }
-    .who-card:hover{ transform:translateY(-4px); }
-    .who-card .e{ font-size:1.9rem; display:block; margin-bottom:10px; }
-    .who-card .n{ font-size:0.95rem; font-weight:600; }
+    /* 2.11 Final CTA */
+    .final{ padding-top:24px; }
+    .cta-card{ padding:36px 22px; border-radius:28px; background:var(--sunset); color:var(--sunset-ink); }
+    .cta-card p{ margin-top:12px; font-size:1.0625rem; }
+    .cta-card .signup-wrap{ margin-top:24px; max-width:560px; }
+    @media (min-width:960px){ .cta-card{ padding:64px; } }
 
-    .testimonials{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:960px; margin:48px auto 0; }
-    .testi-card{ border-radius:var(--radius); padding:26px; }
-    .testi-stars{ color:var(--gold); font-size:0.8rem; margin-bottom:12px; }
-    .testi-text{ font-size:0.95rem; line-height:1.65; margin-bottom:18px; }
-    .testi-author{ display:flex; align-items:center; gap:10px; }
-    .testi-avatar{ width:38px; height:38px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:0.9rem; color:white; }
-    .testi-name{ font-size:0.85rem; font-weight:600; }
-    .testi-handle{ font-size:0.75rem; color:var(--muted); }
+    /* 2.12 Footer */
+    .site-footer{ border-top:1px solid var(--line); padding-block:28px 40px; color:var(--text-muted); font-size:.9375rem; }
+    .foot-links{ display:flex; flex-wrap:wrap; gap:0 8px; }
+    .foot-links a{ display:inline-flex; align-items:center; min-height:44px; padding:0 8px; color:var(--text-soft); text-decoration:none; }
+    .foot-links a:hover{ color:var(--cream); text-decoration:underline; }
+    .copy{ margin-top:8px; padding-inline:8px; }
 
-    /* ── SOCIAL SECTION (big & prominent) ── */
-    .social-section{ background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(156,203,177,0.10), transparent 70%), var(--deep2); padding:84px 24px; }
-    .social-cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; max-width:780px; margin:44px auto 0; }
-    .social-card{
-      border-radius:var(--radius); padding:32px 28px;
-      display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px;
-      text-decoration:none; color:var(--text); cursor:pointer;
-      transition:transform 220ms ease-out, box-shadow 220ms ease-out;
-      position:relative; overflow:hidden;
-    }
-    .social-card:hover{ transform:translateY(-6px); box-shadow:0 18px 44px rgba(0,0,0,0.4); }
-    .social-card .platform-icon{
-      width:74px; height:74px; border-radius:22px;
-      display:flex; align-items:center; justify-content:center;
-      box-shadow:0 8px 24px rgba(0,0,0,0.3);
-      transition:transform 300ms ease-out;
-    }
-    .social-card:hover .platform-icon{ transform:scale(1.08) rotate(-4deg); }
-    .social-card.instagram .platform-icon{
-      background:linear-gradient(135deg, #FEDA77 0%, #F58529 25%, #DD2A7B 55%, #8134AF 85%, #515BD4 100%);
-    }
-    .social-card.tiktok .platform-icon{ background:#000; position:relative; }
-    .social-card .platform-icon svg{ width:42px; height:42px; }
-    .social-card .platform-name{ font-size:1.4rem; font-weight:800; letter-spacing:-0.02em; display:flex; align-items:center; gap:8px; }
-    .social-card .handle{ font-size:1rem; color:var(--green-lt); font-weight:600; }
-    .social-card .sub-text{ font-size:0.88rem; color:var(--muted); line-height:1.55; max-width:280px; }
-    .social-card .follow-btn{
-      margin-top:6px;
-      display:inline-flex; align-items:center; gap:6px;
-      padding:11px 24px; border-radius:100px; font-weight:700; font-size:0.92rem;
-      color:#fff; transition:transform 120ms;
-    }
-    .social-card:hover .follow-btn{ transform:scale(1.04); }
-    .social-card.instagram .follow-btn{ background:linear-gradient(135deg, #F58529, #DD2A7B 60%, #8134AF); box-shadow:0 4px 18px rgba(221,42,123,0.4); }
-    .social-card.tiktok .follow-btn{ background:#000; border:1px solid rgba(255,255,255,0.25); box-shadow:0 4px 18px rgba(0,0,0,0.5); }
-    .social-cta-strip{
-      max-width:780px; margin:24px auto 0;
-      text-align:center; font-size:0.92rem; color:var(--muted);
-      padding:18px; background:rgba(255,255,255,0.03); border:1px dashed var(--border); border-radius:16px;
-    }
-    .social-cta-strip strong{ color:var(--text); }
-
-    .cta-section{ text-align:center; max-width:660px; margin:0 auto; padding:96px 24px; }
-    .cta-section h2{ font-size:clamp(2.2rem,5.5vw,3.5rem); font-weight:900; letter-spacing:-0.045em; line-height:1.08; margin-bottom:18px; }
-    .cta-section p{ color:var(--muted); font-size:1.05rem; line-height:1.65; margin-bottom:34px; }
-
-    footer{ text-align:center; padding:34px 24px; border-top:1px solid var(--border); color:var(--muted); font-size:0.8rem; }
-    footer a{ color:var(--muted); text-decoration:none; }
-    footer a:hover{ color:var(--text); }
-    .footer-links{ display:flex; justify-content:center; gap:24px; margin-bottom:12px; flex-wrap:wrap; }
-    .footer-seo{ max-width:680px; margin:14px auto 0; font-size:0.72rem; line-height:1.6; color:rgba(166,191,182,0.5); }
-
-    /* Modal */
-    .modal-overlay{ position:fixed; inset:0; z-index:200; background:rgba(11,38,32,0.72); backdrop-filter:blur(10px); display:none; align-items:center; justify-content:center; padding:20px; animation:fadeIn 0.25s ease-out; }
-    .modal-overlay.open{ display:flex; }
-    .modal-card{ background:linear-gradient(180deg,var(--deep2),var(--deep)); border:1px solid var(--border); border-radius:26px; padding:32px 28px; max-width:460px; width:100%; box-shadow:0 20px 50px rgba(0,0,0,0.5); animation:popIn 0.3s ease-out; position:relative; }
-    .modal-close{ position:absolute; top:14px; right:14px; width:32px; height:32px; border-radius:50%; border:none; background:rgba(255,255,255,0.06); color:var(--muted); font-size:1.1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background 140ms, color 140ms; }
-    .modal-close:hover{ background:rgba(255,255,255,0.12); color:var(--text); }
-    .modal-icon{ width:64px; height:64px; border-radius:18px; background:var(--green-dk); display:flex; align-items:center; justify-content:center; margin:0 auto 16px; box-shadow:0 4px 18px rgba(82,146,122,0.4); }
-    .modal-icon svg{ width:40px; height:40px; }
-    .modal-card h3{ font-size:1.5rem; font-weight:800; letter-spacing:-0.02em; text-align:center; margin-bottom:8px; }
-    .modal-card .sub{ font-size:0.95rem; color:var(--muted); text-align:center; line-height:1.6; margin-bottom:22px; }
-    .modal-card .sub .plat{ color:var(--green-lt); font-weight:600; }
-
-    @keyframes fadeUp{ from{ opacity:0; transform:translateY(20px);} to{ opacity:1; transform:translateY(0);} }
-    @keyframes fadeIn{ from{ opacity:0;} to{ opacity:1;} }
-    @keyframes popIn{ from{ opacity:0; transform:scale(0.92);} to{ opacity:1; transform:scale(1);} }
-    @keyframes pop{ 0%{ transform:scale(0.6); opacity:0;} 60%{ transform:scale(1.08);} 100%{ transform:scale(1); opacity:1;} }
-    @keyframes floaty{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-7px);} }
-    @media (max-width:640px){
-      .form-row{ flex-direction:column; border-radius:var(--radius); padding:12px; }
-      .form-row input{ padding:6px 10px; text-align:center; }
-      .form-row .btn-primary{ width:100%; }
-      .personas,.testimonials,.social-cards{ grid-template-columns:1fr; }
-      .quiz-options{ grid-template-columns:1fr; }
-    }
+    @media (min-width:960px){ section{ padding-block:112px; } .wrap{ padding-inline:32px; } .final{ padding-top:32px; } }
   </style>
 </head>
 <body>
@@ -290,425 +277,316 @@
       <circle cx="33" cy="21" r="2.4" fill="#fff"/>
       <path d="M30 16 l4 1 -1 4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
     </symbol>
-    <symbol id="apple-logo" viewBox="0 0 24 24">
-      <path fill="#fff" d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
-    </symbol>
-    <symbol id="googleplay-logo" viewBox="0 0 24 24">
-      <path fill="#00C2FF" d="M3.5 2.5v19l10-9.5z"/>
-      <path fill="#FFD700" d="M13.5 12L17 8.5 6 2.5z"/>
-      <path fill="#FF3D3D" d="M13.5 12L6 21.5l11-6z"/>
-      <path fill="#00D26B" d="M13.5 12L17 15.5l3.5-2c1.3-.8 1.3-2.2 0-3l-3.5-2z"/>
-    </symbol>
-    <!-- Instagram logo (camera) -->
-    <symbol id="ig-logo" viewBox="0 0 24 24">
-      <path fill="#fff" d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41-.56-.22-.96-.48-1.38-.9a3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 5.4a4.44 4.44 0 1 0 0 8.88 4.44 4.44 0 0 0 0-8.88zm0 7.32a2.88 2.88 0 1 1 0-5.76 2.88 2.88 0 0 1 0 5.76zm5.65-7.5a1.04 1.04 0 1 1-2.08 0 1.04 1.04 0 0 1 2.08 0z"/>
-    </symbol>
-    <!-- TikTok logo (music note) -->
-    <symbol id="tt-logo" viewBox="0 0 24 24">
-      <path fill="#25F4EE" d="M16.6 5.82c-1.34-.87-2.18-2.4-2.18-4.13h-2.99v13.65a2.5 2.5 0 1 1-1.77-2.4V9.85a5.6 5.6 0 1 0 4.76 5.54V9.4a7.42 7.42 0 0 0 4.5 1.54V7.97a4.36 4.36 0 0 1-2.32-2.15z"/>
-      <path fill="#FE2C55" d="M17.6 5.82c-1.34-.87-2.18-2.4-2.18-4.13h-2.99v13.65a2.5 2.5 0 1 1-1.77-2.4V9.85a5.6 5.6 0 1 0 4.76 5.54V9.4a7.42 7.42 0 0 0 4.5 1.54V7.97a4.36 4.36 0 0 1-2.32-2.15z" transform="translate(-1 0)" opacity="0.8"/>
-      <path fill="#fff" d="M16.1 5.82c-1.34-.87-2.18-2.4-2.18-4.13h-2.99v13.65a2.5 2.5 0 1 1-1.77-2.4V9.85a5.6 5.6 0 1 0 4.76 5.54V9.4a7.42 7.42 0 0 0 4.5 1.54V7.97a4.36 4.36 0 0 1-2.32-2.15z"/>
-    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.53 13.53 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/><path d="m2 2 20 20"/></symbol>
+    <symbol id="i-swipe" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
   </svg>
 
-  <nav class="glass">
-    <a href="#top" class="logo">
-      <span class="logo-mark"><svg><use href="#gtt-globe"/></svg></span>
-      <span class="logo-text">Go To Travel</span>
-    </a>
-    <a href="#quiz" class="btn-primary nav-cta" style="padding:10px 22px;font-size:0.875rem;">Find your traveler type</a>
-  </nav>
-
-  <!-- HERO -->
-  <section class="hero" id="top">
-    <div class="hero-logo"><svg><use href="#gtt-globe"/></svg></div>
-    <div class="hero-badge">🌍 AI Trip Planner · now in beta</div>
-    <h1>Finally, a trip planner<br />that knows <span class="gradient-text">your people.</span></h1>
-    <p class="hero-tagline">The AI Trip Planner built around how you travel</p>
-    <p class="hero-sub">
-      Family trips that actually work for the kids. Couples' escapes for the adventurous ones.
-      Group trips without the chaos. <strong>Built around who you travel with</strong> — be first in line.
-    </p>
-
-    <div class="form-wrap">
-      <div class="form-row" id="formRow">
-        <input type="email" id="emailInput" placeholder="Enter your email" autocomplete="email" />
-        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
-        <button class="btn-primary" onclick="handleSubmit('formRow','successMsg','emailInput')">Get early access</button>
-      </div>
-      <div class="form-success" id="successMsg">
-        <span style="font-size:1.6rem;">🌴</span>
-        <span>You're on the list — adventure incoming.</span>
-        <a href="#quiz" class="btn-ghost" style="margin-top:6px;">Find your traveler type →</a>
-      </div>
-      <p class="form-note">Free early access · No spam, ever · Or <a href="#quiz">take the 30-second quiz</a></p>
-
-      <div class="store-divider">or get notified when it's live</div>
-      <div class="store-row">
-        <button class="store-btn" onclick="openPlatformModal('iOS')" aria-label="Get notified for iOS launch">
-          <span class="soon-pill">Coming soon</span>
-          <svg class="store-icon"><use href="#apple-logo"/></svg>
-          <span class="store-text"><span class="store-small">Download on the</span><span class="store-big">App Store</span></span>
-        </button>
-        <button class="store-btn" onclick="openPlatformModal('Android')" aria-label="Get notified for Android launch">
-          <span class="soon-pill">Coming soon</span>
-          <svg class="store-icon"><use href="#googleplay-logo"/></svg>
-          <span class="store-text"><span class="store-small">Get it on</span><span class="store-big">Google Play</span></span>
-        </button>
-      </div>
+  <!-- 2.1 Header -->
+  <header class="site-header">
+    <div class="wrap header-in">
+      <a href="#top" class="logo"><span class="logo-tile" aria-hidden="true"><svg><use href="#gtt-globe"/></svg></span>Go To Travel</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#crew">Crew mode</a>
+        <a href="#quiz">Traveler quiz</a>
+      </nav>
+      <a href="#join" class="join-pill">Join beta</a>
     </div>
+  </header>
 
-    <div class="social-strip">
-      <div class="avatar-stack">
-        <span style="background:linear-gradient(135deg,#9CCBB1,#52927A);">S</span>
-        <span style="background:linear-gradient(135deg,#4FB5A5,#3E8DAE);">M</span>
-        <span style="background:linear-gradient(135deg,#8FD2E8,#3E8DAE);">A</span>
-        <span style="background:linear-gradient(135deg,#FF9E5B,#E07A38);">J</span>
-      </div>
-      <span class="stars">★★★★★</span>
-      <span>Travelers are already lining up</span>
-    </div>
-  </section>
-
-  <!-- QUIZ -->
-  <section id="quiz" class="quiz-section">
-    <div class="section-label">⭐ The traveler quiz</div>
-    <h2 class="section-h2">What kind of traveler are you?</h2>
-    <p class="section-sub">Four quick taps. Discover your traveler type — and we'll set your trips to match the moment you join.</p>
-
-    <div class="quiz-wrap">
-      <div class="quiz-card glass">
-        <div class="quiz-progress"><span id="quizBar"></span></div>
-        <div id="quizBody"></div>
-        <div class="quiz-result" id="quizResult">
-          <div class="badge-big" id="resultEmoji">🧭</div>
-          <h3>You're a</h3>
-          <div class="type-name gradient-text" id="resultName">Trailblazer</div>
-          <p class="type-desc" id="resultDesc"></p>
-          <div class="form-wrap" style="margin:0 auto;">
-            <div class="form-row" id="formRowQuiz">
-              <input type="email" id="emailInputQuiz" placeholder="Enter your email to save your type" autocomplete="email" />
-              <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
-              <button class="btn-primary" onclick="handleQuizSubmit()">Save &amp; join</button>
-            </div>
-            <div class="form-success" id="successMsgQuiz">
-              <span style="font-size:1.6rem;">🌴</span>
-              <span id="quizSuccessText">You're in! Your traveler type is saved for launch.</span>
-            </div>
-            <p class="form-note">We'll set your trips to match — you can always change it in the app.</p>
+  <main>
+    <!-- 2.2 Hero -->
+    <section id="top" class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="pill"><span class="dot" aria-hidden="true"></span>iOS beta · invites going out in waves</p>
+          <h1>Your TikTok saves deserve an <span class="hl">actual trip.</span></h1>
+          <p class="hero-sub">Drop in the places you've saved. We find the real spots, build the days, and get your crew to agree. Then you go.</p>
+          <div id="join" class="signup-wrap">
+            <form class="signup" data-source="hero" novalidate>
+              <label class="sr-only" for="email-hero">Email address</label>
+              <div class="signup-row">
+                <input class="input" id="email-hero" type="email" name="email" autocomplete="email" placeholder="Enter your email" aria-describedby="err-hero" required />
+                <button class="btn btn-sunset" type="submit">Get early access</button>
+              </div>
+              <p class="err" id="err-hero" role="alert"></p>
+              <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </form>
+            <p class="done" tabindex="-1" role="status" hidden><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span></span></p>
+            <p class="fine">Free · One email a week, max · Unsubscribe anytime</p>
           </div>
-          <button class="quiz-back" style="margin-top:14px;" onclick="restartQuiz()">↺ Retake the quiz</button>
+          <a class="text-link" href="#quiz">Or find your traveler type in 30 seconds →</a>
         </div>
-        <div class="quiz-nav" id="quizNav">
-          <button class="quiz-back" id="quizBackBtn" onclick="quizBack()" disabled>← Back</button>
-          <span style="font-size:0.8rem;color:var(--muted);" id="quizStep">1 of 4</span>
+
+        <div class="phone" role="img" aria-label="Preview of The Drop screen in the Go To Travel app: four saved Lisbon places, each matched to a real spot.">
+          <div class="screen">
+            <div class="ph-status"><span>9:41</span><span class="ph-notch"></span><span>100%</span></div>
+            <p class="ph-title">The Drop</p>
+            <p class="ph-sub">Lisbon · 4 places found</p>
+            <p class="ph-paste"><svg class="i"><use href="#i-link"/></svg>Paste a TikTok, Reel or Maps link</p>
+            <ul class="ph-list">
+              <li><span class="ph-thumb"><svg class="i"><use href="#i-pin"/></svg></span><span><b>Time Out Market Lisboa</b><small>Cais do Sodré · Food hall</small></span><svg class="i ph-ok"><use href="#i-check"/></svg></li>
+              <li><span class="ph-thumb"><svg class="i"><use href="#i-pin"/></svg></span><span><b>Pastéis de Belém</b><small>Belém · Bakery</small></span><svg class="i ph-ok"><use href="#i-check"/></svg></li>
+              <li><span class="ph-thumb"><svg class="i"><use href="#i-pin"/></svg></span><span><b>Miradouro da Senhora do Monte</b><small>Graça · Viewpoint</small></span><svg class="i ph-ok"><use href="#i-check"/></svg></li>
+              <li><span class="ph-thumb"><svg class="i"><use href="#i-pin"/></svg></span><span><b>LX Factory</b><small>Alcântara · Shops &amp; cafés</small></span><svg class="i ph-ok"><use href="#i-check"/></svg></li>
+            </ul>
+            <p class="ph-cta">Build the days</p>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- 2.3 How it works -->
+    <section id="how" class="light">
+      <div class="wrap">
+        <p class="eyebrow">How it works</p>
+        <h2 class="h2">From saved to boarded in three moves.</h2>
+        <ol class="steps">
+          <li class="step"><span class="step-n" aria-hidden="true">1</span><h3>Drop it</h3><p>Paste a TikTok, Reel or Maps link. Or a screenshot.</p></li>
+          <li class="step"><span class="step-n" aria-hidden="true">2</span><h3>We check it</h3><p>Every place is matched to a real spot with real hours. No made-up restaurants.</p></li>
+          <li class="step"><span class="step-n" aria-hidden="true">3</span><h3>Go together</h3><p>Your crew votes, the plan locks, and everyone knows where lunch is.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 2.4 Crew mode -->
+    <section id="crew">
+      <div class="wrap">
+        <div class="crew-grid">
+          <div>
+            <p class="eyebrow">Crew mode</p>
+            <h2 class="h2">The group chat is where trips go to die.</h2>
+            <div class="stat">
+              <span class="stat-n">76%</span>
+              <p>of proposed group trips never happen.<sup>1</sup> Crew mode gets yours out of the chat.</p>
+            </div>
+          </div>
+          <div class="chat">
+            <div class="msg"><p class="bubble">we should do Lisbon!!</p><p class="meta">Sam · March</p></div>
+            <div class="msg me"><p class="bubble">omg YES</p><p class="meta">Priya · March</p></div>
+            <div class="msg"><p class="bubble">ok so who's booking</p><p class="meta">Sam · September</p></div>
+            <p class="seen">Seen by 7</p>
+          </div>
+        </div>
+        <ul class="cards3">
+          <li class="card"><span class="ic" aria-hidden="true"><svg class="i"><use href="#i-eye-off"/></svg></span><h3>Private vibe check</h3><p>Everyone sets their budget and pace privately. The group only sees the overlap. No awkward money talk.</p></li>
+          <li class="card"><span class="ic" aria-hidden="true"><svg class="i"><use href="#i-swipe"/></svg></span><h3>Swipe to vote</h3><p>Four of five are in? That's a yes.</p></li>
+          <li class="card"><span class="ic" aria-hidden="true"><svg class="i"><use href="#i-lock"/></svg></span><h3>Lock it in</h3><p>One tap turns the votes into the plan, and everyone gets it.</p></li>
+        </ul>
+        <p class="fn">1. <a href="https://www.theautochannel.com/news/2026/07/14/1691839-survey-finds-76-group-trips-never-leave-chat-cruisehuddle-expands.html" target="_blank" rel="noopener">Talker Research for Discover Puerto Rico, survey of 2,000 U.S. women, July 2026.</a></p>
+      </div>
+    </section>
+
+    <!-- 2.5 AI strip -->
+    <section class="ai" aria-labelledby="ai-h">
+      <div class="wrap narrow center">
+        <p class="pill pill-dashed">Coming soon</p>
+        <h2 class="h2" id="ai-h">Plan with any AI. Live it here.</h2>
+        <p class="lede">Brainstorming in ChatGPT, Claude or Meta Muse? Send the plan to Go To Travel and it shows up as a real trip your crew can use.</p>
+        <ul class="tags"><li>ChatGPT</li><li>Claude</li><li>Meta Muse</li></ul>
+      </div>
+    </section>
+
+    <!-- 2.6 Traveler quiz -->
+    <section id="quiz">
+      <div class="wrap narrow">
+        <p class="eyebrow">The 30-second quiz</p>
+        <h2 class="h2">What kind of traveler are you?</h2>
+        <p class="lede">Four taps. Get your traveler type, and your first trip is tuned to it the day you join.</p>
+        <div class="quiz-card">
+          <div class="quiz-top" id="quizTop"><div class="bar" aria-hidden="true"><span id="quizBar"></span></div><span class="step-txt" id="quizStep">1 of 4</span></div>
+          <div id="quizBody"></div>
+          <div class="quiz-nav" id="quizNav">
+            <button type="button" class="link-btn" id="quizBackBtn" disabled>← Back</button>
+            <button type="button" class="btn btn-sunset" id="quizNext" hidden>Continue</button>
+          </div>
+          <div class="result" id="quizResult" hidden>
+            <p class="type-lead" id="resultLead">You're a</p>
+            <h3 class="type-name" id="resultName" tabindex="-1">Trailblazer</h3>
+            <p class="desc" id="resultDesc"></p>
+            <div class="signup-wrap">
+              <form class="signup" data-source="quiz" novalidate>
+                <label class="sr-only" for="email-quiz">Email address</label>
+                <div class="signup-row">
+                  <input class="input" id="email-quiz" type="email" name="email" autocomplete="email" placeholder="Enter your email to save your type" aria-describedby="err-quiz" required />
+                  <button class="btn btn-sunset" type="submit">Save &amp; join</button>
+                </div>
+                <p class="err" id="err-quiz" role="alert"></p>
+                <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+              </form>
+              <p class="done" tabindex="-1" role="status" hidden><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span></span></p>
+              <p class="fine">We'll set your trips to match — you can always change it in the app.</p>
+            </div>
+            <div class="share-row">
+              <button type="button" class="btn btn-ghost" id="shareBtn"><svg class="i" aria-hidden="true"><use href="#i-share"/></svg>Share my type</button>
+            </div>
+            <button type="button" class="link-btn" id="retakeBtn">Retake the quiz</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.7 Steal these -->
+    <section id="tips" class="light">
+      <div class="wrap">
+        <p class="eyebrow">Steal these</p>
+        <h2 class="h2">Travel tips your group chat needs.</h2>
+        <ul class="tips" tabindex="0" aria-label="Travel tips, scroll sideways for more">
+          <li class="tip meme"><span class="tag">Meme</span><p>Me: let's keep this trip chill.</p><p>Also me: 14 stops, 23,000 steps, one croissant eaten while walking.</p></li>
+          <li class="tip"><span class="tag">Tip</span><h3>The 3-2-1 day.</h3><p>Three must-dos, two maybes, one lazy afternoon. You'll do more by planning less.</p></li>
+          <li class="tip"><span class="tag">Tip</span><h3>Budget before destination.</h3><p>Agree on a money range first, then pick the place. Saves the friendship.</p></li>
+        </ul>
+        <div class="signup-wrap tips-form">
+          <form class="signup" data-source="tips" novalidate>
+            <label class="form-label" for="email-tips">One tip like this, every Friday.</label>
+            <div class="signup-row">
+              <input class="input" id="email-tips" type="email" name="email" autocomplete="email" placeholder="Enter your email" aria-describedby="err-tips" required />
+              <button class="btn btn-dark" type="submit">Send me Friday tips</button>
+            </div>
+            <p class="err" id="err-tips" role="alert"></p>
+            <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+          </form>
+          <p class="done" tabindex="-1" role="status" hidden><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span></span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.8 Referral teaser (mechanics: W6 backend not built yet, shown as Coming soon) -->
+    <section id="refer" class="refer">
+      <div class="wrap narrow center">
+        <p class="stamp" role="img" aria-label="Founding Traveler stamp: Go To Travel, 2026"><span>GO TO TRAVEL</span><strong>FOUNDING<br />TRAVELER</strong><span>2026</span></p>
+        <h2 class="h2">Skip the line. Bring your crew.</h2>
+        <p class="lede">Invite 3 friends and you jump ahead on the waitlist, plus a Founding Traveler stamp on your profile forever.</p>
+        <ol class="dots" aria-hidden="true"><li></li><li></li><li></li></ol>
+        <p class="pill pill-dashed">Coming soon</p>
+      </div>
+    </section>
+
+    <!-- 2.9 Testimonials: removed (not confirmed as real, approved quotes) -->
+
+    <!-- 2.10 FAQ -->
+    <section id="faq">
+      <div class="wrap narrow">
+        <h2 class="eyebrow">FAQ</h2>
+        <div class="faq">
+          <details><summary>Does it really work with TikTok?</summary><p>Yes. Paste any TikTok link or screenshot and we pull out the real places in it.</p></details>
+          <details><summary>Is it free?</summary><p>Early access is free. <span class="ph">[PLACEHOLDER: pricing after beta — ask Pavan]</span></p></details>
+          <details><summary>When do I get in?</summary><p>The iOS beta opens to the waitlist in waves. Invite friends to move up.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.11 Final CTA -->
+    <section class="final">
+      <div class="wrap">
+        <div class="cta-card">
+          <h2 class="h2">Your saves are waiting.</h2>
+          <p>Be first in when the beta opens. Bring the crew.</p>
+          <div class="signup-wrap">
+            <form class="signup" data-source="footer" novalidate>
+              <label class="sr-only" for="email-final">Email address</label>
+              <div class="signup-row">
+                <input class="input" id="email-final" type="email" name="email" autocomplete="email" placeholder="Enter your email" aria-describedby="err-final" required />
+                <button class="btn btn-dark" type="submit">Get early access</button>
+              </div>
+              <p class="err" id="err-final" role="alert"></p>
+              <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
+            </form>
+            <p class="done" tabindex="-1" role="status" hidden><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 2.12 Footer -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <ul class="foot-links">
+        <li><a href="https://www.tiktok.com/@gototravelapp" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://www.instagram.com/gototravelapp" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="mailto:hello@gototravelapp.com">hello@gototravelapp.com</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+        <li><a href="/terms.html">Terms</a></li>
+      </ul>
+      <p class="copy">© 2026 Go To Travel</p>
     </div>
-  </section>
-
-  <!-- PERSONA CARDS -->
-  <section style="background:linear-gradient(180deg,var(--deep2),var(--deep));">
-    <div class="section-label">However you travel</div>
-    <h2 class="section-h2">One planner. Every kind of trip.</h2>
-    <p class="section-sub">The AI shapes the trip around the version of you that's going — and who's coming along.</p>
-
-    <div class="personas">
-      <div class="persona">
-        <div class="persona-top" style="background:linear-gradient(135deg, rgba(156,203,177,0.30), rgba(82,146,122,0.14));">
-          <span class="big-emoji">👨‍👩‍👧‍👦</span>
-        </div>
-        <div class="persona-body">
-          <span class="tag" style="background:rgba(156,203,177,0.88); color:#0a2418;">For families</span>
-          <h3>Family trips, finally fun for everyone 🧸</h3>
-          <p>Kid-friendly restaurants, the right parks, days that fit little legs and nap times. The smoothest family trip you've planned yet.</p>
-        </div>
-      </div>
-      <div class="persona">
-        <div class="persona-top" style="background:linear-gradient(135deg, rgba(79,181,165,0.30), rgba(62,141,174,0.14));">
-          <span class="big-emoji">🧗</span>
-        </div>
-        <div class="persona-body">
-          <span class="tag" style="background:rgba(79,181,165,0.90); color:#06241f;">For couples</span>
-          <h3>Adventurous escapes, just the two of you ❤️‍🔥</h3>
-          <p>Curated restaurants and the kind of activities you'll actually remember — as adventurous, or as easy, as you both want it.</p>
-        </div>
-      </div>
-      <div class="persona">
-        <div class="persona-top" style="background:linear-gradient(135deg, rgba(143,210,232,0.30), rgba(255,158,91,0.16));">
-          <span class="big-emoji">🥂</span>
-        </div>
-        <div class="persona-body">
-          <span class="tag" style="background:rgba(143,210,232,0.92); color:#06283a;">For groups</span>
-          <h3>Group trips without the chaos 🗺️</h3>
-          <p>Plan it together, end the confusion, and make sure everyone knows where and when to show up for lunch. Big groups, zero stress.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY YOU'LL LOVE IT -->
-  <section style="background:linear-gradient(180deg,var(--deep),var(--deep2));">
-    <div class="section-label">Why you'll love it</div>
-    <h2 class="section-h2">Travel planning, finally off your plate</h2>
-    <p class="section-sub">No more 40 open tabs, abandoned spreadsheets, or group chats that go nowhere. Just a trip that comes together — and feels like it was made for you.</p>
-    <div class="who">
-      <div class="who-card glass" style="border-top:3px solid var(--green-lt);"><span class="e">👨‍👩‍👧‍👦</span><span class="n">Families</span></div>
-      <div class="who-card glass" style="border-top:3px solid var(--teal);"><span class="e">💑</span><span class="n">Couples</span></div>
-      <div class="who-card glass" style="border-top:3px solid var(--sky);"><span class="e">🥂</span><span class="n">Friend groups</span></div>
-      <div class="who-card glass" style="border-top:3px solid var(--sun);"><span class="e">🌍</span><span class="n">Solo travelers</span></div>
-    </div>
-  </section>
-
-  <!-- ⭐⭐⭐ BIG SOCIAL SECTION ⭐⭐⭐ -->
-  <section id="social" class="social-section">
-    <div class="section-label">🤳 Join the journey</div>
-    <h2 class="section-h2">Follow us for the inside scoop</h2>
-    <p class="section-sub">Daily travel inspiration, behind-the-scenes of the build, and early access drops. Be part of the community before launch day.</p>
-
-    <div class="social-cards">
-      <a href="https://www.instagram.com/gototravelapp" target="_blank" rel="noopener" class="social-card instagram glass" aria-label="Follow Go To Travel on Instagram">
-        <div class="platform-icon"><svg><use href="#ig-logo"/></svg></div>
-        <div class="platform-name">Instagram <span>📸</span></div>
-        <div class="handle">@gototravelapp</div>
-        <div class="sub-text">Trip inspiration, traveler stories, and the corners of the world we can't stop talking about.</div>
-        <div class="follow-btn">Follow on Instagram →</div>
-      </a>
-      <a href="https://www.tiktok.com/@gototravelapp" target="_blank" rel="noopener" class="social-card tiktok glass" aria-label="Follow Go To Travel on TikTok">
-        <div class="platform-icon"><svg><use href="#tt-logo"/></svg></div>
-        <div class="platform-name">TikTok <span>🎬</span></div>
-        <div class="handle">@gototravelapp</div>
-        <div class="sub-text">Trip ideas, planning hacks, and the kind of "save for later" content your wishlist was made for.</div>
-        <div class="follow-btn">Follow on TikTok →</div>
-      </a>
-    </div>
-
-    <div class="social-cta-strip">
-      💌 <strong>Follow + tag us</strong> in your travel posts — early followers get exclusive sneak peeks and we'll feature the best trips on the app at launch.
-    </div>
-  </section>
-
-  <!-- REVIEWS -->
-  <section>
-    <div class="section-label">Early reviews</div>
-    <h2 class="section-h2">The first travelers are hooked</h2>
-    <div class="testimonials">
-      <div class="testi-card glass">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Honestly the first time planning a family trip didn't end in a fight. Every day just fit the kids — and we did the whole thing together in one sitting."</p>
-        <div class="testi-author"><div class="testi-avatar" style="background:var(--green-dk);">S</div><div><div class="testi-name">Sarah M.</div><div class="testi-handle">Family travel · beta tester</div></div></div>
-      </div>
-      <div class="testi-card glass">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Our anniversary trip felt completely us — the restaurants, the hikes, all of it. Like someone who knew our taste planned the whole thing."</p>
-        <div class="testi-author"><div class="testi-avatar" style="background:var(--teal);">M</div><div><div class="testi-name">Maya &amp; Dan</div><div class="testi-handle">Couple's escape · beta tester</div></div></div>
-      </div>
-      <div class="testi-card glass">
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">"Eight of us, one trip, zero chaos. Everyone finally knew where to be and when. I sent the plan to a friend and she copied the whole thing."</p>
-        <div class="testi-author"><div class="testi-avatar" style="background:var(--ocean);">A</div><div><div class="testi-name">Anna K.</div><div class="testi-handle">Group traveler · beta tester</div></div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
-  <section style="background:radial-gradient(ellipse 70% 60% at 50% 0%, rgba(156,203,177,0.14), transparent 60%), var(--deep);">
-    <div class="cta-section">
-      <div class="hero-badge" style="margin:0 auto 24px;">🚀 Doors open soon</div>
-      <h2>Your next trip is<br /><span class="gradient-text">already waiting.</span></h2>
-      <p>Join the waitlist for the AI Trip Planner built around your people. Be among the first to plan a trip the new way — however you travel.</p>
-      <div class="form-wrap" style="margin:0 auto;">
-        <div class="form-row" id="formRow2">
-          <input type="email" id="emailInput2" placeholder="Enter your email" autocomplete="email" />
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
-          <button class="btn-primary" onclick="handleSubmit('formRow2','successMsg2','emailInput2')">Get early access</button>
-        </div>
-        <div class="form-success" id="successMsg2"><span style="font-size:1.6rem;">🌴</span><span>You're in. See you at launch!</span></div>
-        <p class="form-note">Free early access · No spam, ever</p>
-
-        <div class="store-divider">or pick your platform</div>
-        <div class="store-row">
-          <button class="store-btn" onclick="openPlatformModal('iOS')" aria-label="Get notified for iOS launch">
-            <span class="soon-pill">Coming soon</span>
-            <svg class="store-icon"><use href="#apple-logo"/></svg>
-            <span class="store-text"><span class="store-small">Download on the</span><span class="store-big">App Store</span></span>
-          </button>
-          <button class="store-btn" onclick="openPlatformModal('Android')" aria-label="Get notified for Android launch">
-            <span class="soon-pill">Coming soon</span>
-            <svg class="store-icon"><use href="#googleplay-logo"/></svg>
-            <span class="store-text"><span class="store-small">Get it on</span><span class="store-big">Google Play</span></span>
-          </button>
-        </div>
-      </div>
-
-      <div style="margin-top:30px;">
-        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:14px;">Already love the brand? Come hang out 👇</p>
-        <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap;">
-          <a href="https://www.instagram.com/gototravelapp" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(221,42,123,0.4);">
-            <svg style="width:16px;height:16px;"><use href="#ig-logo"/></svg> Instagram @gototravelapp
-          </a>
-          <a href="https://www.tiktok.com/@gototravelapp" target="_blank" rel="noopener" class="btn-ghost" style="border-color:rgba(254,44,85,0.4);">
-            <svg style="width:16px;height:16px;"><use href="#tt-logo"/></svg> TikTok @gototravelapp
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div style="margin-bottom:18px;"><span class="logo" style="justify-content:center;"><span class="logo-mark" style="width:30px;height:30px;border-radius:9px;"><svg><use href="#gtt-globe"/></svg></span><span class="logo-text" style="font-size:1rem;">Go To Travel</span></span></div>
-    <div class="footer-links">
-      <a href="mailto:hello@gototravelapp.com">hello@gototravelapp.com</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms.html">Terms</a>
-      <a href="https://www.instagram.com/gototravelapp" target="_blank">Instagram</a>
-      <a href="https://www.tiktok.com/@gototravelapp" target="_blank">TikTok</a>
-    </div>
-    <p>© 2026 Go To Travel · gototravelapp.com</p>
-    <p class="footer-seo">Go To Travel is an AI trip planner and travel itinerary app that builds personalized, day-by-day trips around your family, your budget, and your travel style — for family vacations, couples' getaways, group trips, and solo adventures.</p>
   </footer>
 
-  <!-- PLATFORM MODAL -->
-  <div class="modal-overlay" id="platformModal" onclick="if(event.target===this) closePlatformModal()">
-    <div class="modal-card">
-      <button class="modal-close" onclick="closePlatformModal()" aria-label="Close">✕</button>
-      <div class="modal-icon"><svg><use href="#gtt-globe"/></svg></div>
-      <h3 id="modalTitle">We're almost there!</h3>
-      <p class="sub">Go To Travel is launching on <span class="plat" id="modalPlatform">iOS</span> soon. Drop your email and we'll let you know the moment it's live — and you'll skip the queue for early access.</p>
-      <div class="form-wrap" style="margin:0 auto;">
-        <div class="form-row" id="formRowModal">
-          <input type="email" id="emailInputModal" placeholder="Enter your email" autocomplete="email" />
-          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;" />
-          <button class="btn-primary" onclick="handleModalSubmit()">Notify me</button>
-        </div>
-        <div class="form-success" id="successMsgModal"><span style="font-size:1.6rem;">🌴</span><span id="modalSuccessText">You're on the list!</span></div>
-        <p class="form-note">No spam, ever · Unsubscribe anytime</p>
-      </div>
-    </div>
-  </div>
-
   <script>
-    function isValidEmail(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e); }
-    async function saveEmail(email, extra){
-      // Routes through the public join-waitlist edge function. The
-      // Supabase anon key is intentionally NOT used here; the table is
-      // RLS-locked with no policies, so the function (with the service
-      // role) is the only write path. Honeypot field name === 'website'.
-      const FN_URL = 'https://zkwamqtnaegvlptzdqxn.supabase.co/functions/v1/join-waitlist';
-      const params = new URLSearchParams(window.location.search);
-      const utm = {
-        utm_source:   params.get('utm_source')   || null,
-        utm_medium:   params.get('utm_medium')   || null,
-        utm_campaign: params.get('utm_campaign') || null,
-      };
-      try {
-        const res = await fetch(FN_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, ...utm, ...(extra||{}) }),
-        });
-        if (!res.ok) {
-          // The success UI has already flipped optimistically — don't
-          // re-flip it here. Just log so failures are visible in
-          // console + the edge function logs.
-          const data = await res.json().catch(()=>({}));
-          console.error('[waitlist] save failed:', res.status, data);
-        }
-      } catch (e) {
-        console.error('[waitlist] network error:', e);
-      }
-      if(typeof gtag!=='undefined'){ gtag('event','sign_up',{ method: extra?.platform ? 'store_button' : (extra?.traveler_type ? 'quiz' : 'waitlist'), platform: extra?.platform || null }); }
-    }
-    // Read the honeypot value for a given form row. Real users never
-    // touch the hidden input; bots scrape every field, fill them all,
-    // and trip the silent-accept branch on the server.
-    function honeypotFor(rowId){ return document.querySelector(`#${rowId} input[name="website"]`)?.value || ''; }
-    function flagInvalid(input){ input.style.color='#FF9E5B'; const ph=input.placeholder; input.value=''; input.placeholder='Please enter a valid email'; setTimeout(()=>{ input.style.color=''; input.placeholder=ph; },2000); }
-    function handleSubmit(rowId,msgId,inputId){ const row=document.getElementById(rowId),msg=document.getElementById(msgId),input=document.getElementById(inputId); const email=input.value.trim(); if(!isValidEmail(email)){ flagInvalid(input); return; } saveEmail(email,{ website: honeypotFor(rowId) }); row.style.display='none'; msg.style.display='flex'; }
-    ['emailInput','emailInput2'].forEach(id=>{ const el=document.getElementById(id); if(el) el.addEventListener('keydown',e=>{ if(e.key==='Enter'){ id==='emailInput'?handleSubmit('formRow','successMsg','emailInput'):handleSubmit('formRow2','successMsg2','emailInput2'); }}); });
+  (() => {
+    const $ = id => document.getElementById(id);
+    const article = w => /^[aeiou]/i.test(w) ? 'an' : 'a';
 
-    let currentPlatform='iOS';
-    function openPlatformModal(platform){
-      currentPlatform=platform;
-      document.getElementById('modalPlatform').textContent=platform;
-      document.getElementById('modalTitle').textContent = platform==='iOS' ? "iOS launch is almost here!" : "Android coming soon!";
-      document.getElementById('formRowModal').style.display='flex';
-      document.getElementById('successMsgModal').style.display='none';
-      document.getElementById('emailInputModal').value='';
-      document.getElementById('platformModal').classList.add('open');
-      document.body.style.overflow='hidden';
-      setTimeout(()=>document.getElementById('emailInputModal').focus(), 100);
-    }
-    function closePlatformModal(){ document.getElementById('platformModal').classList.remove('open'); document.body.style.overflow=''; }
-    function handleModalSubmit(){
-      const input=document.getElementById('emailInputModal'); const email=input.value.trim();
-      if(!isValidEmail(email)){ flagInvalid(input); return; }
-      saveEmail(email,{ platform: currentPlatform.toLowerCase(), source:'store_button', website: honeypotFor('formRowModal') });
-      document.getElementById('modalSuccessText').textContent = `You're in! We'll email you the moment ${currentPlatform} launches.`;
-      document.getElementById('formRowModal').style.display='none';
-      document.getElementById('successMsgModal').style.display='flex';
-    }
-    document.getElementById('emailInputModal')?.addEventListener('keydown',e=>{ if(e.key==='Enter') handleModalSubmit(); });
-    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closePlatformModal(); });
-
-    const QUESTIONS=[
+    // ── Traveler quiz (logic unchanged from v1; restyled, emoji removed) ──
+    const QUESTIONS = [
       { key:"group_type", q:"Who's usually coming along?", hint:"Pick the trip you plan most often.", multi:false,
-        options:[ {v:"family",emoji:"👨‍👩‍👧‍👦",label:"Family",desc:"Kids included"},{v:"couple",emoji:"💑",label:"Just us two",desc:"Me + partner"},{v:"friends",emoji:"🥂",label:"The group",desc:"Friends, 3+"},{v:"solo",emoji:"🌍",label:"Solo",desc:"Just me"} ]},
+        options:[ {v:"family",label:"Family",desc:"Kids included"},{v:"couple",label:"Just us two",desc:"Me + partner"},{v:"friends",label:"The group",desc:"Friends, 3+"},{v:"solo",label:"Solo",desc:"Just me"} ]},
       { key:"travel_style", q:"What's your travel style?", hint:"How you like to spend on a trip.", multi:false,
-        options:[ {v:"budget",emoji:"🎒",label:"Smart & savvy",desc:"Great value, hidden gems"},{v:"comfortable",emoji:"✨",label:"Comfortable",desc:"Top-rated, trusted faves"},{v:"luxury",emoji:"🥂",label:"Luxe",desc:"4–5 star, fine dining"},{v:"ultra",emoji:"👑",label:"No compromises",desc:"Private tours, VIP only"} ]},
+        options:[ {v:"budget",label:"Smart & savvy",desc:"Great value, hidden gems"},{v:"comfortable",label:"Comfortable",desc:"Top-rated, trusted faves"},{v:"luxury",label:"Luxe",desc:"4–5 star, fine dining"},{v:"ultra",label:"No compromises",desc:"Private tours, VIP only"} ]},
       { key:"adventure_level", q:"What's your ideal pace?", hint:"How full do you like your days?", multi:false,
-        options:[ {v:"relaxed",emoji:"🌅",label:"Relaxed",desc:"Slow mornings, downtime"},{v:"balanced",emoji:"⚖️",label:"Balanced",desc:"A mix of go and chill"},{v:"active",emoji:"🥾",label:"Active",desc:"Packed, always moving"},{v:"thrill",emoji:"🪂",label:"Thrill",desc:"Off the beaten path"} ]},
+        options:[ {v:"relaxed",label:"Relaxed",desc:"Slow mornings, downtime"},{v:"balanced",label:"Balanced",desc:"A mix of go and chill"},{v:"active",label:"Active",desc:"Packed, always moving"},{v:"thrill",label:"Thrill",desc:"Off the beaten path"} ]},
       { key:"interests", q:"What makes a trip for you?", hint:"Pick up to 3.", multi:true, max:3,
-        options:[ {v:"food",emoji:"🍴",label:"Food",desc:"Eat your way around"},{v:"culture",emoji:"🏛️",label:"Culture",desc:"Museums, history, art"},{v:"nature",emoji:"🌲",label:"Nature",desc:"Outdoors & scenery"},{v:"beach",emoji:"🏖️",label:"Beach",desc:"Sun, sand, sea"},{v:"nightlife",emoji:"🌃",label:"Nightlife",desc:"Bars & late nights"},{v:"family_fun",emoji:"🎡",label:"Family fun",desc:"Parks & kid-friendly"} ]},
+        options:[ {v:"food",label:"Food",desc:"Eat your way around"},{v:"culture",label:"Culture",desc:"Museums, history, art"},{v:"nature",label:"Nature",desc:"Outdoors & scenery"},{v:"beach",label:"Beach",desc:"Sun, sand, sea"},{v:"nightlife",label:"Nightlife",desc:"Bars & late nights"},{v:"family_fun",label:"Family fun",desc:"Parks & kid-friendly"} ]},
     ];
-    const answers={}; let qi=0;
-    function renderQuestion(){
-      const body=document.getElementById('quizBody'),result=document.getElementById('quizResult'),nav=document.getElementById('quizNav');
-      result.style.display='none'; body.style.display='block'; nav.style.display='flex';
-      const Q=QUESTIONS[qi]; const sel=answers[Q.key];
-      document.getElementById('quizBar').style.width=((qi)/QUESTIONS.length*100)+'%';
-      document.getElementById('quizStep').textContent=(qi+1)+' of '+QUESTIONS.length;
-      document.getElementById('quizBackBtn').disabled=qi===0;
-      let html=`<div class="quiz-q">${Q.q}</div><div class="quiz-hint">${Q.hint}</div><div class="quiz-options">`;
-      Q.options.forEach(o=>{ const isSel=Q.multi?(Array.isArray(sel)&&sel.includes(o.v)):sel===o.v;
-        html+=`<button class="quiz-opt ${isSel?'selected':''}" onclick="pick('${Q.key}','${o.v}',${Q.multi},${Q.max||0})"><span class="o-emoji">${o.emoji}</span><span class="o-label">${o.label}</span><span class="o-desc">${o.desc}</span></button>`; });
-      html+=`</div>`;
-      if(Q.multi){ html+=`<div style="text-align:center;margin-top:18px;"><button class="btn-primary" onclick="nextQ()" style="padding:13px 30px;">Continue</button></div>`; }
-      body.innerHTML=html;
-    }
-    function pick(key,val,multi,max){ if(multi){ const cur=Array.isArray(answers[key])?answers[key]:[]; if(cur.includes(val)) answers[key]=cur.filter(x=>x!==val); else { if(cur.length>=max) return; answers[key]=[...cur,val]; } renderQuestion(); } else { answers[key]=val; renderQuestion(); setTimeout(nextQ,220); } }
-    function nextQ(){ if(qi<QUESTIONS.length-1){ qi++; renderQuestion(); } else { showResult(); } }
-    function quizBack(){ if(qi>0){ qi--; renderQuestion(); } }
-    function restartQuiz(){ qi=0; Object.keys(answers).forEach(k=>delete answers[k]); renderQuestion(); }
-    const TYPE_BY_STYLE={
-      budget:{name:"Explorer",emoji:"🧭",desc:"You travel for the find — street eats, hidden gems, and the spots no guidebook lists. We'll fill your trips with smart, high-value picks."},
-      comfortable:{name:"Trailblazer",emoji:"🗺️",desc:"Comfort meets adventure. You want top-rated places and trusted favorites, with room to wander. We'll plan trips that hit the sweet spot."},
-      luxury:{name:"Visionary",emoji:"✨",desc:"Premium, no compromises. Fine dining, standout stays, experiences worth remembering. We'll craft trips that feel effortless and elevated."},
-      ultra:{name:"Visionary",emoji:"👑",desc:"Nothing but the best. Private tours, VIP tables, the extraordinary. We'll build trips around experiences most people never see."},
+    const TYPE_BY_STYLE = {
+      budget:{name:"Explorer",desc:"You travel for the find — street eats, hidden gems, and the spots no guidebook lists. We'll fill your trips with smart, high-value picks."},
+      comfortable:{name:"Trailblazer",desc:"Comfort meets adventure. You want top-rated places and trusted favorites, with room to wander. We'll plan trips that hit the sweet spot."},
+      luxury:{name:"Visionary",desc:"Premium, no compromises. Fine dining, standout stays, experiences worth remembering. We'll craft trips that feel effortless and elevated."},
+      ultra:{name:"Visionary",desc:"Nothing but the best. Private tours, VIP tables, the extraordinary. We'll build trips around experiences most people never see."},
     };
+    const GROUP_LINE = { family:"Perfect for your family trips — kid-friendly spots and days that fit little legs.", couple:"Ideal for your escapes for two — curated just for the both of you.", friends:"Built for your group trips — everyone aligned, zero chaos.", solo:"Made for your solo adventures — shaped entirely around you." };
+    const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
+    const answers = {}; let qi = 0, advancing = false;
+
+    function renderQuestion(focus){
+      const Q = QUESTIONS[qi], sel = answers[Q.key];
+      $('quizResult').hidden = true; $('quizBody').hidden = false; $('quizNav').hidden = false; $('quizTop').hidden = false;
+      $('quizBar').style.width = (qi / QUESTIONS.length * 100) + '%';
+      $('quizStep').textContent = (qi + 1) + ' of ' + QUESTIONS.length;
+      $('quizBackBtn').disabled = qi === 0;
+      $('quizNext').hidden = !Q.multi;
+      $('quizBody').innerHTML = `<h3 class="quiz-q" id="quizQ" tabindex="-1">${esc(Q.q)}</h3><p class="quiz-hint">${esc(Q.hint)}</p><div class="opts" role="group" aria-labelledby="quizQ">` +
+        Q.options.map(o => `<button type="button" class="opt" data-v="${o.v}" aria-pressed="${Q.multi ? (sel || []).includes(o.v) : sel === o.v}"><b>${esc(o.label)}</b><small>${esc(o.desc)}</small><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></button>`).join('') + '</div>';
+      if (focus) $('quizQ').focus({ preventScroll:true });
+    }
+    function pick(btn){
+      const Q = QUESTIONS[qi], v = btn.dataset.v;
+      if (Q.multi){
+        const cur = answers[Q.key] || [];
+        if (cur.includes(v)) answers[Q.key] = cur.filter(x => x !== v);
+        else if (cur.length < Q.max) answers[Q.key] = [...cur, v];
+        btn.setAttribute('aria-pressed', (answers[Q.key] || []).includes(v));
+        return;
+      }
+      if (advancing) return;
+      answers[Q.key] = v;
+      $('quizBody').querySelectorAll('.opt').forEach(o => o.setAttribute('aria-pressed', o === btn));
+      advancing = true;
+      setTimeout(() => { advancing = false; nextQ(); }, 220);
+    }
+    function nextQ(){ if (qi < QUESTIONS.length - 1){ qi++; renderQuestion(true); } else showResult(); }
     function showResult(){
-      const style=answers.travel_style||"comfortable"; const t=TYPE_BY_STYLE[style];
-      document.getElementById('quizBar').style.width='100%';
-      document.getElementById('quizBody').style.display='none';
-      document.getElementById('quizNav').style.display='none';
-      document.getElementById('resultEmoji').textContent=t.emoji;
-      document.getElementById('resultName').textContent=t.name;
-      const groupLine={ family:"Perfect for your family trips — kid-friendly spots and days that fit little legs.", couple:"Ideal for your escapes for two — curated just for the both of you.", friends:"Built for your group trips — everyone aligned, zero chaos.", solo:"Made for your solo adventures — shaped entirely around you." }[answers.group_type||"couple"];
-      document.getElementById('resultDesc').textContent=t.desc+" "+groupLine;
-      document.getElementById('quizResult').style.display='block';
+      const t = TYPE_BY_STYLE[answers.travel_style || 'comfortable'];
+      $('quizBody').hidden = true; $('quizNav').hidden = true; $('quizTop').hidden = true;
+      $('resultLead').textContent = `You're ${article(t.name)}`;
+      $('resultName').textContent = t.name;
+      $('resultDesc').textContent = t.desc + ' ' + GROUP_LINE[answers.group_type || 'couple'];
+      $('quizResult').hidden = false;
+      $('resultName').focus({ preventScroll:true });
     }
-    function handleQuizSubmit(){
-      const input=document.getElementById('emailInputQuiz'); const email=input.value.trim();
-      if(!isValidEmail(email)){ flagInvalid(input); return; }
-      const style=answers.travel_style||"comfortable"; const traveler_type=TYPE_BY_STYLE[style].name;
-      saveEmail(email,{ source:'quiz', group_type:answers.group_type||null, travel_style:answers.travel_style||null, adventure_level:answers.adventure_level||null, interests:answers.interests||[], traveler_type, website: honeypotFor('formRowQuiz') });
-      document.getElementById('quizSuccessText').textContent=`You're in! We've saved you as a ${traveler_type}.`;
-      document.getElementById('formRowQuiz').style.display='none';
-      document.getElementById('successMsgQuiz').style.display='flex';
-    }
-    document.getElementById('emailInputQuiz')?.addEventListener('keydown',e=>{ if(e.key==='Enter') handleQuizSubmit(); });
-    renderQuestion();
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{ a.addEventListener('click',e=>{ const t=document.querySelector(a.getAttribute('href')); if(t){ e.preventDefault(); t.scrollIntoView({behavior:'smooth',block:'start'}); }}); });
+    $('quizBody').addEventListener('click', e => { const b = e.target.closest('.opt'); if (b) pick(b); });
+    $('quizNext').addEventListener('click', nextQ);
+    $('quizBackBtn').addEventListener('click', () => { if (qi > 0){ qi--; renderQuestion(true); } });
+    $('retakeBtn').addEventListener('click', () => { qi = 0; Object.keys(answers).forEach(k => delete answers[k]); renderQuestion(true); });
+    renderQuestion(false);
+  })();
   </script>
 </body>
 </html>
