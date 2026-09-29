@@ -523,6 +523,73 @@
   (() => {
     const $ = id => document.getElementById(id);
     const article = w => /^[aeiou]/i.test(w) ? 'an' : 'a';
+    const params = new URLSearchParams(location.search);
+    const store = {
+      get(k){ try { return JSON.parse(localStorage.getItem(k)); } catch { return null; } },
+      set(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+    };
+
+    // ── Waitlist (W3). All forms post to the existing join-waitlist edge
+    // function -> public.waitlist (upsert on email, so re-submits don't dupe).
+    const FN_URL = 'https://zkwamqtnaegvlptzdqxn.supabase.co/functions/v1/join-waitlist';
+    // Never send test signups to production: localhost / 127.0.0.1 / ?mock=1 use an in-page mock.
+    const MOCK = /^(localhost|127\.0\.0\.1)$/.test(location.hostname) || params.has('mock');
+    const SIGNED_KEY = 'gtt_signed_up';
+    const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // same check as the edge function
+
+    async function saveEmail(payload){
+      if (MOCK){
+        console.info('[waitlist mock] not sent to production. Payload:', JSON.stringify(payload));
+        await new Promise(r => setTimeout(r, 300));
+        return { ok:true };
+      }
+      const res = await fetch(FN_URL, { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify(payload) });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${data.error || ''}`);
+      return data;
+    }
+    // The function returns no position today, so "You're on the list." is what shows.
+    function markSignedUp(form, position){
+      document.querySelectorAll('form.signup').forEach(f => {
+        const done = f.parentElement.querySelector('.done');
+        done.querySelector('span').textContent = f === form && position ? `You're in. You're #${position} in line.` : "You're on the list.";
+        f.hidden = true; done.hidden = false;
+      });
+    }
+    async function onSubmit(e){
+      e.preventDefault();
+      const form = e.currentTarget, input = form.elements.email, err = form.querySelector('.err'), btn = form.querySelector('[type=submit]');
+      const email = input.value.trim();
+      if (!EMAIL_RE.test(email) || email.length > 254){
+        err.textContent = 'Please enter a valid email';
+        input.setAttribute('aria-invalid', 'true');
+        input.focus();
+        return;
+      }
+      if (btn.disabled) return; // one request in flight per form
+      err.textContent = ''; input.removeAttribute('aria-invalid'); btn.disabled = true;
+      const source = form.dataset.source;
+      const payload = {
+        email, source, website: form.elements.website.value,
+        utm_source: params.get('utm_source'), utm_medium: params.get('utm_medium'), utm_campaign: params.get('utm_campaign'),
+        ...(source === 'quiz' ? quizPayload() : {}),
+      };
+      try {
+        const data = await saveEmail(payload);
+        store.set(SIGNED_KEY, { source, t: Date.now() });
+        markSignedUp(form, data.position);
+        form.parentElement.querySelector('.done').focus();
+      } catch (x) {
+        console.error('[waitlist] save failed:', x);
+        err.textContent = 'Could not save. Try again?';
+        btn.disabled = false;
+      }
+    }
+    document.querySelectorAll('form.signup').forEach(f => {
+      f.addEventListener('submit', onSubmit);
+      f.elements.email.addEventListener('input', () => { f.querySelector('.err').textContent = ''; f.elements.email.removeAttribute('aria-invalid'); });
+    });
+    if (store.get(SIGNED_KEY)) markSignedUp(null);
 
     // ── Traveler quiz (logic unchanged from v1; restyled, emoji removed) ──
     const QUESTIONS = [
@@ -544,6 +611,11 @@
     const GROUP_LINE = { family:"Perfect for your family trips — kid-friendly spots and days that fit little legs.", couple:"Ideal for your escapes for two — curated just for the both of you.", friends:"Built for your group trips — everyone aligned, zero chaos.", solo:"Made for your solo adventures — shaped entirely around you." };
     const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;');
     const answers = {}; let qi = 0, advancing = false;
+    const quizPayload = () => ({
+      group_type: answers.group_type || null, travel_style: answers.travel_style || null,
+      adventure_level: answers.adventure_level || null, interests: answers.interests || [],
+      traveler_type: TYPE_BY_STYLE[answers.travel_style || 'comfortable'].name,
+    });
 
     function renderQuestion(focus){
       const Q = QUESTIONS[qi], sel = answers[Q.key];
