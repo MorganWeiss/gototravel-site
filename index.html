@@ -239,9 +239,28 @@
     .stamp strong{ font-size:1.125rem; line-height:1.05; letter-spacing:.02em; }
     .dots{ display:flex; justify-content:center; gap:36px; margin-top:28px; }
     .dots li{ position:relative; width:40px; height:40px; border-radius:50%; border:2px dashed var(--text-muted); }
-    .dots li:first-child{ background:var(--sunset); border-color:var(--sunset); border-style:solid; }
+    .dots li.on{ background:var(--sunset); border-color:var(--sunset); border-style:solid; }
     .dots li+li::before{ content:""; position:absolute; right:calc(100% + 2px); top:50%; width:34px; border-top:2px dashed var(--line); }
     .refer .pill-dashed{ margin-top:20px; }
+    /* W6 referral block (success state + 2.8 once the visitor has a code) */
+    .ref{ display:grid; gap:12px; margin-top:16px; }
+    .ref-h{ font-weight:700; }
+    .ref-label{ display:grid; gap:8px; font-weight:700; }
+    .ref .input{ padding-inline:12px; font-size:.875rem; }
+    .ref-btns{ display:flex; gap:10px; }
+    .ref-btns .btn{ flex:1; }
+    .ref .dots{ justify-content:flex-start; margin-top:4px; }
+    .ref-count{ font-weight:600; color:var(--text-soft); }
+    .refer .ref{ max-width:540px; margin:28px auto 0; }
+    .refer .ref-h{ display:none; } /* the section's own line already says it */
+    .refer .ref .dots{ justify-content:center; }
+    .light .btn-ghost{ color:var(--ink); border-color:var(--text-body-light); }
+    .light .ref-count{ color:var(--text-body-light); }
+    .light .dots li:not(.on){ border-color:var(--text-body-light); }
+    .cta-card .btn-ghost{ color:var(--sunset-ink); border-color:var(--sunset-ink); }
+    .cta-card .ref-count{ color:var(--sunset-ink); }
+    .cta-card .dots li, .cta-card .dots li+li::before{ border-color:var(--sunset-ink); }
+    .cta-card .dots li.on{ background:var(--sunset-ink); border-color:var(--sunset-ink); }
 
     /* 2.10 FAQ */
     #faq{ padding-top:0; }
@@ -315,6 +334,7 @@
     <symbol id="i-swipe" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
     <symbol id="i-share" viewBox="0 0 24 24"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="m16 6-4-4-4 4"/><path d="M12 2v13"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
     <symbol id="i-download" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></symbol>
   </svg>
 
@@ -489,14 +509,16 @@
       </div>
     </section>
 
-    <!-- 2.8 Referral teaser (mechanics: W6 backend not built yet, shown as Coming soon) -->
+    <!-- 2.8 Referral teaser. W6: once the visitor has a code, their link + live dots go in #referMine.
+         "Coming soon" only shows if they signed up but the backend returned no code (pre-referral function). -->
     <section id="refer" class="refer">
       <div class="wrap narrow center">
         <p class="stamp" role="img" aria-label="Founding Traveler stamp: Go To Travel, 2026"><span>GO TO TRAVEL</span><strong>FOUNDING<br />TRAVELER</strong><span>2026</span></p>
         <h2 class="h2">Skip the line. Bring your crew.</h2>
         <p class="lede">Invite 3 friends and you jump ahead on the waitlist, plus a Founding Traveler stamp on your profile forever.</p>
-        <ol class="dots" aria-hidden="true"><li></li><li></li><li></li></ol>
-        <p class="pill pill-dashed">Coming soon</p>
+        <ol class="dots" id="referDots" aria-hidden="true"><li class="on"></li><li></li><li></li></ol>
+        <div id="referMine"></div>
+        <p class="pill pill-dashed" id="referSoon" hidden>Coming soon</p>
       </div>
     </section>
 
@@ -552,6 +574,20 @@
   </footer>
 
   <p class="toast" id="toast" role="status" aria-live="polite"></p>
+
+  <!-- W6 referral block, cloned into the success state and section 2.8 -->
+  <template id="refTpl">
+    <div class="ref">
+      <p class="ref-h">Invite 3 friends and you jump ahead on the waitlist.</p>
+      <label class="ref-label">Your invite link<input class="input" type="text" readonly /></label>
+      <div class="ref-btns">
+        <button type="button" class="btn btn-ghost" data-ref="copy"><svg class="i" aria-hidden="true"><use href="#i-copy"/></svg>Copy</button>
+        <button type="button" class="btn btn-ghost" data-ref="share"><svg class="i" aria-hidden="true"><use href="#i-share"/></svg>Share</button>
+      </div>
+      <ol class="dots" aria-hidden="true"><li></li><li></li><li></li></ol>
+      <p class="ref-count"></p>
+    </div>
+  </template>
 
   <!-- W4 popup: Group Trip Survival Kit -->
   <dialog id="kit" class="sheet" role="dialog" aria-modal="true" aria-labelledby="kit-h">
@@ -622,12 +658,30 @@
     // Deferred: after the load event, when the main thread is idle.
     addEventListener('load', () => (window.requestIdleCallback || setTimeout)(loadPixels, { timeout:3000 }));
 
-    // ── Referral (W6, partial). No referral codes exist in the backend yet, so the
-    // section says "Coming soon". An inbound ?ref= is still kept for 30 days and sent
-    // as referred_by (the current function ignores it until the backend lands).
+    // ── Referral (W6). An inbound ?ref= is kept for 30 days and sent as referred_by; the
+    // backend only counts it on the visitor's first signup. Every signup gets its own code
+    // back; the line puts people with 3+ friends joined ahead of everyone else.
     const REF_KEY = 'gtt_ref';
     if (params.get('ref')) store.set(REF_KEY, { code: params.get('ref').slice(0, 64), t: Date.now() });
     const referredBy = () => { const r = store.get(REF_KEY); return r && Date.now() - r.t < 30 * DAY ? r.code : null; };
+    const CODE_RE = /^[A-Z2-7]{8}$/; // same format the backend issues
+    function refBlock(me){
+      const el = $('refTpl').content.firstElementChild.cloneNode(true), n = Math.min(me.count || 0, 3);
+      el.querySelector('input').value = `https://gototravelapp.com/?ref=${me.code}`;
+      el.querySelectorAll('.dots li').forEach((li, i) => li.classList.toggle('on', i < n));
+      el.querySelector('.ref-count').textContent = n === 3
+        ? `${me.count} friends joined with your link. You jumped ahead in line.`
+        : `${n} of 3 friends joined with your link.`;
+      return el;
+    }
+    // Section 2.8 always; the success state too when `form` is given.
+    function showRefer(me, form){
+      const has = CODE_RE.test(me?.code || '');
+      $('referSoon').hidden = !me || has;
+      $('referDots').hidden = has;
+      $('referMine').replaceChildren(...(has ? [refBlock(me)] : []));
+      if (has && form) form.parentElement.querySelector('.done').after(refBlock(me));
+    }
 
     // ── Waitlist (W3). All forms post to the existing join-waitlist edge
     // function -> public.waitlist (upsert on email, so re-submits don't dupe).
@@ -641,14 +695,17 @@
       if (MOCK){
         console.info('[waitlist mock] not sent to production. Payload:', JSON.stringify(payload));
         await new Promise(r => setTimeout(r, 300));
-        return { ok:true };
+        // ?mock=old: the pre-referral function ({ok} only). ?mockrefs=N: N friends joined.
+        return params.get('mock') === 'old' ? { ok:true }
+          : { ok:true, position:128, referral_code:'K7Q2M4XA', referral_count:+params.get('mockrefs') || 0 };
       }
       const res = await fetch(FN_URL, { method:'POST', headers:{ 'Content-Type':'application/json' }, body:JSON.stringify(payload) });
       const data = await res.json().catch(() => ({}));
       if (!res.ok) throw new Error(`HTTP ${res.status} ${data.error || ''}`);
       return data;
     }
-    // The function returns no position today, so "You're on the list." is what shows.
+    // "You're in. You're #N in line." right after a signup that returned a position;
+    // otherwise (older function, returning visitor) "You're on the list."
     function markSignedUp(form, position){
       document.querySelectorAll('form.signup').forEach(f => {
         const done = f.parentElement.querySelector('.done');
@@ -676,8 +733,10 @@
       };
       try {
         const data = await saveEmail(payload);
-        store.set(SIGNED_KEY, { source, t: Date.now() });
+        const me = { source, t: Date.now(), code: data.referral_code, count: data.referral_count, position: data.position };
+        store.set(SIGNED_KEY, me);
         markSignedUp(form, data.position);
+        showRefer(me, form);
         trackSignup(source);
         form.parentElement.querySelector('.done').focus();
       } catch (x) {
@@ -690,7 +749,7 @@
       f.addEventListener('submit', onSubmit);
       f.elements.email.addEventListener('input', () => { f.querySelector('.err').textContent = ''; f.elements.email.removeAttribute('aria-invalid'); });
     });
-    if (store.get(SIGNED_KEY)) markSignedUp(null);
+    if (store.get(SIGNED_KEY)){ markSignedUp(null); showRefer(store.get(SIGNED_KEY)); }
 
     // ── Kit popup (W4): after 10 s AND (45% scroll OR desktop exit intent).
     // Once per visitor: shown/dismissed -> quiet for 14 days; signed up -> never.
@@ -788,7 +847,9 @@
     // ── Share my type (W5) ──
     let shareType = 'Trailblazer', shareFile = null, toastTimer;
     function toast(msg){
-      const el = $('toast'); el.textContent = msg; el.classList.add('on');
+      const el = $('toast'), host = document.querySelector('dialog[open]') || document.body;
+      if (el.parentElement !== host) host.append(el); // inside an open modal, or it sits under the backdrop
+      el.textContent = msg; el.classList.add('on');
       clearTimeout(toastTimer); toastTimer = setTimeout(() => { el.classList.remove('on'); el.textContent = ''; }, 2400);
     }
     function setShareType(name){
@@ -800,16 +861,28 @@
       if (matchMedia('(pointer:coarse)').matches)
         fetch(img).then(r => r.blob()).then(b => { if (shareType === name) shareFile = new File([b], `go-to-travel-${slug}.png`, { type:'image/png' }); }).catch(x => console.error('[share] image prefetch failed:', x));
     }
-    $('shareBtn').addEventListener('click', async () => {
-      const url = `https://gototravelapp.com/?type=${encodeURIComponent(shareType)}&utm_source=share&utm_medium=quiz`;
-      const text = `I'm ${article(shareType)} ${shareType} traveler. What are you?`;
-      track('share_click', { traveler_type: shareType, via: 'link' });
+    async function copyLink(url, input){
+      try { await navigator.clipboard.writeText(url); toast('Link copied'); }
+      catch (x) { console.error('[share] copy failed:', x); input?.focus(); input?.select(); }
+    }
+    async function shareOrCopy(data, input){
       if (navigator.share){
-        try { await navigator.share({ text, url }); return; }
+        try { await navigator.share(data); return; }
         catch (x) { if (x.name === 'AbortError') return; console.error('[share] share sheet failed, copying instead:', x); }
       }
-      try { await navigator.clipboard.writeText(url); toast('Link copied'); }
-      catch (x) { console.error('[share] copy failed:', x); }
+      await copyLink(data.url, input);
+    }
+    $('shareBtn').addEventListener('click', () => {
+      const url = `https://gototravelapp.com/?type=${encodeURIComponent(shareType)}&utm_source=share&utm_medium=quiz`;
+      track('share_click', { traveler_type: shareType, via: 'link' });
+      shareOrCopy({ text: `I'm ${article(shareType)} ${shareType} traveler. What are you?`, url });
+    });
+    // W6 Copy / Share on any referral block
+    document.addEventListener('click', e => {
+      const b = e.target.closest('[data-ref]'); if (!b) return;
+      const input = b.closest('.ref').querySelector('input');
+      if (b.dataset.ref === 'copy'){ track('referral_copy'); copyLink(input.value, input); }
+      else { track('share_click', { via: 'referral' }); shareOrCopy({ text: 'Your TikTok saves deserve an actual trip.', url: input.value }, input); }
     });
     $('saveImg').addEventListener('click', e => {
       track('share_click', { traveler_type: shareType, via: 'image' });
