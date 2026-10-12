@@ -28,8 +28,8 @@
     "@type": "SoftwareApplication",
     "name": "Go To Travel — AI Trip Planner",
     "applicationCategory": "TravelApplication",
-    "operatingSystem": "iOS, Android",
-    "description": "AI trip planner that builds personalized travel itineraries around your family, your budget, and your travel style.",
+    "operatingSystem": "iOS",
+    "description": "Drop in the places you've saved. Go To Travel finds the real spots, builds the days, and gets your crew to agree.",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
   }
   </script>
@@ -294,7 +294,7 @@
     .x{ position:absolute; top:12px; right:12px; width:44px; height:44px; display:grid; place-items:center; border:0; border-radius:50%; background:var(--surface-2); color:var(--cream); cursor:pointer; }
     .pill-kit{ background:var(--sunset); color:var(--sunset-ink); border:0; padding:6px 12px; font-size:.75rem; font-weight:700; letter-spacing:.08em; }
     .kit-h{ font-size:clamp(1.75rem,7.5vw,2.25rem); margin-top:14px; padding-right:40px; }
-    .kit-sub{ color:var(--text-soft); margin-top:12px; }
+    .kit-sub{ color:var(--text-soft); margin:12px 0 20px; }
     .checks{ display:grid; gap:10px; margin:14px 0 20px; }
     .checks li{ display:flex; align-items:flex-start; gap:10px; }
     .checks .i{ color:var(--green-bright); margin-top:2px; }
@@ -530,7 +530,7 @@
         <h2 class="eyebrow">FAQ</h2>
         <div class="faq">
           <details><summary>Does it really work with TikTok?</summary><p>Yes. Paste any TikTok link or screenshot and we pull out the real places in it.</p></details>
-          <details><summary>Is it free?</summary><p>Early access is free. <span class="ph">[PLACEHOLDER: pricing after beta — ask Pavan]</span></p></details>
+          <details><summary>Is it free?</summary><p>Early access is free.</p></details>
           <details><summary>When do I get in?</summary><p>The iOS beta opens to the waitlist in waves. Invite friends to move up.</p></details>
         </div>
       </div>
@@ -589,24 +589,21 @@
     </div>
   </template>
 
-  <!-- W4 popup: Group Trip Survival Kit -->
+  <!-- W4 popup. The Group Trip Survival Kit offer is paused until the kit exists and an email sender
+       is set up (nothing sends email today). Until then this is a plain early-access signup; it keeps
+       source=popup_kit so the backend allow-list and reporting don't change. -->
   <dialog id="kit" class="sheet" role="dialog" aria-modal="true" aria-labelledby="kit-h">
     <div class="sheet-in">
       <button type="button" class="x" data-close aria-label="Close"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
-      <p class="pill pill-kit">FREE KIT</p>
+      <p class="pill pill-kit">EARLY ACCESS</p>
       <h2 class="kit-h" id="kit-h">Your group chat called. It wants a trip.</h2>
-      <p class="kit-sub">Get the Group Trip Survival Kit, free in your inbox:</p>
-      <ul class="checks">
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>A private budget-check template (no awkward money talk)</li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>The &ldquo;decide in 10 minutes&rdquo; voting script</li>
-        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>12 no-drama rules for trips with friends</li>
-      </ul>
+      <p class="kit-sub">Join the beta waitlist and be first in when invites go out.</p>
       <div class="signup-wrap">
         <form class="signup" data-source="popup_kit" novalidate>
           <label class="sr-only" for="email-kit">Email address</label>
           <div class="signup-row">
             <input class="input" id="email-kit" type="email" name="email" autocomplete="email" placeholder="Enter your email" aria-describedby="err-kit" required />
-            <button class="btn btn-sunset" type="submit">Send me the kit</button>
+            <button class="btn btn-sunset" type="submit">Get early access</button>
           </div>
           <p class="err" id="err-kit" role="alert"></p>
           <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off" /></label>
@@ -614,7 +611,7 @@
         <p class="done" tabindex="-1" role="status" hidden><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span></span></p>
       </div>
       <button type="button" class="link-btn maybe" data-close>Maybe later</button>
-      <p class="fine">Also joins you to the beta waitlist · Unsubscribe anytime</p>
+      <p class="fine">Free · One email a week, max · Unsubscribe anytime</p>
     </div>
   </dialog>
 
