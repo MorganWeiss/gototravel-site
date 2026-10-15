@@ -1,0 +1,47 @@
+<!doctype html>
+<!-- Quiz Story card, website v3 (handoff A10, V3StoryShare style). One per tier x group:
+     tools/render-stories.sh -> share/<tier>-<group>.png, 1080x1920. -->
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:opsz,wght@9..40,400..700&family=Caveat:wght@700&display=block">
+<style>
+  body{margin:0;width:1080px;height:1920px;overflow:hidden;position:relative;color:#fff;font-family:"DM Sans",sans-serif;
+    background:linear-gradient(180deg,#1B1F3F 0%,#7A3B63 34%,#EE6C4D 62%,#F7B955 100%)}
+  .scene{position:absolute;left:90px;top:640px;width:900px;height:700px;border-radius:40px;overflow:hidden;border:16px solid #fff;transform:rotate(-3deg);box-shadow:0 30px 70px rgba(27,31,63,.45);background:#1F4D3E}
+  .scene svg{position:absolute;inset:0;width:100%;height:100%}
+  .group{position:absolute;right:70px;top:1220px;width:330px;height:200px;border-radius:28px;overflow:hidden;border:12px solid #fff;transform:rotate(6deg);box-shadow:0 20px 50px rgba(27,31,63,.4);background:#F3E6CF}
+  .group svg{position:absolute;inset:0;width:100%;height:100%}
+  .top{position:absolute;left:80px;right:80px;top:120px;display:flex;flex-direction:column;gap:6px}
+  .hand{font:700 64px "Caveat";color:#FFD98A}
+  .tier{font:800 168px/.9 "Bricolage Grotesque";letter-spacing:-.045em;color:#FFD98A}
+  .tag{font:700 52px/1.15 "DM Sans";color:#FFF3E3;margin-top:14px}
+  .stamp{position:absolute;left:96px;top:1290px;width:200px;height:200px;border-radius:50%;border:8px dashed #F2A93B;color:#F2A93B;background:rgba(27,31,63,.55);display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-12deg);font:800 26px/1.25 "DM Sans";letter-spacing:.1em;text-align:center}
+  .who{position:absolute;left:330px;top:1360px;padding:14px 26px;border-radius:18px;background:#fff;color:#13201C;font:700 52px "Caveat";transform:rotate(-4deg)}
+  .foot{position:absolute;left:80px;right:80px;bottom:90px;display:flex;align-items:center;gap:22px;padding:26px 30px;border-radius:32px;background:rgba(15,26,23,.85)}
+  .tile{width:84px;height:84px;border-radius:22px;background:#52927A;display:grid;place-items:center;flex-shrink:0}
+  .foot b{display:block;font:800 44px "Bricolage Grotesque";letter-spacing:-.01em}
+  .foot span{font-size:34px;color:#C9D1CD}
+</style>
+<div id="art" style="position:absolute;width:0;height:0;overflow:hidden"></div>
+<div class="top"><div class="hand" id="eyebrow">I'm a</div><div class="tier" id="tier"></div><div class="tag" id="tag"></div></div>
+<div class="scene"><svg><use id="sceneUse" width="100%" height="100%"></use></svg></div>
+<div class="group"><svg><use id="groupUse" width="100%" height="100%"></use></svg></div>
+<div class="stamp">GO TO<br>TRAVEL<br>2026</div>
+<div class="who" id="who"></div>
+<div class="foot"><span class="tile"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17"/></svg></span><div><b>What kind of traveler are you?</b><span>gototravelapp.com</span></div></div>
+<script>
+  const q = new URLSearchParams(location.search);
+  const tier = q.get("tier") || "Explorer", group = q.get("group") || "solo";
+  const T = {
+    Explorer: { tag: "You travel for the find.", scene: "cappadocia" },
+    Trailblazer: { tag: "Comfort meets adventure.", scene: "alps" },
+    Visionary: { tag: "Premium, no compromises.", scene: "santorini" },
+  }[tier];
+  const WHO = { solo: "just me, myself and I", couple: "for two", friends: "with the crew", family: "with the kids" };
+  document.getElementById("eyebrow").textContent = /^[AEIOU]/.test(tier) ? "I'm an" : "I'm a";
+  document.getElementById("tier").textContent = tier;
+  document.getElementById("tag").textContent = T.tag;
+  document.getElementById("who").textContent = WHO[group];
+  document.getElementById("sceneUse").setAttribute("href", "#scene-" + T.scene);
+  document.getElementById("groupUse").setAttribute("href", "#art-" + group);
+  fetch("/assets/art.svg").then((r) => r.text()).then((s) => { document.getElementById("art").innerHTML = s; });
+</script>

@@ -352,8 +352,12 @@
     const url = `https://gototravelapp.com/?type=${encodeURIComponent(slug)}&utm_source=share&utm_medium=quiz`;
     G.track("share_type", { tier: name, group: q.group });
     try {
-      const blob = await fetch(`/share/${slug}.png`).then((r) => r.blob());
-      const file = new File([blob], `go-to-travel-${slug}.png`, { type: "image/png" });
+      // One card per tier x group (handoff A10); the older per-tier card if a group is missing.
+      const group = q.group || "solo";
+      let res = await fetch(`/share/${slug}-${group}.png`);
+      if (!res.ok) res = await fetch(`/share/${slug}.png`);
+      const blob = await res.blob();
+      const file = new File([blob], `go-to-travel-${slug}-${group}.png`, { type: "image/png" });
       if (navigator.canShare && navigator.canShare({ files: [file] })) {
         await navigator.share({ files: [file], text: `I'm a ${name}. What kind of traveler are you?`, url });
         return;

@@ -250,7 +250,10 @@
     fetch("/assets/art.svg").then((r) => (r.ok ? r.text() : "")).then((svg) => {
       if (!svg) return;
       const holder = document.createElement("div");
-      holder.id = "gtt-art"; holder.hidden = true; holder.innerHTML = svg;
+      holder.id = "gtt-art"; holder.setAttribute("aria-hidden", "true");
+      // not display:none: gradients inside a hidden SVG stop painting through <use>
+      holder.style.cssText = "position:absolute;width:0;height:0;overflow:hidden";
+      holder.innerHTML = svg;
       document.body.prepend(holder);
     }).catch(() => { /* frames keep their solid fill */ });
   }
