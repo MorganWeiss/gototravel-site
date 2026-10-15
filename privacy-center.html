@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Center — Go To Travel</title>
+<meta name="description" content="Email preferences, one-click unsubscribe, cookies, and downloading or deleting your data.">
+<link rel="canonical" href="https://gototravelapp.com/privacy-center">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0F1A17">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.pc{max-width:1100px;margin:0 auto;padding:48px var(--gutter) 72px;display:flex;flex-direction:column;gap:24px}
+.pc section{scroll-margin-top:24px}
+.pc h2{font-size:26px}
+.pref{display:flex;align-items:center;gap:16px;padding:12px 0;border-bottom:1px solid #EFE6D6}
+.pref div{flex-grow:1}
+.pref b{display:block;font-size:17px}
+.pref small{font-size:14px;color:var(--on-light-muted)}
+.data-grid{display:flex;flex-wrap:wrap;gap:12px}
+.data-grid>div{flex:1 1 280px;padding:16px;border-radius:18px;background:var(--cream);display:flex;flex-direction:column;gap:8px}
+.danger{background:#FDEDE8!important}
+.btn-danger{background:#9E3412;color:#fff}.btn-danger:hover{background:#86290C;color:#fff}
+.note{font-size:13px;color:var(--on-light-muted)}
+.ok{font-size:15px;font-weight:700;color:var(--green-deep)}
+</style>
+</head>
+<body class="light">
+<a class="sr" href="#main">Skip to content</a>
+<header class="page-head">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="/" aria-label="Go To Travel home"><span class="logo-tile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17"/></svg></span><span class="logo-word">Go To Travel</span></a>
+    <div class="nav-right"><a class="signin" href="/contact">Contact us</a></div>
+  </nav>
+</header>
+<main id="main" class="pc">
+  <div style="display:flex;flex-direction:column;gap:10px">
+    <h1 style="font-size:clamp(38px,5vw,56px)">Privacy Center</h1>
+    <p class="lede" style="max-width:680px">Your trips, your kids' details and your inbox are yours. Change anything here in one tap. <span data-who></span></p>
+  </div>
+
+  <!-- No link token yet: ask for the email, send a signed link (no password, no account needed). -->
+  <section class="card-light" data-need-link hidden aria-labelledby="link-h" style="display:flex;flex-direction:column;gap:12px">
+    <h2 id="link-h">Get your private link</h2>
+    <p style="color:var(--on-light-soft)">Enter the email you signed up with. We'll send a link that opens this page with your settings. No password needed.</p>
+    <form class="form-row" data-link-form novalidate>
+      <label class="sr" for="pc-email">Email</label>
+      <input class="field" id="pc-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required style="height:52px">
+      <button class="btn btn-ink" type="submit" style="min-height:52px">Email me my link</button>
+      <p class="form-msg" role="status" aria-live="polite" style="width:100%"></p>
+    </form>
+  </section>
+
+  <section class="card-light" id="email" aria-labelledby="em-h" style="display:flex;flex-direction:column;gap:14px">
+    <h2 id="em-h">Email preferences</h2>
+    <div data-prefs>
+      <div class="pref"><div><b>Friday trip ideas</b><small>One email a week, tuned to your traveler type</small></div><button type="button" class="switch" role="switch" data-pref="pref_friday" aria-checked="true" aria-label="Friday trip ideas"></button></div>
+      <div class="pref"><div><b>Launch and product news</b><small>Beta invites and big new features</small></div><button type="button" class="switch" role="switch" data-pref="pref_news" aria-checked="true" aria-label="Launch and product news"></button></div>
+      <div class="pref"><div><b>Tips for traveling with kids</b><small>Weekend ideas and packing help for parents</small></div><button type="button" class="switch" role="switch" data-pref="pref_kids_tips" aria-checked="false" aria-label="Tips for traveling with kids"></button></div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px">
+      <button type="button" class="btn btn-ghost" data-unsub-all>Unsubscribe from all marketing email</button>
+      <span class="ok" data-unsub-done role="status" aria-live="polite"></span>
+    </div>
+    <p class="note">We'll still send emails you need, like sign-in links, crew invites and trip changes you ask for.</p>
+  </section>
+
+  <section class="card-light" id="sharing" aria-labelledby="ck-h" style="display:flex;flex-direction:column;gap:14px">
+    <h2 id="ck-h">Cookies, ads and sharing</h2>
+    <div class="pref"><div><b>Analytics</b><small>Helps us see which pages work. No ads.</small></div><button type="button" class="switch" role="switch" data-consent="analytics" aria-label="Analytics"></button></div>
+    <div class="pref"><div><b>Ads cookies</b><small>TikTok and Meta pixels that show you Go To Travel on social</small></div><button type="button" class="switch" role="switch" data-consent="ads" aria-label="Ads cookies"></button></div>
+    <div class="pref"><div><b>Do not sell or share my personal information</b><small>When on, we never share your data for cross-site ads</small></div><button type="button" class="switch" role="switch" data-consent="doNotSell" aria-label="Do not sell or share my personal information"></button></div>
+    <p class="note" data-gpc>We honor Global Privacy Control signals from your browser automatically.</p>
+  </section>
+
+  <section class="card-light" id="delete" aria-labelledby="dt-h" style="display:flex;flex-direction:column;gap:14px">
+    <h2 id="dt-h">Your data</h2>
+    <div class="data-grid">
+      <div><b style="font-size:17px">Download my data</b><span class="note">Your signup, quiz answers and kids' answers, emailed to you as a file.</span><button type="button" class="btn btn-ghost" data-export style="align-self:flex-start;min-height:44px">Request download</button><span class="ok" data-export-done role="status" aria-live="polite"></span></div>
+      <div><b style="font-size:17px">Kids' profiles</b><span class="note">Only visible to your family. Never used for ads.</span><span class="note">Manage them in the app under Profile.</span></div>
+      <div class="danger"><b style="font-size:17px;color:#9E3412">Delete my account and data</b><span class="note" style="color:#6B3B2E">Removes your signup, quiz answers and dream board. Crew trips you joined stay with their owner.</span><button type="button" class="btn btn-danger" data-delete style="align-self:flex-start;min-height:44px">Delete my data</button><span class="ok" data-delete-done role="status" aria-live="polite" style="color:#9E3412"></span></div>
+    </div>
+  </section>
+
+  <div style="display:flex;flex-wrap:wrap;gap:18px;font-size:15px"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="/contact">Contact us</a><span>privacy@gototravelapp.com [MAILBOX: set up]</span></div>
+</main>
+<script src="/assets/site.js"></script>
+<script>
+(function () {
+  const G = window.GTT, $ = (s) => document.querySelector(s), $$ = (s) => [...document.querySelectorAll(s)];
+  const token = G.params.get("t");
+  const FN = `${G.CONFIG.functionsUrl}/privacy-center`;
+
+  // All email/data actions go through one function with the signed token from an email link
+  // (backend: supabase/functions/privacy-center, written but not deployed yet).
+  async function call(action, extra = {}) {
+    if (G.MOCK) {
+      console.info("[privacy-center mock]", action, extra);
+      await new Promise((r) => setTimeout(r, 350));
+      return action === "get" ? { email: "you@email.com", pref_friday: true, pref_news: true, pref_kids_tips: false, unsubscribed: false } : { ok: true };
+    }
+    const res = await fetch(FN, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action, token, ...extra }) });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+    return data;
+  }
+
+  // Email preferences need the private link.
+  const needLink = !token && !G.MOCK;
+  $("[data-need-link]").hidden = !needLink;
+  $$("#email button, #delete button").forEach((b) => { b.disabled = needLink; });
+  if (needLink) $("#email .note").textContent = "Open the link from any of our emails (or get one above) to change these.";
+
+  function paint(p) {
+    $$("[data-pref]").forEach((b) => b.setAttribute("aria-checked", !!p[b.dataset.pref] && !p.unsubscribed));
+    $("[data-who]").textContent = p.email ? `Settings for ${p.email}.` : "";
+    $("[data-unsub-done]").textContent = p.unsubscribed ? "Done. You won't get marketing email from us." : "";
+  }
+  if (!needLink) call("get").then(paint).catch(() => { $("[data-who]").textContent = "That link has expired. Ask for a new one below."; $("[data-need-link]").hidden = false; });
+
+  $$("[data-pref]").forEach((b) => b.addEventListener("click", async () => {
+    const on = b.getAttribute("aria-checked") !== "true";
+    b.setAttribute("aria-checked", on);
+    try { await call("set", { [b.dataset.pref]: on }); G.track("privacy_toggle", { key: b.dataset.pref, value: on }); G.toast("Saved"); }
+    catch { b.setAttribute("aria-checked", !on); G.toast("That didn't save. Try again."); }
+  }));
+  $("[data-unsub-all]").addEventListener("click", async () => {
+    try { await call("unsubscribe_all"); paint({ unsubscribed: true }); G.track("unsubscribe", {}); }
+    catch { G.toast("That didn't save. Try again."); }
+  });
+  $("[data-export]").addEventListener("click", async (e) => {
+    e.target.disabled = true;
+    try { await call("export"); $("[data-export-done]").textContent = "On its way to your inbox."; }
+    catch { e.target.disabled = false; G.toast("That didn't go through. Try again."); }
+  });
+  // Deletion is two-step: this sends a confirmation email; nothing is deleted until its link is clicked.
+  $("[data-delete]").addEventListener("click", async (e) => {
+    e.target.disabled = true;
+    try { await call("delete_request"); $("[data-delete-done]").textContent = "We emailed you a link to confirm. Nothing is deleted until you click it."; }
+    catch { e.target.disabled = false; G.toast("That didn't go through. Try again."); }
+  });
+  if (G.params.get("confirm_delete") && token) {
+    call("delete_confirm").then(() => { document.querySelector("main").innerHTML = '<h1 style="font-size:40px">Deleted.</h1><p class="lede">Your waitlist data is gone. If you had an app account, its deletion has started. Thanks for trying Go To Travel.</p>'; })
+      .catch(() => G.toast("That confirmation link has expired. Ask again below."));
+  }
+
+  $("[data-link-form]").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = e.currentTarget, msg = f.querySelector(".form-msg"), email = f.elements.email.value.trim().toLowerCase();
+    msg.classList.remove("err");
+    if (!G.EMAIL_RE.test(email)) { msg.textContent = "Check your email address."; msg.classList.add("err"); return; }
+    try { await call("send_link", { email }); msg.textContent = "If that email is on our list, a link is on its way."; }
+    catch { msg.textContent = "That didn't go through. Try again."; msg.classList.add("err"); }
+  });
+
+  // Cookies, ads and sharing: saved on this device, applied at once (same store as the cookie banner).
+  function paintConsent() {
+    const c = G.consent();
+    $$("[data-consent]").forEach((b) => b.setAttribute("aria-checked", !!c[b.dataset.consent]));
+    if (G.GPC) {
+      $("[data-gpc]").textContent = "Your browser sends Global Privacy Control, so ads cookies stay off and we treat you as opted out of selling or sharing.";
+      $('[data-consent="ads"]').disabled = true; $('[data-consent="doNotSell"]').disabled = true;
+    }
+  }
+  $$("[data-consent]").forEach((b) => b.addEventListener("click", () => {
+    const k = b.dataset.consent, on = b.getAttribute("aria-checked") !== "true";
+    const next = { [k]: on };
+    if (k === "doNotSell" && on) next.ads = false;
+    G.setConsent(next); paintConsent(); G.toast("Saved");
+  }));
+  paintConsent();
+  // Opening from the "Do not sell" or "Delete" footer links lands on that section.
+  if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+})();
+</script>
+</body>
+</html>
