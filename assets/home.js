@@ -245,7 +245,8 @@
     $("[data-q-progress]").textContent = done ? "Done!" : `Question ${n} of ${total()}`;
     const pct = Math.round(((done ? total() : st) / total()) * 100);
     const bar = $("[data-q-bar]"); bar.setAttribute("aria-valuenow", pct); bar.firstElementChild.style.width = pct + "%";
-    $("[data-q-back]").hidden = !(st > 0 && !done);
+    $("[data-q-back]").hidden = !(st > 0);
+    $("[data-q-restart]").hidden = !(st > 0 || q.group);
     let html = "";
     if (st === 0) html = `<fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:12px"><legend class="qtitle">Who's coming?</legend><div class="choices">${GROUPS.map((g) => choice(g.id, "art-" + g.id, g.label, g.desc, q.group === g.id)).join("")}</div></fieldset>`;
     if (st === 1) html = `<fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:12px"><legend class="qtitle">How do you like to travel?</legend><div class="choices">${STYLES.map((o) => choice(o.id, "art-" + o.id, o.label, o.desc, q.style === o.id, `<em>${o.icon}</em>`)).join("")}</div></fieldset>`;
@@ -292,7 +293,7 @@
           <p class="consent" style="width:100%">By saving you agree to our <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy Policy</a>. Unsubscribe anytime.</p>
           <p class="form-msg" role="status" aria-live="polite"></p>
         </form>
-        <div style="display:flex;flex-wrap:wrap;gap:10px"><button type="button" class="btn btn-ghost" data-share-type style="min-height:44px;font-size:15px">Share my type to Stories</button><button type="button" class="btn btn-text" data-q-retake>Retake</button></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><button type="button" class="btn btn-ghost" data-share-type style="min-height:44px;font-size:15px">Share my type to Stories</button><button type="button" class="btn btn-text" data-q-retake>Start over</button></div>
         <div class="follow"><span>Get one trip idea a week made for a <b>${t.name}</b>. Follow us:</span>
           <a href="https://www.tiktok.com/@gototravelapp" data-social="tiktok" data-loc="quiz_result"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.8 5.8 0 1 0 5 5.7V9.1a7.4 7.4 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.3-1.6z"/></svg>TikTok</a>
           <a href="https://www.instagram.com/gototravelapp" data-social="instagram" data-loc="quiz_result"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a></div>`;
@@ -348,10 +349,12 @@
       save(); return renderQuiz(false);
     }
     if (e.target.closest("[data-q-kids-done]")) return finish();
-    if (e.target.closest("[data-q-retake]")) { q = { ...blank(), started: true }; save(); return renderQuiz(true); }
+    if (e.target.closest("[data-q-retake]")) { q = { ...blank(), started: true }; save(); G.track("quiz_restart", {}); return renderQuiz(true); }
     if (e.target.closest("[data-share-type]")) return shareType();
   });
-  $("[data-q-back]").addEventListener("click", () => go(Math.max(0, q.step - 1)));
+  $("[data-q-restart]").addEventListener("click", () => { q = { ...blank(), started: true }; save(); G.track("quiz_restart", {}); renderQuiz(true); });
+  // From the result, Back returns to the last question they answered (the kids step only for families).
+  $("[data-q-back]").addEventListener("click", () => go(q.step === RESULT ? (isFam() ? 4 : 3) : Math.max(0, q.step - 1)));
 
   // Hero chips and the pop-up's tiles jump in with the group picked and question 2 showing.
   function jumpToQuiz(group, entry) {

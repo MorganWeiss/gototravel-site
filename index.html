@@ -172,6 +172,9 @@
 .remember .art{width:46px;height:46px;border-radius:12px;flex-shrink:0}
 
 /* Quiz (handoff A3) */
+.q-restart{all:unset;cursor:pointer;font-size:14px;font-weight:700;color:var(--amber);text-decoration:underline;text-underline-offset:3px;min-height:32px;display:inline-flex;align-items:center}
+.q-restart[hidden]{display:none}
+.q-restart:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
 .quiz-sec{background:radial-gradient(120% 80% at 80% 0%,#3A2B4E 0%,var(--ink) 60%)}
 .quiz-grid{display:flex;flex-wrap:wrap;gap:32px}
 .quiz-main{flex:1 1 520px;display:flex;flex-direction:column;gap:18px;min-width:0}
@@ -356,7 +359,7 @@
     <div class="quiz-main">
       <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
         <div class="hand" style="font-size:26px;color:var(--amber)">Stamp 1 of 3</div>
-        <div style="font-size:14px;font-weight:600;color:#B9C4BF" data-q-progress aria-live="polite">Question 1 of 4</div>
+        <div style="display:flex;align-items:center;gap:14px"><div style="font-size:14px;font-weight:600;color:#B9C4BF" data-q-progress aria-live="polite">Question 1 of 4</div><button type="button" class="q-restart" data-q-restart hidden>Start over</button></div>
       </div>
       <h2 id="quiz-h" style="font-size:clamp(34px,4.4vw,52px)">What kind of traveler are you?</h2>
       <p style="font-size:17px;line-height:1.5;color:var(--on-dark-soft)">A few quick taps. Your answers come with you into the app, so your very first trip is already tuned to you, and to your kids.</p>
