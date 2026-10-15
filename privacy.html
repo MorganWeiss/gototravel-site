@@ -1,147 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy · Go To Travel</title>
-  <meta name="description" content="Privacy policy for Go To Travel — the AI trip planner. How we collect, use, and protect your data." />
-  <meta name="theme-color" content="#52927A" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --green:#6BAA8C; --green-dk:#52927A; --green-lt:#9CCBB1;
-      --deep:#0E2820; --deep2:#143028;
-      --card:rgba(255,255,255,0.055); --border:rgba(255,255,255,0.11);
-      --text:#EEF6F1; --muted:#A6BFB6;
-    }
-    *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-    body{ font-family:'Inter',system-ui,sans-serif; background:var(--deep); color:var(--text); -webkit-font-smoothing:antialiased; line-height:1.7; }
-    nav{ position:sticky; top:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:14px 40px; background:rgba(14,40,32,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
-    .logo{ display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--text); }
-    .logo-mark{ width:34px; height:34px; border-radius:11px; background:var(--green-dk); display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(82,146,122,0.35); }
-    .logo-mark svg{ width:24px; height:24px; }
-    .logo-text{ font-weight:800; font-size:1.1rem; letter-spacing:-0.02em; }
-    .back-link{ font-size:0.85rem; color:var(--muted); text-decoration:none; padding:8px 16px; border-radius:100px; border:1px solid var(--border); transition:background 120ms; }
-    .back-link:hover{ background:rgba(255,255,255,0.06); color:var(--text); }
-
-    main{ max-width:760px; margin:0 auto; padding:60px 24px 80px; }
-    h1{ font-size:clamp(2rem,5vw,3rem); font-weight:900; letter-spacing:-0.03em; line-height:1.1; margin-bottom:8px; }
-    .updated{ font-size:0.85rem; color:var(--muted); margin-bottom:36px; }
-    h2{ font-size:1.4rem; font-weight:800; letter-spacing:-0.02em; margin:36px 0 12px; color:var(--green-lt); }
-    p{ color:var(--muted); margin-bottom:14px; font-size:0.98rem; }
-    p strong, li strong{ color:var(--text); font-weight:600; }
-    ul{ color:var(--muted); margin:8px 0 14px 22px; }
-    ul li{ margin-bottom:8px; font-size:0.96rem; }
-    a{ color:var(--green-lt); text-decoration:none; border-bottom:1px solid rgba(156,203,177,0.3); }
-    a:hover{ border-bottom-color:var(--green-lt); }
-
-    footer{ text-align:center; padding:32px 24px; border-top:1px solid var(--border); color:var(--muted); font-size:0.8rem; }
-    footer a{ color:var(--muted); margin:0 12px; border:none; }
-    footer a:hover{ color:var(--text); }
-
-    @media (max-width:600px){ nav{ padding:12px 18px; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy — Go To Travel</title>
+<meta name="description" content="What Go To Travel collects on gototravelapp.com, why, who it's shared with, and how to change or delete it.">
+<link rel="canonical" href="https://gototravelapp.com/privacy">
+<meta name="theme-color" content="#0F1A17">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.legal{max-width:760px;margin:0 auto;padding:48px var(--gutter) 72px;display:flex;flex-direction:column;gap:14px;font-size:16.5px;line-height:1.6}
+.legal h1{font-size:clamp(36px,5vw,52px)}
+.legal h2{font-size:24px;margin-top:22px;letter-spacing:-.02em}
+.legal ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.legal .summary{padding:16px 18px;border-radius:16px;background:var(--paper);border:1px solid var(--cream-line)}
+.legal .flag{padding:10px 14px;border-radius:12px;background:#FDEDE8;color:#9E3412;font-weight:700;font-size:14px}
+.legal table{width:100%;border-collapse:collapse;font-size:15px}
+.legal th,.legal td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--cream-line);vertical-align:top}
+.tbl{overflow-x:auto}
+</style>
 </head>
-<body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="gtt-globe" viewBox="0 0 48 48">
-      <circle cx="24" cy="24" r="17" fill="none" stroke="#fff" stroke-width="2"/>
-      <ellipse cx="24" cy="24" rx="7" ry="17" fill="none" stroke="#fff" stroke-width="1.6"/>
-      <line x1="7" y1="24" x2="41" y2="24" stroke="#fff" stroke-width="1.6"/>
-      <line x1="9.5" y1="15" x2="38.5" y2="15" stroke="#fff" stroke-width="1.4"/>
-      <line x1="9.5" y1="33" x2="38.5" y2="33" stroke="#fff" stroke-width="1.4"/>
-      <path d="M15 30 Q24 16 33 21" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
-      <circle cx="15" cy="30" r="2.4" fill="#fff"/>
-      <circle cx="33" cy="21" r="2.4" fill="#fff"/>
-      <path d="M30 16 l4 1 -1 4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-  </svg>
-
-  <nav>
-    <a href="/" class="logo">
-      <span class="logo-mark"><svg><use href="#gtt-globe"/></svg></span>
-      <span class="logo-text">Go To Travel</span>
-    </a>
-    <a href="/" class="back-link">← Back to site</a>
+<body class="light">
+<a class="sr" href="#main">Skip to content</a>
+<header class="page-head">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="/" aria-label="Go To Travel home"><span class="logo-tile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17"/></svg></span><span class="logo-word">Go To Travel</span></a>
+    <div class="nav-right"><a class="signin" href="/privacy-center">Privacy Center</a></div>
   </nav>
+</header>
+<main id="main" class="legal">
+  <p class="flag">[LEGAL REVIEW PENDING: draft for Pavan's lawyer or policy service before launch]</p>
+  <h1>Privacy Policy</h1>
+  <p style="color:var(--on-light-muted)">Updated [DATE OF LAUNCH]</p>
+  <p>Go To Travel ("we", "us") runs gototravelapp.com and the Go To Travel iPhone app. This policy covers the website: the waitlist, the traveler quiz, our emails, the contact form and the Privacy Center. The app shows its own privacy details in the App Store and in the app.</p>
+  <div class="summary"><b>The short version.</b> We collect your email and the answers you choose to give us, to email you about Go To Travel and to set up the app for you. We don't sell your personal data. Ads cookies load only if you say yes. You can change your email choices, download your data or delete it anytime in the <a href="/privacy-center">Privacy Center</a>, no password needed.</div>
 
-  <main>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 12, 2026</p>
+  <h2 id="collect">What we collect</h2>
+  <ul>
+    <li><b>Your email address</b>, when you join the waitlist, ask for a free kit or tips, or contact us.</li>
+    <li><b>Quiz answers</b>, if you take the traveler quiz: who you travel with, your travel style and pace, what you love, and your traveler type.</li>
+    <li><b>Kids' answers entered by a parent</b>, if you pick Family: an age range, what your kids are into and food needs. You enter these yourself; we don't ask for kids' names on the website. The site is not directed at children, and we don't knowingly collect information from children under 13.</li>
+    <li><b>Your dream board</b>: the postcards you heart on the home page.</li>
+    <li><b>Referral info</b>: your personal invite code, the code you arrived with (if any), and how many friends joined with your link.</li>
+    <li><b>Proof of consent</b>: when you signed up, which version of our sign-up wording you saw, and your country (from your connection, not your exact location).</li>
+    <li><b>Contact messages</b>: your name, email and message when you use the contact form.</li>
+    <li><b>Technical info</b>: a one-way hash of your IP address (never the address itself), your browser type, and the campaign link you arrived from (UTM tags), used to stop spam and see which channels work.</li>
+  </ul>
 
-    <p>Go To Travel ("we", "us", "our") respects your privacy. This policy explains what we collect when you join our waitlist or use our website at gototravelapp.com.</p>
+  <h2 id="use">How we use it</h2>
+  <ul>
+    <li>To send the emails you asked for: your welcome email, the kit, Friday trip ideas, launch news and beta invites.</li>
+    <li>To set up the app for you, so your quiz answers, kids' answers and dream board are waiting when you sign in with the same email.</li>
+    <li>To run the waitlist, including "skip the line" invites.</li>
+    <li>To reply to you.</li>
+    <li>To keep the site working, stop spam, and understand which pages and campaigns work.</li>
+  </ul>
 
-    <p><strong>Plain-English summary:</strong> We collect your email when you join the waitlist, plus any travel preferences you choose to share. We use that to email you about the launch and to set up your profile when the app is ready. We don't sell your data to anyone.</p>
+  <h2 id="email">Email and unsubscribing</h2>
+  <p>Every marketing email has a one-click unsubscribe link and a link to your email preferences. Unsubscribing takes effect right away. We'll still send emails you need, like sign-in links, crew invites and trip changes you ask for. In the US we use single opt-in with a welcome email. [DECISION: Pavan, double opt-in for EU/UK signups.] Our postal address: [BUSINESS ADDRESS OR PO BOX].</p>
 
-    <h2>What we collect</h2>
-    <ul>
-      <li><strong>Email address</strong> — when you sign up for the waitlist.</li>
-      <li><strong>Travel preferences</strong> (optional) — if you take the traveler quiz, we save your answers (group type, travel style, pace, interests, and traveler type) so we can personalize your experience at launch.</li>
-      <li><strong>Referral info</strong> — when you sign up, we give you a personal invite link. If you arrived through a friend's link, we note which link it was, and we count how many friends join through yours. That's how "skip the line" works.</li>
-      <li><strong>Technical info</strong> — we store a hashed version of your IP address (not your raw IP) and your browser type to help us prevent spam. We may also store UTM parameters if you arrive from a tracked link.</li>
-    </ul>
+  <h2 id="cookies">Cookies, pixels and browser storage</h2>
+  <p>On your first visit we ask before using anything that isn't essential. You can change your choice anytime with "Cookie settings" at the bottom of every page or in the <a href="/privacy-center#sharing">Privacy Center</a>.</p>
+  <div class="tbl"><table>
+    <thead><tr><th scope="col">Kind</th><th scope="col">What</th><th scope="col">When</th></tr></thead>
+    <tbody>
+      <tr><td>Essential</td><td>Small items in your browser's storage: your cookie choices, quiz progress, dream board, whether you signed up (with your invite link and place in line), an invite code you arrived with (30 days), passport stamps, and when you last closed a pop-up (14 days).</td><td>Always</td></tr>
+      <tr><td>Analytics</td><td>[ANALYTICS TOOL: none installed today]</td><td>Only if you turn on Analytics</td></tr>
+      <tr><td>Ads</td><td>TikTok Pixel and Meta Pixel, to measure our ads and show Go To Travel to people on those apps. [PIXEL IDS: not installed until provided]</td><td>Only if you turn on Ads and haven't opted out of selling or sharing</td></tr>
+    </tbody>
+  </table></div>
+  <p>We honor <b>Global Privacy Control</b>: if your browser sends it, we treat you as opted out of ads cookies and of selling or sharing.</p>
 
-    <h2>How we use it</h2>
-    <ul>
-      <li>To email you when the app launches and during early access.</li>
-      <li>To pre-fill your profile in the app so you don't have to do onboarding twice.</li>
-      <li>To improve the website and understand which marketing channels work.</li>
-      <li>To prevent spam and abuse.</li>
-    </ul>
+  <h2 id="sharing">Selling and sharing (California and similar laws)</h2>
+  <p>We don't sell your personal data for money. If you turn on Ads cookies, the TikTok and Meta pixels may count as "sharing" for cross-context behavioral advertising under California law. You can opt out anytime with <a href="/privacy-center#sharing">Do not sell or share my personal information</a> or with Global Privacy Control.</p>
 
-    <h2>What we don't do</h2>
-    <ul>
-      <li>We don't sell your personal data to advertisers or third parties.</li>
-      <li>We don't share your email with anyone other than essential service providers (hosting, our database and email sending).</li>
-      <li>We don't use analytics tools, advertising pixels or tracking cookies on this site today. If we add any (for example TikTok or Meta pixels to measure our ads), we'll update this page first.</li>
-      <li>We don't send promotional spam — only launch updates and meaningful product news.</li>
-    </ul>
+  <h2 id="providers">Who we share it with</h2>
+  <ul>
+    <li><b>Supabase</b> stores your signup and messages.</li>
+    <li><b>Resend</b> sends our emails.</li>
+    <li><b>Vercel</b> hosts the website.</li>
+    <li><b>Google Fonts</b> serves the typefaces, so your browser requests them from Google.</li>
+    <li><b>TikTok and Meta</b>, only if you turn on Ads cookies.</li>
+    <li><b>AI assistants you connect.</b> In the app you can connect an assistant such as Claude, ChatGPT, Gemini or Meta Muse. Trip data goes only to the assistants you connect, and you can disconnect them anytime.</li>
+  </ul>
+  <p>Service providers process data for us under contract. We'd also share data if the law requires it.</p>
 
-    <h2>Who we share data with</h2>
-    <p>We use a small number of trusted service providers to run our website:</p>
-    <ul>
-      <li><strong>Supabase</strong> — stores your waitlist signup.</li>
-      <li><strong>Resend</strong> — sends you launch and product emails.</li>
-      <li><strong>Google Fonts</strong> — serves the typefaces on this website, so your browser requests them from Google.</li>
-      <li><strong>Vercel</strong> — hosts the website.</li>
-    </ul>
-    <p>Each of these has their own privacy policies. They process data on our behalf and are bound by contract.</p>
+  <h2 id="rights">Your choices and rights</h2>
+  <p>In the <a href="/privacy-center">Privacy Center</a> you can change email preferences, unsubscribe from everything, download your data, and delete it. Deleting takes two steps: we email you a confirmation link, and nothing is deleted until you click it. Your app account is deleted in the app under Profile.</p>
+  <p>Depending on where you live (for example the EU, the UK or California) you may also have rights to access, correct, port or delete your data, to object or restrict processing, and to complain to your data protection authority. We won't treat you differently for using them. Email us at the address below for anything the Privacy Center doesn't cover.</p>
 
-    <h2>Your rights</h2>
-    <p>You can, at any time:</p>
-    <ul>
-      <li><strong>Unsubscribe</strong> — every email has an unsubscribe link.</li>
-      <li><strong>Request your data</strong> — email us and we'll send you what we have.</li>
-      <li><strong>Request deletion</strong> — email us and we'll remove your record from the waitlist.</li>
-      <li><strong>Correct your data</strong> — same way: just email us.</li>
-    </ul>
-    <p>If you're in the EU/UK, you have additional rights under GDPR including the right to data portability and to lodge a complaint with your local data-protection authority. If you're in California, you have rights under CCPA including the right to know, delete, and not be discriminated against for exercising these rights.</p>
+  <h2 id="retention">How long we keep it</h2>
+  <ul>
+    <li>Waitlist signups: until you delete them, or until we close the waitlist and you haven't created an app account. [RETENTION PERIOD: Pavan to confirm, e.g. 24 months of no activity]</li>
+    <li>Contact messages: [RETENTION PERIOD: e.g. 2 years], then deleted.</li>
+    <li>Browser storage: on your device until you clear it.</li>
+  </ul>
 
-    <h2>Data retention</h2>
-    <p>We keep your waitlist signup until you ask us to delete it or until we're confident you're no longer interested (e.g. multiple emails unopened over a long period). At that point we delete the record.</p>
+  <h2 id="changes">Changes</h2>
+  <p>If we change this policy in a way that matters, we'll update the date above and tell subscribers by email.</p>
 
-    <h2>Cookies and browser storage</h2>
-    <p>We don't set advertising or analytics cookies. The site saves a few small items in your browser's local storage so it works the way you'd expect: whether you've already signed up (with your invite link and place in line), an invite code you arrived with (kept for 30 days), and when you last saw the sign-up pop-up. You can clear them at any time in your browser settings.</p>
-
-    <h2>Children</h2>
-    <p>Go To Travel is not directed at children under 13 (under 16 in the EU). We don't knowingly collect data from children. If you believe we have, please contact us and we'll delete it.</p>
-
-    <h2>Changes to this policy</h2>
-    <p>We'll update this page if anything material changes. The "last updated" date at the top will reflect the latest revision.</p>
-
-    <h2>Contact us</h2>
-    <p>Questions, requests, or concerns? Email <a href="mailto:hello@gototravelapp.com">hello@gototravelapp.com</a> and we'll respond within 7 days.</p>
-  </main>
-
-  <footer>
-    <a href="/">Home</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-    <a href="mailto:hello@gototravelapp.com">Contact</a>
-    <p style="margin-top:14px;">© 2026 Go To Travel · gototravelapp.com</p>
-  </footer>
+  <h2 id="contact">Contact</h2>
+  <p>Email privacy@gototravelapp.com [MAILBOX: set up] or hello@gototravelapp.com, or use the <a href="/contact">contact form</a>. [LEGAL ENTITY NAME AND ADDRESS]</p>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-base" style="padding-top:28px;display:flex;flex-wrap:wrap;gap:18px"><span>© 2026 Go To Travel</span><a href="/">Home</a><a href="/terms">Terms</a><a href="/privacy-center">Privacy Center</a><a href="/contact">Contact</a><button type="button" data-open-cookies style="all:unset;cursor:pointer;color:#B9C4BF">Cookie settings</button></div>
+</footer>
+<script src="/assets/site.js"></script>
 </body>
 </html>

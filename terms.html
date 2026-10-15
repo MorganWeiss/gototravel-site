@@ -1,145 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Terms of Service · Go To Travel</title>
-  <meta name="description" content="Terms of service for Go To Travel — the AI trip planner." />
-  <meta name="theme-color" content="#52927A" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --green:#6BAA8C; --green-dk:#52927A; --green-lt:#9CCBB1;
-      --deep:#0E2820; --deep2:#143028;
-      --card:rgba(255,255,255,0.055); --border:rgba(255,255,255,0.11);
-      --text:#EEF6F1; --muted:#A6BFB6;
-    }
-    *,*::before,*::after{ box-sizing:border-box; margin:0; padding:0; }
-    body{ font-family:'Inter',system-ui,sans-serif; background:var(--deep); color:var(--text); -webkit-font-smoothing:antialiased; line-height:1.7; }
-    nav{ position:sticky; top:0; z-index:100; display:flex; align-items:center; justify-content:space-between; padding:14px 40px; background:rgba(14,40,32,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); }
-    .logo{ display:flex; align-items:center; gap:11px; text-decoration:none; color:var(--text); }
-    .logo-mark{ width:34px; height:34px; border-radius:11px; background:var(--green-dk); display:flex; align-items:center; justify-content:center; box-shadow:0 2px 10px rgba(82,146,122,0.35); }
-    .logo-mark svg{ width:24px; height:24px; }
-    .logo-text{ font-weight:800; font-size:1.1rem; letter-spacing:-0.02em; }
-    .back-link{ font-size:0.85rem; color:var(--muted); text-decoration:none; padding:8px 16px; border-radius:100px; border:1px solid var(--border); transition:background 120ms; }
-    .back-link:hover{ background:rgba(255,255,255,0.06); color:var(--text); }
-
-    main{ max-width:760px; margin:0 auto; padding:60px 24px 80px; }
-    h1{ font-size:clamp(2rem,5vw,3rem); font-weight:900; letter-spacing:-0.03em; line-height:1.1; margin-bottom:8px; }
-    .updated{ font-size:0.85rem; color:var(--muted); margin-bottom:36px; }
-    h2{ font-size:1.4rem; font-weight:800; letter-spacing:-0.02em; margin:36px 0 12px; color:var(--green-lt); }
-    p{ color:var(--muted); margin-bottom:14px; font-size:0.98rem; }
-    p strong, li strong{ color:var(--text); font-weight:600; }
-    ul{ color:var(--muted); margin:8px 0 14px 22px; }
-    ul li{ margin-bottom:8px; font-size:0.96rem; }
-    a{ color:var(--green-lt); text-decoration:none; border-bottom:1px solid rgba(156,203,177,0.3); }
-    a:hover{ border-bottom-color:var(--green-lt); }
-
-    footer{ text-align:center; padding:32px 24px; border-top:1px solid var(--border); color:var(--muted); font-size:0.8rem; }
-    footer a{ color:var(--muted); margin:0 12px; border:none; }
-    footer a:hover{ color:var(--text); }
-
-    @media (max-width:600px){ nav{ padding:12px 18px; } }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of Service — Go To Travel</title>
+<meta name="description" content="The terms for using gototravelapp.com, the waitlist and the Go To Travel app.">
+<link rel="canonical" href="https://gototravelapp.com/terms">
+<meta name="theme-color" content="#0F1A17">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.legal{max-width:760px;margin:0 auto;padding:48px var(--gutter) 72px;display:flex;flex-direction:column;gap:14px;font-size:16.5px;line-height:1.6}
+.legal h1{font-size:clamp(36px,5vw,52px)}
+.legal h2{font-size:24px;margin-top:22px;letter-spacing:-.02em}
+.legal ul{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.legal .summary{padding:16px 18px;border-radius:16px;background:var(--paper);border:1px solid var(--cream-line)}
+.legal .flag{padding:10px 14px;border-radius:12px;background:#FDEDE8;color:#9E3412;font-weight:700;font-size:14px}
+</style>
 </head>
-<body>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="gtt-globe" viewBox="0 0 48 48">
-      <circle cx="24" cy="24" r="17" fill="none" stroke="#fff" stroke-width="2"/>
-      <ellipse cx="24" cy="24" rx="7" ry="17" fill="none" stroke="#fff" stroke-width="1.6"/>
-      <line x1="7" y1="24" x2="41" y2="24" stroke="#fff" stroke-width="1.6"/>
-      <line x1="9.5" y1="15" x2="38.5" y2="15" stroke="#fff" stroke-width="1.4"/>
-      <line x1="9.5" y1="33" x2="38.5" y2="33" stroke="#fff" stroke-width="1.4"/>
-      <path d="M15 30 Q24 16 33 21" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
-      <circle cx="15" cy="30" r="2.4" fill="#fff"/>
-      <circle cx="33" cy="21" r="2.4" fill="#fff"/>
-      <path d="M30 16 l4 1 -1 4" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-  </svg>
-
-  <nav>
-    <a href="/" class="logo">
-      <span class="logo-mark"><svg><use href="#gtt-globe"/></svg></span>
-      <span class="logo-text">Go To Travel</span>
-    </a>
-    <a href="/" class="back-link">← Back to site</a>
+<body class="light">
+<a class="sr" href="#main">Skip to content</a>
+<header class="page-head">
+  <nav class="nav" aria-label="Main">
+    <a class="logo" href="/" aria-label="Go To Travel home"><span class="logo-tile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17"/></svg></span><span class="logo-word">Go To Travel</span></a>
+    <div class="nav-right"><a class="signin" href="/contact">Contact us</a></div>
   </nav>
+</header>
+<main id="main" class="legal">
+  <p class="flag">[LEGAL REVIEW PENDING: draft for Pavan's lawyer or policy service before launch]</p>
+  <h1>Terms of Service</h1>
+  <p style="color:var(--on-light-muted)">Updated [DATE OF LAUNCH]</p>
+  <p>These terms cover gototravelapp.com, the waitlist, our emails and the Go To Travel app. By joining the waitlist or using the site or app, you agree to them.</p>
+  <div class="summary"><b>The short version.</b> Be honest and decent, don't abuse the service, and check important travel details before you rely on them. Go To Travel is in beta, so things will change as we improve.</div>
 
-  <main>
-    <h1>Terms of Service</h1>
-    <p class="updated">Last updated: May 28, 2026</p>
+  <h2>What Go To Travel is</h2>
+  <p>Go To Travel helps you plan trips: it turns saved posts and AI plans into a trip, helps your crew agree, and suggests fixes when plans change. The website lets you join the waitlist, take the traveler quiz and learn about the app.</p>
 
-    <p>Welcome to Go To Travel. These terms govern your use of our website at gototravelapp.com and, when launched, the Go To Travel mobile app. By joining the waitlist or using the site, you agree to these terms.</p>
+  <h2>The waitlist</h2>
+  <p>When you join, you confirm that you're at least 13 (16 in the EU), that the email is yours, and that you agree to get the emails you signed up for. You can unsubscribe from marketing email anytime in one click or in the <a href="/privacy-center">Privacy Center</a>. A place in line isn't a promise of an invite date.</p>
 
-    <p><strong>Plain-English summary:</strong> Be reasonable, don't abuse the service, and understand that we're a startup in beta — things will change as we improve. Travel info we provide is for planning help, not booking guarantees.</p>
+  <h2>Invites, referrals and Founding Traveler</h2>
+  <ul>
+    <li>Your invite link is personal. Share it with people you know; don't post it as spam, buy sign-ups or create fake ones.</li>
+    <li>When 3 friends join with your link, you move ahead in line and earn the Founding Traveler stamp. Friends count once each, and your own other emails don't count.</li>
+    <li>We may remove referrals or perks earned through fake, automated or duplicate sign-ups.</li>
+    <li>We can change or end the referral program, with notice on the site. Perks already earned stay earned unless they came from abuse.</li>
+  </ul>
 
-    <h2>What Go To Travel is</h2>
-    <p>Go To Travel is an AI-powered travel itinerary planner. The website (gototravelapp.com) lets you join our waitlist and learn about the app. The mobile app, when available, helps you plan personalized trips for yourself, your family, your partner, or your group.</p>
+  <h2>Your content</h2>
+  <p>What you create or add is yours: trips, saves, notes, photos, recaps, quiz answers and messages. You give us permission to store, process and show it in the ways you choose, for example to your crew, in a recap you share, or to an AI assistant you connect. You're responsible for what you share publicly, including other people's photos. Don't post anything illegal, hateful or that you don't have the right to share. We may remove content that breaks these terms.</p>
 
-    <h2>Waitlist signups</h2>
-    <p>By submitting your email to our waitlist, you confirm that:</p>
-    <ul>
-      <li>You're at least 13 years old (16 if you're in the EU).</li>
-      <li>The email you provided is yours.</li>
-      <li>You consent to receive launch and product updates. You can unsubscribe anytime via the link in any email.</li>
-    </ul>
+  <h2>Acceptable use</h2>
+  <ul>
+    <li>No spam, fake accounts or automated sign-ups.</li>
+    <li>No malware, scraping, reverse engineering or attempts to break the service.</li>
+    <li>Don't impersonate anyone, and don't use Go To Travel for anything illegal.</li>
+  </ul>
+  <p>We may suspend access if we reasonably believe someone is breaking these terms.</p>
 
-    <h2>Acceptable use</h2>
-    <p>You agree not to:</p>
-    <ul>
-      <li>Submit fake, automated, or spam waitlist entries.</li>
-      <li>Use the site or app to send spam, malware, or harmful content.</li>
-      <li>Reverse-engineer, scrape, or attempt to extract our proprietary content.</li>
-      <li>Impersonate anyone else or misrepresent your identity.</li>
-      <li>Use the service for anything illegal.</li>
-    </ul>
-    <p>We may remove your access at any time if we reasonably believe you're violating these terms.</p>
+  <h2>Travel information and AI</h2>
+  <p>Plans, places and suggestions, including AI-generated ones and Trip Watch fixes, are planning help, not guarantees. Hours change, places close and prices vary, so check before you go. They aren't advice about safety, health, visas or insurance.</p>
 
-    <h2>AI-generated travel content</h2>
-    <p>When the app launches, it will provide AI-generated itineraries, place recommendations, and other travel information. This content is:</p>
-    <ul>
-      <li><strong>For planning help, not booking guarantees.</strong> Restaurant hours change, attractions close, prices vary — always verify before you go.</li>
-      <li><strong>Not a substitute for professional advice</strong> about travel safety, medical needs, visas, or insurance.</li>
-      <li><strong>Generated by AI</strong> and may occasionally include errors. We do our best to provide accurate information but cannot guarantee it.</li>
-    </ul>
-    <p>You're responsible for verifying critical details before booking or relying on any specific recommendation.</p>
+  <h2>Other services</h2>
+  <p>We use other providers, such as maps, AI models and our database host. Some features depend on them, and their own terms may apply. We're not responsible for their availability or accuracy.</p>
 
-    <h2>Intellectual property</h2>
-    <p>The Go To Travel name, logo, website design, and app are owned by us. The traveler quiz, traveler types ("Explorer", "Trailblazer", "Visionary"), and product copy are our intellectual property. You may not copy, reproduce, or use them without permission.</p>
-    <p>Content you create in the app (your trips, your wishlist, your notes) belongs to you. We may use anonymized, aggregated data to improve the service.</p>
+  <h2>Pricing</h2>
+  <p>Early access is free. If we add paid features, we'll show the price and terms before you subscribe, and App Store terms will apply too. [PRICING DETAILS: Pavan]</p>
 
-    <h2>Third-party services</h2>
-    <p>Our service uses third-party providers (e.g. Google Maps, OpenAI/Gemini for AI generation, Supabase for storage). When you use the app, you're also bound by their respective terms. We're not responsible for third-party services' availability or accuracy.</p>
+  <h2>Ownership</h2>
+  <p>The Go To Travel name, logo, website, app, illustrations, traveler types (Explorer, Trailblazer, Visionary) and our copy belong to us. Don't copy them without permission.</p>
 
-    <h2>Pricing and subscriptions</h2>
-    <p>The waitlist is free. The app will have a free tier and a paid "Plus" tier. Pricing, features, and terms of any paid subscription will be clearly disclosed before you subscribe and are subject to App Store / Google Play platform terms in addition to ours.</p>
+  <h2>Disclaimers and liability</h2>
+  <p>The service is provided "as is", without warranties, to the extent the law allows. We're not liable for indirect or consequential losses, including missed bookings or travel problems. Our total liability for any claim is limited to what you paid us in the 12 months before it, or $50 if you haven't paid us anything. Some places don't allow these limits, so they may not apply to you.</p>
 
-    <h2>Disclaimers and limitation of liability</h2>
-    <p>The service is provided "as is" without warranties of any kind, express or implied. To the maximum extent permitted by law, we are not liable for any indirect, incidental, or consequential damages arising from your use of the service, including lost trips, missed bookings, or travel mishaps based on AI-generated suggestions.</p>
-    <p>Our total liability to you for any claim related to the service will not exceed the amount you paid us in the 12 months before the claim (or $50 if you haven't paid us anything).</p>
+  <h2>Ending things</h2>
+  <p>You can stop anytime and delete your data in the <a href="/privacy-center">Privacy Center</a> or the app. We may suspend or end access for people who break these terms, or for technical reasons, with notice when we can.</p>
 
-    <h2>Termination</h2>
-    <p>You can stop using the service or unsubscribe from emails at any time. We may suspend or terminate access for users who violate these terms or for technical/operational reasons, with reasonable notice when possible.</p>
+  <h2>Changes</h2>
+  <p>We'll update these terms as the product grows. For changes that matter, we'll email subscribers or post a notice on the site before they take effect.</p>
 
-    <h2>Changes to these terms</h2>
-    <p>We may update these terms as the product evolves. Material changes will be communicated via email or a notice on the site. Continued use after changes means you accept the updated terms.</p>
+  <h2>Law</h2>
+  <p>California law governs these terms, and disputes go to the courts there, unless your local law gives you other rights. [LEGAL ENTITY NAME AND ADDRESS]</p>
 
-    <h2>Governing law</h2>
-    <p>These terms are governed by the laws of the State of California, USA. Disputes will be resolved in the courts of that jurisdiction.</p>
-
-    <h2>Contact</h2>
-    <p>Questions? Email <a href="mailto:hello@gototravelapp.com">hello@gototravelapp.com</a>.</p>
-  </main>
-
-  <footer>
-    <a href="/">Home</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms.html">Terms</a>
-    <a href="mailto:hello@gototravelapp.com">Contact</a>
-    <p style="margin-top:14px;">© 2026 Go To Travel · gototravelapp.com</p>
-  </footer>
+  <h2>Contact</h2>
+  <p>Email hello@gototravelapp.com or use the <a href="/contact">contact form</a>.</p>
+</main>
+<footer class="site-foot">
+  <div class="wrap foot-base" style="padding-top:28px;display:flex;flex-wrap:wrap;gap:18px"><span>© 2026 Go To Travel</span><a href="/">Home</a><a href="/privacy">Privacy</a><a href="/privacy-center">Privacy Center</a><a href="/contact">Contact</a><button type="button" data-open-cookies style="all:unset;cursor:pointer;color:#B9C4BF">Cookie settings</button></div>
+</footer>
+<script src="/assets/site.js"></script>
 </body>
 </html>
