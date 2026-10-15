@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sign in — Go To Travel</title>
+<meta name="description" content="Sign in to Go To Travel with the same account as the iPhone app.">
+<link rel="canonical" href="https://gototravelapp.com/signin">
+<meta name="theme-color" content="#0F1A17">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:opsz,wght@9..40,400..700&family=Caveat:wght@700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<style>
+.si{display:flex;flex-wrap:wrap;min-height:100dvh}
+.si-art{flex:1 1 520px;min-height:420px;position:relative;overflow:hidden}
+.si-art>.art{position:absolute;inset:0}
+.si-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(27,31,63,.15),rgba(15,26,23,.78))}
+.si-copy{position:relative;height:100%;padding:clamp(24px,4vw,56px);display:flex;flex-direction:column;justify-content:space-between;gap:40px}
+.si-form{flex:1 1 440px;display:flex;align-items:center;justify-content:center;padding:clamp(24px,4vw,56px)}
+.si-form>div{width:100%;max-width:420px;display:flex;flex-direction:column;gap:14px}
+.saved-badge{align-self:flex-start;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px}
+.saved-badge .st{width:34px;height:34px;border-radius:50%;border:2px dashed var(--sunset);color:var(--amber);font-size:8px;font-weight:800;display:grid;place-items:center;transform:rotate(-10deg)}
+.qr-card{display:flex;align-items:center;gap:14px;padding:14px;border-radius:18px;background:var(--surface);border:1px solid var(--line);margin-top:14px}
+.qr-card .code{width:64px;height:64px;flex-shrink:0;border-radius:10px;background:#fff;color:var(--on-light);font-size:10px;font-weight:800;display:grid;place-items:center}
+.si .field{background:var(--surface);border-color:#33443D}
+</style>
+</head>
+<body>
+<main class="si" id="main">
+  <div class="si-art">
+    <div class="art"><svg aria-hidden="true"><use href="#scene-aurora" width="100%" height="100%"/></svg></div>
+    <div class="si-shade"></div>
+    <div class="si-copy">
+      <a class="logo" href="/"><span class="logo-tile"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17"/><path d="M6 16c3-6 8-8 12-8"/></svg></span><span class="logo-word">Go To Travel</span></a>
+      <div style="display:flex;flex-direction:column;gap:12px;max-width:520px">
+        <div class="saved-badge glass" data-quiz-badge hidden><span class="st" aria-hidden="true">GO</span><span style="font-size:14px;font-weight:600" data-quiz-badge-text></span></div>
+        <div class="hand" style="font-size:30px;color:var(--gold)" data-welcome>welcome back</div>
+        <h1 style="font-size:clamp(40px,5vw,64px);line-height:.98;letter-spacing:-.04em" data-title>Your trips are right where you left them.</h1>
+        <p style="font-size:18px;line-height:1.5;color:#FFF3E3">See what's coming up, vote with your crew and grab your recaps. Same account as the app.</p>
+      </div>
+    </div>
+  </div>
+  <div class="si-form">
+    <div data-signin>
+      <h2 style="font-size:32px;letter-spacing:-.02em;margin-bottom:6px">Sign in</h2>
+      <form class="signin-form" novalidate style="display:flex;flex-direction:column;gap:10px">
+        <label class="lbl" for="si-email" style="color:var(--on-dark-soft)">Email</label>
+        <input class="field" id="si-email" name="email" type="email" autocomplete="email" placeholder="you@email.com" required>
+        <button class="btn btn-sun" type="submit" style="min-height:54px">Email me a sign-in link</button>
+        <p class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+      <p style="font-size:13px;line-height:1.5;color:#9DAAA4">No password needed. Apple and Google sign-in on the web are coming soon. By continuing you agree to our <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
+      <div class="qr-card"><div class="code" data-qr>[QR]</div><div style="font-size:14px;line-height:1.45"><b>New here?</b> <span data-new-copy>Join the beta on our <a href="/#join">home page</a>. Saving from TikTok, Trip Watch and the full planner live in the iPhone app.</span></div></div>
+    </div>
+    <div data-signed-in hidden style="display:flex;flex-direction:column;gap:14px">
+      <div class="hand" style="font-size:28px;color:var(--gold)">you're signed in</div>
+      <h2 style="font-size:36px;letter-spacing:-.02em">Your trips live in the app.</h2>
+      <p style="font-size:17px;line-height:1.5;color:var(--on-dark-soft)">Trips, your crew's votes and recaps on the web are on the way. For now, open Go To Travel on your iPhone.</p>
+      <div class="qr-card"><div class="code" data-qr>[QR]</div><div style="font-size:14px;line-height:1.45">Scan to open the app on your iPhone.</div></div>
+      <a href="/" class="btn btn-ghost" style="align-self:flex-start">Back to the home page</a>
+    </div>
+  </div>
+</main>
+<script src="/assets/site.js"></script>
+<script>
+(function () {
+  const G = window.GTT, $ = (s) => document.querySelector(s);
+  // Same Supabase project and sign-in as the iOS app. The publishable key is public by design (it ships in
+  // the app). [VERIFY] https://gototravelapp.com/signin must be in Supabase Auth's redirect allow-list.
+  const SUPABASE_URL = "https://zkwamqtnaegvlptzdqxn.supabase.co";
+  const SUPABASE_KEY = "__SUPABASE_PUBLISHABLE_KEY__";
+
+  // A quiz taken on this device: "Your quiz is saved · Trailblazer · traveling with friends".
+  const quiz = G.store.get("gtt_quiz");
+  const TIER = { budget: "Explorer", comfortable: "Trailblazer", luxury: "Visionary", ultra: "Visionary" };
+  const GROUP = { solo: "traveling solo", couple: "traveling as a couple", friends: "traveling with friends", family: "traveling with family" };
+  if (quiz && quiz.step === 5 && TIER[quiz.style]) {
+    $("[data-quiz-badge]").hidden = false;
+    $("[data-quiz-badge-text]").textContent = `Your quiz is saved · ${TIER[quiz.style]} · ${GROUP[quiz.group] || "traveling solo"}`;
+    $("[data-welcome]").textContent = `welcome back, ${TIER[quiz.style]}`;
+  }
+
+  // Back from the magic link: Supabase puts the session in the URL hash. Part A only shows the
+  // "your trips live in the app" screen; the session isn't kept (the web app is Part B).
+  const hash = new URLSearchParams(location.hash.slice(1));
+  if (hash.get("access_token") || hash.get("type") === "magiclink") {
+    history.replaceState(null, "", location.pathname);
+    $("[data-signin]").hidden = true; $("[data-signed-in]").hidden = false;
+  } else if (hash.get("error_description")) {
+    $(".form-msg").textContent = "That sign-in link expired. Ask for a new one.";
+    $(".form-msg").classList.add("err");
+  }
+
+  $(".signin-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = e.currentTarget, msg = f.querySelector(".form-msg"), btn = f.querySelector("button");
+    const email = f.elements.email.value.trim().toLowerCase();
+    msg.classList.remove("err");
+    if (!G.EMAIL_RE.test(email)) { msg.textContent = "Check your email address."; msg.classList.add("err"); return; }
+    btn.disabled = true; btn.textContent = "Sending…";
+    try {
+      if (G.MOCK || SUPABASE_KEY.startsWith("__")) { console.info("[signin mock] magic link for", email); await new Promise((r) => setTimeout(r, 400)); }
+      else {
+        // create_user:false — the website never creates app accounts. The answer is the same either
+        // way, so this can't be used to find out who has an account.
+        await fetch(`${SUPABASE_URL}/auth/v1/otp?redirect_to=${encodeURIComponent("https://gototravelapp.com/signin")}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", apikey: SUPABASE_KEY },
+          body: JSON.stringify({ email, create_user: false }),
+        });
+      }
+      msg.textContent = "If you have a Go To Travel account, a sign-in link is on its way. Check your inbox.";
+      btn.textContent = "Link sent";
+    } catch (err) {
+      console.error("[signin]", err);
+      btn.disabled = false; btn.textContent = "Email me a sign-in link";
+      msg.textContent = "That didn't send. Check your connection and try again."; msg.classList.add("err");
+    }
+  });
+})();
+</script>
+</body>
+</html>
