@@ -120,7 +120,7 @@
     $("[data-who]").textContent = p.email ? `Settings for ${p.email}.` : "";
     $("[data-unsub-done]").textContent = p.unsubscribed ? "Done. You won't get marketing email from us." : "";
   }
-  if (!needLink) call("get").then(paint).catch(() => { $("[data-who]").textContent = "That link has expired. Ask for a new one below."; $("[data-need-link]").hidden = false; });
+  if (!needLink && !G.params.get("confirm_delete")) call("get").then(paint).catch(() => { $("[data-who]").textContent = "That link has expired. Ask for a new one below."; $("[data-need-link]").hidden = false; });
 
   $$("[data-pref]").forEach((b) => b.addEventListener("click", async () => {
     const on = b.getAttribute("aria-checked") !== "true";
@@ -143,8 +143,8 @@
     try { await call("delete_request"); $("[data-delete-done]").textContent = "We emailed you a link to confirm. Nothing is deleted until you click it."; }
     catch { e.target.disabled = false; G.toast("That didn't go through. Try again."); }
   });
-  if (G.params.get("confirm_delete") && token) {
-    call("delete_confirm").then(() => { document.querySelector("main").innerHTML = '<h1 style="font-size:40px">Deleted.</h1><p class="lede">Your waitlist data is gone. If you had an app account, its deletion has started. Thanks for trying Go To Travel.</p>'; })
+  if (G.params.get("confirm_delete")) {
+    call("delete_confirm", { delete_token: G.params.get("confirm_delete") }).then(() => { document.querySelector("main").innerHTML = '<h1 style="font-size:40px">Deleted.</h1><p class="lede">Your website signup, quiz answers and dream board are gone. If you also have an app account, delete it in the app under Profile. Thanks for trying Go To Travel.</p>'; })
       .catch(() => G.toast("That confirmation link has expired. Ask again below."));
   }
 
