@@ -181,6 +181,23 @@
     { id: "solo", label: "Solo", desc: "Just me" }, { id: "couple", label: "Couple", desc: "Me + partner" },
     { id: "friends", label: "Friends", desc: "Group trip" }, { id: "family", label: "Family", desc: "Kids included" },
   ];
+  // One free kit per group, so a solo traveler never gets the kids' weekend email (Pavan, Oct 15).
+  const KITS = {
+    family: { badge: "FREE FOR PARENTS", title: "The Weekend Rescue Kit", short: "the Weekend Rescue Kit", friday: "One kid-proof weekend idea every Friday",
+      items: ["Rainy-day backups that kids actually like", "The 10-minute packing list for every age", "A Friday email with weekend ideas near you"] },
+    solo: { badge: "FREE FOR SOLO TRAVELERS", title: "The Solo Trip Playbook", short: "the Solo Trip Playbook", friday: "One solo trip idea every Friday",
+      items: ["Solo-friendly places to stay, eat and meet people", "The one-bag packing list", "A Friday email with one trip made for one"] },
+    couple: { badge: "FREE FOR COUPLES", title: "The Getaway for Two Kit", short: "the Getaway for Two Kit", friday: "One getaway for two every Friday",
+      items: ["Weekend getaways a short drive or flight away", "Date-night spots locals love, not tourist traps", "A Friday email with one trip for two"] },
+    friends: { badge: "FREE FOR CREWS", title: "The Group Trip Kit", short: "the Group Trip Kit", friday: "One crew trip idea every Friday",
+      items: ["How to get the group chat to actually commit", "The split-it-fair cost sheet", "A Friday email with one trip for the crew"] },
+  };
+  // Everything that changes once we know who they travel with.
+  function personalize() {
+    const kit = KITS[q.group];
+    const lbl = document.querySelector('label[for="email-tips"]');
+    if (lbl) lbl.textContent = kit ? kit.friday : "One trip idea every Friday";
+  }
   const STYLES = [
     { id: "budget", label: "Budget", icon: "$", desc: "Best value, hostels, street food" },
     { id: "comfortable", label: "Comfortable", icon: "$$", desc: "Mid-range hotels, good restaurants" },
@@ -268,7 +285,7 @@
             <div class="chips"><span>${GROUP_LINE[q.group] || "Traveling solo"}</span><span>${pace ? pace.label + " pace" : "Balanced pace"}</span><span>${picked.length ? esc(picked.join(" · ")) : "Open to anything"}</span>${isFam() && kidBits.length ? `<span class="kid-chip">Kids: ${esc(kidBits.join(" · "))}</span>` : ""}</div>
           </div></div>
         <form class="form-row signup" data-source="quiz" data-waitlist novalidate>
-          <label class="lbl" for="email-type" style="width:100%;font-size:15px">Save your type. The app will greet you as a ${t.name}.</label>
+          <label class="lbl" for="email-type" style="width:100%;font-size:15px">${KITS[q.group] ? `Save your type and get ${KITS[q.group].short} free. ` : "Save your type. "}The app will greet you as a ${t.name}.</label>
           <input class="field" id="email-type" name="email" type="email" autocomplete="email" placeholder="you@email.com" required style="height:52px">
           <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
           <button class="btn btn-sun" type="submit" style="min-height:52px">${joined ? "Save to my signup" : "Save my type"}</button>
@@ -281,6 +298,7 @@
           <a href="https://www.instagram.com/gototravelapp" data-social="instagram" data-loc="quiz_result"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a></div>`;
     }
     stage.innerHTML = html;
+    personalize();
     bindForms(stage);
     if (focus) {
       const target = done ? $("[data-result]", stage) : $("[aria-pressed=true], .choice, .qpill", stage);
@@ -388,7 +406,8 @@
   }
   function successHtml(me, source) {
     const pos = me.position ? `You're #${Number(me.position).toLocaleString()} in line.` : "You're on the list.";
-    const head = source === "quiz" ? `Saved. The app will greet you as a ${tier().name}.` : source === "popup_kit" ? "You're in. Your kit is on its way this week." : `You're in. ${pos}`;
+    const kit = KITS[q.group];
+    const head = source === "quiz" ? `Saved. ${kit ? `${kit.short[0].toUpperCase() + kit.short.slice(1)} is on its way, and the` : "The"} app will greet you as a ${tier().name}.` : source === "popup_kit" ? `You're in. ${kit ? kit.short[0].toUpperCase() + kit.short.slice(1) : "Your kit"} is on its way this week.` : `You're in. ${pos}`;
     const sub = source === "quiz" || source === "popup_kit" ? pos : "Invite friends and you both move up.";
     return `<div class="joined" tabindex="-1"><b>${esc(head)}</b><span>${esc(sub)}</span>${me.code ? `
       <div class="ref-row"><label class="sr" for="ref-${source}">Your invite link</label><input id="ref-${source}" readonly value="${esc(G.refLink(me.code))}">
@@ -488,11 +507,8 @@
   let closePopup = null;
   const loadedAt = Date.now();
   const DISMISS_DAYS = 14;
-  const familyInterest = () => q.group === "family" || G.session.get("gtt_saw_families");
-  const famEl = document.getElementById("families");
-  if ("IntersectionObserver" in window && famEl) {
-    new IntersectionObserver((ents, obs) => { if (ents.some((x) => x.isIntersecting)) { G.session.set("gtt_saw_families", true); obs.disconnect(); } }, { threshold: 0.35 }).observe(famEl);
-  }
+  // The free kit matches who they travel with (from the quiz). No group yet: ask the quiz first.
+  const tick = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F6B55" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M5 12l5 5L20 7"/></svg>';
   function canShow(id) {
     if (G.me() || G.session.get("gtt_popup_shown") || closePopup) return false;
     if (Date.now() - loadedAt < 10000) return false;
@@ -503,17 +519,16 @@
     return true;
   }
   function show(id) {
+    if (id === "kit" && !KITS[q.group] && !q.started) id = "quiz";
+    if (id === "kit" && !KITS[q.group]) return; // mid-quiz: leave them to it
     if (!canShow(id)) return;
     const scrim = document.getElementById(id === "quiz" ? "pop-quiz" : "pop-kit");
     if (id === "kit") {
-      const fam = familyInterest();
-      $("[data-kit-badge]", scrim).textContent = fam ? "FREE FOR PARENTS" : "FREE";
-      $("[data-kit-title]", scrim).textContent = fam ? "The Weekend Rescue Kit" : "The Trip Starter Kit";
-      $("[data-kit-art] use", scrim).setAttribute("href", fam ? "#art-family" : "#art-friends");
-      const items = fam
-        ? ["Rainy-day backups that kids actually like", "The 10-minute packing list for every age", "A Friday email with ideas near you"]
-        : ["[KIT ITEM 1: Pavan to decide]", "[KIT ITEM 2]", "A Friday email with one trip idea"];
-      $("[data-kit-list]", scrim).innerHTML = items.map((t) => `<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2F6B55" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0"><path d="M5 12l5 5L20 7"/></svg>${esc(t)}</li>`).join("");
+      const kit = KITS[q.group];
+      $("[data-kit-badge]", scrim).textContent = kit.badge;
+      $("[data-kit-title]", scrim).textContent = kit.title;
+      $("[data-kit-art] use", scrim).setAttribute("href", "#art-" + q.group);
+      $("[data-kit-list]", scrim).innerHTML = kit.items.map((t) => `<li>${tick}${esc(t)}</li>`).join("");
     }
     G.session.set("gtt_popup_shown", id);
     G.track("popup_shown", { id: id === "quiz" ? "popup_quiz" : "popup_kit" });
