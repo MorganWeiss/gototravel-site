@@ -109,6 +109,7 @@
       ...utm(),
       consent_text_version: CONFIG.consentTextVersion,
       dreams: (store.get("gtt_dreams") || []).slice(0, 12),
+      tz: (() => { try { return Intl.DateTimeFormat().resolvedOptions().timeZone; } catch { return undefined; } })(),
     };
     delete payload.t;
     if (MOCK) {

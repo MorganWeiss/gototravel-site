@@ -407,11 +407,14 @@
     }
     return f;
   }
-  function successHtml(me, source) {
+  function successHtml(me, source, confirm) {
     const pos = me.position ? `You're #${Number(me.position).toLocaleString()} in line.` : "You're on the list.";
     const kit = KITS[q.group];
-    const head = source === "quiz" ? `Saved. ${kit ? `${kit.short[0].toUpperCase() + kit.short.slice(1)} is on its way, and the` : "The"} app will greet you as a ${tier().name}.` : source === "popup_kit" ? `You're in. ${kit ? kit.short[0].toUpperCase() + kit.short.slice(1) : "Your kit"} is on its way this week.` : `You're in. ${pos}`;
-    const sub = source === "quiz" || source === "popup_kit" ? pos : "Invite friends and you both move up.";
+    // The kit emails aren't written yet, so promise "when it's ready", not "on its way".
+    const kitLater = kit ? ` We'll email you ${kit.short} as soon as it's ready.` : "";
+    const head = confirm ? "Almost there. Check your inbox." : source === "quiz" ? `Saved. The app will greet you as a ${tier().name}.` : source === "popup_kit" ? `You're in.${kitLater || " We'll email your kit as soon as it's ready."}` : `You're in. ${pos}`;
+    // EU/EEA, UK and Switzerland: double opt-in, nothing counts until the link is tapped.
+    const sub = confirm ? "Tap the link we just sent to confirm your spot." : source === "quiz" ? `${pos}${kitLater}` : source === "popup_kit" ? pos : "Invite friends and you both move up.";
     return `<div class="joined" tabindex="-1"><b>${esc(head)}</b><span>${esc(sub)}</span>${me.code ? `
       <div class="ref-row"><label class="sr" for="ref-${source}">Your invite link</label><input id="ref-${source}" readonly value="${esc(G.refLink(me.code))}">
       <button type="button" class="btn btn-sun" data-ref-copy>Copy</button><button type="button" class="btn btn-ghost" data-ref-share>Share</button></div>` : ""}</div>`;
@@ -445,7 +448,7 @@
       G.track("signup", { source, tier: q.style ? tier().name : undefined });
       if (source === "popup_kit") G.track("kit_signup", {});
       const holder = document.createElement("div");
-      holder.innerHTML = successHtml(me, source);
+      holder.innerHTML = successHtml(me, source, !!data.confirm);
       const joined = holder.firstElementChild;
       form.replaceWith(joined);
       renderDreams(); renderInvite();

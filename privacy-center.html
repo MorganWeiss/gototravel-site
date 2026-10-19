@@ -88,7 +88,7 @@
     </div>
   </section>
 
-  <div style="display:flex;flex-wrap:wrap;gap:18px;font-size:15px"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="/contact">Contact us</a><span>privacy@gototravelapp.com [MAILBOX: set up]</span></div>
+  <div style="display:flex;flex-wrap:wrap;gap:18px;font-size:15px"><a href="/privacy.html">Privacy Policy</a><a href="/terms.html">Terms of Service</a><a href="/contact">Contact us</a><span>hello@gototravelapp.com</span></div>
 </main>
 <script src="/assets/site.js"></script>
 <script>
@@ -122,7 +122,7 @@
     $("[data-who]").textContent = p.email ? `Settings for ${p.email}.` : "";
     $("[data-unsub-done]").textContent = p.unsubscribed ? "Done. You won't get marketing email from us." : "";
   }
-  if (!needLink && !G.params.get("confirm_delete")) call("get").then(paint).catch(() => { $("[data-who]").textContent = "That link has expired. Ask for a new one below."; $("[data-need-link]").hidden = false; });
+  if (!needLink && !G.params.get("confirm_delete") && !G.params.get("confirm")) call("get").then(paint).catch(() => { $("[data-who]").textContent = "That link has expired. Ask for a new one below."; $("[data-need-link]").hidden = false; });
 
   $$("[data-pref]").forEach((b) => b.addEventListener("click", async () => {
     const on = b.getAttribute("aria-checked") !== "true";
@@ -145,6 +145,13 @@
     try { await call("delete_request"); $("[data-delete-done]").textContent = "We emailed you a link to confirm. Nothing is deleted until you click it."; }
     catch { e.target.disabled = false; G.toast("That didn't go through. Try again."); }
   });
+  // Double opt-in (EU/EEA, UK, Switzerland): the link in the confirmation email.
+  if (G.params.get("confirm")) {
+    const main = document.querySelector("main");
+    call("confirm", { confirm_token: G.params.get("confirm") })
+      .then(() => { main.innerHTML = '<h1 style="font-size:40px">You\'re on the list.</h1><p class="lede">Thanks for confirming. We\'ll email you when your invite is ready.</p><p><a class="btn btn-sun" href="/">Back to the home page</a></p>'; G.track("signup_confirm", {}); })
+      .catch(() => { main.innerHTML = '<h1 style="font-size:40px">That link has already been used.</h1><p class="lede">If you tapped it before, you\'re all set. Otherwise sign up again on the home page and we\'ll send a fresh one.</p><p><a class="btn btn-sun" href="/#join">Back to the home page</a></p>'; });
+  }
   if (G.params.get("confirm_delete")) {
     call("delete_confirm", { delete_token: G.params.get("confirm_delete") }).then(() => { document.querySelector("main").innerHTML = '<h1 style="font-size:40px">Deleted.</h1><p class="lede">Your website signup, quiz answers and dream board are gone. If you also have an app account, delete it in the app under Profile. Thanks for trying Go To Travel.</p>'; })
       .catch(() => G.toast("That confirmation link has expired. Ask again below."));
