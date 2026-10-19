@@ -3,7 +3,7 @@
   "redirects": [
     {
       "source": "/app",
-      "destination": "/#join",
+      "destination": "https://testflight.apple.com/join/HXVp8DH9",
       "permanent": false
     }
   ],

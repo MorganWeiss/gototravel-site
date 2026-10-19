@@ -6,8 +6,8 @@
 export const config = { runtime: 'edge' };
 
 const PREVIEW_FN = 'https://zkwamqtnaegvlptzdqxn.supabase.co/functions/v1/invite-preview';
-// Where "Get the app" goes: the one app link (vercel.json sends /app to the waitlist today, to the
-// TestFlight public link once there is one, later the App Store). The email QR code points there too.
+// Where "Get the app" goes: the one app link (vercel.json sends /app to the TestFlight public link,
+// later the App Store). The email QR code points there too.
 const GET_APP_URL = '/app';
 const FALLBACK_PHOTO = 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&h=630&fit=crop&crop=entropy&q=80&fm=jpg';
 const LOGO = '<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><defs><linearGradient id="logo-t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A9C82"/><stop offset="1" stop-color="#3E7A63"/></linearGradient><clipPath id="logo-c"><rect width="1024" height="1024" rx="230"/></clipPath></defs><g clip-path="url(#logo-c)"><rect width="1024" height="1024" fill="url(#logo-t)"/><g fill="none" stroke="#FFFFFF" stroke-linecap="round"><circle cx="512" cy="512" r="300" stroke-width="34"/><ellipse cx="512" cy="512" rx="128" ry="300" stroke-width="22" opacity="0.45"/><path d="M232 412H792M232 612H792" stroke-width="22" opacity="0.45"/></g><path d="M318 700C390 540 520 450 668 420" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round" stroke-dasharray="1 70"/><circle cx="318" cy="700" r="30" fill="none" stroke="#FFFFFF" stroke-width="16"/><g transform="translate(712,452)"><path d="M0 0C0 0-64-66-64-110A64 64 0 0 1 64-110C64-66 0 0 0 0Z" fill="#F2A93B"/><circle cx="0" cy="-110" r="24" fill="#5A9C82"/></g></g></svg>';
