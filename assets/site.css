@@ -77,6 +77,21 @@ a{color:var(--sunset)}a:hover{color:#FFC46B}
 .ref-row input{flex:1 1 220px;height:46px;padding:0 12px;border-radius:12px;border:1px solid rgba(255,255,255,.25);background:rgba(15,26,23,.4);color:inherit;font:600 14px var(--body)}
 .light .ref-row input{border-color:#D8CFBC;background:#fff}
 .ref-row .btn{min-height:46px;padding:0 16px;font-size:15px}
+/* "Dark or light?" on the thank-you card: the look the app opens in (saved with the signup). */
+.look{display:flex;flex-direction:column;gap:10px;margin-top:2px;padding-top:12px;border-top:1px dashed rgba(127,199,167,.5)}
+.look-q{display:flex;flex-direction:column;gap:2px}
+.joined .look-q b{font-size:16px}
+.look-q span{font-size:14px;opacity:.8}
+.look-row{display:flex;flex-wrap:wrap;gap:10px}
+.look-btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 18px 0 9px;border-radius:14px;border:1.5px solid currentColor;background:transparent;color:inherit;font:700 15px/1 var(--body);cursor:pointer}
+.look-btn[aria-pressed="true"]{border-color:var(--sunset);box-shadow:inset 0 0 0 1.5px var(--sunset)}
+.look-btn:disabled{cursor:default}
+.look-btn:disabled:not([aria-pressed="true"]){opacity:.5}
+.look-sw{width:30px;height:30px;flex:none;border-radius:9px;border:1px solid rgba(127,127,127,.5)}
+.look-sw.dark{background:linear-gradient(150deg,#181B20 58%,#469870 58%)}
+.look-sw.light{background:linear-gradient(150deg,#F9F7F6 58%,#469870 58%)}
+.look-note{font-size:14px;font-weight:700}
+.look-note:empty{display:none}
 
 /* ── Header: passport bar + nav ─────────────────────────────── */
 .site-head{position:sticky;top:0;z-index:40;background:rgba(15,26,23,.78);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}

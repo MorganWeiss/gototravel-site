@@ -407,7 +407,19 @@
     }
     return f;
   }
-  function successHtml(me, source, confirm) {
+  // "Dark or light?" right after a signup: the look the app opens in, saved with the signup (theme_pref).
+  // Only asked while the email is still in memory (this page view), and once per browser.
+  let lastEmail = null;
+  const lookHtml = (source) => `
+      <div class="look" role="group" aria-labelledby="look-${source}">
+        <p class="look-q" id="look-${source}"><b>Last one: dark or light?</b><span>The app opens in your pick. Change it anytime.</span></p>
+        <div class="look-row">
+          <button type="button" class="look-btn" data-look="dark" aria-pressed="false"><span class="look-sw dark" aria-hidden="true"></span>Dark</button>
+          <button type="button" class="look-btn" data-look="light" aria-pressed="false"><span class="look-sw light" aria-hidden="true"></span>Light</button>
+        </div>
+        <p class="look-note" role="status" aria-live="polite"></p>
+      </div>`;
+  function successHtml(me, source, confirm, askLook) {
     const pos = me.position ? `You're #${Number(me.position).toLocaleString()} in line.` : "You're on the list.";
     const kit = KITS[q.group];
     // The quiz and the kit pop-up send the traveler's kit (join-waitlist → kit-emails.ts).
@@ -418,7 +430,7 @@
     const sub = confirm ? (gotKit ? `Tap the link we just sent to confirm your spot, and ${kit.short} follows right after.` : "Tap the link we just sent to confirm your spot.") : source === "quiz" || source === "popup_kit" ? pos : "Invite friends and you both move up.";
     return `<div class="joined" tabindex="-1"><b>${esc(head)}</b><span>${esc(sub)}</span>${me.code ? `
       <div class="ref-row"><label class="sr" for="ref-${source}">Your invite link</label><input id="ref-${source}" readonly value="${esc(G.refLink(me.code))}">
-      <button type="button" class="btn btn-sun" data-ref-copy>Copy</button><button type="button" class="btn btn-ghost" data-ref-share>Share</button></div>` : ""}</div>`;
+      <button type="button" class="btn btn-sun" data-ref-copy>Copy</button><button type="button" class="btn btn-ghost" data-ref-share>Share</button></div>` : ""}${askLook ? lookHtml(source) : ""}</div>`;
   }
   function bindForms(root = document) {
     $$("form[data-waitlist]", root).forEach((form) => {
@@ -448,12 +460,15 @@
       const me = G.markSignedUp(data, source);
       G.track("signup", { source, tier: q.style ? tier().name : undefined });
       if (source === "popup_kit") G.track("kit_signup", {});
+      lastEmail = email;
+      const askLook = !G.store.get("gtt_look");
       const holder = document.createElement("div");
-      holder.innerHTML = successHtml(me, source, !!data.confirm);
+      holder.innerHTML = successHtml(me, source, !!data.confirm, askLook);
       const joined = holder.firstElementChild;
       form.replaceWith(joined);
       renderDreams(); renderInvite();
-      if (source === "popup_kit" && closePopup) setTimeout(() => closePopup && closePopup("signup"), 2200);
+      // The kit pop-up closes itself, unless it's asking dark or light (then it closes after the pick).
+      if (source === "popup_kit" && closePopup && !askLook) setTimeout(() => closePopup && closePopup("signup"), 2200);
       else joined.focus({ preventScroll: true });
     } catch (err) {
       console.error("[signup]", err);
@@ -461,6 +476,24 @@
       msg.textContent = "That didn't save. Check your connection and try again."; msg.classList.add("err");
     }
   }
+  document.addEventListener("click", async (e) => {
+    const b = e.target.closest("[data-look]");
+    if (!b || !lastEmail) return;
+    const box = b.closest(".look"), look = b.dataset.look, note = box.querySelector(".look-note");
+    const btns = [...box.querySelectorAll("[data-look]")];
+    btns.forEach((x) => { x.disabled = true; x.setAttribute("aria-pressed", String(x === b)); });
+    try {
+      await G.saveEmail({ email: lastEmail, theme: look }); // merges on email, like every other answer
+      G.store.set("gtt_look", look);
+      G.track("look_pick", { look });
+      note.textContent = `Saved: ${look} it is. Change it anytime in the app.`;
+      if (box.closest("#pop-kit") && closePopup) setTimeout(() => closePopup && closePopup("signup"), 1600);
+    } catch (err) {
+      console.error("[look]", err);
+      btns.forEach((x) => { x.disabled = false; x.setAttribute("aria-pressed", "false"); });
+      note.textContent = "That didn't save. Try again.";
+    }
+  });
   document.addEventListener("click", async (e) => {
     const copy = e.target.closest("[data-ref-copy]");
     const share = e.target.closest("[data-ref-share]");
