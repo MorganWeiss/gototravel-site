@@ -1,5 +1,12 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/app",
+      "destination": "/#join",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/join/:token",
