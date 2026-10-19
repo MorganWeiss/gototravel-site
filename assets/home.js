@@ -247,6 +247,8 @@
     const bar = $("[data-q-bar]"); bar.setAttribute("aria-valuenow", pct); bar.firstElementChild.style.width = pct + "%";
     $("[data-q-back]").hidden = !(st > 0);
     $("[data-q-restart]").hidden = !(st > 0 || q.group);
+    // Finished: on wide screens the result and "save your type" sit side by side (index.html .is-done).
+    $(".quiz-grid").classList.toggle("is-done", done);
     let html = "";
     if (st === 0) html = `<fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:12px"><legend class="qtitle">Who's coming?</legend><div class="choices">${GROUPS.map((g) => choice(g.id, "art-" + g.id, g.label, g.desc, q.group === g.id)).join("")}</div></fieldset>`;
     if (st === 1) html = `<fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:12px"><legend class="qtitle">How do you like to travel?</legend><div class="choices">${STYLES.map((o) => choice(o.id, "art-" + o.id, o.label, o.desc, q.style === o.id, `<em>${o.icon}</em>`)).join("")}</div></fieldset>`;
@@ -275,7 +277,7 @@
       const kidBits = KID_LOVES.filter(([id]) => q.kidLoves.includes(id)).map(([, l]) => l)
         .concat(KID_FOOD.filter(([id]) => id !== "none" && q.kidFood.includes(id)).map(([, l]) => l.toLowerCase()));
       const joined = !!G.me();
-      html = `<div class="result" tabindex="-1" data-result>
+      html = `<div class="done-row"><div class="result" tabindex="-1" data-result>
           <div class="art">${use("scene-" + scene)}</div><div class="result-shade"></div>
           <div class="result-body">
             <div class="stamp-big" aria-hidden="true">STAMPED<br>2026</div>
@@ -285,6 +287,7 @@
             <p style="max-width:520px;font-size:16px;line-height:1.5;color:#E5ECE8">${esc(t.blurb)}</p>
             <div class="chips"><span>${GROUP_LINE[q.group] || "Traveling solo"}</span><span>${pace ? pace.label + " pace" : "Balanced pace"}</span><span>${picked.length ? esc(picked.join(" · ")) : "Open to anything"}</span>${isFam() && kidBits.length ? `<span class="kid-chip">Kids: ${esc(kidBits.join(" · "))}</span>` : ""}</div>
           </div></div>
+        <div class="done-act">
         <form class="form-row signup" data-source="quiz" data-waitlist novalidate>
           <label class="lbl" for="email-type" style="width:100%;font-size:15px">${KITS[q.group] ? `Save your type and get ${KITS[q.group].short} free. ` : "Save your type. "}The app will greet you as a ${t.name}.</label>
           <input class="field" id="email-type" name="email" type="email" autocomplete="email" placeholder="you@email.com" required style="height:52px">
@@ -293,10 +296,11 @@
           <p class="consent" style="width:100%">By saving you agree to our <a href="/terms.html">Terms</a> and <a href="/privacy.html">Privacy Policy</a>. Unsubscribe anytime.</p>
           <p class="form-msg" role="status" aria-live="polite"></p>
         </form>
-        <div style="display:flex;flex-wrap:wrap;gap:10px"><button type="button" class="btn btn-ghost" data-share-type style="min-height:44px;font-size:15px">Share my type to Stories</button><button type="button" class="btn btn-text" data-q-retake>Start over</button></div>
+        <div style="display:flex;flex-wrap:wrap;gap:10px"><button type="button" class="btn btn-ghost" data-share-type style="min-height:44px;font-size:15px">Share my type to Stories</button></div>
         <div class="follow"><span>Get one trip idea a week made for a <b>${t.name}</b>. Follow us:</span>
           <a href="https://www.tiktok.com/@gototravelapp" data-social="tiktok" data-loc="quiz_result"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 5.8A4.3 4.3 0 0 1 15.5 3h-3.1v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .5 0 .8.1V9.7a5.8 5.8 0 1 0 5 5.7V9.1a7.4 7.4 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.3-1.6z"/></svg>TikTok</a>
-          <a href="https://www.instagram.com/gototravelapp" data-social="instagram" data-loc="quiz_result"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a></div>`;
+          <a href="https://www.instagram.com/gototravelapp" data-social="instagram" data-loc="quiz_result"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>Instagram</a></div>
+        </div></div>`;
     }
     stage.innerHTML = html;
     personalize();
