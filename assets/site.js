@@ -67,6 +67,9 @@
   }
 
   const isSet = (id) => id && !/PLACEHOLDER/.test(id);
+  // The cookie pop-up asks only when something optional is installed. Today nothing is (no analytics tool,
+  // and the pixel IDs are placeholders), so it stays away; "Cookie settings" in the footer still opens it.
+  const optionalInstalled = () => isSet(CONFIG.metaPixelId) || isSet(CONFIG.tiktokPixelId);
   let pixels = { tiktok: false, meta: false };
   function loadPixels() {
     // Official base snippets, only for configured IDs, only with Ads consent, after the page is interactive.
@@ -269,7 +272,9 @@
     el.id = "cookie"; el.className = "cookie"; el.setAttribute("aria-label", "Cookie choices");
     el.innerHTML = `
       <h2>Cookies, your call</h2>
-      <p>We use essential cookies to run the site. With your OK we also use analytics, and ads cookies from TikTok and Meta to show you Go To Travel on social. <a href="/privacy.html#cookies">Learn more about cookies</a></p>
+      <p>${optionalInstalled()
+        ? "We use essential cookies to run the site. With your OK we also use analytics, and ads cookies from TikTok and Meta to show you Go To Travel on social."
+        : "We only use essential cookies today, to run the site. We don't use analytics or ad cookies yet. If we add them, they'll only run with your OK, and you can set your choice now."} <a href="/privacy.html#cookies">Learn more about cookies</a></p>
       <div class="cookie-opts">
         <div class="opt-row"><span><b>Essential</b> · always on</span><button type="button" class="switch" role="switch" aria-checked="true" aria-label="Essential cookies, always on" disabled></button></div>
         <div class="opt-row"><span><b>Analytics</b></span><button type="button" class="switch" role="switch" data-k="analytics" aria-checked="${c.analytics}" aria-label="Analytics cookies"></button></div>
@@ -307,7 +312,7 @@
     loadArt();
     renderStamps();
     applyConsent();
-    if (!document.body.hasAttribute("data-no-cookie-banner")) setTimeout(() => cookieBanner(), 600);
+    if (!document.body.hasAttribute("data-no-cookie-banner") && optionalInstalled()) setTimeout(() => cookieBanner(), 600);
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
