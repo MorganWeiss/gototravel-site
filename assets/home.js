@@ -263,7 +263,7 @@
         <div class="pills"><span class="lab">They're into</span></div>
         <div class="tiles">${KID_LOVES.map(([id, l]) => `<button type="button" class="choice" data-kid-love="${id}" aria-pressed="${q.kidLoves.includes(id)}"><div class="art">${use("art-" + id)}</div><b><span>${l}</span></b></button>`).join("")}</div>
         <div class="pills" role="group" aria-label="Eats"><span class="lab">Eats</span>${KID_FOOD.map(([id, l]) => `<button type="button" class="qpill" data-kid-food="${id}" aria-pressed="${q.kidFood.includes(id)}">${l}</button>`).join("")}</div>
-        <p style="font-size:14px;color:#9DAAA4">You can add more kids, names and nap times in the app. Kids' details stay private to your family.</p>
+        <p style="font-size:14px;color:#9DAAA4">Optional. Food needs are only used to suggest places to eat, never for ads, and you can delete them anytime. You can add more kids, names and nap times in the app. Kids' details stay private to your family.</p>
         <button type="button" class="btn btn-sun" data-q-kids-done style="align-self:flex-start">See my traveler type</button></div>`;
     }
     if (done) {

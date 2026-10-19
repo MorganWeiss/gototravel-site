@@ -65,6 +65,7 @@
       <div class="pref"><div><b>Tips for traveling with kids</b><small>Weekend ideas and packing help for parents</small></div><button type="button" class="switch" role="switch" data-pref="pref_kids_tips" aria-checked="false" aria-label="Tips for traveling with kids"></button></div>
     </div>
     <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px">
+      <p class="note" data-unsub-hint hidden style="font-weight:700">One tap and you won't get marketing email from us again.</p>
       <button type="button" class="btn btn-ghost" data-unsub-all>Unsubscribe from all marketing email</button>
       <span class="ok" data-unsub-done role="status" aria-live="polite"></span>
     </div>
@@ -123,6 +124,15 @@
     $("[data-unsub-done]").textContent = p.unsubscribed ? "Done. You won't get marketing email from us." : "";
   }
   if (!needLink && !G.params.get("confirm_delete") && !G.params.get("confirm")) call("get").then(paint).catch(() => { $("[data-who]").textContent = "That link has expired. Ask for a new one below."; $("[data-need-link]").hidden = false; });
+
+  // From an email's Unsubscribe button: land on the one tap that does it.
+  if (G.params.get("unsub") && !needLink) {
+    const btn = $("[data-unsub-all]");
+    $("[data-unsub-hint]").hidden = false;
+    btn.classList.replace("btn-ghost", "btn-sun");
+    document.getElementById("email").scrollIntoView({ block: "start" });
+    btn.focus({ preventScroll: true });
+  }
 
   $$("[data-pref]").forEach((b) => b.addEventListener("click", async () => {
     const on = b.getAttribute("aria-checked") !== "true";
