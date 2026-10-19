@@ -1,16 +1,33 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/join/:token", "destination": "/join.html" }
+    {
+      "source": "/join/:token",
+      "destination": "/api/join?token=:token"
+    },
+    {
+      "source": "/join",
+      "destination": "/api/join"
+    }
   ],
   "headers": [
     {
       "source": "/.well-known/apple-app-site-association",
-      "headers": [{ "key": "Content-Type", "value": "application/json" }]
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/json"
+        }
+      ]
     },
     {
       "source": "/assets/(.*)",
-      "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }]
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
     }
   ]
 }
