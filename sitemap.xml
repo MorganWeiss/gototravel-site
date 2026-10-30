@@ -4,4 +4,37 @@
   <url><loc>https://gototravelapp.com/contact</loc><changefreq>monthly</changefreq><priority>0.4</priority></url>
   <url><loc>https://gototravelapp.com/privacy</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
   <url><loc>https://gototravelapp.com/terms</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+  <!-- lists -->
+  <url><loc>https://gototravelapp.com/lists</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gototravelapp.com/lists/mexico-city-day-of-the-dead-weekend</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/sydney-jacaranda-season</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/sedona-a-two-day-40th</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/kyoto-fall-color-late-nov-to-early-dec-2026</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/zion-with-a-stroller-one-fall-day</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/tromso-in-november-orcas-and-northern-lights</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/kyoto-the-list-pip-saved-for-us</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/puerto-rico-the-glowing-bay-week</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/nashville-a-two-day-crew-weekend</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/lake-tekapo-lupins-and-dark-skies</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/vienna-first-bites-and-christmas-markets</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/plymouth-massachusetts-thanksgiving-week-with-kids</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/chiang-mai-lantern-night-tue-nov-24</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/marrakech-our-crews-four-picks</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/palm-springs-joshua-tree-a-desert-bachelorette</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/san-diego-thanksgiving-week-toddler-to-teen</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/torres-del-paine-a-dome-and-the-big-days</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/nyc-the-100th-macys-parade-with-kids</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/mexico-city-four-bites-and-a-boat-ride</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/chicago-opening-weekend-of-lights-nov-20-21</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/san-diego-one-saturday-from-one-screenshot</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/new-orleans-thanksgiving-weekend-with-your-crew</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/marrakech-a-rooftop-a-legend-a-desert</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/rovaniemi-with-kids-in-december</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/cape-town-with-kids-penguins-cable-car-chips</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/chiang-mai-eat-first-float-later</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/queenstown-the-crew-adventure-list</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/lapland-the-family-vote</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/tromso-polar-night</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://gototravelapp.com/lists/plymouth-massachusetts-last-weekend-of-the-season</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- /lists -->
 </urlset>
