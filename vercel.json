@@ -1,6 +1,18 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/:path(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.gototravelapp.com"
+        }
+      ],
+      "destination": "https://gototravelapp.com/:path*",
+      "permanent": true
+    },
     {
       "source": "/app",
       "destination": "https://testflight.apple.com/join/HXVp8DH9",
