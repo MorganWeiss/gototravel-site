@@ -3,6 +3,7 @@
  "folder": "california-christmas-markets-2026",
  "module": "ca_markets",
  "post": {
+  "tiktok_credits": true,
   "slug": "california-christmas-markets-2026",
   "series": "Save the dates",
   "title": "California Christmas markets 2026: save the dates",
@@ -14,7 +15,7 @@
     "photo": "cover",
     "big": "California's Christmas markets, 2026",
     "sub": "4 markets · dates, hours, kid notes",
-    "pip": "Every date checked on each market's own site.",
+    "pip": "Every date checked on Nov 10.",
     "pos45": "50% 50%",
     "pos916": "45% 50%",
     "text_top": true,
@@ -133,7 +134,7 @@
     ],
     "pos45": "50% 50%",
     "pos916": "50% 50%",
-    "photo_note": "Photo: the lodge's lounge on a 1930s postcard"
+    "photo_note": "Photo: the lodge's lounge on a vintage postcard"
    },
    {
     "type": "stay",
@@ -254,7 +255,7 @@
    "cover": "Red half-timbered Danish-style houses with steep tiled roofs in Solvang, under a blue sky",
    "dates": "The painted chapel with a bell tower at Old World Village in Huntington Beach",
    "solvang": "A windmill and Danish flags above a red Danish-style building in Solvang",
-   "cambria": "A 1930s linen postcard of the lounge at Cambria Pines Lodge, where the Cambria Christmas Market is held",
+   "cambria": "A vintage linen postcard (about 1930 to 1945) of the lounge at Cambria Pines Lodge, where the Cambria Christmas Market is held",
    "dickensbg": "Costumed performers at the Great Dickens Christmas Fair",
    "oldworld": "German-style buildings with painted walls and blue awnings on a lane at Old World Village in Huntington Beach",
    "kids": "A blue Victorian-style house with a white picket fence in Cambria",

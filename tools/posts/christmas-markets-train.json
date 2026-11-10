@@ -3,6 +3,7 @@
  "folder": "christmas-markets-by-train-v2",
  "module": "markets_v2",
  "post": {
+  "tiktok_credits": true,
   "slug": "christmas-markets-by-train-v2",
   "series": "Trips you can copy",
   "title": "Christmas markets by train with kids",
@@ -186,7 +187,7 @@
       "Hellbrunn Advent",
       "Salzburg",
       "Nov 19 – Dec 24",
-      "Closed Mondays",
+      "Closed Mondays but Dec 21",
       [
        "hellbrunn_hours"
       ]
@@ -310,7 +311,7 @@
    ],
    [
     "📍 Hellbrunner Adventzauber — Salzburg, Austria",
-    "Palace Advent with a train and a petting zoo on weekends; closed Mondays"
+    "Palace Advent with a train and a petting zoo on weekends; closed Mondays except Dec 21"
    ],
    [
     "📍 Münchner Christkindlmarkt — Munich, Germany",

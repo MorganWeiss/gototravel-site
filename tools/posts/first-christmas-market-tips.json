@@ -3,6 +3,7 @@
  "folder": "kids-first-christmas-market-tips",
  "module": "tips_first_market",
  "post": {
+  "tiktok_credits": true,
   "slug": "kids-first-christmas-market-tips",
   "kind": "tips",
   "series": "Pip's tips",
@@ -96,7 +97,7 @@
     "photo": "t8",
     "n": 8,
     "big": "Salzburg has a petting zoo, too.",
-    "pip": "Hellbrunn's Advent: train and petting zoo, weekends 11 to 6. Closed Mondays.",
+    "pip": "Hellbrunn's Advent: train and petting zoo, weekends 11 to 6. Closed Mondays except Dec 21.",
     "src": "hellbrunn_kids",
     "src2": "hellbrunn_hours",
     "pos45": "50% 55%",
@@ -147,7 +148,7 @@
    "5. Grab the free kids' quiz at the stand opposite Vienna's Tree of Hearts.",
    "6. Toddler blades are free to borrow: Vienna's kids' rink lends double blades (EU 21-25) and helmets with a ticket.",
    "7. Munich's Himmelswerkstatt is free for ages 6 to 12. Sign-ups open 10 days ahead.",
-   "8. Salzburg's Hellbrunn Advent has a train and petting zoo on weekends. Closed Mondays."
+   "8. Salzburg's Hellbrunn Advent has a train and petting zoo on weekends. Closed Mondays, except Dec 21."
   ],
   "question": "Which city would your kids pick: Vienna, Munich or Salzburg?",
   "cta_end": "Get a plan fitted to your family: link in bio.",
