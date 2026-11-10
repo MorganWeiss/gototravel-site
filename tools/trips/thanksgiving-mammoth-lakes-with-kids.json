@@ -1,0 +1,791 @@
+{
+ "slug": "thanksgiving-mammoth-lakes-with-kids",
+ "title": "Thanksgiving in Mammoth Lakes with kids",
+ "hook": "Thanksgiving in the mountains, 5 hours from LA",
+ "dates": "Wed Nov 25 to Sun Nov 29, 2026",
+ "who": "Families driving up from Los Angeles; kids 3 and up (notes for little ones and teens)",
+ "checked_on": "2026-11-10",
+ "days": [
+  {
+   "day": 1,
+   "date": "Wed Nov 25",
+   "title": "The drive up 395",
+   "stops": [
+    {
+     "time": "7:00 AM",
+     "name": "Leave Los Angeles",
+     "kind": "move",
+     "why": "About 5 hours to Mammoth; leave early, arrive in daylight",
+     "kid_note": "Carry chains in winter even if the forecast is clear.",
+     "lat": 34.053696,
+     "lng": -118.242921,
+     "address": null,
+     "booking_note": null,
+     "source_ids": [
+      "mm_discover",
+      "vm_roads"
+     ]
+    },
+    {
+     "time": "10:30 AM",
+     "name": "Alabama Hills (Mobius Arch Trailhead)",
+     "kind": "see",
+     "why": "Granite arches below the High Sierra, west of Lone Pine",
+     "kid_note": "There's a porta potty at the Mobius Arch trailhead.",
+     "lat": 36.613553,
+     "lng": -118.125754,
+     "address": "Movie Rd off Whitney Portal Rd, Lone Pine, CA",
+     "booking_note": "From Lone Pine: Whitney Portal Rd 2.5 mi, then right on Movie Rd.",
+     "source_ids": [
+      "blm_alabama"
+     ]
+    },
+    {
+     "time": "12:30 PM",
+     "name": "Erick Schat's Bakkery",
+     "kind": "eat",
+     "why": "Home of the Original Sheepherder Bread (1938); sandwich bar",
+     "kid_note": "Let each kid pick one pastry for the last leg.",
+     "lat": 37.367852,
+     "lng": -118.395709,
+     "address": "763 N Main St, Bishop, CA 93514",
+     "booking_note": "We couldn't confirm holiday-week hours.",
+     "source_ids": [
+      "schats",
+      "osm"
+     ]
+    },
+    {
+     "time": "4:00 PM",
+     "name": "Check in: Mammoth Mountain Inn",
+     "kind": "stay",
+     "why": "Across from Main Lodge; pool, hot tubs, game room",
+     "kid_note": "Game room with PlayStation and Xbox; board games at the front desk.",
+     "lat": 37.651764,
+     "lng": -119.038584,
+     "address": "10400 Minaret Rd, Mammoth Lakes, CA 93546",
+     "booking_note": "Check-in 4 PM. Our pick, not a booking.",
+     "source_ids": [
+      "mm_mmi"
+     ]
+    },
+    {
+     "time": "5:30 PM",
+     "name": "Mammoth Brewing Company",
+     "kind": "eat",
+     "why": "House root beer for the kids, by Main and Minaret",
+     "kid_note": "Root beer is the all-ages pour.",
+     "lat": 37.648438,
+     "lng": -118.983445,
+     "address": "18 Lake Mary Rd, Mammoth Lakes, CA 93546",
+     "booking_note": null,
+     "source_ids": [
+      "vm_mbc"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Los Angeles",
+     "to": "Alabama Hills",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 213 mi via US-395. The whole LA-to-Mammoth drive is about 5 hours without stops. On Nov 10 Caltrans had one-way traffic control near the SR 190 junction (Inyo County).",
+     "source_ids": [
+      "osrm",
+      "mm_discover",
+      "ct_roads395"
+     ]
+    },
+    {
+     "from": "Alabama Hills",
+     "to": "Bishop",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 62 mi north on US-395.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Bishop",
+     "to": "Mammoth Lakes",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 43 mi. If chain controls are up: at R2, 4WD/AWD with snow tires on all four wheels can skip chains but must carry them.",
+     "source_ids": [
+      "osrm",
+      "ct_chains"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "date": "Thu Nov 26",
+   "title": "Tubes, a coaster, then turkey",
+   "stops": [
+    {
+     "time": "10:00 AM",
+     "name": "Woolly's Tube Park",
+     "kind": "do",
+     "why": "Snow tubing lanes, open daily Nov 20 to 29 (scheduled)",
+     "kid_note": "Riders must be 42 inches or taller; one person per tube.",
+     "lat": 37.650946,
+     "lng": -119.007458,
+     "address": "9000 Minaret Rd, Mammoth Lakes, CA 93546",
+     "booking_note": "Book a session online; onsite tickets from 9:30 AM. Scheduled 'weather and conditions permitting.'",
+     "source_ids": [
+      "mm_tube"
+     ]
+    },
+    {
+     "time": "11:30 AM",
+     "name": "Mountain Coaster at Woolly's",
+     "kind": "do",
+     "why": "Same stop, same dates: Woolly's mountain coaster",
+     "kid_note": "Kids 3+ and 38 in.+ ride with an adult 18+; solo riders 54 in.+",
+     "lat": 37.650946,
+     "lng": -119.007458,
+     "address": "9000 Minaret Rd, Mammoth Lakes, CA 93546",
+     "booking_note": "Book ahead; every rider signs a digital waiver emailed before the day.",
+     "source_ids": [
+      "mm_coaster"
+     ]
+    },
+    {
+     "time": "5:00 PM",
+     "name": "Mountainside Bar & Grill (Thanksgiving dinner)",
+     "kind": "eat",
+     "why": "Carving stations: turkey, prime rib, salmon, the sides",
+     "kid_note": "A family-friendly room with kid dishes on the regular menu.",
+     "lat": 37.651764,
+     "lng": -119.038584,
+     "address": "Mammoth Mountain Inn, 10400 Minaret Rd, Mammoth Lakes, CA",
+     "booking_note": "Seatings 2:30, 5:00 and 7:30 PM. Book now. A hot dinner to go for 2-4 is also offered.",
+     "source_ids": [
+      "mm_thanksgiving",
+      "mm_mountainside"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Mammoth Mountain Inn",
+     "to": "Woolly's",
+     "mode": "shuttle or drive",
+     "duration": null,
+     "note": "Free Red Line shuttle from The Village every 20 minutes; Woolly's is about halfway between The Village and Main Lodge.",
+     "source_ids": [
+      "mm_tube",
+      "osrm"
+     ]
+    },
+    {
+     "from": "Woolly's",
+     "to": "Mammoth Mountain Inn",
+     "mode": "shuttle or drive",
+     "duration": null,
+     "note": "Back for a rest before dinner.",
+     "source_ids": [
+      "osrm"
+     ]
+    }
+   ],
+   "alternative": {
+    "name": "The Lakefront Restaurant (Tamarack Lodge)",
+    "text": "Quieter, lakeside option: a 4-course prix fixe. 3:00 PM seating $105 adult, $55 child; 5:00 and 7:30 PM $125 adult, $65 child (before tax, plus a $40 corkage fee per bottle). Public booking opened Nov 5. No kids' menu on regular nights.",
+    "source_ids": [
+     "mm_thanksgiving",
+     "mm_lakefront"
+    ]
+   }
+  },
+  {
+   "day": 3,
+   "date": "Fri Nov 27",
+   "title": "Summit, snowshoes, tree lighting",
+   "stops": [
+    {
+     "time": "8:30 AM",
+     "name": "The Stove",
+     "kind": "eat",
+     "why": "Breakfast classics in Old Mammoth for 40+ years",
+     "kid_note": "Opens at 7 AM every day.",
+     "lat": 37.636803,
+     "lng": -118.966841,
+     "address": "644 Old Mammoth Rd, Mammoth Lakes, CA",
+     "booking_note": null,
+     "source_ids": [
+      "vm_stove"
+     ]
+    },
+    {
+     "time": "10:00 AM",
+     "name": "Panorama Gondola to the summit",
+     "kind": "do",
+     "why": "Up to 11,053 ft for the summit sign and the views",
+     "kid_note": "Up to two kids 12 and under ride free with each paying adult.",
+     "lat": 37.64678,
+     "lng": -119.03407,
+     "address": "Main Lodge, 10001 Minaret Rd, Mammoth Lakes, CA",
+     "booking_note": "Daily from Nov 13, weather permitting; check Lift & Trail Status for holds. The Eleven53 Interpretive Center is included.",
+     "source_ids": [
+      "mm_gondola"
+     ]
+    },
+    {
+     "time": "3:15 PM",
+     "name": "Sunset Snowshoe Tour, Tamarack",
+     "kind": "do",
+     "why": "A guided 1.5-hour walk to the Panorama Dome lookout",
+     "kid_note": "Moderate terrain. No minimum age is listed, so ask when you book.",
+     "lat": 37.61964,
+     "lng": -119.006283,
+     "address": "163 Twin Lakes Rd, Mammoth Lakes, CA",
+     "booking_note": "Departs 3:15 or 3:30 PM; snowshoes included. Needs snow: Tamarack was closed on Nov 9.",
+     "source_ids": [
+      "mm_snowshoe",
+      "mm_report"
+     ]
+    },
+    {
+     "time": "6:30 PM",
+     "name": "Toomey's",
+     "kind": "eat",
+     "why": "Dinner in The Village before the lights go on",
+     "kid_note": null,
+     "lat": 37.649814,
+     "lng": -118.984129,
+     "address": "6085 Minaret Rd, Mammoth Lakes, CA 93546",
+     "booking_note": "Open daily 11 AM to 9 PM.",
+     "source_ids": [
+      "vm_toomeys"
+     ]
+    },
+    {
+     "time": "8:00 PM",
+     "name": "Holiday Tree Lighting in The Village",
+     "kind": "see",
+     "why": "Santa and Woolly light the tree at 8; it's free",
+     "kid_note": "Free photos with Santa and Woolly at 8:15 PM at Mammoth Sports.",
+     "lat": 37.650521,
+     "lng": -118.985184,
+     "address": "6201 Minaret Rd, Mammoth Lakes, CA 93546",
+     "booking_note": "DJ from 6 PM, live music at 7.",
+     "source_ids": [
+      "mm_tree"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "The Stove",
+     "to": "Main Lodge",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 6 mi up Minaret Rd.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Main Lodge",
+     "to": "Tamarack",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 7 mi.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Tamarack",
+     "to": "The Village",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 3 mi.",
+     "source_ids": [
+      "osrm"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "date": "Sat Nov 28",
+   "title": "Maybe a lesson, then biscuits and bowling",
+   "stops": [
+    {
+     "time": "9:30 AM",
+     "name": "First ski lesson (only if beginner terrain is open)",
+     "kind": "do",
+     "why": "Only if the Mountain Report shows beginner terrain",
+     "kid_note": "Kids must be 3+ and potty-trained; 4 and under ski free with a ticket.",
+     "lat": 37.64678,
+     "lng": -119.03407,
+     "address": "Main Lodge, 10001 Minaret Rd, Mammoth Lakes, CA",
+     "booking_note": "No beginner terrain or lessons were available on Nov 9. Check the report before you book.",
+     "source_ids": [
+      "mm_faq",
+      "mm_report",
+      "mm_opening"
+     ]
+    },
+    {
+     "time": "12:30 PM",
+     "name": "Bird and the Biscuit",
+     "kind": "eat",
+     "why": "Scratch biscuits, fried chicken and banana pudding",
+     "kid_note": "It's closed Wednesdays, so it lands on Saturday.",
+     "lat": 37.646108,
+     "lng": -118.967484,
+     "address": "26 Old Mammoth Rd, Unit L1, Mammoth Lakes, CA 93546",
+     "booking_note": "Saturday 8 AM to 8 PM.",
+     "source_ids": [
+      "vm_bird",
+      "mm_whatsnew"
+     ]
+    },
+    {
+     "time": "2:30 PM",
+     "name": "Pool and hot tubs at the inn",
+     "kind": "do",
+     "why": "Heated outdoor pool and hot tubs, open 8 AM to 10 PM",
+     "kid_note": "First-floor game room if it's too cold to swim.",
+     "lat": 37.651764,
+     "lng": -119.038584,
+     "address": "10400 Minaret Rd, Mammoth Lakes, CA 93546",
+     "booking_note": null,
+     "source_ids": [
+      "mm_mmi"
+     ]
+    },
+    {
+     "time": "4:30 PM",
+     "name": "Mammoth Rock 'n' Bowl",
+     "kind": "do",
+     "why": "Bowling and dinner, with views of the Sherwins",
+     "kid_note": null,
+     "lat": 37.637394,
+     "lng": -118.965437,
+     "address": "3029 Chateau Rd, Mammoth Lakes, CA",
+     "booking_note": "Opens at 4 PM on Saturdays.",
+     "source_ids": [
+      "vm_bowl"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Main Lodge",
+     "to": "Bird and the Biscuit",
+     "mode": "drive",
+     "duration": null,
+     "note": "Down Minaret Rd into town.",
+     "source_ids": []
+    },
+    {
+     "from": "Mammoth Mountain Inn",
+     "to": "Rock 'n' Bowl",
+     "mode": "drive",
+     "duration": null,
+     "note": "Into Old Mammoth.",
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "date": "Sun Nov 29",
+   "title": "Home, with one stop that matters",
+   "stops": [
+    {
+     "time": "9:00 AM",
+     "name": "Leave Mammoth Lakes",
+     "kind": "move",
+     "why": "South on US-395; check road conditions first",
+     "kid_note": null,
+     "lat": 37.651764,
+     "lng": -119.038584,
+     "address": null,
+     "booking_note": "Caltrans conditions: roads.dot.ca.gov or 1-800-427-7623.",
+     "source_ids": [
+      "ct_roads395"
+     ]
+    },
+    {
+     "time": "10:45 AM",
+     "name": "Manzanar National Historic Site",
+     "kind": "see",
+     "why": "Where 11,000+ Japanese Americans were incarcerated in WWII",
+     "kid_note": "Big history for older kids: Block 14's rebuilt barracks make it real.",
+     "lat": 36.727872,
+     "lng": -118.155195,
+     "address": "5001 US-395, Independence, CA 93526",
+     "booking_note": "Visitor center Fri to Mon, 9 to 4:30 (closed Tue to Thu). Grounds and driving tour sunrise to sunset.",
+     "source_ids": [
+      "nps_manz"
+     ]
+    },
+    {
+     "time": "12:30 PM",
+     "name": "Drive home to Los Angeles",
+     "kind": "move",
+     "why": "About 220 mi south on US-395",
+     "kid_note": null,
+     "lat": 34.053696,
+     "lng": -118.242921,
+     "address": null,
+     "booking_note": null,
+     "source_ids": [
+      "osrm"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Mammoth Lakes",
+     "to": "Manzanar",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 96 mi south on US-395.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Manzanar",
+     "to": "Los Angeles",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 220 mi.",
+     "source_ids": [
+      "osrm"
+     ]
+    }
+   ]
+  }
+ ],
+ "stays": [
+  {
+   "name": "Mammoth Mountain Inn",
+   "tier": "On the mountain",
+   "why": "Across from Main Lodge, steps from ski school and the gondola; pool, hot tubs, game room, and Thanksgiving dinner upstairs.",
+   "lat": 37.651764,
+   "lng": -119.038584,
+   "url": "https://www.mammothmountain.com/plan-your-trip/mammoth-hotels/mammoth-mountain-inn",
+   "source_ids": [
+    "mm_mmi",
+    "mm_thanksgiving"
+   ]
+  },
+  {
+   "name": "The Village Lodge",
+   "tier": "Condo with a kitchen",
+   "why": "Studios to 3-bedroom condos with full kitchens (cook your own turkey), a heated pool and a game room, steps from the tree lighting. No cribs.",
+   "lat": 37.65114,
+   "lng": -118.98641,
+   "url": "https://www.mammothmountain.com/plan-your-trip/mammoth-hotels/the-village-lodge",
+   "source_ids": [
+    "mm_villagelodge"
+   ]
+  },
+  {
+   "name": "The Westin Monache",
+   "tier": "Full-service resort",
+   "why": "Heated pool and hot tubs, the Westin Family Kids Club, suites with fireplaces, next to The Village.",
+   "lat": 37.649146,
+   "lng": -118.98633,
+   "url": "https://www.visitmammoth.com/directory/the-westin-monache-resort-mammoth/",
+   "source_ids": [
+    "vm_westin"
+   ]
+  },
+  {
+   "name": "Tamarack Lodge cabins",
+   "tier": "Lakeside cabins",
+   "why": "Cabins with kitchens on Twin Lakes, the cross-country and snowshoe center at the door. Cell service is spotty.",
+   "lat": 37.61964,
+   "lng": -119.006283,
+   "url": "https://www.mammothmountain.com/plan-your-trip/mammoth-hotels/tamarack-lodge",
+   "source_ids": [
+    "mm_tamarack"
+   ]
+  }
+ ],
+ "heads_ups": [
+  {
+   "text": "Ski lessons aren't a given: on Nov 9, 3 of 181 trails were open and there was no beginner terrain.",
+   "source_id": "mm_report",
+   "source_ids": [
+    "mm_report"
+   ]
+  },
+  {
+   "text": "The Village Gondola was closed on Nov 9, and Mammoth's lodging page says it typically runs mid-December to mid-April.",
+   "source_id": "mm_lodging",
+   "source_ids": [
+    "mm_lodging",
+    "mm_report"
+   ]
+  },
+  {
+   "text": "Tioga Pass (Hwy 120) into Yosemite was still open Nov 6, but the Park Service says it closes with snow, usually in November, until late May or June.",
+   "source_id": "nps_yose_winter",
+   "source_ids": [
+    "nps_yose_winter",
+    "nps_yose_cond"
+   ]
+  },
+  {
+   "text": "Devils Postpile's season ended Oct 30, and the Lakes Basin road and Hwy 203 past Main Lodge are closed for winter.",
+   "source_id": "vm_roads",
+   "source_ids": [
+    "vm_roads",
+    "nps_depo"
+   ]
+  },
+  {
+   "text": "Manzanar's visitor center is closed Tuesday to Thursday, which is why it's on Sunday's drive home, not Wednesday's.",
+   "source_id": "nps_manz",
+   "source_ids": [
+    "nps_manz"
+   ]
+  },
+  {
+   "text": "June Mountain, Mammoth's family-friendly sister resort, doesn't open until Dec 19, 2026.",
+   "source_id": "mm_whatsnew",
+   "source_ids": [
+    "mm_whatsnew"
+   ]
+  },
+  {
+   "text": "Thanksgiving dinners run on fixed seatings; The Lakefront opened bookings to the public on Nov 5. Apricity, the Westin's new restaurant, is on Mammoth's Thanksgiving list but still listed as coming soon, so we left it out.",
+   "source_id": "mm_thanksgiving",
+   "source_ids": [
+    "mm_thanksgiving",
+    "mm_events",
+    "mm_dining"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "mm_opening",
+   "url": "https://www.mammothmountain.com/things-to-do/events/opening-day",
+   "title": "Mammoth Mountain: 26/27 Opening Day (Nov 5, 2026; beginner terrain and lessons not available at opening)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_report",
+   "url": "https://www.mammothmountain.com/on-the-mountain/mountain-report",
+   "title": "Mammoth Mountain: Mountain Report (daily message Mon Nov 9, 2026: 3/181 trails, no beginner terrain; Village Gondola, Woolly's and Tamarack closed)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_tube",
+   "url": "https://www.mammothmountain.com/things-to-do/activities/tube-park",
+   "title": "Mammoth Mountain: Woolly's Tube Park (open daily Nov 20-29, 2026; 42-inch minimum; free Red Line shuttle every 20 min)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_coaster",
+   "url": "https://www.mammothmountain.com/things-to-do/activities/mountain-coaster",
+   "title": "Mammoth Mountain: Mountain Coaster (same dates; companion 3+ and 38 in.+, solo 54 in.+, waiver)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_gondola",
+   "url": "https://www.mammothmountain.com/tickets/scenic-gondola-rides",
+   "title": "Mammoth Mountain: Scenic Gondola Rides (summit 11,053 ft; daily from Nov 13, 2026; two kids 12 and under free per paying adult)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_thanksgiving",
+   "url": "https://www.mammothmountain.com/things-to-do/events/thanksgiving-dinners",
+   "title": "Mammoth Mountain: Thanksgiving Dinners, Nov 26, 2026 (Mountainside seatings; Lakefront prix fixe, prices, booking dates)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_events",
+   "url": "https://www.mammothmountain.com/events",
+   "title": "Mammoth Mountain: Events calendar (Nov 26 dinners; Nov 27 tree lighting; snowshoe tours)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_tree",
+   "url": "https://www.mammothmountain.com/things-to-do/events/holiday-tree-lighting",
+   "title": "Mammoth Mountain: Holiday Tree Lighting in The Village, Nov 27, 2026, 6-8:30 PM, free",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_snowshoe",
+   "url": "https://www.mammothmountain.com/things-to-do/events/tamarack-sunset-snowshoe-tours",
+   "title": "Mammoth Mountain: Tamarack Sunset Snowshoe Tours (Nov 27-28 at 3:15 and 3:30 PM; 1.5 h; snowshoes included)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_faq",
+   "url": "https://www.mammothmountain.com/about/mammoth-faq",
+   "title": "Mammoth Mountain: FAQ (ski school 3+ and potty-trained; 4 and under ski free with a ticket; shuttle free every 20 min)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_lodging",
+   "url": "https://www.mammothmountain.com/lodging",
+   "title": "Mammoth Mountain: Lodging (Village Gondola 'typically operates from mid-December through mid-April')",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_mmi",
+   "url": "https://www.mammothmountain.com/plan-your-trip/mammoth-hotels/mammoth-mountain-inn",
+   "title": "Mammoth Mountain Inn (address, pool and hot tubs 8 AM-10 PM, game room, check-in 4 PM, winter season from Nov 20, 2026)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_villagelodge",
+   "url": "https://www.mammothmountain.com/plan-your-trip/mammoth-hotels/the-village-lodge",
+   "title": "The Village Lodge (condos with full kitchens, heated pool, game room, no cribs)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_tamarack",
+   "url": "https://www.mammothmountain.com/plan-your-trip/mammoth-hotels/tamarack-lodge",
+   "title": "Tamarack Lodge (cabins with kitchens on Twin Lakes, cross-country center, limited cell service)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "vm_westin",
+   "url": "https://www.visitmammoth.com/directory/the-westin-monache-resort-mammoth/",
+   "title": "Visit Mammoth: The Westin Monache Resort (heated pool, hot tubs, Westin Family Kids Club, gondola access mid-Dec to mid-April)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_mountainside",
+   "url": "https://www.mammothmountain.com/things-to-do/restaurants/mountainside-bar-and-grill",
+   "title": "Mammoth Mountain: Mountainside Bar & Grill (inside Mammoth Mountain Inn; family-friendly; kid dishes)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_lakefront",
+   "url": "https://www.mammothmountain.com/things-to-do/restaurants/lakefront-restaurant",
+   "title": "Mammoth Mountain: The Lakefront Restaurant (Tamarack Lodge; no children's menu on regular nights)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_dining",
+   "url": "https://www.mammothmountain.com/things-to-do/dining",
+   "title": "Mammoth Mountain: Dining (Apricity listed as 'coming soon')",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_whatsnew",
+   "url": "https://www.mammothmountain.com/-/media/Project/Mammoth/LIBRARY/PDFs/PR/2627_Whats-New-Mammoth",
+   "title": "Mammoth Lakes / Mammoth Mountain press release: What's New for Winter 2026-27 (June Mountain opens Dec 19, 2026; Bird and the Biscuit)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mm_discover",
+   "url": "https://www.mammothmountain.com/discover",
+   "title": "Mammoth Mountain: Discover ('approximately 5 hours north of Los Angeles')",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "vm_roads",
+   "url": "https://www.visitmammoth.com/travel-info/information-road-conditions/",
+   "title": "Visit Mammoth: Road conditions (Lakes Basin road closed; Hwy 203 to Minaret Vista closed; Reds Meadow closed for the season; carry chains)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "ct_chains",
+   "url": "https://dot.ca.gov/travel/winter-driving-tips/chain-controls",
+   "title": "Caltrans: Chain controls R1, R2, R3 (4WD/AWD with snow tires on all four wheels exempt at R2, must carry chains)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "ct_roads395",
+   "url": "https://roads.dot.ca.gov/roadscell.php?roadnumber=395",
+   "title": "Caltrans highway conditions, US 395 (as of Tue Nov 10, 2026, 12:19 AM: one-way control near the SR 190 junction, Inyo County, for emergency repairs)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "nps_yose_cond",
+   "url": "https://www.nps.gov/yose/planyourvisit/conditions.htm",
+   "title": "NPS Yosemite: Current conditions (Tioga Road open; page updated Nov 6, 2026)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "nps_yose_winter",
+   "url": "https://www.nps.gov/yose/planyourvisit/wroads.htm",
+   "title": "NPS Yosemite: Winter roads ('Tioga Road closes due to snow, usually from sometime in November through late May or early June')",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "nps_depo",
+   "url": "https://www.nps.gov/depo/planyourvisit/conditions.htm",
+   "title": "NPS Devils Postpile: Conditions (2026 season June 13 to October 30; Reds Meadow Road is the only access)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "nps_manz",
+   "url": "https://www.nps.gov/manz/planyourvisit/hours.htm",
+   "title": "NPS Manzanar: Hours (visitor center Fri-Mon 9-4:30, closed Tue-Thu; grounds sunrise-sunset; Block 14 daily 9-4:15)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "blm_alabama",
+   "url": "https://www.blm.gov/visit/alabama-hills-national-scenic-area",
+   "title": "BLM: Alabama Hills National Scenic Area (west of Lone Pine via Whitney Portal Rd and Movie Rd; porta potty at Mobius Arch trailhead)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "schats",
+   "url": "https://www.schatsbakery.com/",
+   "title": "Erick Schat's Bakkery (Original Sheepherder Bread 1938; sandwich bar)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "vm_stove",
+   "url": "https://www.visitmammoth.com/directory/the-stove/",
+   "title": "Visit Mammoth: The Stove (644 Old Mammoth Rd; daily 7 AM-2 PM; 'a Mammoth Lakes tradition for over 40 years')",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "vm_bird",
+   "url": "https://www.visitmammoth.com/directory/bird-and-the-biscuit/",
+   "title": "Visit Mammoth: Bird and the Biscuit (26 Old Mammoth Rd; closed Wednesdays; Sat 8 AM-8 PM)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "vm_mbc",
+   "url": "https://www.visitmammoth.com/directory/mammoth-brewing-company/",
+   "title": "Visit Mammoth: Mammoth Brewing Company (18 Lake Mary Rd; root beer for all ages)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "vm_toomeys",
+   "url": "https://www.visitmammoth.com/directory/toomeys/",
+   "title": "Visit Mammoth: Toomey's (6085 Minaret Rd; daily 11 AM-9 PM)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "vm_bowl",
+   "url": "https://www.visitmammoth.com/directory/mammoth-rock-n-bowl/",
+   "title": "Visit Mammoth: Mammoth Rock 'N' Bowl (3029 Chateau Rd; opens 4 PM; closed Tue-Wed per listing)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "osm",
+   "url": "https://nominatim.openstreetmap.org/",
+   "title": "OpenStreetMap via Nominatim: coordinates and street addresses (looked up 2026-11-10)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "osrm",
+   "url": "https://router.project-osrm.org/",
+   "title": "OSRM route on OpenStreetMap data: driving distances and route lines (computed 2026-11-10)",
+   "accessed": "2026-11-10"
+  }
+ ]
+}

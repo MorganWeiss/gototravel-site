@@ -1,0 +1,709 @@
+{
+ "slug": "christmas-markets-by-train-with-kids",
+ "title": "Christmas markets by train with kids",
+ "hook": "Three Christmas markets, two easy trains",
+ "dates": "7 days, any week Nov 26 to Dec 13, 2026 (sample: Thu Dec 3 to Wed Dec 9)",
+ "who": "Families with kids about 4 to 12 (notes for little ones and teens); fly into Vienna, home from Munich",
+ "checked_on": "2026-11-10",
+ "days": [
+  {
+   "day": 1,
+   "date": "Thu Dec 3",
+   "title": "Vienna: land, then the Rathaus lights",
+   "stops": [
+    {
+     "time": "1:00 PM",
+     "name": "Land at Vienna Airport",
+     "kind": "move",
+     "why": "Railjet or Intercity to the main station: 15 min",
+     "kid_note": null,
+     "lat": 48.104997,
+     "lng": 16.584899,
+     "address": null,
+     "booking_note": "Trains run twice an hour.",
+     "source_ids": [
+      "oebb_airport"
+     ]
+    },
+    {
+     "time": "3:00 PM",
+     "name": "Check in: Hotel Rathauspark",
+     "kind": "stay",
+     "why": "575 steps from City Hall and the market",
+     "kid_note": "Listed by the hotel as family friendly.",
+     "lat": 48.213278,
+     "lng": 16.356854,
+     "address": "Rathausstrasse 17, 1010 Vienna",
+     "booking_note": "Our pick, not a booking.",
+     "source_ids": [
+      "rathauspark"
+     ]
+    },
+    {
+     "time": "4:30 PM",
+     "name": "Wiener Christkindlmarkt, Rathausplatz",
+     "kind": "see",
+     "why": "Stalls in front of City Hall, daily 10 AM to 10 PM",
+     "kid_note": "Kids' Christmas world in the park: double-decker carousel, reindeer train, Ferris wheel.",
+     "lat": 48.210552,
+     "lng": 16.359504,
+     "address": "Rathausplatz, 1010 Vienna",
+     "booking_note": "Nov 13 to Dec 26. Trams 1, 71, D or U2 (Rathaus).",
+     "source_ids": [
+      "wien_ckm",
+      "wien_kinder",
+      "wien_besuch"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Vienna Airport",
+     "to": "Wien Hauptbahnhof",
+     "mode": "train (ÖBB Railjet or Intercity)",
+     "duration": "15 min",
+     "note": "Twice an hour.",
+     "source_ids": [
+      "oebb_airport"
+     ]
+    },
+    {
+     "from": "Wien Hauptbahnhof",
+     "to": "Rathausplatz",
+     "mode": "tram or U-Bahn",
+     "duration": null,
+     "note": "Market stops: trams 1, 71, D (Rathausplatz/Burgtheater), U2 (Rathaus).",
+     "source_ids": [
+      "wien_besuch"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "date": "Fri Dec 4",
+   "title": "Vienna: palace market, kids' rink, schnitzel",
+   "stops": [
+    {
+     "time": "10:00 AM",
+     "name": "Schönbrunn Palace Christmas Market",
+     "kind": "see",
+     "why": "Stalls in the palace forecourt, daily 10 AM to 9 PM",
+     "kid_note": "Free Glice rink for kids, plus a carousel, Ferris wheel and kids' railway.",
+     "lat": 48.184989,
+     "lng": 16.311568,
+     "address": "Schönbrunner Schlossstraße, 1130 Vienna",
+     "booking_note": "Nov 6 to Jan 6.",
+     "source_ids": [
+      "wieninfo_schoen"
+     ]
+    },
+    {
+     "time": "3:00 PM",
+     "name": "Kids' ice rink, Rathauspark",
+     "kind": "do",
+     "why": "A 110 m² kids' rink with skating-aid figures to hold",
+     "kid_note": "Free double-blade skates (sizes 21-25) and kids' helmets with a ticket.",
+     "lat": 48.210552,
+     "lng": 16.359504,
+     "address": "Rathauspark, 1010 Vienna",
+     "booking_note": "Tickets online, at the ticket desks or machines. Rink open 10 AM to 10 PM.",
+     "source_ids": [
+      "wien_kinder",
+      "wien_ckm"
+     ]
+    },
+    {
+     "time": "6:00 PM",
+     "name": "Figlmüller Wollzeile",
+     "kind": "eat",
+     "why": "Wiener schnitzel on Wollzeile since 1905",
+     "kid_note": "Kitchen open until 9:30 PM, so an early table is easy.",
+     "lat": 48.209421,
+     "lng": 16.374843,
+     "address": "Wollzeile 5, 1010 Vienna",
+     "booking_note": "Book ahead: +43 1 512 61 77. Open daily 11 AM to 10:30 PM.",
+     "source_ids": [
+      "figl"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Hotel",
+     "to": "Schönbrunn",
+     "mode": "U-Bahn",
+     "duration": null,
+     "note": "Plan with the Wiener Linien app.",
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "date": "Sat Dec 5",
+   "title": "Railjet to Salzburg",
+   "stops": [
+    {
+     "time": "10:00 AM",
+     "name": "ÖBB Railjet, Vienna to Salzburg",
+     "kind": "move",
+     "why": "Two Railjets an hour; the fastest takes about 2 h 25 min",
+     "kid_note": "Ask for the family zone: last 2nd-class car (21 or 31), with a kids' cinema.",
+     "lat": 48.184988,
+     "lng": 16.377939,
+     "address": null,
+     "booking_note": "The family zone isn't on every train; the timetable detail shows which.",
+     "source_ids": [
+      "salzinfo_oebb",
+      "bahn_railjet",
+      "oebb_family"
+     ]
+    },
+    {
+     "time": "1:00 PM",
+     "name": "Check in: Hotel Sacher Salzburg",
+     "kind": "stay",
+     "why": "On the river, facing the Old Town and the fortress",
+     "kid_note": "Family suites; the Original Sacher-Torte downstairs.",
+     "lat": 47.8022,
+     "lng": 13.043293,
+     "address": "Schwarzstraße 5-7, 5020 Salzburg",
+     "booking_note": "Our pick, not a booking.",
+     "source_ids": [
+      "sacher_salz"
+     ]
+    },
+    {
+     "time": "3:00 PM",
+     "name": "Salzburger Christkindlmarkt, Domplatz",
+     "kind": "see",
+     "why": "Stalls around the cathedral; Saturdays 9 AM to 9 PM",
+     "kid_note": null,
+     "lat": 47.797912,
+     "lng": 13.045446,
+     "address": "Domplatz and Residenzplatz, 5020 Salzburg",
+     "booking_note": "Nov 19 to Jan 1.",
+     "source_ids": [
+      "salz_ckm"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Wien Hauptbahnhof",
+     "to": "Salzburg Hauptbahnhof",
+     "mode": "train (ÖBB Railjet)",
+     "duration": "about 2 h 25 min (fastest RJX)",
+     "note": "Two Railjets an hour.",
+     "source_ids": [
+      "salzinfo_oebb",
+      "bahn_railjet"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "date": "Sun Dec 6",
+   "title": "Salzburg: Hellbrunn's kids' Advent",
+   "stops": [
+    {
+     "time": "11:00 AM",
+     "name": "Hellbrunner Adventzauber",
+     "kind": "do",
+     "why": "Palace Advent market with a kids' Christmas world",
+     "kid_note": "Weekends 11-6: Christmas train and petting zoo; scouts grill sausages at a campfire.",
+     "lat": 47.762114,
+     "lng": 13.060267,
+     "address": "Fürstenweg 37, 5020 Salzburg",
+     "booking_note": "Bus 25 (toward Untersbergbahn) to Schloss Hellbrunn, about 25 min. Closed Mondays except Dec 21.",
+     "source_ids": [
+      "hellbrunn_advent",
+      "hellbrunn_kids",
+      "hellbrunn_palace"
+     ]
+    },
+    {
+     "time": "6:00 PM",
+     "name": "Sternbräu",
+     "kind": "eat",
+     "why": "Austrian cooking in an inn first named in 1542",
+     "kid_note": "Thirteen dining rooms and gardens under one roof.",
+     "lat": 47.800721,
+     "lng": 13.041223,
+     "address": "Griesgasse 23, 5020 Salzburg",
+     "booking_note": null,
+     "source_ids": [
+      "sternbrau"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Old Town",
+     "to": "Hellbrunn",
+     "mode": "bus 25",
+     "duration": "about 25 min",
+     "note": "From the city center (Rathaus stop) or the main station (about 30 min).",
+     "source_ids": [
+      "hellbrunn_palace"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "date": "Mon Dec 7",
+   "title": "Over the border to Munich",
+   "stops": [
+    {
+     "time": "10:00 AM",
+     "name": "Train, Salzburg to Munich",
+     "kind": "move",
+     "why": "From about 1 h 40 min; check the timetable for works",
+     "kid_note": "Railjets have the same family zone.",
+     "lat": 47.813062,
+     "lng": 13.045853,
+     "address": null,
+     "booking_note": "Through Dec 12 the direct Railjet Xpress runs every 2 hours, about 15 min slower; extra ICE trains help.",
+     "source_ids": [
+      "salzinfo_oebb",
+      "oebb_works",
+      "oebb_family"
+     ]
+    },
+    {
+     "time": "1:00 PM",
+     "name": "Check in: Platzl Hotel",
+     "kind": "stay",
+     "why": "Old Town, a few minutes' walk from Marienplatz",
+     "kid_note": null,
+     "lat": 48.137988,
+     "lng": 11.578962,
+     "address": "Sparkassenstraße 10, 80331 Munich",
+     "booking_note": "Our pick, not a booking.",
+     "source_ids": [
+      "platzl"
+     ]
+    },
+    {
+     "time": "2:30 PM",
+     "name": "Münchner Christkindlmarkt, Marienplatz",
+     "kind": "see",
+     "why": "138 stalls around Marienplatz; Mon to Sat 10 AM to 9 PM",
+     "kid_note": "The Kripperlmarkt by Alter Peter sells nativity figures down to tiny lanterns.",
+     "lat": 48.137144,
+     "lng": 11.575399,
+     "address": "Marienplatz, 80331 Munich",
+     "booking_note": "Nov 20 to Dec 24 (closed Nov 22). U3, U6 or S-Bahn to Marienplatz.",
+     "source_ids": [
+      "muc_ckm"
+     ]
+    },
+    {
+     "time": "5:00 PM",
+     "name": "St. Nicholas at the Residenz Christmas village",
+     "kind": "see",
+     "why": "The Nikolaus visits from 5 PM on Dec 6 and 7",
+     "kid_note": "He brings small gifts for kids while they last.",
+     "lat": 48.141161,
+     "lng": 11.579045,
+     "address": "Kaiserhof der Residenz, Residenzstraße 1, 80333 Munich",
+     "booking_note": "Free entry; enter from Residenzstraße at Odeonsplatz.",
+     "source_ids": [
+      "muc_residenz"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Salzburg Hauptbahnhof",
+     "to": "München Hauptbahnhof",
+     "mode": "train (ÖBB Railjet, ICE or EC)",
+     "duration": "from about 1 h 40 min",
+     "note": "Works through Dec 12: direct RJX every 2 h, about 15 min slower.",
+     "source_ids": [
+      "salzinfo_oebb",
+      "oebb_works"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 6,
+   "date": "Tue Dec 8",
+   "title": "Munich: fairy tales and a kids' workshop",
+   "stops": [
+    {
+     "time": "11:00 AM",
+     "name": "Fairy-tale forest, Residenz Christmas village",
+     "kind": "see",
+     "why": "Press a button and Little Red Riding Hood comes alive",
+     "kid_note": "Under 6? Kasperle puppet theater here today, 3 to 4 PM, free.",
+     "lat": 48.141161,
+     "lng": 11.579045,
+     "address": "Kaiserhof der Residenz, 80333 Munich",
+     "booking_note": "Daily 11 AM to 9 PM, Nov 16 to Dec 22.",
+     "source_ids": [
+      "muc_residenz"
+     ]
+    },
+    {
+     "time": "2:30 PM",
+     "name": "Himmelswerkstatt kids' workshop",
+     "kind": "do",
+     "why": "Free Christmas crafts in City Hall for kids 6 to 12",
+     "kid_note": "Kids can dress up as angels while they make cards or candles.",
+     "lat": 48.137238,
+     "lng": 11.57618,
+     "address": "Marienplatz 8, 80331 Munich",
+     "booking_note": "Register with Kindermuseum München; sign-ups open 10 days ahead (Nov 28 for Dec 8). Meet at the Fischbrunnen, on time.",
+     "source_ids": [
+      "muc_ckm"
+     ]
+    },
+    {
+     "time": "5:15 PM",
+     "name": "Advent music from the Rathaus balcony",
+     "kind": "see",
+     "why": "Brass, choirs and folk music for about 30 minutes",
+     "kid_note": null,
+     "lat": 48.137144,
+     "lng": 11.575399,
+     "address": "Marienplatz, 80331 Munich",
+     "booking_note": "Sundays to Thursdays from 5:15 PM.",
+     "source_ids": [
+      "muc_ckm"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Residenz",
+     "to": "Marienplatz",
+     "mode": "walk",
+     "duration": null,
+     "note": "Old Town, on foot.",
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "day": 7,
+   "date": "Wed Dec 9",
+   "title": "Weisswurst, then home",
+   "stops": [
+    {
+     "time": "9:00 AM",
+     "name": "Weisses Bräuhaus",
+     "kind": "eat",
+     "why": "Weisswurst breakfast, served 9 AM to noon only",
+     "kid_note": "Pretzels and sweet mustard; the sausages never hear the noon bells.",
+     "lat": 48.136365,
+     "lng": 11.578525,
+     "address": "Tal 7, 80331 Munich",
+     "booking_note": "Open daily from 9 AM.",
+     "source_ids": [
+      "weisses"
+     ]
+    },
+    {
+     "time": "11:00 AM",
+     "name": "S-Bahn to Munich Airport",
+     "kind": "move",
+     "why": "S1 or S8: about 40 min from the main station",
+     "kid_note": null,
+     "lat": 48.353963,
+     "lng": 11.778593,
+     "address": null,
+     "booking_note": "Between them, a train every 10 minutes.",
+     "source_ids": [
+      "muc_airport"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Munich center",
+     "to": "Munich Airport",
+     "mode": "S-Bahn S1 or S8",
+     "duration": "about 40 min from the main station",
+     "note": "Every 10 min combined.",
+     "source_ids": [
+      "muc_airport"
+     ]
+    }
+   ]
+  }
+ ],
+ "stays": [
+  {
+   "name": "Hotel Rathauspark",
+   "tier": "Upscale",
+   "why": "575 steps from the Rathausplatz market; family-friendly, redesigned in 2024.",
+   "lat": 48.213278,
+   "lng": 16.356854,
+   "url": "https://www.austria-trend.at/en/hotels/rathauspark",
+   "city": "Vienna",
+   "source_ids": [
+    "rathauspark"
+   ]
+  },
+  {
+   "name": "MEININGER Vienna Downtown Sissi",
+   "tier": "Budget-friendly",
+   "why": "Family rooms and cots, across the Danube Canal from the Old Town.",
+   "lat": 48.219186,
+   "lng": 16.375709,
+   "url": "https://www.meininger-hotels.com/en/hotels/vienna/hotel-vienna-downtown-sissi/",
+   "city": "Vienna",
+   "source_ids": [
+    "meininger_sissi",
+    "meininger_vienna"
+   ]
+  },
+  {
+   "name": "Hotel Sacher Salzburg",
+   "tier": "5-star",
+   "why": "On the Salzach facing the Old Town; family suites and the Original Sacher-Torte.",
+   "lat": 47.8022,
+   "lng": 13.043293,
+   "url": "https://www.sacher.com/en/salzburg/",
+   "city": "Salzburg",
+   "source_ids": [
+    "sacher_salz"
+   ]
+  },
+  {
+   "name": "MEININGER Salzburg City Center",
+   "tier": "Budget-friendly",
+   "why": "Family rooms; the Old Town is about 25 minutes on foot.",
+   "lat": 47.808415,
+   "lng": 13.064544,
+   "url": "https://www.meininger-hotels.com/en/hotels/salzburg/hotel-salzburg-center/",
+   "city": "Salzburg",
+   "source_ids": [
+    "meininger_salz"
+   ]
+  },
+  {
+   "name": "Platzl Hotel",
+   "tier": "4-star superior",
+   "why": "4-star superior in the Old Town, a few minutes' walk from Marienplatz.",
+   "lat": 48.137988,
+   "lng": 11.578962,
+   "url": "https://www.platzl.de/en/",
+   "city": "Munich",
+   "source_ids": [
+    "platzl"
+   ]
+  },
+  {
+   "name": "MEININGER München Zentrum",
+   "tier": "Budget-friendly",
+   "why": "Family rooms, about a 15-minute walk from the main station.",
+   "lat": 48.139977,
+   "lng": 11.545324,
+   "url": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-city-center/",
+   "city": "Munich",
+   "source_ids": [
+    "meininger_muc"
+   ]
+  }
+ ],
+ "heads_ups": [
+  {
+   "text": "Through Dec 12, construction in Germany thins the direct Railjet Xpress Vienna-Salzburg-Munich to every two hours, about 15 minutes slower. Extra ICE trains run.",
+   "source_id": "oebb_works",
+   "source_ids": [
+    "oebb_works"
+   ]
+  },
+  {
+   "text": "Munich's free kids' workshop (Himmelswerkstatt, ages 6 to 12) needs registration, which opens 10 days before each date; it ends Dec 13.",
+   "source_id": "muc_ckm",
+   "source_ids": [
+    "muc_ckm"
+   ]
+  },
+  {
+   "text": "Hellbrunn's famous trick fountains are closed until Mar 25, 2027. In Advent, go for the Advent market instead, which is closed Mondays (except Dec 21). Pony rides are gone.",
+   "source_id": "hellbrunn_palace",
+   "source_ids": [
+    "hellbrunn_palace"
+   ]
+  },
+  {
+   "text": "Munich's market is closed Sunday Nov 22 and ends Dec 24 at 2 PM; the Residenz Christmas village ends Dec 22; Vienna's Rathausplatz market closes Dec 26.",
+   "source_id": "muc_ckm",
+   "source_ids": [
+    "muc_ckm"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "wien_ckm",
+   "url": "https://www.christkindlmarkt.at/",
+   "title": "Wiener Christkindlmarkt (Rathausplatz): Nov 13 to Dec 26, 2026, daily 10 AM-10 PM (Dec 24 to 6:30 PM); Eistraum rink Nov 13 to Jan 6",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "wien_kinder",
+   "url": "https://www.christkindlmarkt.at/kinder/",
+   "title": "Wiener Christkindlmarkt: kids' Weihnachtswelt in Rathauspark (12 m double-decker carousel, reindeer train, Ferris wheel, 110 m2 kids' rink, free double-blade skates sizes 21-25 and helmets with a ticket)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "wien_besuch",
+   "url": "https://www.christkindlmarkt.at/besuch/",
+   "title": "Wiener Christkindlmarkt: getting there (trams 1, 71, D to Rathausplatz/Burgtheater; U2 Rathaus)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "wieninfo_schoen",
+   "url": "https://www.wien.info/de/aktuell/veranstaltungen/weihnachtsmarkt-schloss-schoenbrunn-1133662",
+   "title": "Vienna Tourist Board: Weihnachtsmarkt Schloss Schönbrunn (Nov 6, 2026 to Jan 6, 2027; 10 AM-9 PM to Dec 23; free Glice rink for kids, carousel, Ferris wheel, kids' railway)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "figl",
+   "url": "https://www.figlmueller.at/en/",
+   "title": "Figlmüller Wollzeile (since 1905; Wollzeile 5; daily 11 AM-10:30 PM, kitchen to 9:30 PM; reservations)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "oebb_airport",
+   "url": "https://www.oebb.at/en/regionale-angebote/ueberregionale-angebote/anreise-zum-flughafen",
+   "title": "ÖBB: to Vienna Airport (railjet and intercity, 15 min from Vienna Main Station, twice an hour)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "rathauspark",
+   "url": "https://www.austria-trend.at/en/hotels/rathauspark",
+   "title": "Hotel Rathauspark Vienna, Handwritten Collection (Rathausstrasse 17; family friendly; redesigned 2024; 575 steps from City Hall)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "meininger_sissi",
+   "url": "https://www.meininger-hotels.com/en/hotels/vienna/hotel-vienna-downtown-sissi/",
+   "title": "MEININGER Hotel Vienna Downtown Sissi (Schiffamtsgasse 15; family rooms, cots; central station about 10 min by train)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "meininger_vienna",
+   "url": "https://www.meininger-hotels.com/en/hotels/vienna/",
+   "title": "MEININGER Vienna hotels ('budget-friendly stays')",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "salzinfo_oebb",
+   "url": "https://salzburg.info/en/travel-info/arrival-traffic/train/salzburg-by-oebb",
+   "title": "Salzburg tourist board: by ÖBB (Vienna-Salzburg two Railjets an hour, RJX 2 h 25 min; Munich-Salzburg from 1 h 40 min)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "bahn_railjet",
+   "url": "https://www.bahn.de/p/view/angebot/auslandsbahnen/railjet.shtml",
+   "title": "Deutsche Bahn: Railjet (Salzburg to Vienna in about 2:30 h)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "oebb_family",
+   "url": "https://www.oebb.at/de/reiseplanung-services/im-zug/spezialabteile",
+   "title": "ÖBB: special areas on trains (Railjet family zone in the last 2nd-class car, 21/31, with a kids' cinema and game tables; check which trains have it)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "oebb_works",
+   "url": "https://kundeninformation-pv.oebb.at/dam/kundeninformation/extern/OEBB/2026/2026_06/VorinfoDB14062026_Gesamt.pdf",
+   "title": "ÖBB customer notice: DB construction June 14 to December 12, 2026 (RJX Wien-Linz-Salzburg-München every two hours, about 15 min longer; 2 extra ICE pairs Wien-Salzburg-München)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "salz_ckm",
+   "url": "https://www.christkindlmarkt.co.at/",
+   "title": "Salzburger Christkindlmarkt: Nov 19, 2026 to Jan 1, 2027 (Mon-Thu 10-8:30, Fri 10-9, Sat 9-9, Sun/holiday 9-8:30)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "hellbrunn_advent",
+   "url": "https://www.hellbrunneradventzauber.at/oeffnungszeiten/",
+   "title": "Hellbrunner Adventzauber: Nov 19 to Dec 24, 2026 (Tue-Fri 1-8 PM, Sat/Sun/holiday 10 AM-8 PM, closed Mondays except Dec 21)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "hellbrunn_kids",
+   "url": "https://www.hellbrunneradventzauber.at/kinderweihnachtswelt/",
+   "title": "Hellbrunner Adventzauber: Kinderweihnachtswelt (train and petting zoo weekends 11-6; scouts' campfire; Christmas post office Fri-Sun; pony rides no longer offered)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "hellbrunn_palace",
+   "url": "https://www.hellbrunn.at/en/info/opening-hours-prices-arrival",
+   "title": "Schloss Hellbrunn: trick fountains and palace exhibition in winter break until Mar 25, 2027; bus 25 to Schloss Hellbrunn about 25 min from the center",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "sternbrau",
+   "url": "https://www.sternbrau.at/",
+   "title": "Sternbräu, Griesgasse 23, Salzburg (first named as a brewery with an inn in 1542; Austrian cooking; 13 rooms and gardens)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "sacher_salz",
+   "url": "https://www.sacher.com/en/salzburg/",
+   "title": "Hotel Sacher Salzburg (family-owned 5-star superior luxury hotel on the Salzach; family suites; Café Sacher and the Original Sacher-Torte)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "meininger_salz",
+   "url": "https://www.meininger-hotels.com/en/hotels/salzburg/hotel-salzburg-center/",
+   "title": "MEININGER Hotel Salzburg City Center (Fürbergstraße 18-20; family rooms; Old Town about 25 min on foot)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "muc_ckm",
+   "url": "https://www.muenchen.de/veranstaltungen/muenchner-christkindlmarkt-marienplatz",
+   "title": "muenchen.de: Münchner Christkindlmarkt 2026 (Nov 20 to Dec 24; closed Nov 22; Mon-Sat 10-9, Sun 10-8, Dec 24 10-2; Himmelswerkstatt Nov 26 to Dec 13; balcony music Sun-Thu 5:15 PM)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "muc_residenz",
+   "url": "https://www.muenchen.de/veranstaltungen/freizeit/weihnachtsmarkt-christkindlmarkt/weihnachtsdorf-der-residenz",
+   "title": "muenchen.de: Weihnachtsdorf im Kaiserhof der Residenz (Nov 16 to Dec 22, daily 11 AM-9 PM; free fairy-tale forest; Nikolaus Dec 6 and 7 from 5 PM; Kasperle Dec 8, 3-4 PM)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "weisses",
+   "url": "https://www.weisses-brauhaus.de/",
+   "title": "Weisses Bräuhaus, Tal 7, Munich (daily 9 AM-11:30 PM; Weisswurst breakfast 9 AM-noon)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "platzl",
+   "url": "https://www.platzl.de/en/",
+   "title": "Platzl Hotel, Sparkassenstraße 10, Munich (4-star superior, a few minutes' walk from Marienplatz)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "meininger_muc",
+   "url": "https://www.meininger-hotels.com/en/hotels/munich/hotel-munich-city-center/",
+   "title": "MEININGER Hotel München Zentrum (Landsberger Str. 20b; family rooms; 15 min walk to the main station)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "muc_airport",
+   "url": "https://www.munich-airport.com/transport-1080974",
+   "title": "Munich Airport: S1 and S8 to the main station about 40 min, combined every 10 min",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "osm",
+   "url": "https://nominatim.openstreetmap.org/",
+   "title": "OpenStreetMap via Nominatim: coordinates and street addresses (looked up 2026-11-10)",
+   "accessed": "2026-11-10"
+  }
+ ]
+}

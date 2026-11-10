@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>New Year&#x27;s in NYC with kids — Go To Travel</title>
+<meta name="description" content="New Year&#x27;s in NYC with kids, minus Times Square">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://gototravelapp.com/trips/nyc-new-years-with-kids">
+<meta property="og:title" content="New Year&#x27;s in NYC with kids">
+<meta property="og:description" content="New Year&#x27;s in NYC with kids, minus Times Square">
+<meta property="og:image" content="https://gototravelapp.com/og.png">
+<meta property="og:url" content="https://gototravelapp.com/trips/nyc-new-years-with-kids">
+<meta name="theme-color" content="#0F1A17">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js" defer></script>
+<script src="/assets/trips.js" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "TouristTrip", "name": "New Year's in NYC with kids", "url": "https://gototravelapp.com/trips/nyc-new-years-with-kids", "description": "New Year's in NYC with kids, minus Times Square", "itinerary": {"@type": "ItemList", "numberOfItems": 8, "itemListElement": [{"@type": "ListItem", "position": 1, "item": {"@type": "TouristAttraction", "name": "Bryant Park Winter Village rink", "address": "Bryant Park, Midtown Manhattan", "geo": {"@type": "GeoCoordinates", "latitude": 40.753751, "longitude": -73.983543}}}, {"@type": "ListItem", "position": 2, "item": {"@type": "TouristAttraction", "name": "Ellen's Stardust Diner", "address": "1650 Broadway, New York, NY 10019", "geo": {"@type": "GeoCoordinates", "latitude": 40.761848, "longitude": -73.983503}}}, {"@type": "ListItem", "position": 3, "item": {"@type": "TouristAttraction", "name": "Radio City Christmas Spectacular", "address": "1260 6th Ave, New York, NY", "geo": {"@type": "GeoCoordinates", "latitude": 40.759812, "longitude": -73.979279}}}, {"@type": "ListItem", "position": 4, "item": {"@type": "TouristAttraction", "name": "Rockefeller Center Christmas Tree", "address": "Rockefeller Plaza, New York, NY", "geo": {"@type": "GeoCoordinates", "latitude": 40.758757, "longitude": -73.97865}}}, {"@type": "ListItem", "position": 5, "item": {"@type": "TouristAttraction", "name": "The Metropolitan Museum of Art", "address": "1000 Fifth Ave, New York, NY 10028", "geo": {"@type": "GeoCoordinates", "latitude": 40.77944, "longitude": -73.963382}}}, {"@type": "ListItem", "position": 6, "item": {"@type": "TouristAttraction", "name": "Junior's Restaurant & Bakery", "address": "386 Flatbush Ave Ext, Brooklyn, NY 11201", "geo": {"@type": "GeoCoordinates", "latitude": 40.690145, "longitude": -73.981989}}}, {"@type": "ListItem", "position": 7, "item": {"@type": "TouristAttraction", "name": "Prospect Park fireworks, Grand Army Plaza", "address": "Grand Army Plaza, Brooklyn, NY 11238", "geo": {"@type": "GeoCoordinates", "latitude": 40.674896, "longitude": -73.970874}}}, {"@type": "ListItem", "position": 8, "item": {"@type": "TouristAttraction", "name": "Statue of Liberty", "address": "Liberty Island, New York, NY 10004", "geo": {"@type": "GeoCoordinates", "latitude": 40.689253, "longitude": -74.044548}}}]}}</script>
+<style>
+.trip-main{max-width:820px;display:flex;flex-direction:column;gap:18px}
+.list-kicker{font:700 12px/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#2F6B55}
+.list-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.trip-facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.trip-facts li{padding:6px 12px;border-radius:999px;background:#F3EBDD;font-size:14px;font-weight:600}
+.trip-map{height:min(62vh,460px);border-radius:20px;overflow:hidden;border:1px solid rgba(15,26,23,.12);background:#EAE4D8}
+.trip-map .mk{width:30px;height:30px;border-radius:50%;background:#F2A93B;color:#0F1A17;border:2px solid #0F1A17;display:flex;align-items:center;justify-content:center;font:800 13px/1 'DM Sans',sans-serif;cursor:pointer}
+.trip-map .mk.stay{background:#0F1A17;color:#FBF5EA;border-color:#FBF5EA;border-radius:8px}
+.heads{padding:18px 20px;border-radius:18px;background:#FFF4DF;border:1px solid #F2C77B}
+.heads h2{font-size:20px;margin:0 0 8px}
+.heads ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.day{display:grid;gap:12px;margin-top:6px}
+.day h2{font-size:24px;margin:8px 0 0}
+.leg{margin:0;color:#55605B;font-size:14px;padding-left:58px}
+.day-map-row{margin:0}
+.day-map{appearance:none;border:1px solid rgba(15,26,23,.2);background:#fff;border-radius:999px;padding:6px 12px;font:600 13px/1.2 'DM Sans',sans-serif;color:#0F1A17;cursor:pointer}
+.places{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.place{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:16px;border:1px solid rgba(15,26,23,.12);border-radius:18px;background:#fff;scroll-margin-top:90px}
+.pn{width:44px;height:44px;border-radius:50%;background:#F2A93B;color:#0F1A17;display:flex;align-items:center;justify-content:center;font:800 18px/1 'Bricolage Grotesque',sans-serif}
+.place h3{font-size:19px;line-height:1.25;margin:0 0 2px}
+.place .when{color:#55605B;font-size:14px;margin:0 0 6px;font-weight:600}
+.place p{margin:0 0 8px}
+.place .kid{color:#2F4A3F}
+.place .book{font-size:14px;color:#7A4B00}
+.place a{font-weight:700;font-size:14px}
+.stays{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.stays li{padding:14px 16px;border:1px solid rgba(15,26,23,.12);border-radius:16px;background:#fff}
+.stays b{display:block;font-size:17px}
+.stays span{color:#55605B;font-size:14px}
+.sources{font-size:14px;color:#55605B}
+.sources ol{padding-left:20px;display:grid;gap:4px}
+.get-app{margin-top:10px;padding:20px;border-radius:20px;background:#0F1A17;color:#FBF5EA;display:grid;gap:10px}
+.get-app h2{color:#FBF5EA;margin:0;font-size:24px}
+.get-app p{margin:0;color:rgba(251,245,234,.85)}
+.get-app .micro,.get-app a{color:rgba(251,245,234,.8)}
+.joined{font-weight:700;color:#7FC7A7}
+.list-grid{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.list-grid a{display:block;padding:14px 16px;border:1px solid rgba(15,26,23,.12);border-radius:16px;background:#fff;text-decoration:none;color:#0F1A17}
+.list-grid b{display:block;font:800 18px/1.2 'Bricolage Grotesque',sans-serif}
+.list-grid span{color:#55605B;font-size:14px}
+</style>
+</head>
+<body class="light">
+<header class="page-head"><nav class="nav" aria-label="Main"><a class="logo" href="/"><span class="logo-tile"><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><defs><linearGradient id="logo-t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A9C82"/><stop offset="1" stop-color="#3E7A63"/></linearGradient><clipPath id="logo-c"><rect width="1024" height="1024" rx="230"/></clipPath></defs><g clip-path="url(#logo-c)"><rect width="1024" height="1024" fill="url(#logo-t)"/><g fill="none" stroke="#FFFFFF" stroke-linecap="round"><circle cx="512" cy="512" r="300" stroke-width="34"/><ellipse cx="512" cy="512" rx="128" ry="300" stroke-width="22" opacity="0.45"/><path d="M232 412H792M232 612H792" stroke-width="22" opacity="0.45"/></g><path d="M318 700C390 540 520 450 668 420" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round" stroke-dasharray="1 70"/><circle cx="318" cy="700" r="30" fill="none" stroke="#FFFFFF" stroke-width="16"/><g transform="translate(712,452)"><path d="M0 0C0 0-64-66-64-110A64 64 0 0 1 64-110C64-66 0 0 0 0Z" fill="#F2A93B"/><circle cx="0" cy="-110" r="24" fill="#5A9C82"/></g></g></svg></span><span class="logo-word">Go To Travel</span></a><div class="nav-right"><a class="signin" href="/contact">Contact us</a></div></nav></header>
+<main class="page-main trip-main">
+<p class="list-kicker">A trip you can copy · checked on Nov 10, 2026</p>
+<h1 style="font-size:clamp(34px,5vw,50px)">New Year&#x27;s in NYC with kids</h1>
+<p class="lede">New Year&#x27;s in NYC with kids, minus Times Square</p>
+<ul class="trip-facts"><li>Wed Dec 30, 2026 to Fri Jan 1, 2027</li><li>Families with kids about 3 to 15 (notes for strollers and teens)</li><li>Checked on Nov 10, 2026</li></ul>
+<div class="trip-map" id="trip-map" role="img" aria-label="Map of the trip with every stop numbered"></div>
+<div class="list-actions"><button class="btn btn-sun" type="button" data-copy-list>Copy this trip</button><a class="btn" href="/app">Get the app</a></div>
+<p class="micro">Have the app? Copy it, then in Go To Travel tap Drop, then A list, and paste. Pip plans the days around your crew.</p>
+<section class="heads" aria-labelledby="heads-h"><h2 id="heads-h">Heads-up: what AI planners get wrong</h2><ul><li>Times Square at midnight isn&#x27;t a kid plan: viewing areas open at 3 PM, there are no portable restrooms, and if you leave your spot you can&#x27;t get back in.</li><li>The Met is closed on Wednesdays and on New Year&#x27;s Day, so on a Dec 30 to Jan 1 trip, Thursday Dec 31 is your only Met day.</li><li>Bryant Park&#x27;s free skating still needs a reserved entry time; bring-your-own-skates slots open a week out, and skate aids are free before 10:30 AM.</li><li>Prospect Park&#x27;s free fireworks need an RSVP; the Statue of Liberty is open on Jan 1 (it closes only on Thanksgiving and Dec 25).</li><li>Kids under 44 inches ride the subway free, up to three per paying adult.</li></ul></section>
+<section class="day" aria-labelledby="day-1">
+<h2 id="day-1">Day 1: Skates, a show and the tree</h2>
+<p class="day-map-row"><button class="day-map" type="button" data-day="1">Show day 1 on the map</button></p>
+<p class="leg">Walk: Bryant Park to Ellen&#x27;s Stardust Diner. Midtown, about 10 blocks north.</p><p class="leg">Walk: Ellen&#x27;s to Radio City. A few blocks east.</p><p class="leg">Walk: Radio City to Rockefeller Center. Across the street, practically.</p>
+<ol class="places" start="1">
+  <li class="place" id="stop-1"><div class="pn" aria-hidden="true">1</div><div>
+    <h3>Bryant Park Winter Village rink</h3><p class="when">9:00 AM · Bryant Park, Midtown Manhattan</p>
+    <p>Free-admission skating; skate aids free before 10:30 AM</p><p class="kid">With kids: Penguin aids for beginners under 4 feet; kids under 14 skate with an adult.</p><p class="book">Reserve an entry time on bryantpark.org; rental skates cost extra. Open daily, weather permitting.</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Bryant%20Park%20Winter%20Village%20rink%2C%20Bryant%20Park%2C%20Midtown%20Manhattan" target="_blank" rel="noopener">Open in Maps</a>
+  </div></li>
+  <li class="place" id="stop-2"><div class="pn" aria-hidden="true">2</div><div>
+    <h3>Ellen&#x27;s Stardust Diner</h3><p class="when">12:00 PM · 1650 Broadway, New York, NY 10019</p>
+    <p>The waitstaff sings from open to close, 7 AM to midnight</p><p class="kid">With kids: Stroller parking out front on Broadway, with free locks (space is limited).</p><p class="book">No reservations; expect a line.</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Ellen%27s%20Stardust%20Diner%2C%201650%20Broadway%2C%20New%20York%2C%20NY%2010019" target="_blank" rel="noopener">Open in Maps</a>
+  </div></li>
+  <li class="place" id="stop-3"><div class="pn" aria-hidden="true">3</div><div>
+    <h3>Radio City Christmas Spectacular</h3><p class="when">2:00 PM · 1260 6th Ave, New York, NY</p>
+    <p>The Rockettes&#x27; 2026 run goes through Jan 4, 2027</p><p class="kid">With kids: For little ones, pick the earliest show of the day.</p><p class="book">Book on rockettes.com/christmas; we didn&#x27;t check Dec 30 show times.</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Radio%20City%20Christmas%20Spectacular%2C%201260%206th%20Ave%2C%20New%20York%2C%20NY" target="_blank" rel="noopener">Open in Maps</a>
+  </div></li>
+  <li class="place" id="stop-4"><div class="pn" aria-hidden="true">4</div><div>
+    <h3>Rockefeller Center Christmas Tree</h3><p class="when">5:00 PM · Rockefeller Plaza, New York, NY</p>
+    <p>Lit on Dec 2, with the rink below it (open since Oct 10)</p><p class="book">2026 visiting hours hadn&#x27;t been announced when we checked.</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Rockefeller%20Center%20Christmas%20Tree%2C%20Rockefeller%20Plaza%2C%20New%20York%2C%20NY" target="_blank" rel="noopener">Open in Maps</a>
+  </div></li>
+</ol>
+</section>
+<section class="day" aria-labelledby="day-2">
+<h2 id="day-2">Day 2: The Met, early dinner, fireworks</h2>
+<p class="day-map-row"><button class="day-map" type="button" data-day="2">Show day 2 on the map</button></p>
+<p class="leg">Subway or walk: The Met to Hotel. Rest in the afternoon. Stay clear of the Times Square viewing areas, which open at 3 PM.</p><p class="leg">Subway: Hotel to Junior&#x27;s Brooklyn. Kids under 44 inches ride free (up to three per paying adult).</p><p class="leg">Subway: Junior&#x27;s to Grand Army Plaza. Plan the trip with the MTA app before you go.</p>
+<ol class="places" start="5">
+  <li class="place" id="stop-5"><div class="pn" aria-hidden="true">5</div><div>
+    <h3>The Metropolitan Museum of Art</h3><p class="when">10:00 AM · 1000 Fifth Ave, New York, NY 10028</p>
+    <p>Open 10 AM to 5 PM: the only Met day on this trip</p><p class="book">Closed Wednesdays and on Jan 1.</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=The%20Metropolitan%20Museum%20of%20Art%2C%201000%20Fifth%20Ave%2C%20New%20York%2C%20NY%2010028" target="_blank" rel="noopener">Open in Maps</a>
+  </div></li>
+  <li class="place" id="stop-6"><div class="pn" aria-hidden="true">6</div><div>
+    <h3>Junior&#x27;s Restaurant &amp; Bakery</h3><p class="when">5:00 PM · 386 Flatbush Ave Ext, Brooklyn, NY 11201</p>
+    <p>Early dinner and cheesecake in Downtown Brooklyn</p><p class="book">Thursdays 7 AM to 11 PM; reserve or join the waitlist online.</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Junior%27s%20Restaurant%20%26%20Bakery%2C%20386%20Flatbush%20Ave%20Ext%2C%20Brooklyn%2C%20NY%2011201" target="_blank" rel="noopener">Open in Maps</a>
+  </div></li>
+  <li class="place" id="stop-7"><div class="pn" aria-hidden="true">7</div><div>
+    <h3>Prospect Park fireworks, Grand Army Plaza</h3><p class="when">10:00 PM · Grand Army Plaza, Brooklyn, NY 11238</p>
+    <p>Free New Year&#x27;s Eve fireworks, 10 PM to 12:30 AM</p><p class="kid">With kids: Little ones asleep by then? The Times Square webcast starts at 6 PM; watch the ball drop from bed.</p><p class="book">Free; reserve a spot through prospectpark.org/nye.</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Prospect%20Park%20fireworks%2C%20Grand%20Army%20Plaza%2C%20Grand%20Army%20Plaza%2C%20Brooklyn%2C%20NY%2011238" target="_blank" rel="noopener">Open in Maps</a>
+  </div></li>
+</ol>
+</section>
+<section class="day" aria-labelledby="day-3">
+<h2 id="day-3">Day 3: New Year&#x27;s Day: what&#x27;s open</h2>
+<p class="day-map-row"><button class="day-map" type="button" data-day="3">Show day 3 on the map</button></p>
+<p class="leg">Subway: Hotel to Battery Park ferry. Ferries leave from Battery Park in Lower Manhattan.</p><p class="leg">Ferry (statue city cruises): Battery Park to Liberty Island. The only way onto the island.</p>
+<ol class="places" start="8">
+  <li class="place" id="stop-8"><div class="pn" aria-hidden="true">8</div><div>
+    <h3>Statue of Liberty</h3><p class="when">10:30 AM · Liberty Island, New York, NY 10004</p>
+    <p>Open Jan 1; it closes only on Thanksgiving and Dec 25</p><p class="kid">With kids: Last entry into the statue is 3:30 PM.</p><p class="book">Ferry only, with Statue City Cruises from Battery Park.</p>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Statue%20of%20Liberty%2C%20Liberty%20Island%2C%20New%20York%2C%20NY%2010004" target="_blank" rel="noopener">Open in Maps</a>
+  </div></li>
+</ol>
+</section>
+<section aria-labelledby="stay-h"><h2 id="stay-h">Where to stay</h2><ul class="stays"><li><b>The Plaza</b><span>Luxury · Fifth Avenue at Central Park South, and Eloise&#x27;s hotel; the splurge.</span> <a href="https://www.theplazany.com/" target="_blank" rel="noopener">Website</a></li><li><b>Hotel Beacon</b><span>Kitchenettes · Upper West Side rooms and suites with kitchenettes and a guest laundry.</span> <a href="https://www.beaconhotel.com/" target="_blank" rel="noopener">Website</a></li><li><b>Pod Times Square</b><span>Affordable · Bunk pods with twin beds, a few blocks west of Times Square. Book two for a family of four.</span> <a href="https://www.thepodhotel.com/pod-times-square" target="_blank" rel="noopener">Website</a></li></ul></section>
+<section class="get-app" aria-labelledby="get-h">
+  <h2 id="get-h">Copy it, then make it yours</h2>
+  <p>In Go To Travel, Pip fits a trip like this to your kids' ages, your hotel and your dates, and your crew votes on the picks. It's in beta on iPhone.</p>
+  <form class="form-row signup" data-list-waitlist data-slug="trip-nyc-new-years-with-kids" novalidate>
+      <label class="sr" for="email-trip">Email address</label>
+      <input class="field" id="email-trip" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@email.com" required>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-sun" type="submit">Get early access</button>
+      <p class="form-msg" role="status" aria-live="polite"></p>
+    </form>
+    <p class="micro">Free to start · iPhone · No spam, unsubscribe anytime · <a href="/privacy.html">Privacy</a></p>
+</section>
+<section class="sources" aria-labelledby="src-h"><h2 id="src-h" style="font-size:18px">Sources</h2><ol><li><a href="https://timessquarenyc.org/times-square-new-years-eve/nye-faq" target="_blank" rel="noopener nofollow">Times Square Alliance: New Year&#x27;s Eve FAQ (viewing areas open at 3 PM; no portable restrooms; leave your spot and you can&#x27;t return; no backpacks; webcast from 6 PM)</a>, checked Nov 10, 2026</li><li><a href="https://www.metmuseum.org/plan-your-visit" target="_blank" rel="noopener nofollow">The Met: Plan your visit (Sun-Tue and Thu 10-5, Fri-Sat 10-9, closed Wednesdays; closed Thanksgiving, Dec 25, Jan 1, first Monday in May)</a>, checked Nov 10, 2026</li><li><a href="https://bryantpark.org/activities/the-rink" target="_blank" rel="noopener nofollow">Bryant Park: The Rink at Bank of America Winter Village (open daily Oct 28, 2026 to Feb 28, 2027; free admission with reserved entry; skate aids free before 10:30 AM; under-14s with an adult)</a>, checked Nov 10, 2026</li><li><a href="https://investor.msgentertainment.com/news/news-details/2026/More-Rockettes-Scenes-More-Perspectives-More-Shows--Even-More-Spectacular/default.aspx" target="_blank" rel="noopener nofollow">MSG Entertainment (Jul 23, 2026): Christmas Spectacular at Radio City, Nov 4, 2026 through Jan 4, 2027, 230 performances</a>, checked Nov 10, 2026</li><li><a href="https://www.timeout.com/newyork/news/the-2026-rockefeller-center-christmas-tree-lighting-has-officially-been-announced-and-its-happening-earlier-than-you-think-092926" target="_blank" rel="noopener nofollow">Time Out New York (Sep 29, 2026): tree lighting Wed Dec 2; The Rink at Rockefeller Center opens Oct 10; visiting hours to be announced</a>, checked Nov 10, 2026</li><li><a href="https://www.ellensstardustdiner.com/faq/" target="_blank" rel="noopener nofollow">Ellen&#x27;s Stardust Diner FAQ (7 AM-midnight every day incl. holidays; singing waitstaff all day; no reservations; children welcome; stroller parking out front)</a>, checked Nov 10, 2026</li><li><a href="https://www.juniorscheesecake.com/pages/brooklyn" target="_blank" rel="noopener nofollow">Junior&#x27;s Brooklyn (386 Flatbush Ave Ext; Sun-Thu 7 AM-11 PM, Fri-Sat 7 AM-midnight; reserve or waitlist)</a>, checked Nov 10, 2026</li><li><a href="https://www.prospectpark.org/nye" target="_blank" rel="noopener nofollow">Prospect Park Alliance: New Year&#x27;s Eve Fireworks in Prospect Park (Grand Army Plaza; Thursday, Dec 31, 10 PM-12:30 AM; free, reserve a spot)</a>, checked Nov 10, 2026</li><li><a href="https://www.nps.gov/stli/planyourvisit/hours.htm" target="_blank" rel="noopener nofollow">NPS Statue of Liberty: Hours (every day 9-4:30; closed Thanksgiving and Dec 25; ferry by Statue City Cruises only; last statue entry 3:30 PM)</a>, checked Nov 10, 2026</li><li><a href="https://www.mta.info/fares-tolls/subway-bus" target="_blank" rel="noopener nofollow">MTA: subway and bus fares (up to three children under 44 inches ride free with a fare-paying adult)</a>, checked Nov 10, 2026</li><li><a href="https://www.theplazany.com/" target="_blank" rel="noopener nofollow">The Plaza (768 Fifth Avenue; &#x27;New York&#x27;s iconic luxury hotel&#x27;; Eloise)</a>, checked Nov 10, 2026</li><li><a href="https://www.beaconhotel.com/" target="_blank" rel="noopener nofollow">Hotel Beacon (2130 Broadway; rooms and suites with kitchenettes; guest laundry)</a>, checked Nov 10, 2026</li><li><a href="https://www.thepodhotel.com/pod-times-square" target="_blank" rel="noopener nofollow">Pod Times Square (400 W 42nd St; &#x27;affordable hotel&#x27;; bunk pods with twin beds)</a>, checked Nov 10, 2026</li><li><a href="https://nominatim.openstreetmap.org/" target="_blank" rel="noopener nofollow">OpenStreetMap via Nominatim: coordinates and street addresses (looked up 2026-11-10)</a>, checked Nov 10, 2026</li></ol><p>Map: © OpenStreetMap contributors, OpenMapTiles, OpenFreeMap.</p></section>
+<p><a href="/trips">All trips you can copy</a> · <a href="/lists">All our lists</a></p>
+<textarea hidden data-list-text>Our list for “New Year&#x27;s in NYC with kids” on Go To Travel: 8 spots
+📍 Bryant Park Winter Village rink — Bryant Park, Midtown Manhattan
+📍 Ellen&#x27;s Stardust Diner — 1650 Broadway, New York, NY 10019
+📍 Radio City Christmas Spectacular — 1260 6th Ave, New York, NY
+📍 Rockefeller Center Christmas Tree — Rockefeller Plaza, New York, NY
+📍 The Metropolitan Museum of Art — 1000 Fifth Ave, New York, NY 10028
+📍 Junior&#x27;s Restaurant &amp; Bakery — 386 Flatbush Ave Ext, Brooklyn, NY 11201
+📍 Prospect Park fireworks, Grand Army Plaza — Grand Army Plaza, Brooklyn, NY 11238
+📍 Statue of Liberty — Liberty Island, New York, NY 10004
+
+Copy it into your own bucket list: in Go To Travel, tap Drop, then A list, and paste this.
+gototravelapp.com/trips/nyc-new-years-with-kids</textarea>
+<script type="application/json" id="trip-data">{"pins": [{"n": 1, "name": "Bryant Park Winter Village rink", "lat": 40.753751, "lng": -73.983543, "id": "stop-1", "day": 1}, {"n": 2, "name": "Ellen's Stardust Diner", "lat": 40.761848, "lng": -73.983503, "id": "stop-2", "day": 1}, {"n": 3, "name": "Radio City Christmas Spectacular", "lat": 40.759812, "lng": -73.979279, "id": "stop-3", "day": 1}, {"n": 4, "name": "Rockefeller Center Christmas Tree", "lat": 40.758757, "lng": -73.97865, "id": "stop-4", "day": 1}, {"n": 5, "name": "The Metropolitan Museum of Art", "lat": 40.77944, "lng": -73.963382, "id": "stop-5", "day": 2}, {"n": 6, "name": "Junior's Restaurant & Bakery", "lat": 40.690145, "lng": -73.981989, "id": "stop-6", "day": 2}, {"n": 7, "name": "Prospect Park fireworks, Grand Army Plaza", "lat": 40.674896, "lng": -73.970874, "id": "stop-7", "day": 2}, {"n": 8, "name": "Statue of Liberty", "lat": 40.689253, "lng": -74.044548, "id": "stop-8", "day": 3}], "stays": [{"name": "The Plaza", "lat": 40.76446, "lng": -73.974494}, {"name": "Hotel Beacon", "lat": 40.780484, "lng": -73.980831}, {"name": "Pod Times Square", "lat": 40.758433, "lng": -73.993071}]}</script>
+</main>
+<script src="/assets/site.js"></script>
+<script src="/assets/lists.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+{
+ "slug": "nyc-new-years-with-kids",
+ "title": "New Year's in NYC with kids",
+ "hook": "New Year's in NYC with kids, minus Times Square",
+ "dates": "Wed Dec 30, 2026 to Fri Jan 1, 2027",
+ "who": "Families with kids about 3 to 15 (notes for strollers and teens)",
+ "checked_on": "2026-11-10",
+ "days": [
+  {
+   "day": 1,
+   "date": "Wed Dec 30",
+   "title": "Skates, a show and the tree",
+   "stops": [
+    {
+     "time": "9:00 AM",
+     "name": "Bryant Park Winter Village rink",
+     "kind": "do",
+     "why": "Free-admission skating; skate aids free before 10:30 AM",
+     "kid_note": "Penguin aids for beginners under 4 feet; kids under 14 skate with an adult.",
+     "lat": 40.753751,
+     "lng": -73.983543,
+     "address": "Bryant Park, Midtown Manhattan",
+     "booking_note": "Reserve an entry time on bryantpark.org; rental skates cost extra. Open daily, weather permitting.",
+     "source_ids": [
+      "bp_rink"
+     ]
+    },
+    {
+     "time": "12:00 PM",
+     "name": "Ellen's Stardust Diner",
+     "kind": "eat",
+     "why": "The waitstaff sings from open to close, 7 AM to midnight",
+     "kid_note": "Stroller parking out front on Broadway, with free locks (space is limited).",
+     "lat": 40.761848,
+     "lng": -73.983503,
+     "address": "1650 Broadway, New York, NY 10019",
+     "booking_note": "No reservations; expect a line.",
+     "source_ids": [
+      "ellens_faq"
+     ]
+    },
+    {
+     "time": "2:00 PM",
+     "name": "Radio City Christmas Spectacular",
+     "kind": "see",
+     "why": "The Rockettes' 2026 run goes through Jan 4, 2027",
+     "kid_note": "For little ones, pick the earliest show of the day.",
+     "lat": 40.759812,
+     "lng": -73.979279,
+     "address": "1260 6th Ave, New York, NY",
+     "booking_note": "Book on rockettes.com/christmas; we didn't check Dec 30 show times.",
+     "source_ids": [
+      "msg_rockettes"
+     ]
+    },
+    {
+     "time": "5:00 PM",
+     "name": "Rockefeller Center Christmas Tree",
+     "kind": "see",
+     "why": "Lit on Dec 2, with the rink below it (open since Oct 10)",
+     "kid_note": null,
+     "lat": 40.758757,
+     "lng": -73.97865,
+     "address": "Rockefeller Plaza, New York, NY",
+     "booking_note": "2026 visiting hours hadn't been announced when we checked.",
+     "source_ids": [
+      "timeout_tree"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Bryant Park",
+     "to": "Ellen's Stardust Diner",
+     "mode": "walk",
+     "duration": null,
+     "note": "Midtown, about 10 blocks north.",
+     "source_ids": [
+      "osm"
+     ]
+    },
+    {
+     "from": "Ellen's",
+     "to": "Radio City",
+     "mode": "walk",
+     "duration": null,
+     "note": "A few blocks east.",
+     "source_ids": [
+      "osm"
+     ]
+    },
+    {
+     "from": "Radio City",
+     "to": "Rockefeller Center",
+     "mode": "walk",
+     "duration": null,
+     "note": "Across the street, practically.",
+     "source_ids": [
+      "osm"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "date": "Thu Dec 31",
+   "title": "The Met, early dinner, fireworks",
+   "stops": [
+    {
+     "time": "10:00 AM",
+     "name": "The Metropolitan Museum of Art",
+     "kind": "see",
+     "why": "Open 10 AM to 5 PM: the only Met day on this trip",
+     "kid_note": null,
+     "lat": 40.77944,
+     "lng": -73.963382,
+     "address": "1000 Fifth Ave, New York, NY 10028",
+     "booking_note": "Closed Wednesdays and on Jan 1.",
+     "source_ids": [
+      "met_visit"
+     ]
+    },
+    {
+     "time": "5:00 PM",
+     "name": "Junior's Restaurant & Bakery",
+     "kind": "eat",
+     "why": "Early dinner and cheesecake in Downtown Brooklyn",
+     "kid_note": null,
+     "lat": 40.690145,
+     "lng": -73.981989,
+     "address": "386 Flatbush Ave Ext, Brooklyn, NY 11201",
+     "booking_note": "Thursdays 7 AM to 11 PM; reserve or join the waitlist online.",
+     "source_ids": [
+      "juniors"
+     ]
+    },
+    {
+     "time": "10:00 PM",
+     "name": "Prospect Park fireworks, Grand Army Plaza",
+     "kind": "see",
+     "why": "Free New Year's Eve fireworks, 10 PM to 12:30 AM",
+     "kid_note": "Little ones asleep by then? The Times Square webcast starts at 6 PM; watch the ball drop from bed.",
+     "lat": 40.674896,
+     "lng": -73.970874,
+     "address": "Grand Army Plaza, Brooklyn, NY 11238",
+     "booking_note": "Free; reserve a spot through prospectpark.org/nye.",
+     "source_ids": [
+      "pp_nye",
+      "ts_faq"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "The Met",
+     "to": "Hotel",
+     "mode": "subway or walk",
+     "duration": null,
+     "note": "Rest in the afternoon. Stay clear of the Times Square viewing areas, which open at 3 PM.",
+     "source_ids": [
+      "ts_faq"
+     ]
+    },
+    {
+     "from": "Hotel",
+     "to": "Junior's Brooklyn",
+     "mode": "subway",
+     "duration": null,
+     "note": "Kids under 44 inches ride free (up to three per paying adult).",
+     "source_ids": [
+      "mta_fares"
+     ]
+    },
+    {
+     "from": "Junior's",
+     "to": "Grand Army Plaza",
+     "mode": "subway",
+     "duration": null,
+     "note": "Plan the trip with the MTA app before you go.",
+     "source_ids": []
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "date": "Fri Jan 1",
+   "title": "New Year's Day: what's open",
+   "stops": [
+    {
+     "time": "10:30 AM",
+     "name": "Statue of Liberty",
+     "kind": "see",
+     "why": "Open Jan 1; it closes only on Thanksgiving and Dec 25",
+     "kid_note": "Last entry into the statue is 3:30 PM.",
+     "lat": 40.689253,
+     "lng": -74.044548,
+     "address": "Liberty Island, New York, NY 10004",
+     "booking_note": "Ferry only, with Statue City Cruises from Battery Park.",
+     "source_ids": [
+      "nps_stli"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Hotel",
+     "to": "Battery Park ferry",
+     "mode": "subway",
+     "duration": null,
+     "note": "Ferries leave from Battery Park in Lower Manhattan.",
+     "source_ids": [
+      "nps_stli"
+     ]
+    },
+    {
+     "from": "Battery Park",
+     "to": "Liberty Island",
+     "mode": "ferry (Statue City Cruises)",
+     "duration": null,
+     "note": "The only way onto the island.",
+     "source_ids": [
+      "nps_stli"
+     ]
+    }
+   ]
+  }
+ ],
+ "stays": [
+  {
+   "name": "The Plaza",
+   "tier": "Luxury",
+   "why": "Fifth Avenue at Central Park South, and Eloise's hotel; the splurge.",
+   "lat": 40.76446,
+   "lng": -73.974494,
+   "url": "https://www.theplazany.com/",
+   "source_ids": [
+    "plaza"
+   ]
+  },
+  {
+   "name": "Hotel Beacon",
+   "tier": "Kitchenettes",
+   "why": "Upper West Side rooms and suites with kitchenettes and a guest laundry.",
+   "lat": 40.780484,
+   "lng": -73.980831,
+   "url": "https://www.beaconhotel.com/",
+   "source_ids": [
+    "beacon"
+   ]
+  },
+  {
+   "name": "Pod Times Square",
+   "tier": "Affordable",
+   "why": "Bunk pods with twin beds, a few blocks west of Times Square. Book two for a family of four.",
+   "lat": 40.758433,
+   "lng": -73.993071,
+   "url": "https://www.thepodhotel.com/pod-times-square",
+   "source_ids": [
+    "pod"
+   ]
+  }
+ ],
+ "heads_ups": [
+  {
+   "text": "Times Square at midnight isn't a kid plan: viewing areas open at 3 PM, there are no portable restrooms, and if you leave your spot you can't get back in.",
+   "source_id": "ts_faq",
+   "source_ids": [
+    "ts_faq"
+   ]
+  },
+  {
+   "text": "The Met is closed on Wednesdays and on New Year's Day, so on a Dec 30 to Jan 1 trip, Thursday Dec 31 is your only Met day.",
+   "source_id": "met_visit",
+   "source_ids": [
+    "met_visit"
+   ]
+  },
+  {
+   "text": "Bryant Park's free skating still needs a reserved entry time; bring-your-own-skates slots open a week out, and skate aids are free before 10:30 AM.",
+   "source_id": "bp_rink",
+   "source_ids": [
+    "bp_rink"
+   ]
+  },
+  {
+   "text": "Prospect Park's free fireworks need an RSVP; the Statue of Liberty is open on Jan 1 (it closes only on Thanksgiving and Dec 25).",
+   "source_id": "pp_nye",
+   "source_ids": [
+    "pp_nye"
+   ]
+  },
+  {
+   "text": "Kids under 44 inches ride the subway free, up to three per paying adult.",
+   "source_id": "mta_fares",
+   "source_ids": [
+    "mta_fares"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "ts_faq",
+   "url": "https://timessquarenyc.org/times-square-new-years-eve/nye-faq",
+   "title": "Times Square Alliance: New Year's Eve FAQ (viewing areas open at 3 PM; no portable restrooms; leave your spot and you can't return; no backpacks; webcast from 6 PM)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "met_visit",
+   "url": "https://www.metmuseum.org/plan-your-visit",
+   "title": "The Met: Plan your visit (Sun-Tue and Thu 10-5, Fri-Sat 10-9, closed Wednesdays; closed Thanksgiving, Dec 25, Jan 1, first Monday in May)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "bp_rink",
+   "url": "https://bryantpark.org/activities/the-rink",
+   "title": "Bryant Park: The Rink at Bank of America Winter Village (open daily Oct 28, 2026 to Feb 28, 2027; free admission with reserved entry; skate aids free before 10:30 AM; under-14s with an adult)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "msg_rockettes",
+   "url": "https://investor.msgentertainment.com/news/news-details/2026/More-Rockettes-Scenes-More-Perspectives-More-Shows--Even-More-Spectacular/default.aspx",
+   "title": "MSG Entertainment (Jul 23, 2026): Christmas Spectacular at Radio City, Nov 4, 2026 through Jan 4, 2027, 230 performances",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "timeout_tree",
+   "url": "https://www.timeout.com/newyork/news/the-2026-rockefeller-center-christmas-tree-lighting-has-officially-been-announced-and-its-happening-earlier-than-you-think-092926",
+   "title": "Time Out New York (Sep 29, 2026): tree lighting Wed Dec 2; The Rink at Rockefeller Center opens Oct 10; visiting hours to be announced",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "ellens_faq",
+   "url": "https://www.ellensstardustdiner.com/faq/",
+   "title": "Ellen's Stardust Diner FAQ (7 AM-midnight every day incl. holidays; singing waitstaff all day; no reservations; children welcome; stroller parking out front)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "juniors",
+   "url": "https://www.juniorscheesecake.com/pages/brooklyn",
+   "title": "Junior's Brooklyn (386 Flatbush Ave Ext; Sun-Thu 7 AM-11 PM, Fri-Sat 7 AM-midnight; reserve or waitlist)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "pp_nye",
+   "url": "https://www.prospectpark.org/nye",
+   "title": "Prospect Park Alliance: New Year's Eve Fireworks in Prospect Park (Grand Army Plaza; Thursday, Dec 31, 10 PM-12:30 AM; free, reserve a spot)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "nps_stli",
+   "url": "https://www.nps.gov/stli/planyourvisit/hours.htm",
+   "title": "NPS Statue of Liberty: Hours (every day 9-4:30; closed Thanksgiving and Dec 25; ferry by Statue City Cruises only; last statue entry 3:30 PM)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mta_fares",
+   "url": "https://www.mta.info/fares-tolls/subway-bus",
+   "title": "MTA: subway and bus fares (up to three children under 44 inches ride free with a fare-paying adult)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "plaza",
+   "url": "https://www.theplazany.com/",
+   "title": "The Plaza (768 Fifth Avenue; 'New York's iconic luxury hotel'; Eloise)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "beacon",
+   "url": "https://www.beaconhotel.com/",
+   "title": "Hotel Beacon (2130 Broadway; rooms and suites with kitchenettes; guest laundry)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "pod",
+   "url": "https://www.thepodhotel.com/pod-times-square",
+   "title": "Pod Times Square (400 W 42nd St; 'affordable hotel'; bunk pods with twin beds)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "osm",
+   "url": "https://nominatim.openstreetmap.org/",
+   "title": "OpenStreetMap via Nominatim: coordinates and street addresses (looked up 2026-11-10)",
+   "accessed": "2026-11-10"
+  }
+ ]
+}

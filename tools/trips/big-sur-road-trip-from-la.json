@@ -1,0 +1,568 @@
+{
+ "slug": "big-sur-road-trip-from-la",
+ "title": "Big Sur road trip from LA",
+ "hook": "Highway 1 is open again. Some stops aren't.",
+ "dates": "3 days, any winter weekend (checked for December 2026)",
+ "who": "Families with kids about 4 and up; one car, two nights",
+ "checked_on": "2026-11-10",
+ "days": [
+  {
+   "day": 1,
+   "date": "Friday",
+   "title": "Inland on 101 to Monterey",
+   "stops": [
+    {
+     "time": "8:00 AM",
+     "name": "Leave Los Angeles",
+     "kind": "move",
+     "why": "North on US-101: about 340 mi today, so start early",
+     "kid_note": null,
+     "lat": 34.053696,
+     "lng": -118.242921,
+     "address": null,
+     "booking_note": null,
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "time": "10:30 AM",
+     "name": "Solvang Restaurant",
+     "kind": "eat",
+     "why": "Home of Arne's aebleskiver, the Danish treat",
+     "kid_note": "Powdered sugar and jam: messy, worth it.",
+     "lat": 34.59474,
+     "lng": -120.139434,
+     "address": "1672 Copenhagen Dr, Solvang, CA 93463",
+     "booking_note": "We couldn't confirm hours; call (805) 688-4645.",
+     "source_ids": [
+      "solvang_rest"
+     ]
+    },
+    {
+     "time": "4:00 PM",
+     "name": "Check in: Portola Hotel & Spa",
+     "kind": "stay",
+     "why": "Downtown Monterey, by Old Fisherman's Wharf",
+     "kid_note": null,
+     "lat": 36.601318,
+     "lng": -121.894318,
+     "address": "Two Portola Plaza, Monterey, CA 93940",
+     "booking_note": "Our pick, not a booking.",
+     "source_ids": [
+      "portola"
+     ]
+    },
+    {
+     "time": "5:30 PM",
+     "name": "Old Fisherman's Grotto",
+     "kind": "eat",
+     "why": "The wharf restaurant known for its clam chowder",
+     "kid_note": "Strict stroller, high-chair and children's policy (since 2009): read it before you go.",
+     "lat": 36.604376,
+     "lng": -121.892916,
+     "address": "39 Fisherman's Wharf, Monterey, CA 93940",
+     "booking_note": null,
+     "source_ids": [
+      "grotto",
+      "grotto_home"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Los Angeles",
+     "to": "Solvang",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 129 mi on US-101.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Solvang",
+     "to": "Monterey",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 210 mi, inland on US-101.",
+     "source_ids": [
+      "osrm"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 2,
+   "date": "Saturday",
+   "title": "Aquarium, then the coast south",
+   "stops": [
+    {
+     "time": "10:00 AM",
+     "name": "Monterey Bay Aquarium",
+     "kind": "see",
+     "why": "Watch the sea otter feeding (10:30 AM on our check)",
+     "kid_note": "Free for ages 4 and under, but they still need a ticket.",
+     "lat": 36.618089,
+     "lng": -121.901672,
+     "address": "886 Cannery Row, Monterey, CA 93940",
+     "booking_note": "Buy ahead on the aquarium's own site; tickets were on sale through Dec 31, 2026. Hours vary by date.",
+     "source_ids": [
+      "mba_schedule",
+      "mba_tickets",
+      "mba_faq"
+     ]
+    },
+    {
+     "time": "1:00 PM",
+     "name": "Carmel Belle",
+     "kind": "eat",
+     "why": "Lunch made with local Monterey County produce",
+     "kid_note": null,
+     "lat": 36.554511,
+     "lng": -121.922073,
+     "address": "Ocean Ave & San Carlos St, Carmel-by-the-Sea, CA 93921",
+     "booking_note": "Open daily 8 AM to 5:30 PM.",
+     "source_ids": [
+      "carmelbelle"
+     ]
+    },
+    {
+     "time": "2:00 PM",
+     "name": "Bixby Creek Bridge",
+     "kind": "see",
+     "why": "See it from the car: no parking near it since August",
+     "kid_note": null,
+     "lat": 36.371586,
+     "lng": -121.901932,
+     "address": "Highway 1, Big Sur, CA",
+     "booking_note": "12-month ban on parking from about 900 ft north to 700 ft south of the bridge.",
+     "source_ids": [
+      "cbs_bixby"
+     ]
+    },
+    {
+     "time": "2:45 PM",
+     "name": "Pfeiffer Big Sur State Park",
+     "kind": "do",
+     "why": "Redwood Grove Boardwalk and River Path are open",
+     "kid_note": "The Pfeiffer Falls trail is closed until further notice.",
+     "lat": 36.253306,
+     "lng": -121.783295,
+     "address": "Highway 1, Big Sur, CA",
+     "booking_note": "$10 per car; 8 AM to sunset. Reopened Oct 16 after the Timber Fire closure.",
+     "source_ids": [
+      "parks_pfeiffer"
+     ]
+    },
+    {
+     "time": "4:30 PM",
+     "name": "Ragged Point",
+     "kind": "see",
+     "why": "Cliff-top stop 350 ft above the Pacific, Big Sur's south gate",
+     "kid_note": null,
+     "lat": 35.780715,
+     "lng": -121.330831,
+     "address": "19019 Highway 1, Ragged Point, CA 93452",
+     "booking_note": null,
+     "source_ids": [
+      "ragged"
+     ]
+    },
+    {
+     "time": "6:00 PM",
+     "name": "Cambria Christmas Market (select dates)",
+     "kind": "do",
+     "why": "3 million lights, Santa, a train ride, fire pits",
+     "kid_note": "Santa visits and a train ride for the kids.",
+     "lat": 35.55872,
+     "lng": -121.08012,
+     "address": "2905 Burton Dr, Cambria, CA 93428",
+     "booking_note": "Nov 27 to Dec 31 on select dates, 5 to 9 PM. Tickets required; peak dates sell out. Night 2: Cavalier Oceanfront Resort, about 6 mi north.",
+     "source_ids": [
+      "cambria_mkt",
+      "cavalier",
+      "osrm"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Monterey",
+     "to": "Carmel",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 6 mi.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Carmel",
+     "to": "Bixby Bridge",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 15 mi on Highway 1. One-way traffic control at Rocky Creek Bridge through Nov 30.",
+     "source_ids": [
+      "osrm",
+      "ct_roads1"
+     ]
+    },
+    {
+     "from": "Bixby Bridge",
+     "to": "Pfeiffer Big Sur",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 13 mi. One-way control near Point Sur through Dec 31.",
+     "source_ids": [
+      "osrm",
+      "ct_roads1"
+     ]
+    },
+    {
+     "from": "Pfeiffer Big Sur",
+     "to": "Ragged Point",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 49 mi of the curviest stretch.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Ragged Point",
+     "to": "Cambria",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 24 mi.",
+     "source_ids": [
+      "osrm"
+     ]
+    }
+   ]
+  },
+  {
+   "day": 3,
+   "date": "Sunday",
+   "title": "Seals, a castle, then home",
+   "stops": [
+    {
+     "time": "8:30 AM",
+     "name": "Piedras Blancas elephant seals",
+     "kind": "see",
+     "why": "Free, open daily; big males arrive from late November",
+     "kid_note": "No restrooms at the viewing area, so stop before.",
+     "lat": 35.663502,
+     "lng": -121.258455,
+     "address": "Highway 1 north of San Simeon, CA",
+     "booking_note": "Flat shoes and a jacket: afternoons turn cold and windy.",
+     "source_ids": [
+      "fes"
+     ]
+    },
+    {
+     "time": "10:00 AM",
+     "name": "Hearst Castle, Grand Rooms Tour",
+     "kind": "see",
+     "why": "A 70-minute tour; a bus takes you up the hill",
+     "kid_note": "About 140 steps and a 2/3-mile walk; the ride down passes the old zoo's bear pits.",
+     "lat": 35.650922,
+     "lng": -121.185664,
+     "address": "750 Hearst Castle Rd, San Simeon, CA 93452",
+     "booking_note": "Book up to 60 days ahead; arrive 20 min early. Closed Thanksgiving, Christmas and New Year's Day.",
+     "source_ids": [
+      "hearst_grand",
+      "hearst_tickets"
+     ]
+    },
+    {
+     "time": "1:00 PM",
+     "name": "Giovanni's Fish Market & Galley",
+     "kind": "eat",
+     "why": "Fish and chips on the bay; family-run since 1985",
+     "kid_note": null,
+     "lat": 35.365914,
+     "lng": -120.853039,
+     "address": "1001 Front St, Morro Bay, CA 93442",
+     "booking_note": "Restaurant 11 AM to 6 PM daily.",
+     "source_ids": [
+      "giovannis"
+     ]
+    },
+    {
+     "time": "2:30 PM",
+     "name": "Drive home to Los Angeles",
+     "kind": "move",
+     "why": "About 200 mi back on US-101",
+     "kid_note": null,
+     "lat": 34.053696,
+     "lng": -118.242921,
+     "address": null,
+     "booking_note": null,
+     "source_ids": [
+      "osrm"
+     ]
+    }
+   ],
+   "legs": [
+    {
+     "from": "Cavalier (San Simeon)",
+     "to": "Elephant seals",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 8 mi north.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Elephant seals",
+     "to": "Hearst Castle",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 5 mi back south.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Hearst Castle",
+     "to": "Morro Bay",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 30 mi.",
+     "source_ids": [
+      "osrm"
+     ]
+    },
+    {
+     "from": "Morro Bay",
+     "to": "Los Angeles",
+     "mode": "drive",
+     "duration": null,
+     "note": "About 201 mi.",
+     "source_ids": [
+      "osrm"
+     ]
+    }
+   ]
+  }
+ ],
+ "stays": [
+  {
+   "name": "Portola Hotel & Spa",
+   "tier": "Hotel and spa",
+   "why": "Downtown Monterey by Old Fisherman's Wharf; pet-friendly.",
+   "lat": 36.601318,
+   "lng": -121.894318,
+   "url": "https://www.portolahotel.com/",
+   "night": "Night 1, Monterey",
+   "source_ids": [
+    "portola"
+   ]
+  },
+  {
+   "name": "Cavalier Oceanfront Resort",
+   "tier": "Oceanfront resort",
+   "why": "San Simeon's only oceanfront resort, 3 mi from Hearst Castle: two heated pools, oceanfront fire pits.",
+   "lat": 35.613505,
+   "lng": -121.145879,
+   "url": "https://www.cavalierresort.com/",
+   "night": "Night 2, San Simeon",
+   "source_ids": [
+    "cavalier"
+   ]
+  },
+  {
+   "name": "Ragged Point Inn",
+   "tier": "Boutique",
+   "why": "Ocean-view rooms 350 ft above the Pacific at the south end of Big Sur.",
+   "lat": 35.780715,
+   "lng": -121.330831,
+   "url": "https://www.raggedpointinn.com/",
+   "night": "Night 2, if you skip the market",
+   "source_ids": [
+    "ragged"
+   ]
+  }
+ ],
+ "heads_ups": [
+  {
+   "text": "Old info says Highway 1 is closed at Big Sur. It reopened at Regent's Slide on Jan 14, 2026; on Nov 10 Caltrans showed it open end to end, with one-way control at Rocky Creek Bridge (through Nov 30) and near Point Sur (through Dec 31).",
+   "source_id": "ct_roads1",
+   "source_ids": [
+    "ct_roads1",
+    "ct_d5_reopen"
+   ]
+  },
+  {
+   "text": "No stopping for the classic Bixby Bridge photo: since August, Monterey County bans parking on Highway 1 from about 900 ft north to 700 ft south of the bridge, for 12 months.",
+   "source_id": "cbs_bixby",
+   "source_ids": [
+    "cbs_bixby"
+   ]
+  },
+  {
+   "text": "The McWay Falls Overlook Trail is closed for a retaining wall project, and there's no beach access at McWay Falls.",
+   "source_id": "parks_jpb_trails",
+   "source_ids": [
+    "parks_jpb_trails",
+    "parks_jpb"
+   ]
+  },
+  {
+   "text": "Pfeiffer Big Sur reopened Oct 16 after the Timber Fire closure, but the Pfeiffer Falls trail stays closed; the Redwood Grove Boardwalk and River Path are open.",
+   "source_id": "parks_pfeiffer",
+   "source_ids": [
+    "parks_pfeiffer"
+   ]
+  },
+  {
+   "text": "Hearst Castle is closed on Thanksgiving, Christmas and New Year's Day; tours book up to 60 days ahead.",
+   "source_id": "hearst_tickets",
+   "source_ids": [
+    "hearst_tickets"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "id": "ct_d5_reopen",
+   "url": "https://dot.ca.gov/caltrans-near-me/district-5/d5-news/d5-news-1-14-26",
+   "title": "Caltrans District 5 (Jan 14, 2026): Highway 1 reopens at Regent's Slide, ahead of the March 30 estimate; occasional full closures possible",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "ct_roads1",
+   "url": "https://roads.dot.ca.gov/roadscell.php?roadnumber=1",
+   "title": "Caltrans highway conditions, SR 1 (as of Mon Nov 9, 2026, 10:45 PM, and again Tue Nov 10, 12:19 AM): no full closure in Big Sur; one-way control at Rocky Creek Bridge through Nov 30, near Point Sur through Dec 31, Mud Creek weekday mornings through Nov 13",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "cbs_bixby",
+   "url": "https://www.cbsnews.com/sacramento/news/bixby-bridge-no-parking-signs-big-sur-coast-monterey-county-california/",
+   "title": "CBS News (updated Aug 3, 2026): Monterey County bans parking on Highway 1 from 900 ft north to 700 ft south of Bixby Bridge for 12 months (approved June 23)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "parks_jpb_trails",
+   "url": "https://www.parks.ca.gov/?page_id=29888",
+   "title": "California State Parks, Julia Pfeiffer Burns trails: McWay Falls Overlook Trail closed for a retaining wall project into 2026",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "parks_jpb",
+   "url": "https://www.parks.ca.gov/?page_id=578",
+   "title": "California State Parks, Julia Pfeiffer Burns SP (last checked 11/9/2026): no beach or ocean access at McWay Falls",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "parks_pfeiffer",
+   "url": "https://www.parks.ca.gov/?page_id=570",
+   "title": "California State Parks, Pfeiffer Big Sur SP (last checked 11/9/2026): reopened Oct 16 after the Timber Fire closure; Pfeiffer Falls and other trails closed; Redwood Grove Boardwalk and River Path open; $10 day use; 8 AM to sunset",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mba_tickets",
+   "url": "https://www.montereybayaquarium.org/visit/admission-tickets",
+   "title": "Monterey Bay Aquarium: tickets (on sale through Dec 31, 2026; free for ages 4 and under)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mba_faq",
+   "url": "https://www.montereybayaquarium.org/visit/visitor-faqs",
+   "title": "Monterey Bay Aquarium: FAQ (buy in advance; arrive up to an hour before closing; hours vary; kids 4 and under still need a free ticket)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "mba_schedule",
+   "url": "https://www.montereybayaquarium.org/visit/schedule",
+   "title": "Monterey Bay Aquarium: schedule (Nov 9, 2026: 10 AM-5 PM; sea otter feeding 10:30 AM)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "hearst_tickets",
+   "url": "https://hearstcastle.org/reserve/ticket-information/",
+   "title": "Hearst Castle: ticket information (advance reservations strongly recommended, up to 60 days ahead; arrive 20 min early; closed Thanksgiving, Christmas, New Year's Day)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "hearst_grand",
+   "url": "https://hearstcastle.org/tour/grand-rooms-tour/",
+   "title": "Hearst Castle: Grand Rooms Tour (70 min; about 140 steps and a 2/3-mile walk; bus to the hilltop; return route passes the old zoo's bear pits)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "fes",
+   "url": "https://www.elephantseal.org/",
+   "title": "Friends of the Elephant Seal (viewing areas open every day; free, no reservations; no restrooms; December to March popular; cycle begins with mature males at the end of November)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "cambria_mkt",
+   "url": "https://www.cambriachristmasmarket.com/",
+   "title": "Cambria Christmas Market: Nov 27 to Dec 31, 2026, select dates, 5-9 PM; 3 million lights, Santa, train ride, fire pits; tickets; 2905 Burton Dr",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "cavalier",
+   "url": "https://www.cavalierresort.com/",
+   "title": "Cavalier Oceanfront Resort, San Simeon ('San Simeon's only oceanfront resort'; 3 miles from Hearst Castle; two heated pools; three oceanfront fire pits)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "ragged",
+   "url": "https://www.raggedpointinn.com/",
+   "title": "Ragged Point Inn (19019 Highway 1; boutique property 350 feet above the Pacific at the gateway to Big Sur; ocean-view rooms, cliffside dining)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "portola",
+   "url": "https://www.portolahotel.com/",
+   "title": "Portola Hotel & Spa (Two Portola Plaza, Monterey; by Old Fisherman's Wharf; pet-friendly)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "solvang_rest",
+   "url": "https://www.solvangrestaurant.com/",
+   "title": "Solvang Restaurant, home of Arne's Aebleskiver (1672 Copenhagen Dr, Solvang; (805) 688-4645)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "grotto",
+   "url": "https://www.oldfishermansgrotto.com/childrens-policy/",
+   "title": "Old Fisherman's Grotto (39 Fisherman's Wharf, Monterey; stroller and high-chair policy since 2009; children's policy)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "grotto_home",
+   "url": "https://www.oldfishermansgrotto.com/",
+   "title": "Old Fisherman's Grotto: home page (clam chowder)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "carmelbelle",
+   "url": "https://www.carmelbelle.com/",
+   "title": "Carmel Belle (Ocean Ave & San Carlos, Carmel; open daily 8 AM-5:30 PM; local Monterey County ingredients)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "giovannis",
+   "url": "https://www.giosfish.com/about-us",
+   "title": "Giovanni's Fish Market & Galley (1001 Front St, Morro Bay; family-run since 1985; restaurant 11 AM-6 PM daily; fish and chips)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "osm",
+   "url": "https://nominatim.openstreetmap.org/",
+   "title": "OpenStreetMap via Nominatim: coordinates and street addresses (looked up 2026-11-10)",
+   "accessed": "2026-11-10"
+  },
+  {
+   "id": "osrm",
+   "url": "https://router.project-osrm.org/",
+   "title": "OSRM route on OpenStreetMap data: driving distances and route lines (computed 2026-11-10)",
+   "accessed": "2026-11-10"
+  }
+ ]
+}

@@ -37,4 +37,11 @@
   <url><loc>https://gototravelapp.com/lists/tromso-polar-night</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://gototravelapp.com/lists/plymouth-massachusetts-last-weekend-of-the-season</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <!-- /lists -->
+  <!-- trips -->
+  <url><loc>https://gototravelapp.com/trips</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://gototravelapp.com/trips/big-sur-road-trip-from-la</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/christmas-markets-by-train-with-kids</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/nyc-new-years-with-kids</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/thanksgiving-mammoth-lakes-with-kids</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <!-- /trips -->
 </urlset>
