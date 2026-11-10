@@ -1,0 +1,42 @@
+# Every 10 minutes: is the app's server answering? (Pavan's call 4 on the Build 213 page, Nov 9 2026.) What it asks and
+# when it emails: tools/uptime-check.mjs.
+#
+# To switch it on, add these under Settings -> Secrets and variables -> Actions -> New repository secret:
+#   UPTIME_SUPABASE_KEY  the app's publishable key (the one in the app's .env)
+#   RESEND_API_KEY       a key from the Resend team that owns gototravelapp.com (optional, for the emails)
+#   ALERT_TO             who gets the emails, comma-separated (optional)
+# Then run it once by hand from the Actions tab (Uptime -> Run workflow). While the server is down each run fails, and
+# GitHub also emails whoever last changed this schedule about failed runs; that can be turned off in GitHub's
+# notification settings, since the Resend email already says it once each way. GitHub can start scheduled runs a few
+# minutes late, and pauses schedules in a repository with no commits for 60 days.
+name: Uptime
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: tools
+      - name: Ask what the app asks
+        run: node tools/uptime-check.mjs
+        env:
+          SUPABASE_URL: https://zkwamqtnaegvlptzdqxn.supabase.co
+          SUPABASE_KEY: ${{ secrets.UPTIME_SUPABASE_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          ALERT_TO: ${{ secrets.ALERT_TO }}
+          GITHUB_TOKEN: ${{ github.token }}
