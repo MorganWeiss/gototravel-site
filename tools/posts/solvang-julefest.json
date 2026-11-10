@@ -1,0 +1,581 @@
+{
+ "slug": "solvang-julefest",
+ "folder": "solvang-julefest-weekend",
+ "module": "solvang",
+ "post": {
+  "slug": "solvang-julefest-weekend",
+  "series": "Weekend notes",
+  "title": "Christmas in Europe, 2.5 hours from LA: Solvang's Julefest",
+  "hook": "Christmas in Europe, 2.5 hours from LA",
+  "dates": "Solvang's Julefest: Nov 27, 2026 to Jan 3, 2027",
+  "checked_on": "2026-11-10",
+  "slides": [
+   {
+    "type": "cover",
+    "photo": "cover",
+    "big": "Christmas in Europe, 2.5 hours from LA",
+    "sub": "Solvang's Julefest · Nov 27 to Jan 3",
+    "pip": "Parking is free all over the village, hotels too.",
+    "source_ids": [
+     "solv_getting",
+     "solv_faq",
+     "solv_julefest"
+    ],
+    "pos45": "15% 50%",
+    "pos916": "12% 50%",
+    "text_top": true
+   },
+   {
+    "type": "city",
+    "photo": "lights",
+    "label": "Every night · Solvang Park",
+    "big": "Light and music shows",
+    "dates": "5, 6, 7, 8 and 9 PM · 10 minutes each",
+    "pips": [
+     "Catch the 5 PM show and still make bedtime.",
+     "From Dec 26, the music turns to New Year's melodies."
+    ],
+    "source_ids": [
+     "solv_julefest"
+    ],
+    "pos45": "50% 20%",
+    "pos916": "50% 20%"
+   },
+   {
+    "type": "city",
+    "photo": "nisse",
+    "label": "All season · for kids",
+    "big": "The Nisser Adventure",
+    "dates": "Nov 27 to Jan 3 · clues at the Visitor Center",
+    "pips": [
+     "Pick up the clue sheet, then let the kids lead.",
+     "Parade theme, Dec 5: Nisser & Nordic Nights."
+    ],
+    "source_ids": [
+     "solv_julefest"
+    ],
+    "pos45": "71% 50%",
+    "pos916": "85% 50%",
+    "text_top": true
+   },
+   {
+    "type": "city",
+    "photo": "aeble",
+    "label": "Eat this",
+    "big": "Æbleskiver",
+    "dates": "Solvang Restaurant · Æbleskivehuset",
+    "pips": [
+     "Round Danish pancakes, powdered sugar, raspberry jam.",
+     "Solvang Restaurant calls itself the home of Arne's Aebleskiver."
+    ],
+    "source_ids": [
+     "solv_faq",
+     "solv_rest"
+    ],
+    "pos45": "62% 50%",
+    "pos916": "66% 50%"
+   },
+   {
+    "type": "kids",
+    "photo": "kids",
+    "label": "Kids will love",
+    "big": "Small Denmark, big fun",
+    "pos45": "55% 50%",
+    "pos916": "60% 50%",
+    "cy45": 820,
+    "cy916": 1060,
+    "items": [
+     [
+      "shoe",
+      "The Giant Red Clog",
+      "Take the family photo in it"
+     ],
+     [
+      "castle",
+      "Sunny Fields Park",
+      "A castle to play on"
+     ],
+     [
+      "star",
+      "Elsa at the Andersen museum",
+      "Dec 12, 11 AM to noon, on the museum crawl"
+     ]
+    ],
+    "pip": "Copenhagen Countdown, Dec 31: New Year's at 3 PM.",
+    "source_ids": [
+     "solv_faq",
+     "solv_julefest"
+    ]
+   },
+   {
+    "type": "stay",
+    "photo": "staybg",
+    "label": "Where we'd stay",
+    "big": "Alisal Ranch",
+    "kicker": "Our editorial pick",
+    "lines": [
+     "A 10,500-acre guest ranch for families, couples and multi-generational trips.",
+     "Horseback riding on 50 miles of trails.",
+     "About 3 miles from Solvang Park."
+    ],
+    "addr": "1054 Alisal Rd, Solvang",
+    "note": "Editorial picks. Nobody paid to be here.",
+    "pip": "Riding with little ones? Ask the ranch about ages first.",
+    "source_ids": [
+     "alisal",
+     "alisal_ride",
+     "osrm_alisal"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "dates",
+    "photo": "dates",
+    "label": "Save the dates",
+    "big": "Julefest 2026",
+    "k0": 1.08,
+    "pos45": "50% 30%",
+    "pos916": "50% 30%",
+    "rows": [
+     [
+      "Julefest begins",
+      "Light shows nightly",
+      "Fri Nov 27",
+      "5 to 9 PM, on the hour",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Santa's Village opens",
+      "Weekends to Dec 20",
+      "Sat Nov 28",
+      "Noon to 4 PM",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Tree lighting",
+      "Solvang Park",
+      "Fri Dec 4",
+      "5:30 PM",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Julefest parade",
+      "Nisser & Nordic Nights",
+      "Sat Dec 5",
+      "11 AM to 1:30 PM",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Elf The Musical",
+      "Solvang Festival Theater",
+      "Dec 11 and 12",
+      "6 PM",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Museum crawl",
+      "Elsa at the Andersen museum",
+      "Sat Dec 12",
+      "Elsa 11 AM to noon",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Copenhagen Countdown",
+      "Solvang Park",
+      "Thu Dec 31",
+      "2 to 4 PM, countdown at 3",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Last light shows",
+      "Solvang Park",
+      "Sun Jan 3",
+      "5 to 9 PM",
+      [
+       "solv_julefest"
+      ]
+     ]
+    ]
+   },
+   {
+    "type": "aiwrong",
+    "photo": "aiwrong",
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "zoom45": [
+     1.25,
+     0.5,
+     0.0
+    ],
+    "zoom916": [
+     1.0,
+     0.5,
+     0.0
+    ],
+    "items": [
+     [
+      "The Copenhagen Countdown is at 3 PM on Dec 31, not midnight.",
+      "solv_julefest"
+     ],
+     [
+      "Santa's Village is weekends only, noon to 4, through Dec 20.",
+      "solv_julefest"
+     ],
+     [
+      "By train, the last leg is an Amtrak bus, and only two run a day.",
+      "solv_getting"
+     ]
+    ]
+   },
+   {
+    "type": "app",
+    "photo": "app",
+    "big": "Pip plans it around your family.",
+    "button": "Copy this weekend: link in bio",
+    "screens": [
+     "yosTop",
+     "cCooks"
+    ],
+    "screens_alt": "the trip header (kids 7 and 10) and a stop card where Pip says why: 'One flat mile with big views. Little legs approved.'",
+    "screens_note": "an example family trip: Yosemite, kids 7 and 10"
+   }
+  ],
+  "photo_alt": {
+   "cover": "Copenhagen Drive in Solvang in December: a Christmas tree hung with red and white ornaments, Danish-style buildings and families strolling under a blue sky",
+   "lights": "Solvang Park's Christmas tree hung with red, white and green ornaments, with a North Pole sign at its base",
+   "nisse": "A red-sailed windmill and half-timbered Danish-style buildings with a green roof in Solvang, under a blue sky",
+   "aeble": "A plate of æbleskiver with jam beside a Danish sausage in Solvang",
+   "kids": "Solvang's horse-drawn trolley pulled by two draft horses down a village street",
+   "staybg": "A street of Danish-style buildings in Solvang",
+   "dates": "A small red Santa's cabin in Solvang with wreaths on its doors, toy-soldier figures and a snowman",
+   "aiwrong": "A giant smiling gingerbread figure with a candy cane, part of Solvang's Christmas decorations",
+   "app": "A Solvang street with Danish-style buildings"
+  },
+  "places": [
+   [
+    "📍 Solvang Park — Solvang, CA, USA",
+    "Light and music shows nightly at 5, 6, 7, 8 and 9 PM; tree lighting Dec 4 at 5:30 PM"
+   ],
+   [
+    "📍 Solvang Visitor Center — Solvang, CA, USA",
+    "Clues for the Nisser Adventure, Nov 27 to Jan 3"
+   ],
+   [
+    "📍 Solvang Restaurant — Solvang, CA, USA",
+    "Home of Arne's Aebleskiver"
+   ],
+   [
+    "📍 Æbleskivehuset — Solvang, CA, USA",
+    "Æbleskiver served fresh, says the town's visitor guide"
+   ],
+   [
+    "📍 Sunny Fields Park — Solvang, CA, USA",
+    "A castle to play on"
+   ],
+   [
+    "📍 Hans Christian Andersen Museum — Solvang, CA, USA",
+    "Elsa visits Dec 12, 11 AM to noon, on the museum crawl"
+   ],
+   [
+    "📍 Alisal Ranch — Solvang, CA, USA",
+    "Where we'd stay: a 10,500-acre guest ranch, about 3 miles from Solvang Park (editorial pick)"
+   ]
+  ],
+  "caption_lines": [
+   "Getting there: 125 miles up the coast, about 2½ hours from downtown LA (US-101 to exit 140A, then 3 miles east on 246). No car? Amtrak's Pacific Surfliner to Santa Barbara, then the Amtrak bus into the village (two a day, sold with your train ticket)."
+  ],
+  "wrong_caption": [
+   "The Copenhagen Countdown on Dec 31 is at 3 PM (2 to 4 PM in Solvang Park), not midnight.",
+   "Santa's Village is open weekends only, noon to 4 PM, from Nov 28 through Dec 20.",
+   "By train, the last leg from Santa Barbara is an Amtrak bus: only two a day, sold with your train ticket."
+  ],
+  "question": "Light show, nisse hunt or æbleskiver: what would your kids do first?",
+  "cta_end": "Get this plan fitted to your family: link in bio.",
+  "hashtags": [
+   "#Solvang",
+   "#Julefest",
+   "#SoCalWithKids",
+   "#ChristmasInCalifornia",
+   "#FamilyWeekend"
+  ],
+  "tiktok_title": "Christmas in Europe, 2.5 hours from LA",
+  "tiktok_desc": "Weekend notes: Solvang's Julefest, Nov 27 to Jan 3. Light shows every night, a nisse hunt, æbleskiver. Every date checked Nov 10, 2026.",
+  "dropped": [
+   "Solvang Restaurant and Æbleskivehuset hours (not published where we could check)",
+   "Santa's Village location (the official page gives no address)",
+   "Alisal Ranch riding ages and kids' programs (not published on its site)",
+   "Nativity Pageant Dec 13 (verified, cut for space)"
+  ],
+  "notes": {
+   "window": "Nov 12 to Dec 20, 2026 (a week before Julefest opens on Thanksgiving weekend; best before the Dec 4-5 tree lighting and parade)",
+   "suggest": [
+    [
+     "Instagram carousel (9 slides)",
+     "Thu Nov 19, 2026, 9:00 AM PT",
+     "2026-11-19T09:00:00-08:00"
+    ],
+    [
+     "TikTok photo mode (9 slides)",
+     "Thu Nov 19, 2026, 6:00 PM PT",
+     null
+    ]
+   ],
+   "campaign": "2026-11-19-solvang-julefest",
+   "recheck": [
+    "solvangusa.com Julefest page: tree lighting time, parade time, Santa's Village days.",
+    "Amtrak Connection bus times to Solvang.",
+    "Alisal Ranch still listing December events."
+   ]
+  }
+ },
+ "sources": [
+  [
+   "solv_julefest",
+   "https://solvangusa.com/things-to-do/solvang-julefest/",
+   "Solvang Julefest 2026 (official visitor site): Nov 27, 2026 to Jan 3, 2027; Tree Lighting Fri Dec 4, 5:30 PM, Solvang Park (1630 Mission Dr); parade Sat Dec 5, 11 AM-1:30 PM, theme 'Nisser & Nordic Nights'; nightly 10-minute light & music shows in Solvang Park at 5, 6, 7, 8 and 9 PM (New Year's Melodies Dec 26-Jan 3); Nisser Adventure Nov 27-Jan 3, clues at the Solvang Visitor Center; Santa's Village opens Sat Nov 28, weekends through Dec 20, 12-4 PM; Photos with Santa Paws Sat Dec 12, 10 AM-12 PM, free; museum crawl Sat Dec 12 with Elsa at the Hans Christian Andersen Museum 11 AM-12 PM; Elf The Musical Dec 11 and 12, 6 PM, Solvang Festival Theater; Copenhagen Countdown Thu Dec 31, 2-4 PM, countdown at 3 PM; tree burn Fri Jan 8, 2027, 5 PM",
+   "2026-11-10"
+  ],
+  [
+   "solv_faq",
+   "https://solvangusa.com/getting-to-solvang/frequently-asked-questions-about-visiting-solvang/",
+   "Solvang FAQ (official): parking is free throughout the village and at hotels; compact and walkable; 'Solvang Restaurant and Æbleskivehuset both serve them fresh' (round Danish pancakes with powdered sugar and raspberry jam); family photos in the Giant Red Clog; Sunny Fields Park castle; Julefest Nov 27, 2026 to Jan 3, 2027",
+   "2026-11-10"
+  ],
+  [
+   "solv_getting",
+   "https://solvangusa.com/getting-to-solvang/",
+   "Getting to Solvang (official): 125 miles up the coast from Los Angeles, downtown LA about two and a half hours; US-101 exit 140A for CA-246, three miles east; Amtrak Pacific Surfliner to Santa Barbara plus an Amtrak Connection bus into the village (sold with the train ticket, reservations required, two buses a day)",
+   "2026-11-10"
+  ],
+  [
+   "solv_rest",
+   "https://www.solvangrestaurant.com/",
+   "Solvang Restaurant, 1672 Copenhagen Dr: 'Home of Arne's Aebleskiver', famous for its Danish æbleskiver",
+   "2026-11-10"
+  ],
+  [
+   "alisal",
+   "https://www.alisalranch.com/",
+   "Alisal Ranch, 1054 Alisal Rd, Solvang: a luxury guest ranch across 10,500 acres, for families, couples and multi-generational trips; December 2026 events listed",
+   "2026-11-10"
+  ],
+  [
+   "alisal_ride",
+   "https://www.alisalranch.com/activities/horseback-riding",
+   "Alisal Ranch, horseback riding: 'riding horses along 50 miles of trails' (no riding ages published)",
+   "2026-11-10"
+  ],
+  [
+   "osrm_alisal",
+   "https://router.project-osrm.org/route/v1/driving/-120.141411,34.561848;-120.140579,34.595949",
+   "OpenStreetMap routing (OSRM): Alisal Ranch to Solvang Park, 2.8 miles by road",
+   "2026-11-10"
+  ]
+ ],
+ "photos": {
+  "cover": {
+   "file": "cover.jpg",
+   "title": "File:Solvang, CA (2025).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Solvang,_CA_(2025).jpg",
+   "artist": "Ligocsicnarf89",
+   "credit": "Own work",
+   "license": "CC BY 4.0",
+   "license_url": "https://creativecommons.org/licenses/by/4.0",
+   "usage_terms": "Creative Commons Attribution 4.0",
+   "attribution_required": "true",
+   "date": "2025-12-20 17:35:38",
+   "desc": "Solvang, CA",
+   "source_size": "5906x3791",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2465
+   ]
+  },
+  "lights": {
+   "file": "lights.jpg",
+   "title": "File:Solvang (California) 017.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Solvang_(California)_017.jpg",
+   "artist": "Américo Toledano",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2019-12-27 20:54:48",
+   "desc": "Árbol de navidad en Solvang (California).",
+   "source_size": "3523x4698",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3523,
+    4698
+   ]
+  },
+  "nisse": {
+   "file": "nisse.jpg",
+   "title": "File:Solvang in Santa Barbara County, California LCCN2013632339.tif",
+   "page": "https://commons.wikimedia.org/wiki/File:Solvang_in_Santa_Barbara_County,_California_LCCN2013632339.tif",
+   "artist": "Carol M. Highsmith",
+   "credit": "Library of Congress Catalog: http://lccn.loc.gov/2013632339 Image download: https://cdn.loc.gov/master/pnp/highsm/21800/21879a.tif Original url: http://hdl.loc.gov/loc.pnp/highsm.21879",
+   "license": "Public domain",
+   "license_url": "",
+   "usage_terms": "Public domain",
+   "attribution_required": "false",
+   "date": "Taken on 23 June 2012, 20:13 (according ",
+   "desc": "Title: Solvang in Santa Barbara County, California Physical description: 1 photograph : digital, tiff file, color. Notes: Title, date, and keywords provided by the photographer.; Credit line: The Jon B. Lovelace Collection of California Pho",
+   "source_size": "6144x4096",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2560
+   ]
+  },
+  "aeble": {
+   "file": "aeble.jpg",
+   "title": "File:Solvang Medisterpølse with æbleskiver.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Solvang_Medisterp%C3%B8lse_with_%C3%A6bleskiver.JPG",
+   "artist": "Carlos Almendarez",
+   "credit": "https://www.flickr.com/photos/calmenda/3358786349/",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2009-03-13",
+   "desc": "Solvang, California. \"Danish\" dish of medistepølse and æbleskiver.",
+   "source_size": "3892x2586",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2551
+   ]
+  },
+  "kids": {
+   "file": "kids.jpg",
+   "title": "File:Horse drawn trolley in Solvang, Santa Barbara County, California LCCN2013632341.tif",
+   "page": "https://commons.wikimedia.org/wiki/File:Horse_drawn_trolley_in_Solvang,_Santa_Barbara_County,_California_LCCN2013632341.tif",
+   "artist": "Carol M. Highsmith",
+   "credit": "Library of Congress Catalog: http://lccn.loc.gov/2013632341 Image download: https://cdn.loc.gov/master/pnp/highsm/21800/21881a.tif Original url: http://hdl.loc.gov/loc.pnp/highsm.21881",
+   "license": "Public domain",
+   "license_url": "",
+   "usage_terms": "Public domain",
+   "attribution_required": "false",
+   "date": "Taken on 23 June 2012, 20:22 (according ",
+   "desc": "Title: Horse drawn trolley in Solvang, Santa Barbara County, California Physical description: 1 photograph : digital, tiff file, color. Notes: Title, date, and keywords provided by the photographer.; Credit line: The Jon B. Lovelace Collect",
+   "source_size": "6144x4096",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2560
+   ]
+  },
+  "staybg": {
+   "file": "staybg.jpg",
+   "title": "File:City of Solvang (8586060337).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:City_of_Solvang_(8586060337).jpg",
+   "artist": "Sodanie Chea from Norwalk, Ca, United States",
+   "credit": "City of Solvang",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2013-03-23 17:13",
+   "desc": "City of Solvang",
+   "source_size": "5616x3744",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2560
+   ]
+  },
+  "dates": {
+   "file": "dates.jpg",
+   "title": "File:Solvang (California) 019.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Solvang_(California)_019.jpg",
+   "artist": "Américo Toledano",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2019-12-27 10:36:28",
+   "desc": "Decoración navideña en Solvang (California).",
+   "source_size": "3890x2918",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2880
+   ]
+  },
+  "aiwrong": {
+   "file": "aiwrong.jpg",
+   "title": "File:Solvang (California) 018.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Solvang_(California)_018.jpg",
+   "artist": "Américo Toledano",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2019-12-27 10:35:43",
+   "desc": "Decoración navideña en Solvang (California).",
+   "source_size": "3000x4000",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3000,
+    4000
+   ]
+  },
+  "app": {
+   "file": "app.jpg",
+   "title": "File:Charming Solvang - panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Charming_Solvang_-_panoramio.jpg",
+   "artist": "Annette Teng",
+   "credit": "https://web.archive.org/web/20161025002742/http://www.panoramio.com/photo/89213506",
+   "license": "CC BY 3.0",
+   "license_url": "https://creativecommons.org/licenses/by/3.0",
+   "usage_terms": "Creative Commons Attribution 3.0",
+   "attribution_required": "true",
+   "date": "Taken on 22 April 2013",
+   "desc": "Charming Solvang",
+   "source_size": "3648x2736",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3648,
+    2736
+   ]
+  }
+ },
+ "map": null,
+ "screens": {
+  "yosTop": {
+   "src": "reels-v3/screens/d-yos1-a.png",
+   "sx": 0,
+   "sy": 150,
+   "sw": 1206,
+   "sh": 560
+  },
+  "cCooks": {
+   "src": "reels-v3/screens/d-yos1-d.png",
+   "sx": 30,
+   "sy": 410,
+   "sw": 1146,
+   "sh": 600
+  }
+ },
+ "post_at": "2026-11-19T09:00:00-08:00"
+}

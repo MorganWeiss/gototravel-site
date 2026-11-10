@@ -1,0 +1,573 @@
+{
+ "slug": "socal-holiday-nights",
+ "folder": "socal-holiday-nights-2026",
+ "module": "socal_nights",
+ "post": {
+  "slug": "socal-holiday-nights-2026",
+  "series": "Weekend notes",
+  "title": "SoCal holiday nights with kids, by date",
+  "hook": "SoCal holiday nights with kids, by date",
+  "checked_on": "2026-11-10",
+  "slides": [
+   {
+    "type": "cover",
+    "photo": "cover",
+    "big": "SoCal holiday nights with kids, by date",
+    "sub": "8 nights out · LA, Orange County, San Diego",
+    "pip": "Four of the eight are free to watch.",
+    "source_ids": [
+     "grove",
+     "decnights",
+     "sdbay",
+     "newport"
+    ],
+    "pos45": "40% 50%",
+    "pos916": "42% 50%"
+   },
+   {
+    "type": "dates",
+    "photo": "dates",
+    "label": "Save the dates",
+    "big": "Holiday nights, 2026",
+    "k0": 1.0,
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "rows": [
+     [
+      "Christmas at The Grove",
+      "Los Angeles · free",
+      "Mon Nov 16",
+      "Tree lighting + snowfall",
+      [
+       "grove"
+      ]
+     ],
+     [
+      "L.A. Zoo Lights",
+      "Griffith Park · ticketed",
+      "Nov 20 – Jan 10",
+      "Select nights",
+      [
+       "lazoo"
+      ]
+     ],
+     [
+      "Enchanted, Descanso Gardens",
+      "La Cañada Flintridge · ticketed",
+      "Nov 22 – Jan 9",
+      "Timed entry",
+      [
+       "descanso"
+      ]
+     ],
+     [
+      "December Nights",
+      "Balboa Park · free",
+      "Dec 4 and 5",
+      "Fri 4–10, Sat noon–10",
+      [
+       "decnights"
+      ]
+     ],
+     [
+      "Holiday Boat Parade",
+      "Marina del Rey",
+      "Sat Dec 12",
+      "Evening",
+      [
+       "mdr"
+      ]
+     ],
+     [
+      "Bay Parade of Lights",
+      "San Diego Bay · free",
+      "Sun Dec 13 + 20",
+      "5:30 PM",
+      [
+       "sdbay"
+      ]
+     ],
+     [
+      "Christmas Boat Parade",
+      "Newport Beach · free",
+      "Dec 16 – 20",
+      "About 6:30 PM",
+      [
+       "newport"
+      ]
+     ],
+     [
+      "Jungle Bells",
+      "San Diego Zoo · with admission",
+      "Dec 19 – Jan 3",
+      "Until 8 PM",
+      [
+       "jungle"
+      ]
+     ]
+    ]
+   },
+   {
+    "type": "city",
+    "photo": "grove",
+    "label": "Mon Nov 16 · Los Angeles",
+    "big": "Christmas at The Grove",
+    "dates": "25th tree lighting · free · space is limited",
+    "pips": [
+     "Tree lighting, first snowfall, drone show, fireworks, Santa.",
+     "It's filmed for TV, so expect a crowd."
+    ],
+    "source_ids": [
+     "grove"
+    ],
+    "pos45": "50% 30%",
+    "pos916": "50% 30%"
+   },
+   {
+    "type": "city",
+    "photo": "decnights",
+    "label": "Dec 4 and 5 · San Diego",
+    "big": "December Nights, Balboa Park",
+    "dates": "Fri 4 to 10 PM · Sat noon to 10 PM · free",
+    "pips": [
+     "San Diego's biggest free holiday festival.",
+     "Saturday starts at noon: easier with little ones."
+    ],
+    "source_ids": [
+     "decnights"
+    ],
+    "pos45": "40% 50%",
+    "pos916": "38% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "sdbay",
+    "label": "Sundays Dec 13 and 20 · San Diego",
+    "big": "Bay Parade of Lights",
+    "dates": "5:30 PM · about 80 lit boats · free to watch",
+    "pips": [
+     "More than 100,000 people line the bay: go early.",
+     "2026 theme: Liberty Lights the Bay."
+    ],
+    "source_ids": [
+     "sdbay"
+    ],
+    "pos45": "62% 50%",
+    "pos916": "66% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "newport",
+    "label": "Dec 16 to 20 · Newport Beach",
+    "big": "Christmas Boat Parade",
+    "dates": "Nightly, about 6:30 PM · 118th year",
+    "pips": [
+     "Watch free from Marina Park, which has a playground.",
+     "Opening night, Dec 16: fireworks off the pier at about 6:15."
+    ],
+    "source_ids": [
+     "newport"
+    ],
+    "pos45": "60% 50%",
+    "pos916": "62% 50%"
+   },
+   {
+    "type": "kids",
+    "photo": "kids",
+    "label": "Kids will love",
+    "big": "Lights worth a late bedtime",
+    "pos45": "50% 30%",
+    "pos916": "50% 25%",
+    "cy45": 640,
+    "cy916": 880,
+    "items": [
+     [
+      "lights",
+      "L.A. Zoo Lights",
+      "Ice Age giants in lights, a carousel, a skating rink (extra ticket)"
+     ],
+     [
+      "star",
+      "Enchanted at Descanso",
+      "A new laser show with a 'snowfall' finale"
+     ],
+     [
+      "star",
+      "Jungle Bells, San Diego Zoo",
+      "Acrobatic elves, and a little 'snow' at the finale"
+     ]
+    ],
+    "pip": "Sensory-inclusive Zoo Lights night: Tue Dec 8.",
+    "source_ids": [
+     "lazoo",
+     "descanso",
+     "jungle"
+    ]
+   },
+   {
+    "type": "aiwrong",
+    "photo": "aiwrong",
+    "pos45": "50% 50%",
+    "pos916": "45% 50%",
+    "items": [
+     [
+      "L.A. Zoo Lights is closed some nights, including Dec 24, 25 and 31.",
+      "lazoo"
+     ],
+     [
+      "Jungle Bells skips Dec 24, and Dec 18 is for members only.",
+      "jungle"
+     ],
+     [
+      "The Bay Parade of Lights is just two Sundays: Dec 13 and 20.",
+      "sdbay"
+     ]
+    ]
+   },
+   {
+    "type": "app",
+    "photo": "app",
+    "big": "Pip plans it around your family.",
+    "button": "Save this for December",
+    "screens": [
+     "dolomitesTop",
+     "cBraies"
+    ],
+    "screens_alt": "the trip header (kids 6 and 9) and a stop card for Lago di Braies with Pip's reason for it",
+    "screens_note": "an example family trip: the Dolomites, kids 6 and 9"
+   }
+  ],
+  "photo_alt": {
+   "cover": "A sailboat outlined in colored holiday lights, reflected in the dark water of San Diego Bay during the Parade of Lights",
+   "dates": "The USS Midway lit with strings of lights above San Diego Bay at night, with people watching from the shore",
+   "grove": "The tall Christmas tree at The Grove in Los Angeles, covered in red ornaments and lights at dusk",
+   "decnights": "Balboa Park's Spreckels Organ Pavilion lit blue at night with a glowing Christmas tree, during December Nights",
+   "sdbay": "A boat with a giant inflatable snowman and holiday lights in San Diego Bay's Parade of Lights",
+   "newport": "A boat lit with holiday lights in the Christmas boat parade in Newport Beach's harbor at night",
+   "kids": "Balboa Park's California Tower lit blue with a giant snowflake during December Nights",
+   "aiwrong": "A Balboa Park building lit pink, with strings of lights, during December Nights",
+   "app": "The lit waterfront of San Diego Bay at night"
+  },
+  "places": [
+   [
+    "📍 The Grove — Los Angeles, CA, USA",
+    "25th tree lighting, Mon Nov 16: snowfall, drone show, fireworks, Santa (free; space is limited)"
+   ],
+   [
+    "📍 Los Angeles Zoo — Los Angeles, CA, USA",
+    "L.A. Zoo Lights, select nights Nov 20 to Jan 10 (closed Dec 24, 25 and 31)"
+   ],
+   [
+    "📍 Descanso Gardens — La Cañada Flintridge, CA, USA",
+    "Enchanted, Nov 22 to Jan 9: a new laser show with a 'snowfall' finale"
+   ],
+   [
+    "📍 Balboa Park — San Diego, CA, USA",
+    "December Nights, Fri Dec 4 (4 to 10 PM) and Sat Dec 5 (noon to 10 PM); free"
+   ],
+   [
+    "📍 Marina del Rey — Marina del Rey, CA, USA",
+    "Holiday Boat Parade, Sat Dec 12 ('Hollywood Under The Stars')"
+   ],
+   [
+    "📍 San Diego Bay — San Diego, CA, USA",
+    "Bay Parade of Lights, Sundays Dec 13 and 20 at 5:30 PM; free to watch"
+   ],
+   [
+    "📍 Marina Park — Newport Beach, CA, USA",
+    "Free viewing for the Christmas Boat Parade, Dec 16 to 20, about 6:30 PM; playground on site"
+   ],
+   [
+    "📍 San Diego Zoo — San Diego, CA, USA",
+    "Jungle Bells, Dec 19 to Jan 3 (not Dec 24), until 8 PM; included with admission"
+   ]
+  ],
+  "caption_lines": [
+   "Free to watch: The Grove's tree lighting, December Nights, the Bay Parade of Lights and the Newport boat parade. Ticketed: L.A. Zoo Lights and Enchanted. Jungle Bells comes with San Diego Zoo admission."
+  ],
+  "wrong_caption": [
+   "L.A. Zoo Lights is closed some nights, including Dec 24, 25 and 31 (and Nov 26, 30, Dec 1, 7, 14-16, Jan 4-7).",
+   "Jungle Bells skips Dec 24, and Dec 18 is a members-only preview.",
+   "The San Diego Bay Parade of Lights runs just two Sundays: Dec 13 and 20."
+  ],
+  "question": "Free parade or ticketed lights: what's your family's tradition?",
+  "cta_end": "Get a plan fitted to your family: link in bio.",
+  "hashtags": [
+   "#SoCalWithKids",
+   "#HolidayLights",
+   "#LosAngelesKids",
+   "#SanDiegoKids",
+   "#OrangeCounty"
+  ],
+  "tiktok_title": "SoCal holiday nights with kids, by date",
+  "tiktok_desc": "Weekend notes: 8 SoCal holiday nights for 2026, LA to San Diego. Four are free to watch. Every date checked Nov 10, 2026.",
+  "dropped": [
+   "Huntington Harbour Cruise of Lights: 2026 dates not announced on Nov 10",
+   "Marina del Rey parade start time: not posted yet (date only)",
+   "Descanso Gardens nightly hours: not on the event page (timed tickets)",
+   "Theme parks: left out on purpose (not a fit for this list)"
+  ],
+  "notes": {
+   "window": "Nov 12 to Dec 18, 2026 (first event is Mon Nov 16)",
+   "suggest": [
+    [
+     "Instagram carousel (9 slides)",
+     "Thu Nov 12, 2026, 9:00 AM PT",
+     "2026-11-12T09:00:00-08:00"
+    ],
+    [
+     "TikTok photo mode (9 slides)",
+     "Thu Nov 12, 2026, 6:00 PM PT",
+     null
+    ]
+   ],
+   "campaign": "2026-11-12-socal-holiday-nights",
+   "recheck": [
+    "Marina del Rey parade start time.",
+    "The Grove tree lighting time (not posted on Nov 10).",
+    "Jungle Bells January dates for members."
+   ]
+  }
+ },
+ "sources": [
+  [
+   "grove",
+   "https://thegrovela.com/events/25th-annual-christmas-at-the-grove/",
+   "The Grove: 25th Annual Christmas at The Grove, Nov 16, 2026: tree lighting, the season's first snowfall, drone show, fireworks, Santa's arrival; complimentary and open to the public; filmed for broadcast; space is limited",
+   "2026-11-10"
+  ],
+  [
+   "lazoo",
+   "https://lazoo.org/plan-your-visit/special-experiences/zoolights/",
+   "L.A. Zoo Lights 2026: select evenings Nov 20 to Jan 10; closed Nov 26, 30, Dec 1, 7, 14, 15, 16, 24, 25, 31 and Jan 4-7; box office 5:45-8:45 PM; ticketed; 2026 theme with Ice Age giants, birds, butterflies; artificial ice rink (separate ticket); carousel; Santa on select days (extra fee); Sensory-Inclusive night Dec 8; free parking",
+   "2026-11-10"
+  ],
+  [
+   "descanso",
+   "https://www.descansogardens.org/events-and-activities/enchanted/",
+   "Descanso Gardens: Enchanted, Nov 22 to Jan 9; tenth season; new laser light show with a 'snowfall' finale; Giant Koi; timed or Anytime tickets; Holiday Market Dec 2-6",
+   "2026-11-10"
+  ],
+  [
+   "decnights",
+   "https://www.sandiego.gov/december-nights",
+   "City of San Diego: Balboa Park December Nights, Fri Dec 4, 2026, 4-10 PM and Sat Dec 5, noon-10 PM; the city's largest free holiday festival; family friendly",
+   "2026-11-10"
+  ],
+  [
+   "mdr",
+   "https://mdrboatparade.org/",
+   "Marina del Rey Holiday Boat Parade: 64th annual, Saturday Dec 12, 2026; theme 'Hollywood Under The Stars'; begins with a light show (no start time posted on Nov 10)",
+   "2026-11-10"
+  ],
+  [
+   "sdbay",
+   "https://sdparadeoflights.org/",
+   "San Diego Bay Parade of Lights: 56th annual, Dec 13 and Dec 20, 2026; procession starts 5:30 PM; about 80 decorated boats; more than 100,000 people on the shores each year; no cost to view; theme 'Liberty Lights the Bay - Cheers to 250 Years'",
+   "2026-11-10"
+  ],
+  [
+   "newport",
+   "https://christmasboatparade.com/",
+   "118th Newport Beach Christmas Boat Parade: Wed-Sun Dec 16-20, 2026, about 6:30 PM nightly from the tip of Lido Isle; Marina Park (1600 W Balboa Blvd) is the largest public viewing area, free, with a nautical-themed playground; opening fireworks off Newport Pier Dec 16 at about 6:15 PM",
+   "2026-11-10"
+  ],
+  [
+   "jungle",
+   "https://zoo.sandiegozoo.org/jungle-bells",
+   "San Diego Zoo Jungle Bells: member preview Dec 18; Dec 19, 2026 to Jan 3, 2027, excluding Dec 24; lights until 8 PM; included with all admission tickets and memberships; acrobatic elves show; a cappella finale with a dusting of 'snow'",
+   "2026-11-10"
+  ]
+ ],
+ "photos": {
+  "cover": {
+   "file": "cover.jpg",
+   "title": "File:San Diego Bay Parade of Lights 2014 (15839518417).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:San_Diego_Bay_Parade_of_Lights_2014_(15839518417).jpg",
+   "artist": "Tony Webster from Portland, Oregon, United States",
+   "credit": "San Diego Bay Parade of Lights 2014",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2014-12-14 18:59",
+   "desc": "San Diego, California",
+   "source_size": "5760x3335",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2223
+   ]
+  },
+  "dates": {
+   "file": "dates.jpg",
+   "title": "File:San Diego Bay Parade of Lights 2016 023.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:San_Diego_Bay_Parade_of_Lights_2016_023.jpg",
+   "artist": "Port of San Diego",
+   "credit": "https://www.flickr.com/photos/8123170@N06/31737842956/",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2016-12-12 08:59:51",
+   "desc": "San Diego Bay Parade of Lights 2016",
+   "source_size": "4928x3264",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2543
+   ]
+  },
+  "grove": {
+   "file": "grove.jpg",
+   "title": "File:Christmas Tree at the Grove (4159122936).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Christmas_Tree_at_the_Grove_(4159122936).jpg",
+   "artist": "Prayitno / Thank you for (4 millions +) views from Los Angeles, USA",
+   "credit": "O' . . . Christmas Tree",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2009-11-21 17:18",
+   "desc": "The Grove Christmas Tree at the The Grove at Farmers Market in Los Angeles, California.",
+   "source_size": "2026x3383",
+   "downloaded": "2026-11-10",
+   "dims": [
+    2026,
+    3383
+   ]
+  },
+  "decnights": {
+   "file": "decnights.jpg",
+   "title": "File:Balboa Park, San Diego, CA, USA - panoramio (237).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Balboa_Park,_San_Diego,_CA,_USA_-_panoramio_(237).jpg",
+   "artist": "Roman Eugeniusz",
+   "credit": "https://web.archive.org/web/20161031054540/http://www.panoramio.com/photo/126238857",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+   "attribution_required": "true",
+   "date": "Taken on 6 December 2015",
+   "desc": "Balboa Park, San Diego, CA, USA",
+   "source_size": "3648x2736",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3648,
+    2736
+   ]
+  },
+  "sdbay": {
+   "file": "sdbay.jpg",
+   "title": "File:2012 San Diego Bay Parade of Lights - 8261644085.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:2012_San_Diego_Bay_Parade_of_Lights_-_8261644085.jpg",
+   "artist": "Port of San Diego",
+   "credit": "https://www.flickr.com/photos/8123170@N06/8261644085/",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2012-12-09 19:54:23",
+   "desc": "The Port of San Diego kicked off the holiday season with a free, fun, family event that served as the official launch to the Port's 50th anniversary. The annual San Diego Bay Parade of Lights took place on Sunday, Dec. 9, 2012 at 5:30 p.m. ",
+   "source_size": "4928x3264",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2543
+   ]
+  },
+  "newport": {
+   "file": "newport.jpg",
+   "title": "File:Balboa Boat Parade - panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Balboa_Boat_Parade_-_panoramio.jpg",
+   "artist": "Jacob Montgomery",
+   "credit": "https://web.archive.org/web/20161020090606/http://www.panoramio.com/photo/63773008",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+   "attribution_required": "true",
+   "date": "Taken on 16 December 2011",
+   "desc": "Balboa Boat Parade",
+   "source_size": "3264x2448",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3264,
+    2448
+   ]
+  },
+  "kids": {
+   "file": "kids.jpg",
+   "title": "File:DecemberNightsMoM2015.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:DecemberNightsMoM2015.JPG",
+   "artist": "Nehrams2020",
+   "credit": "Image taken by uploader",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+   "attribution_required": "true",
+   "date": "2015-12-04",
+   "desc": "The California Tower illuminated during December Nights in Balboa Park in San Diego, California.",
+   "source_size": "2448x3264",
+   "downloaded": "2026-11-10",
+   "dims": [
+    2448,
+    3264
+   ]
+  },
+  "aiwrong": {
+   "file": "aiwrong.jpg",
+   "title": "File:Balboa Park, San Diego, CA, USA - panoramio (242).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Balboa_Park,_San_Diego,_CA,_USA_-_panoramio_(242).jpg",
+   "artist": "Roman Eugeniusz",
+   "credit": "https://web.archive.org/web/20161031202339/http://www.panoramio.com/photo/126238944",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+   "attribution_required": "true",
+   "date": "Taken on 6 December 2015",
+   "desc": "Balboa Park, San Diego, CA, USA",
+   "source_size": "3626x2550",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3626,
+    2550
+   ]
+  },
+  "app": {
+   "file": "app.jpg",
+   "title": "File:San Diego Bay Parade of Lights 2016 017.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:San_Diego_Bay_Parade_of_Lights_2016_017.jpg",
+   "artist": "Port of San Diego",
+   "credit": "https://www.flickr.com/photos/8123170@N06/31402669810/",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2016-12-19 09:59:42",
+   "desc": "San Diego Bay Parade of Lights 2016",
+   "source_size": "4928x3264",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2543
+   ]
+  }
+ },
+ "map": null,
+ "screens": {
+  "dolomitesTop": {
+   "src": "reels-v3/screens/t-dolo-01-top.png",
+   "sx": 0,
+   "sy": 150,
+   "sw": 1206,
+   "sh": 560
+  },
+  "cBraies": {
+   "src": "reels-v3/screens/d-dolo2-b.png",
+   "sx": 30,
+   "sy": 1880,
+   "sw": 1146,
+   "sh": 660
+  }
+ },
+ "post_at": "2026-11-12T09:00:00-08:00"
+}

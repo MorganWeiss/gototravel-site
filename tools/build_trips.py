@@ -1,4 +1,6 @@
-# build_trips.py: tools/trips/<slug>.json -> trips/<slug>.html (one page per "Trips you can copy" post) + trips/index.html.
+# build_trips.py: tools/trips/<slug>.json -> trips/<slug>.html (one page per "Trips you can copy" post of the first round:
+# NYC New Year's, Big Sur). The hub (trips/index.html) and the sitemap's trips block now come from tools/build_posts.py,
+# which also builds the photo-led posts; the Mammoth and markets-by-train pages here were replaced by those (v2).
 # Each trip was checked by a person (dates, closures, booking windows) and carries its sources. The page shows the route
 # on a map with numbered pins, every day's stops and legs, where to stay and the heads-ups, with "Copy this trip" (the
 # app's shared-board text: paste it into Drop > A list) and the waitlist form. The trip JSON comes from the social team's
@@ -264,29 +266,4 @@ out.mkdir(exist_ok=True)
 for t in trips:
     (out / f"{t['slug']}.html").write_text(trip_page(t), encoding="utf-8")
 
-cards = "\n".join(
-    f"""  <li><a href="/trips/{e(t['slug'])}"><b>{e(t['title'])}</b><span>{len(places_of(t))} stops · {e(t.get('dates', ''))}</span></a></li>"""
-    for t in trips)
-index_body = f"""<p class="list-kicker">Checked by a person, copied in one tap</p>
-<h1 style="font-size:clamp(34px,5vw,50px)">Trips you can copy</h1>
-<p class="lede">Real trips, stop by stop, with the trains, the drives, where to stay and what's closed. Copy one, and Pip makes it fit your crew.</p>
-<ol class="list-grid">
-{cards}
-</ol>
-<section class="get-app" aria-labelledby="get-h">
-  <h2 id="get-h">Copy it, then make it yours</h2>
-  <p>Go To Travel fits every trip to your kids, your hotel and your dates. It's in beta on iPhone.</p>
-  {FORM.format(slug="trip-index")}
-</section>"""
-(out / "index.html").write_text(page("Trips you can copy", "Real, checked trips you can copy stop by stop: trains, drives, where to stay and what's closed.", "https://gototravelapp.com/trips", index_body), encoding="utf-8")
-print(f"wrote {len(trips)} trip pages + index")
-
-sm = ROOT / "sitemap.xml"
-xml = sm.read_text(encoding="utf-8")
-start, end = "  <!-- trips -->\n", "  <!-- /trips -->\n"
-if start in xml:
-    xml = xml[: xml.index(start)] + xml[xml.index(end) + len(end):]
-urls = "".join(f"  <url><loc>https://gototravelapp.com/trips/{t['slug']}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>\n" for t in trips)
-block = start + "  <url><loc>https://gototravelapp.com/trips</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>\n" + urls + end
-sm.write_text(xml.replace("</urlset>", block + "</urlset>"), encoding="utf-8")
-print("sitemap: trips added")
+print(f"wrote {len(trips)} trip pages (the hub and sitemap come from build_posts.py)")

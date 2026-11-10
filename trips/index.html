@@ -3,87 +3,102 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Trips you can copy — Go To Travel</title>
-<meta name="description" content="Real, checked trips you can copy stop by stop: trains, drives, where to stay and what&#x27;s closed.">
+<title>Plans you can copy — Go To Travel</title>
+<meta name="description" content="The full plans from @gototravelapp&#x27;s posts: holiday trips and tips for families, with every date, hour and kid note checked at the source.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://gototravelapp.com/trips">
-<meta property="og:title" content="Trips you can copy">
-<meta property="og:description" content="Real, checked trips you can copy stop by stop: trains, drives, where to stay and what&#x27;s closed.">
-<meta property="og:image" content="https://gototravelapp.com/og.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Go To Travel">
+<meta property="og:title" content="Plans you can copy">
+<meta property="og:description" content="The full plans from @gototravelapp&#x27;s posts: holiday trips and tips for families, with every date, hour and kid note checked at the source.">
+<meta property="og:image" content="https://gototravelapp.com/assets/trips/first-christmas-market-tips/og.jpg">
 <meta property="og:url" content="https://gototravelapp.com/trips">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0F1A17">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,800&family=DM+Sans:opsz,wght@9..40,400..700&display=swap">
 <link rel="stylesheet" href="/assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Plans you can copy", "url": "https://gototravelapp.com/trips", "mainEntity": {"@type": "ItemList", "numberOfItems": 8, "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://gototravelapp.com/trips/solvang-julefest", "name": "Christmas in Europe, 2.5 hours from LA: Solvang's Julefest"}, {"@type": "ListItem", "position": 2, "url": "https://gototravelapp.com/trips/christmas-markets-train", "name": "Christmas markets by train with kids"}, {"@type": "ListItem", "position": 3, "url": "https://gototravelapp.com/trips/california-christmas-markets", "name": "California Christmas markets 2026: save the dates"}, {"@type": "ListItem", "position": 4, "url": "https://gototravelapp.com/trips/socal-holiday-nights", "name": "SoCal holiday nights with kids, by date"}, {"@type": "ListItem", "position": 5, "url": "https://gototravelapp.com/trips/mammoth-thanksgiving", "name": "Thanksgiving in Mammoth Lakes with kids"}, {"@type": "ListItem", "position": 6, "url": "https://gototravelapp.com/trips/first-christmas-market-tips", "name": "Kids' first Christmas market in Europe: 8 tips"}, {"@type": "ListItem", "position": 7, "url": "https://gototravelapp.com/trips/big-sur-road-trip-from-la", "name": "Big Sur road trip from LA"}, {"@type": "ListItem", "position": 8, "url": "https://gototravelapp.com/trips/nyc-new-years-with-kids", "name": "New Year's in NYC with kids"}]}}</script>
 <style>
-.trip-main{max-width:820px;display:flex;flex-direction:column;gap:18px}
-.list-kicker{font:700 12px/1 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#2F6B55}
-.list-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.trip-facts{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
-.trip-facts li{padding:6px 12px;border-radius:999px;background:#F3EBDD;font-size:14px;font-weight:600}
-.trip-map{height:min(62vh,460px);border-radius:20px;overflow:hidden;border:1px solid rgba(15,26,23,.12);background:#EAE4D8}
-.trip-map .mk{width:30px;height:30px;border-radius:50%;background:#F2A93B;color:#0F1A17;border:2px solid #0F1A17;display:flex;align-items:center;justify-content:center;font:800 13px/1 'DM Sans',sans-serif;cursor:pointer}
-.trip-map .mk.stay{background:#0F1A17;color:#FBF5EA;border-color:#FBF5EA;border-radius:8px}
-.heads{padding:18px 20px;border-radius:18px;background:#FFF4DF;border:1px solid #F2C77B}
-.heads h2{font-size:20px;margin:0 0 8px}
-.heads ul{margin:0;padding-left:20px;display:grid;gap:6px}
-.day{display:grid;gap:12px;margin-top:6px}
-.day h2{font-size:24px;margin:8px 0 0}
-.leg{margin:0;color:#55605B;font-size:14px;padding-left:58px}
-.day-map-row{margin:0}
-.day-map{appearance:none;border:1px solid rgba(15,26,23,.2);background:#fff;border-radius:999px;padding:6px 12px;font:600 13px/1.2 'DM Sans',sans-serif;color:#0F1A17;cursor:pointer}
-.places{list-style:none;margin:0;padding:0;display:grid;gap:12px}
-.place{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;padding:16px;border:1px solid rgba(15,26,23,.12);border-radius:18px;background:#fff;scroll-margin-top:90px}
-.pn{width:44px;height:44px;border-radius:50%;background:#F2A93B;color:#0F1A17;display:flex;align-items:center;justify-content:center;font:800 18px/1 'Bricolage Grotesque',sans-serif}
-.place h3{font-size:19px;line-height:1.25;margin:0 0 2px}
-.place .when{color:#55605B;font-size:14px;margin:0 0 6px;font-weight:600}
-.place p{margin:0 0 8px}
-.place .kid{color:#2F4A3F}
-.place .book{font-size:14px;color:#7A4B00}
-.place a{font-weight:700;font-size:14px}
-.stays{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-.stays li{padding:14px 16px;border:1px solid rgba(15,26,23,.12);border-radius:16px;background:#fff}
-.stays b{display:block;font-size:17px}
-.stays span{color:#55605B;font-size:14px}
-.sources{font-size:14px;color:#55605B}
-.sources ol{padding-left:20px;display:grid;gap:4px}
-.get-app{margin-top:10px;padding:20px;border-radius:20px;background:#0F1A17;color:#FBF5EA;display:grid;gap:10px}
-.get-app h2{color:#FBF5EA;margin:0;font-size:24px}
-.get-app p{margin:0;color:rgba(251,245,234,.85)}
-.get-app .micro,.get-app a{color:rgba(251,245,234,.8)}
-.joined{font-weight:700;color:#7FC7A7}
+.hub-main{padding:0 0 64px}
+.kick{font:700 12.5px/1.25 var(--body);letter-spacing:.13em;text-transform:uppercase;color:var(--green-deep)}
+.hub-head{max-width:1120px;margin:0 auto;padding:40px var(--gutter) 0;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.hub-head>*{max-width:760px}
+.hub-head .join-box{width:100%}
+.hub-head h1{font-size:clamp(40px,5.6vw,62px)}
+.join-box{margin-top:4px;padding:18px 18px 16px;border-radius:22px;background:#0F1A17;color:#FBF5EA;display:grid;gap:12px}
+.join-box p{margin:0}
+.join-line{font-size:16.5px;line-height:1.45;font-weight:600}
+.join-box .form-row .field{flex:1 1 200px;height:52px}
+.join-box .form-row .btn{flex:1 1 auto;min-height:52px}
+.join-box .micro{font-size:13px;color:rgba(251,245,234,.78)}
+.light .join-box .micro a{color:rgba(251,245,234,.95)}
+.join-box .joined{background:rgba(95,176,143,.16);border-color:rgba(127,199,167,.55);color:#CDEBDC;font-weight:700}
+.cards{list-style:none;margin:30px auto 0;padding:0 var(--gutter);max-width:1120px;display:grid;gap:22px}
+.card{min-width:0}
+.card a{display:flex;flex-direction:column;height:100%;border-radius:22px;overflow:hidden;background:#fff;border:1px solid rgba(15,26,23,.1);text-decoration:none;color:var(--on-light)}
+.light .card a{color:var(--on-light)}
+.card a:hover h2{text-decoration:underline;text-decoration-thickness:2px}
+.card img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;background:#E6DDCB}
+.c-in{padding:16px 18px 20px;display:flex;flex-direction:column;gap:7px}
+.card h2{font-size:clamp(23px,2.4vw,28px)}
+.card .who{font-size:14px;font-weight:700;color:#34433D}
+.card p{margin:0;color:var(--on-light-soft);font-size:15.5px;line-height:1.5}
+.card .kick{color:var(--green-deep);font-size:12.5px;line-height:1.25}
+@media (min-width:720px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:1000px){
+ .cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .cards .card:first-child{grid-column:1/-1}
+ .cards .card:first-child a{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+ .cards .card:first-child img{height:100%;aspect-ratio:auto;min-height:340px}
+ .cards .card:first-child .c-in{justify-content:center;padding:28px 32px}
+ .cards .card:first-child h2{font-size:38px}
+}
+.more{max-width:1120px;margin:44px auto 0;padding:0 var(--gutter);display:grid;gap:12px}
+.more h2{font-size:24px}
 .list-grid{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.list-grid a{display:block;padding:14px 16px;border:1px solid rgba(15,26,23,.12);border-radius:16px;background:#fff;text-decoration:none;color:#0F1A17}
-.list-grid b{display:block;font:800 18px/1.2 'Bricolage Grotesque',sans-serif}
-.list-grid span{color:#55605B;font-size:14px}
+@media (min-width:720px){.list-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.list-grid a{display:block;padding:14px 16px;border:1px solid rgba(15,26,23,.12);border-radius:16px;background:#fff;text-decoration:none}
+.light .list-grid a{color:var(--on-light)}
+.list-grid b{display:block;font:800 18px/1.2 var(--display);letter-spacing:-.01em}
+.list-grid span{color:var(--on-light-muted);font-size:14px}
+.small-sec{max-width:1120px;margin:36px auto 0;padding:0 var(--gutter);display:flex;flex-direction:column;gap:8px;font-size:13.5px;line-height:1.5;color:var(--on-light-muted)}
+.small-sec h2{font-size:18px;color:var(--on-light)}
+.small-sec ul{margin:0;padding-left:20px;display:grid;gap:4px}
+.small-sec p{margin:0}
 </style>
 </head>
 <body class="light">
 <header class="page-head"><nav class="nav" aria-label="Main"><a class="logo" href="/"><span class="logo-tile"><svg width="40" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" aria-hidden="true" focusable="false"><defs><linearGradient id="logo-t" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5A9C82"/><stop offset="1" stop-color="#3E7A63"/></linearGradient><clipPath id="logo-c"><rect width="1024" height="1024" rx="230"/></clipPath></defs><g clip-path="url(#logo-c)"><rect width="1024" height="1024" fill="url(#logo-t)"/><g fill="none" stroke="#FFFFFF" stroke-linecap="round"><circle cx="512" cy="512" r="300" stroke-width="34"/><ellipse cx="512" cy="512" rx="128" ry="300" stroke-width="22" opacity="0.45"/><path d="M232 412H792M232 612H792" stroke-width="22" opacity="0.45"/></g><path d="M318 700C390 540 520 450 668 420" fill="none" stroke="#FFFFFF" stroke-width="40" stroke-linecap="round" stroke-dasharray="1 70"/><circle cx="318" cy="700" r="30" fill="none" stroke="#FFFFFF" stroke-width="16"/><g transform="translate(712,452)"><path d="M0 0C0 0-64-66-64-110A64 64 0 0 1 64-110C64-66 0 0 0 0Z" fill="#F2A93B"/><circle cx="0" cy="-110" r="24" fill="#5A9C82"/></g></g></svg></span><span class="logo-word">Go To Travel</span></a><div class="nav-right"><a class="signin" href="/contact">Contact us</a></div></nav></header>
-<main class="page-main trip-main">
-<p class="list-kicker">Checked by a person, copied in one tap</p>
-<h1 style="font-size:clamp(34px,5vw,50px)">Trips you can copy</h1>
-<p class="lede">Real trips, stop by stop, with the trains, the drives, where to stay and what's closed. Copy one, and Pip makes it fit your crew.</p>
-<ol class="list-grid">
-  <li><a href="/trips/big-sur-road-trip-from-la"><b>Big Sur road trip from LA</b><span>12 stops · 3 days, any winter weekend (checked for December 2026)</span></a></li>
-  <li><a href="/trips/christmas-markets-by-train-with-kids"><b>Christmas markets by train with kids</b><span>16 stops · 7 days, any week Nov 26 to Dec 13, 2026 (sample: Thu Dec 3 to Wed Dec 9)</span></a></li>
-  <li><a href="/trips/nyc-new-years-with-kids"><b>New Year&#x27;s in NYC with kids</b><span>8 stops · Wed Dec 30, 2026 to Fri Jan 1, 2027</span></a></li>
-  <li><a href="/trips/thanksgiving-mammoth-lakes-with-kids"><b>Thanksgiving in Mammoth Lakes with kids</b><span>17 stops · Wed Nov 25 to Sun Nov 29, 2026</span></a></li>
-</ol>
-<section class="get-app" aria-labelledby="get-h">
-  <h2 id="get-h">Copy it, then make it yours</h2>
-  <p>Go To Travel fits every trip to your kids, your hotel and your dates. It's in beta on iPhone.</p>
-  <form class="form-row signup" data-list-waitlist data-slug="trip-index" novalidate>
-      <label class="sr" for="email-trip">Email address</label>
-      <input class="field" id="email-trip" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@email.com" required>
+<main class="hub-main">
+<section class="hub-head" aria-labelledby="hub-h">
+<p class="kick">From @gototravelapp</p>
+<h1 id="hub-h">Plans you can copy</h1>
+<p class="lede">The full plans from our posts: every date, hour and kid note, checked at the source. Save one for the holidays.</p>
+<div class="join-box"><p class="join-line">Pip fits these plans to your family in the app. It opens in December: join the waitlist.</p>
+<form class="form-row signup" data-list-waitlist data-slug="trip-index" novalidate>
+      <label class="sr" for="email-wl">Email address</label>
+      <input class="field" id="email-wl" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@email.com" required>
       <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button class="btn btn-sun" type="submit">Get early access</button>
+      <button class="btn btn-sun" type="submit">Join the waitlist</button>
       <p class="form-msg" role="status" aria-live="polite"></p>
     </form>
-    <p class="micro">Free to start · iPhone · No spam, unsubscribe anytime · <a href="/privacy.html">Privacy</a></p>
+    <p class="micro">iPhone app · No spam, unsubscribe anytime · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p></div>
 </section>
+<ol class="cards" data-cards aria-label="Plans, newest first">
+<li class="card" data-post="2026-11-19T09:00:00-08:00"><a href="/trips/solvang-julefest"><img src="/assets/trips/solvang-julefest/card.jpg" width="900" height="600" alt="Copenhagen Drive in Solvang in December: a Christmas tree hung with red and white ornaments, Danish-style buildings and families strolling under a blue sky" decoding="async"><div class="c-in"><p class="kick">Weekend notes</p><h2>Christmas in Europe, 2.5 hours from LA</h2><p class="who">Solvang&#x27;s Julefest · Nov 27 to Jan 3</p><p>Light shows every night, a nisse hunt and æbleskiver: Solvang&#x27;s Julefest, 2.5 hours from LA.</p></div></a></li>
+<li class="card" data-post="2026-11-17T09:00:00-08:00"><a href="/trips/christmas-markets-train"><img src="/assets/trips/christmas-markets-train/card.jpg" width="900" height="600" alt="Schönbrunn Palace&#x27;s Christmas market at blue hour: the lit golden palace, a tall Christmas tree and stalls in the courtyard" decoding="async"><div class="c-in"><p class="kick">Trips you can copy</p><h2>Three Christmas markets, two easy trains</h2><p class="who">7 days with kids · Vienna, Salzburg, Munich</p><p>Vienna, Salzburg and Munich in 7 days, with two direct trains and a Christmas market in every city.</p></div></a></li>
+<li class="card" data-post="2026-11-15T09:00:00-08:00"><a href="/trips/california-christmas-markets"><img src="/assets/trips/california-christmas-markets/card.jpg" width="900" height="600" alt="Red half-timbered Danish-style houses with steep tiled roofs in Solvang, under a blue sky" loading="lazy" decoding="async"><div class="c-in"><p class="kick">Save the dates</p><h2>California&#x27;s Christmas markets, 2026</h2><p class="who">4 markets · dates, hours, kid notes</p><p>Solvang, Cambria, the Dickens Fair and Old World: dates, hours and kid notes for 2026.</p></div></a></li>
+<li class="card" data-post="2026-11-12T09:00:00-08:00"><a href="/trips/socal-holiday-nights"><img src="/assets/trips/socal-holiday-nights/card.jpg" width="900" height="600" alt="A sailboat outlined in colored holiday lights, reflected in the dark water of San Diego Bay during the Parade of Lights" loading="lazy" decoding="async"><div class="c-in"><p class="kick">Weekend notes</p><h2>SoCal holiday nights with kids, by date</h2><p class="who">8 nights out · LA, Orange County, San Diego</p><p>Eight holiday nights from LA to San Diego, in date order. Four are free to watch.</p></div></a></li>
+<li class="card" data-post="2026-11-11T09:00:00-08:00"><a href="/trips/mammoth-thanksgiving"><img src="/assets/trips/mammoth-thanksgiving/card.jpg" width="900" height="600" alt="Early-season snow on the grassy banks of a still lake in Mammoth at dusk, pine trees and a pink sky reflected in the water" loading="lazy" decoding="async"><div class="c-in"><p class="kick">Trips you can copy</p><h2>Thanksgiving in the mountains, 5 hours from LA</h2><p class="who">Mammoth Lakes with kids · Nov 25 to 29</p><p>Tubing, a summit gondola and a free tree lighting over Thanksgiving week, 5 hours from LA.</p></div></a></li>
+<li class="card" data-post="2026-11-10T18:30:00-08:00"><a href="/trips/first-christmas-market-tips"><img src="/assets/trips/first-christmas-market-tips/card.jpg" width="900" height="600" alt="Munich&#x27;s Christmas market from above at dusk, white stall roofs dusted with snow, a lit tree by the Neues Rathaus" loading="lazy" decoding="async"><div class="c-in"><p class="kick">Pip&#x27;s tips</p><h2>Their first Christmas market</h2><p class="who">8 tips for Europe with kids</p><p>Go at 4, order the kids&#x27; punch, borrow toddler blades: 8 checked tips for Vienna, Munich and Salzburg.</p></div></a></li>
+</ol>
+<script>(function(){var l=document.querySelector('[data-cards]');if(!l)return;var n=Date.now(),t=function(x){return Date.parse(x.getAttribute('data-post'))},c=[].slice.call(l.children),a=c.filter(function(x){return t(x)<=n}).sort(function(x,y){return t(y)-t(x)}),b=c.filter(function(x){return t(x)>n}).sort(function(x,y){return t(x)-t(y)});a.concat(b).forEach(function(x){l.appendChild(x)})})();</script>
+<section class="more" aria-labelledby="more-h"><h2 id="more-h">More plans</h2><ul class="list-grid"><li><a href="/trips/big-sur-road-trip-from-la"><b>Big Sur road trip from LA</b><span>12 stops · 3 days, any winter weekend (checked for December 2026)</span></a></li><li><a href="/trips/nyc-new-years-with-kids"><b>New Year&#x27;s in NYC with kids</b><span>8 stops · Wed Dec 30, 2026 to Fri Jan 1, 2027</span></a></li></ul></section>
+<section class="small-sec" aria-labelledby="cr-h"><h2 id="cr-h">Photo credits</h2><ul><li>Christmas in Europe, 2.5 hours from LA: photo by Ligocsicnarf89, <a href="https://creativecommons.org/licenses/by/4.0" target="_blank" rel="noopener license">CC BY 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Solvang,_CA_(2025).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li><li>Three Christmas markets, two easy trains: Image by <a href="http://www.traveljunction.com" rel="nofollow noopener" target="_blank">www.traveljunction.com</a>, <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener license">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Sch%C3%B6nbrunn_Palace_in_Vienna_at_Christmas,_Vienna,_Austria._(16405939248).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li><li>California&#x27;s Christmas markets, 2026: photo by Ymblanter, <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener license">CC BY-SA 4.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Fachwerk_Houses_Solvang.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li><li>SoCal holiday nights with kids, by date: photo by Tony Webster, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener license">CC BY 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:San_Diego_Bay_Parade_of_Lights_2014_(15839518417).jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li><li>Thanksgiving in the mountains, 5 hours from LA: photo by Justin Wise, <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener license">CC BY 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Early_snow_in_Mammoth_(Explored)_-_Flickr_-_Just,n_W,se.jpg" target="_blank" rel="noopener">Wikimedia Commons</a></li><li>Their first Christmas market: photo by X (Wikimedia Commons user), <a href="https://commons.wikimedia.org/wiki/File:M%C3%BCnchner_Christkindlmarkt_2.JPG" target="_blank" rel="noopener license">Public domain</a>, via <a href="https://commons.wikimedia.org/wiki/File:M%C3%BCnchner_Christkindlmarkt_2.JPG" target="_blank" rel="noopener">Wikimedia Commons</a></li></ul>
+<p>Each photo is resized and cropped for the web and stays under its own license. <a href="/lists">All our lists</a></p></section>
 </main>
 <script src="/assets/site.js"></script>
 <script src="/assets/lists.js"></script>

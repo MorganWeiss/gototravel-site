@@ -1,0 +1,1345 @@
+{
+ "assets/trips/app/cBraies.jpg": {
+  "src": "reels-v3/screens/d-dolo2-b.png",
+  "sha1": "25306a82f6487f04f3ac00f70925685c9448a879",
+  "op": {
+   "crop": [
+    1146,
+    660,
+    30,
+    1880
+   ],
+   "width": 720,
+   "q": 60
+  },
+  "w": 720,
+  "h": 414,
+  "bytes": 60895
+ },
+ "assets/trips/app/cCooks.jpg": {
+  "src": "reels-v3/screens/d-yos1-d.png",
+  "sha1": "e908ea53c74b346a7806608b7df01e84b5b5638f",
+  "op": {
+   "crop": [
+    1146,
+    600,
+    30,
+    410
+   ],
+   "width": 720,
+   "q": 60
+  },
+  "w": 720,
+  "h": 377,
+  "bytes": 44953
+ },
+ "assets/trips/app/cTreCime.jpg": {
+  "src": "reels-v3/screens/d-dolo3-c.png",
+  "sha1": "1e6068e6c2e9552c27c203dae4152e6e3d5fdb0b",
+  "op": {
+   "crop": [
+    1146,
+    660,
+    30,
+    450
+   ],
+   "width": 720,
+   "q": 60
+  },
+  "w": 720,
+  "h": 414,
+  "bytes": 71192
+ },
+ "assets/trips/app/cTunnel.jpg": {
+  "src": "reels-v3/screens/d-yos1-e.png",
+  "sha1": "e71d5c5cf12972487c8159e8609fed67957afa13",
+  "op": {
+   "crop": [
+    1146,
+    700,
+    30,
+    1080
+   ],
+   "width": 720,
+   "q": 60
+  },
+  "w": 720,
+  "h": 439,
+  "bytes": 67411
+ },
+ "assets/trips/app/dolomitesTop.jpg": {
+  "src": "reels-v3/screens/t-dolo-01-top.png",
+  "sha1": "6daedbc2612af65ec0fc334c47b7de00fb67c16d",
+  "op": {
+   "crop": [
+    1206,
+    560,
+    0,
+    150
+   ],
+   "width": 720,
+   "q": 60
+  },
+  "w": 720,
+  "h": 334,
+  "bytes": 38119
+ },
+ "assets/trips/app/nearDoloKid.jpg": {
+  "src": "reels-v3/screens/hn-dolo-02-nearby.png",
+  "sha1": "57d3ec1fc30885f264ad2865aaac55d8b3adcb12",
+  "op": {
+   "crop": [
+    1206,
+    620,
+    0,
+    300
+   ],
+   "width": 720,
+   "q": 60
+  },
+  "w": 720,
+  "h": 370,
+  "bytes": 38053
+ },
+ "assets/trips/app/yosTop.jpg": {
+  "src": "reels-v3/screens/d-yos1-a.png",
+  "sha1": "916c0b3ce951aaad360c6a07323ef5e734708107",
+  "op": {
+   "crop": [
+    1206,
+    560,
+    0,
+    150
+   ],
+   "width": 720,
+   "q": 60
+  },
+  "w": 720,
+  "h": 334,
+  "bytes": 40738
+ },
+ "assets/trips/california-christmas-markets/aiwrong.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/aiwrong.jpg",
+  "sha1": "9d5afd6378e859f036a473151d892475a75f0a58",
+  "op": {
+   "crop": [
+    3840,
+    2880,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 205605
+ },
+ "assets/trips/california-christmas-markets/app-blur.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/app.jpg",
+  "sha1": "af787398e8904bb7d0a90be6d8d77ed64d46ba84",
+  "op": {
+   "crop": [
+    3034,
+    1517,
+    403,
+    0
+   ],
+   "width": 48,
+   "q": 50
+  },
+  "w": 48,
+  "h": 24,
+  "bytes": 1121
+ },
+ "assets/trips/california-christmas-markets/cambria.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/cambria.jpg",
+  "sha1": "8bc8107f397deacc377e47ec45ec62d5c5ccf042",
+  "op": {
+   "crop": [
+    3272,
+    2120,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 777,
+  "bytes": 236620
+ },
+ "assets/trips/california-christmas-markets/card.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/cover.jpg",
+  "sha1": "27b14eccee50ee1d2fdec122e7646d6599c29b4b",
+  "op": {
+   "crop": [
+    2736,
+    1824,
+    0,
+    1131
+   ],
+   "width": 900,
+   "q": 54
+  },
+  "w": 900,
+  "h": 600,
+  "bytes": 113253
+ },
+ "assets/trips/california-christmas-markets/dates.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/dates.jpg",
+  "sha1": "e9923a7d72edca80600708a700b2285ed916afae",
+  "op": {
+   "crop": [
+    3840,
+    2880,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 184344
+ },
+ "assets/trips/california-christmas-markets/dickensbg.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/dickensbg.jpg",
+  "sha1": "75ea31e07cf6a8567c53a4382abe92d96d801a01",
+  "op": {
+   "crop": [
+    3456,
+    4320,
+    0,
+    346
+   ],
+   "width": 960,
+   "q": 52
+  },
+  "w": 960,
+  "h": 1200,
+  "bytes": 179948
+ },
+ "assets/trips/california-christmas-markets/hero-m.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/cover.jpg",
+  "sha1": "27b14eccee50ee1d2fdec122e7646d6599c29b4b",
+  "op": {
+   "crop": [
+    2736,
+    3648,
+    0,
+    0
+   ],
+   "width": 900,
+   "q": 56
+  },
+  "w": 900,
+  "h": 1200,
+  "bytes": 173050
+ },
+ "assets/trips/california-christmas-markets/hero.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/cover.jpg",
+  "sha1": "27b14eccee50ee1d2fdec122e7646d6599c29b4b",
+  "op": {
+   "crop": [
+    2736,
+    1710,
+    0,
+    1202
+   ],
+   "width": 1600,
+   "q": 58
+  },
+  "w": 1600,
+  "h": 1000,
+  "bytes": 293157
+ },
+ "assets/trips/california-christmas-markets/kids.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/kids.jpg",
+  "sha1": "ad46068efa28f207641c9446f9d2bd6622a15185",
+  "op": {
+   "crop": [
+    2400,
+    1800,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 188961
+ },
+ "assets/trips/california-christmas-markets/og.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/cover.jpg",
+  "sha1": "27b14eccee50ee1d2fdec122e7646d6599c29b4b",
+  "op": {
+   "crop": [
+    2736,
+    1436,
+    0,
+    1371
+   ],
+   "width": 1200,
+   "q": 62
+  },
+  "w": 1200,
+  "h": 630,
+  "bytes": 186846
+ },
+ "assets/trips/california-christmas-markets/oldworld.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/oldworld.jpg",
+  "sha1": "454e9c6ca98749822b6219b7f5430a42c8dbe194",
+  "op": {
+   "crop": [
+    3840,
+    2311,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 722,
+  "bytes": 166749
+ },
+ "assets/trips/california-christmas-markets/solvang.jpg": {
+  "src": "trips-you-can-copy/california-christmas-markets-2026/photos/solvang.jpg",
+  "sha1": "6eac0c67405450644072c71f94fc83650817cdfb",
+  "op": {
+   "crop": [
+    2048,
+    1536,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 170745
+ },
+ "assets/trips/christmas-markets-train/aiwrong.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/aiwrong.jpg",
+  "sha1": "47641d7678353df0efe13be86fae7cad73f3f4ff",
+  "op": {
+   "crop": [
+    3840,
+    2560,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 800,
+  "bytes": 172220
+ },
+ "assets/trips/christmas-markets-train/app-blur.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/app.jpg",
+  "sha1": "2a75f8118217b441515b7c8176e10c7bc3eac585",
+  "op": {
+   "crop": [
+    3840,
+    2550,
+    0,
+    0
+   ],
+   "width": 48,
+   "q": 50
+  },
+  "w": 48,
+  "h": 32,
+  "bytes": 1488
+ },
+ "assets/trips/christmas-markets-train/card.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/cover.jpg",
+  "sha1": "0395a2ebbece971b4f7b03e1fc16993131275017",
+  "op": {
+   "crop": [
+    3840,
+    2560,
+    0,
+    0
+   ],
+   "width": 900,
+   "q": 54
+  },
+  "w": 900,
+  "h": 600,
+  "bytes": 105175
+ },
+ "assets/trips/christmas-markets-train/dates.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/dates.jpg",
+  "sha1": "449aafd20cbffc337a403b72c9569598a66b8145",
+  "op": {
+   "crop": [
+    3840,
+    2275,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 711,
+  "bytes": 202977
+ },
+ "assets/trips/christmas-markets-train/hero-m.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/cover.jpg",
+  "sha1": "0395a2ebbece971b4f7b03e1fc16993131275017",
+  "op": {
+   "crop": [
+    1920,
+    2560,
+    960,
+    0
+   ],
+   "width": 900,
+   "q": 56
+  },
+  "w": 900,
+  "h": 1200,
+  "bytes": 213229
+ },
+ "assets/trips/christmas-markets-train/hero.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/cover.jpg",
+  "sha1": "0395a2ebbece971b4f7b03e1fc16993131275017",
+  "op": {
+   "crop": [
+    3840,
+    2400,
+    0,
+    80
+   ],
+   "width": 1600,
+   "q": 58
+  },
+  "w": 1600,
+  "h": 1000,
+  "bytes": 310722
+ },
+ "assets/trips/christmas-markets-train/kids.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/kids.jpg",
+  "sha1": "6b109923a0b8a8b4d557e0959ef308cfdbb435c1",
+  "op": {
+   "crop": [
+    3840,
+    2560,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 800,
+  "bytes": 181877
+ },
+ "assets/trips/christmas-markets-train/munich.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/munich.jpg",
+  "sha1": "985d1583e16c8b98fb668fb7c00ad408dded0c8a",
+  "op": {
+   "crop": [
+    3840,
+    2553,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 798,
+  "bytes": 212068
+ },
+ "assets/trips/christmas-markets-train/og.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/cover.jpg",
+  "sha1": "0395a2ebbece971b4f7b03e1fc16993131275017",
+  "op": {
+   "crop": [
+    3840,
+    2016,
+    0,
+    272
+   ],
+   "width": 1200,
+   "q": 62
+  },
+  "w": 1200,
+  "h": 630,
+  "bytes": 196856
+ },
+ "assets/trips/christmas-markets-train/salzburg.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/salzburg.jpg",
+  "sha1": "5904e8fc55dc2894e7da45604d731c13494dad49",
+  "op": {
+   "crop": [
+    3840,
+    2160,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 675,
+  "bytes": 199527
+ },
+ "assets/trips/christmas-markets-train/vienna.jpg": {
+  "src": "trips-you-can-copy/christmas-markets-by-train-v2/photos/vienna.jpg",
+  "sha1": "f5723275ba8afd5beaf457660db6dc726389fb84",
+  "op": {
+   "crop": [
+    3840,
+    2550,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 797,
+  "bytes": 288148
+ },
+ "assets/trips/first-christmas-market-tips/app-blur.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/app.jpg",
+  "sha1": "f3bc2de0bae61fbbdd6fd7c7d1c82aa47d0b6139",
+  "op": {
+   "crop": [
+    2592,
+    1944,
+    0,
+    0
+   ],
+   "width": 48,
+   "q": 50
+  },
+  "w": 48,
+  "h": 36,
+  "bytes": 4855
+ },
+ "assets/trips/first-christmas-market-tips/card.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/cover.jpg",
+  "sha1": "66e879f0d80d2abdc2005167a66a719c9cd2f7cf",
+  "op": {
+   "crop": [
+    3168,
+    2112,
+    3,
+    0
+   ],
+   "width": 900,
+   "q": 54
+  },
+  "w": 900,
+  "h": 600,
+  "bytes": 118904
+ },
+ "assets/trips/first-christmas-market-tips/hero-m.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/cover.jpg",
+  "sha1": "66e879f0d80d2abdc2005167a66a719c9cd2f7cf",
+  "op": {
+   "crop": [
+    1584,
+    2112,
+    795,
+    0
+   ],
+   "width": 900,
+   "q": 56
+  },
+  "w": 900,
+  "h": 1200,
+  "bytes": 211882
+ },
+ "assets/trips/first-christmas-market-tips/hero.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/cover.jpg",
+  "sha1": "66e879f0d80d2abdc2005167a66a719c9cd2f7cf",
+  "op": {
+   "crop": [
+    3174,
+    1984,
+    0,
+    70
+   ],
+   "width": 1600,
+   "q": 58
+  },
+  "w": 1600,
+  "h": 1000,
+  "bytes": 287036
+ },
+ "assets/trips/first-christmas-market-tips/og.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/cover.jpg",
+  "sha1": "66e879f0d80d2abdc2005167a66a719c9cd2f7cf",
+  "op": {
+   "crop": [
+    3174,
+    1666,
+    0,
+    245
+   ],
+   "width": 1200,
+   "q": 62
+  },
+  "w": 1200,
+  "h": 630,
+  "bytes": 181245
+ },
+ "assets/trips/first-christmas-market-tips/t1.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/t1.jpg",
+  "sha1": "28c9cd129c5abda5e551511c5f7f411c41015225",
+  "op": {
+   "crop": [
+    3840,
+    2880,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 201566
+ },
+ "assets/trips/first-christmas-market-tips/t2.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/t2.jpg",
+  "sha1": "2d08e30a938f8f8995e5ed4ea2917e959dd3792b",
+  "op": {
+   "crop": [
+    3840,
+    2550,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 797,
+  "bytes": 205959
+ },
+ "assets/trips/first-christmas-market-tips/t3.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/t3.jpg",
+  "sha1": "35edecf7010729ab5058b187e1a527482fced108",
+  "op": {
+   "crop": [
+    3840,
+    2163,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 676,
+  "bytes": 48829
+ },
+ "assets/trips/first-christmas-market-tips/t4.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/t4.jpg",
+  "sha1": "aead7894c6df8d2bfa3798cbbb51607a70126e26",
+  "op": {
+   "crop": [
+    3264,
+    2448,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 176055
+ },
+ "assets/trips/first-christmas-market-tips/t5.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/t5.jpg",
+  "sha1": "af2cc3d056db8419e0dd10e9b2a241cf2ef35827",
+  "op": {
+   "crop": [
+    1920,
+    2400,
+    0,
+    56
+   ],
+   "width": 960,
+   "q": 52
+  },
+  "w": 960,
+  "h": 1200,
+  "bytes": 165835
+ },
+ "assets/trips/first-christmas-market-tips/t6.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/t6.jpg",
+  "sha1": "e545ff97ccfd3c25d5dfdd6f0e41eaed73e716ae",
+  "op": {
+   "crop": [
+    2241,
+    2801,
+    0,
+    420
+   ],
+   "width": 960,
+   "q": 52
+  },
+  "w": 960,
+  "h": 1200,
+  "bytes": 278218
+ },
+ "assets/trips/first-christmas-market-tips/t7.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/t7.jpg",
+  "sha1": "9f379effd2ea5f261361a83ae7155b0f0802bbe2",
+  "op": {
+   "crop": [
+    1936,
+    2420,
+    0,
+    52
+   ],
+   "width": 960,
+   "q": 52
+  },
+  "w": 960,
+  "h": 1200,
+  "bytes": 181480
+ },
+ "assets/trips/first-christmas-market-tips/t8.jpg": {
+  "src": "trips-you-can-copy/kids-first-christmas-market-tips/photos/t8.jpg",
+  "sha1": "d6370c743b18dec730175c4d5e977ab3a2ff142f",
+  "op": {
+   "crop": [
+    3840,
+    2560,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 800,
+  "bytes": 149712
+ },
+ "assets/trips/mammoth-thanksgiving/aiwrong.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/aiwrong.jpg",
+  "sha1": "ddba423b9117cbe1cc9df12df0d49ef2dee8e289",
+  "op": {
+   "crop": [
+    2380,
+    1578,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 795,
+  "bytes": 111114
+ },
+ "assets/trips/mammoth-thanksgiving/app-blur.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/app.jpg",
+  "sha1": "0aa6c4548456d52c7096b0a2aeca7be903311ccf",
+  "op": {
+   "crop": [
+    3840,
+    2771,
+    0,
+    0
+   ],
+   "width": 48,
+   "q": 50
+  },
+  "w": 48,
+  "h": 34,
+  "bytes": 1238
+ },
+ "assets/trips/mammoth-thanksgiving/card.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/cover.jpg",
+  "sha1": "3153cb63ea6358eb3d741e739465ab3cf99246fd",
+  "op": {
+   "crop": [
+    3832,
+    2555,
+    3,
+    0
+   ],
+   "width": 900,
+   "q": 54
+  },
+  "w": 900,
+  "h": 600,
+  "bytes": 117700
+ },
+ "assets/trips/mammoth-thanksgiving/day1.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/day1.jpg",
+  "sha1": "a1aa9c2577ac36fd2387e752254bf3a0926e815f",
+  "op": {
+   "crop": [
+    3602,
+    1801,
+    119,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 600,
+  "bytes": 170622
+ },
+ "assets/trips/mammoth-thanksgiving/day2.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/day2.jpg",
+  "sha1": "3c44c5a40b4fb858483f5745afa6c5bd66b40b2a",
+  "op": {
+   "crop": [
+    3840,
+    2880,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 209796
+ },
+ "assets/trips/mammoth-thanksgiving/day3.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/day3.jpg",
+  "sha1": "2f91219cedcc1b5ae0673576e374f69d3f1f4a31",
+  "op": {
+   "crop": [
+    3840,
+    2563,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 801,
+  "bytes": 133479
+ },
+ "assets/trips/mammoth-thanksgiving/day4.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/day4.jpg",
+  "sha1": "de16f5e1de9f553f3c9134b420570e250f5eb14b",
+  "op": {
+   "crop": [
+    3840,
+    2880,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 294125
+ },
+ "assets/trips/mammoth-thanksgiving/day5.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/day5.jpg",
+  "sha1": "ccf5e1ceabe8fb4ff8d5a903e5d2d5039caee19f",
+  "op": {
+   "crop": [
+    3840,
+    2545,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 795,
+  "bytes": 150872
+ },
+ "assets/trips/mammoth-thanksgiving/hero-m.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/cover.jpg",
+  "sha1": "3153cb63ea6358eb3d741e739465ab3cf99246fd",
+  "op": {
+   "crop": [
+    1916,
+    2555,
+    673,
+    0
+   ],
+   "width": 900,
+   "q": 56
+  },
+  "w": 900,
+  "h": 1200,
+  "bytes": 174535
+ },
+ "assets/trips/mammoth-thanksgiving/hero.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/cover.jpg",
+  "sha1": "3153cb63ea6358eb3d741e739465ab3cf99246fd",
+  "op": {
+   "crop": [
+    3840,
+    2400,
+    0,
+    78
+   ],
+   "width": 1600,
+   "q": 58
+  },
+  "w": 1600,
+  "h": 1000,
+  "bytes": 378126
+ },
+ "assets/trips/mammoth-thanksgiving/og.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/cover.jpg",
+  "sha1": "3153cb63ea6358eb3d741e739465ab3cf99246fd",
+  "op": {
+   "crop": [
+    3840,
+    2016,
+    0,
+    270
+   ],
+   "width": 1200,
+   "q": 62
+  },
+  "w": 1200,
+  "h": 630,
+  "bytes": 224184
+ },
+ "assets/trips/mammoth-thanksgiving/staybg-blur.jpg": {
+  "src": "trips-you-can-copy/thanksgiving-mammoth-v2/photos/staybg.jpg",
+  "sha1": "07d445ffde32d50523d3fb54514ae01a089b4ae1",
+  "op": {
+   "crop": [
+    3072,
+    2304,
+    0,
+    0
+   ],
+   "width": 48,
+   "q": 50
+  },
+  "w": 48,
+  "h": 36,
+  "bytes": 4647
+ },
+ "assets/trips/socal-holiday-nights/aiwrong.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/aiwrong.jpg",
+  "sha1": "7488d8f85537f0f7f9a541461dd6f4686641210b",
+  "op": {
+   "crop": [
+    3626,
+    2550,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 844,
+  "bytes": 131946
+ },
+ "assets/trips/socal-holiday-nights/app-blur.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/app.jpg",
+  "sha1": "eb96295a3001e58f17b5f71adc0fec51ddc2e994",
+  "op": {
+   "crop": [
+    3840,
+    2543,
+    0,
+    0
+   ],
+   "width": 48,
+   "q": 50
+  },
+  "w": 48,
+  "h": 31,
+  "bytes": 1146
+ },
+ "assets/trips/socal-holiday-nights/card.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/cover.jpg",
+  "sha1": "799206566595e06af9c0741709e9b71d8d501418",
+  "op": {
+   "crop": [
+    3334,
+    2223,
+    228,
+    0
+   ],
+   "width": 900,
+   "q": 54
+  },
+  "w": 900,
+  "h": 600,
+  "bytes": 101779
+ },
+ "assets/trips/socal-holiday-nights/dates.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/dates.jpg",
+  "sha1": "82aaa7b80a5c893f9d566b4d7adfcb68b01c8438",
+  "op": {
+   "crop": [
+    3840,
+    2543,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 794,
+  "bytes": 144862
+ },
+ "assets/trips/socal-holiday-nights/decnights.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/decnights.jpg",
+  "sha1": "5f94a6bf149ff612dac7e8892e6ae905f9f50800",
+  "op": {
+   "crop": [
+    3648,
+    2736,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 149161
+ },
+ "assets/trips/socal-holiday-nights/grove.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/grove.jpg",
+  "sha1": "103341a84e466ed55be167669381745d1394dce2",
+  "op": {
+   "crop": [
+    2026,
+    2532,
+    0,
+    255
+   ],
+   "width": 960,
+   "q": 52
+  },
+  "w": 960,
+  "h": 1199,
+  "bytes": 268350
+ },
+ "assets/trips/socal-holiday-nights/hero-m.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/cover.jpg",
+  "sha1": "799206566595e06af9c0741709e9b71d8d501418",
+  "op": {
+   "crop": [
+    1667,
+    2223,
+    913,
+    0
+   ],
+   "width": 900,
+   "q": 56
+  },
+  "w": 900,
+  "h": 1200,
+  "bytes": 283333
+ },
+ "assets/trips/socal-holiday-nights/hero.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/cover.jpg",
+  "sha1": "799206566595e06af9c0741709e9b71d8d501418",
+  "op": {
+   "crop": [
+    3557,
+    2223,
+    127,
+    0
+   ],
+   "width": 1600,
+   "q": 58
+  },
+  "w": 1600,
+  "h": 1000,
+  "bytes": 357630
+ },
+ "assets/trips/socal-holiday-nights/kids.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/kids.jpg",
+  "sha1": "d99ca233c947a95a55d89e813a1eae0fa99a815e",
+  "op": {
+   "crop": [
+    2448,
+    3060,
+    0,
+    61
+   ],
+   "width": 960,
+   "q": 52
+  },
+  "w": 960,
+  "h": 1200,
+  "bytes": 85628
+ },
+ "assets/trips/socal-holiday-nights/newport.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/newport.jpg",
+  "sha1": "7be2e62e2aedce42724047cc3f0d61308ceeb89b",
+  "op": {
+   "crop": [
+    3264,
+    2448,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 168891
+ },
+ "assets/trips/socal-holiday-nights/og.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/cover.jpg",
+  "sha1": "799206566595e06af9c0741709e9b71d8d501418",
+  "op": {
+   "crop": [
+    3840,
+    2016,
+    0,
+    114
+   ],
+   "width": 1200,
+   "q": 62
+  },
+  "w": 1200,
+  "h": 630,
+  "bytes": 177241
+ },
+ "assets/trips/socal-holiday-nights/sdbay.jpg": {
+  "src": "trips-you-can-copy/socal-holiday-nights-2026/photos/sdbay.jpg",
+  "sha1": "1120a0bb45bf884dd8058c1c8b194af497be7000",
+  "op": {
+   "crop": [
+    3840,
+    2543,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 794,
+  "bytes": 75429
+ },
+ "assets/trips/solvang-julefest/aeble.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/aeble.jpg",
+  "sha1": "84aeb59a59ebaa6e391a4c8d32c243c7da047894",
+  "op": {
+   "crop": [
+    3840,
+    2551,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 797,
+  "bytes": 97686
+ },
+ "assets/trips/solvang-julefest/aiwrong.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/aiwrong.jpg",
+  "sha1": "ee70041fb0fc18b13c5cd0bfa1ffc14ea8b434b9",
+  "op": {
+   "crop": [
+    3000,
+    3750,
+    0,
+    125
+   ],
+   "width": 960,
+   "q": 52
+  },
+  "w": 960,
+  "h": 1200,
+  "bytes": 257775
+ },
+ "assets/trips/solvang-julefest/app-blur.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/app.jpg",
+  "sha1": "5307597093c95f09da3c63e5fdc71f8ca026b1f9",
+  "op": {
+   "crop": [
+    3648,
+    2736,
+    0,
+    0
+   ],
+   "width": 48,
+   "q": 50
+  },
+  "w": 48,
+  "h": 36,
+  "bytes": 2596
+ },
+ "assets/trips/solvang-julefest/card.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/cover.jpg",
+  "sha1": "0603e80462467d585871d2e1a3e947193ab2837d",
+  "op": {
+   "crop": [
+    3698,
+    2465,
+    28,
+    0
+   ],
+   "width": 900,
+   "q": 54
+  },
+  "w": 900,
+  "h": 600,
+  "bytes": 147244
+ },
+ "assets/trips/solvang-julefest/dates.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/dates.jpg",
+  "sha1": "2118b31124401cb2d894b3dd9a6a2a018683bb99",
+  "op": {
+   "crop": [
+    3840,
+    2880,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 900,
+  "bytes": 308979
+ },
+ "assets/trips/solvang-julefest/hero-m.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/cover.jpg",
+  "sha1": "0603e80462467d585871d2e1a3e947193ab2837d",
+  "op": {
+   "crop": [
+    1849,
+    2465,
+    239,
+    0
+   ],
+   "width": 900,
+   "q": 56
+  },
+  "w": 900,
+  "h": 1200,
+  "bytes": 312166
+ },
+ "assets/trips/solvang-julefest/hero.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/cover.jpg",
+  "sha1": "0603e80462467d585871d2e1a3e947193ab2837d",
+  "op": {
+   "crop": [
+    3840,
+    2400,
+    0,
+    36
+   ],
+   "width": 1600,
+   "q": 58
+  },
+  "w": 1600,
+  "h": 1000,
+  "bytes": 474589
+ },
+ "assets/trips/solvang-julefest/kids.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/kids.jpg",
+  "sha1": "2c1978afbc4e9a2bf6ec2f275700fe1acbcb4c52",
+  "op": {
+   "crop": [
+    3840,
+    2560,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 800,
+  "bytes": 188270
+ },
+ "assets/trips/solvang-julefest/lights.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/lights.jpg",
+  "sha1": "b189604f783eb3ef1f7afa061402e0915bee985e",
+  "op": {
+   "crop": [
+    3523,
+    4404,
+    0,
+    59
+   ],
+   "width": 960,
+   "q": 52
+  },
+  "w": 960,
+  "h": 1200,
+  "bytes": 235192
+ },
+ "assets/trips/solvang-julefest/nisse.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/nisse.jpg",
+  "sha1": "bcc353b37aca151782564c6cd499423307d9441f",
+  "op": {
+   "crop": [
+    3840,
+    2560,
+    0,
+    0
+   ],
+   "width": 1200,
+   "q": 52
+  },
+  "w": 1200,
+  "h": 800,
+  "bytes": 126705
+ },
+ "assets/trips/solvang-julefest/og.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/cover.jpg",
+  "sha1": "0603e80462467d585871d2e1a3e947193ab2837d",
+  "op": {
+   "crop": [
+    3840,
+    2016,
+    0,
+    247
+   ],
+   "width": 1200,
+   "q": 62
+  },
+  "w": 1200,
+  "h": 630,
+  "bytes": 272587
+ },
+ "assets/trips/solvang-julefest/staybg-blur.jpg": {
+  "src": "trips-you-can-copy/solvang-julefest-weekend/photos/staybg.jpg",
+  "sha1": "42e9ad10c4f99d43079255dbe1e93f15e1219733",
+  "op": {
+   "crop": [
+    3840,
+    2560,
+    0,
+    0
+   ],
+   "width": 48,
+   "q": 50
+  },
+  "w": 48,
+  "h": 32,
+  "bytes": 1272
+ }
+}

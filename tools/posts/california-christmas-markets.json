@@ -1,0 +1,570 @@
+{
+ "slug": "california-christmas-markets",
+ "folder": "california-christmas-markets-2026",
+ "module": "ca_markets",
+ "post": {
+  "slug": "california-christmas-markets-2026",
+  "series": "Save the dates",
+  "title": "California Christmas markets 2026: save the dates",
+  "hook": "California's Christmas markets, 2026",
+  "checked_on": "2026-11-10",
+  "slides": [
+   {
+    "type": "cover",
+    "photo": "cover",
+    "big": "California's Christmas markets, 2026",
+    "sub": "4 markets · dates, hours, kid notes",
+    "pip": "Every date checked on each market's own site.",
+    "pos45": "50% 50%",
+    "pos916": "45% 50%",
+    "text_top": true,
+    "topshade45": [
+     34,
+     60
+    ],
+    "topshade916": [
+     34,
+     56
+    ]
+   },
+   {
+    "type": "dates",
+    "photo": "dates",
+    "label": "Save the dates",
+    "big": "The 2026 calendar",
+    "k0": 1.12,
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "rows": [
+     [
+      "Christmas Markt",
+      "Old World · Huntington Beach",
+      "Nov 15 – Jan 3",
+      "Hours TBA",
+      [
+       "oldworld_markt"
+      ]
+     ],
+     [
+      "Great Dickens Christmas Fair",
+      "Cow Palace · Daly City",
+      "Nov 21 – Dec 20",
+      "Weekends + Nov 27, 10–6",
+      [
+       "dickens_home"
+      ]
+     ],
+     [
+      "Julefest",
+      "Solvang",
+      "Nov 27 – Jan 3",
+      "Light shows 5–9 PM",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Cambria Christmas Market",
+      "Cambria Pines Lodge",
+      "Nov 27 – Dec 31",
+      "Select nights, 5–9 PM",
+      [
+       "cambria_home"
+      ]
+     ],
+     [
+      "Tree lighting",
+      "Solvang Park",
+      "Fri Dec 4",
+      "5:30 PM",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Julefest parade",
+      "Solvang",
+      "Sat Dec 5",
+      "11 AM",
+      [
+       "solv_julefest"
+      ]
+     ],
+     [
+      "Copenhagen Countdown",
+      "Solvang Park",
+      "Thu Dec 31",
+      "3 PM",
+      [
+       "solv_julefest"
+      ]
+     ]
+    ]
+   },
+   {
+    "type": "city",
+    "photo": "solvang",
+    "label": "Santa Ynez Valley",
+    "big": "Solvang's Julefest",
+    "dates": "Nov 27 to Jan 3 · Solvang Park and village",
+    "pips": [
+     "Light and music shows in Solvang Park, nightly 5 to 9.",
+     "Tree lighting Fri Dec 4 at 5:30, parade Sat Dec 5 at 11."
+    ],
+    "source_ids": [
+     "solv_julefest"
+    ],
+    "pos45": "62% 50%",
+    "pos916": "68% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "cambria",
+    "label": "Central Coast",
+    "big": "Cambria Christmas Market",
+    "dates": "Cambria Pines Lodge · Nov 27 to Dec 31 · select nights, 5 to 9 PM",
+    "pips": [
+     "3 million lights, a train ride and visits from Santa.",
+     "Sold-out nights don't sell at the door; weeknights are calmer."
+    ],
+    "source_ids": [
+     "cambria_home",
+     "cambria_faq"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "photo_note": "Photo: the lodge's lounge on a 1930s postcard"
+   },
+   {
+    "type": "stay",
+    "photo": "dickensbg",
+    "label": "Bay Area · Daly City",
+    "big": "Great Dickens Christmas Fair",
+    "kicker": "5 weekends · Nov 21 to Dec 20, plus Nov 27",
+    "lines": [
+     "Victorian London inside the Cow Palace: over 4 acres of lanes, theatres and shops.",
+     "Open 10 AM to 6 PM.",
+     "Tickets are date-specific and sold online only."
+    ],
+    "addr": "Cow Palace, Daly City",
+    "note": "",
+    "pip": "A miniature steam train meets you at 'Victoria Station'.",
+    "source_ids": [
+     "dickens_home",
+     "dickens_faq",
+     "dickens_kids"
+    ],
+    "pos45": "50% 40%",
+    "pos916": "50% 40%"
+   },
+   {
+    "type": "city",
+    "photo": "oldworld",
+    "label": "Orange County · Huntington Beach",
+    "big": "Old World's Christmas Markt",
+    "dates": "Old World Village · Nov 15 to Jan 3",
+    "pips": [
+     "Icicle lights and green-and-red stalls, built into the village.",
+     "Hours aren't announced yet: check before you drive."
+    ],
+    "source_ids": [
+     "oldworld_markt",
+     "oldworld_home"
+    ],
+    "pos45": "40% 50%",
+    "pos916": "35% 50%"
+   },
+   {
+    "type": "kids",
+    "photo": "kids",
+    "label": "Kids will love",
+    "big": "Small hands, big lights",
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "cy45": 640,
+    "cy916": 900,
+    "items": [
+     [
+      "lights",
+      "Cambria's 3 million lights",
+      "With a train ride and visits from Santa"
+     ],
+     [
+      "star",
+      "Solvang's Nisser Adventure",
+      "Clue sheets at the Visitor Center, all season"
+     ],
+     [
+      "train",
+      "Dickens Fair's steam train",
+      "Then chimney-sweep school, and maybe a bronze coin"
+     ]
+    ],
+    "pip": "New Year's at 3 PM: Solvang's Copenhagen Countdown, Dec 31.",
+    "source_ids": [
+     "cambria_home",
+     "solv_julefest",
+     "dickens_kids"
+    ]
+   },
+   {
+    "type": "aiwrong",
+    "photo": "aiwrong",
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "zoom45": [
+     1.6,
+     0.5,
+     0.6
+    ],
+    "zoom916": [
+     1.3,
+     0.5,
+     0.55
+    ],
+    "items": [
+     [
+      "Cambria's sold-out nights don't sell at the door; tickets are online only.",
+      "cambria_faq"
+     ],
+     [
+      "The Dickens Fair is weekends only, plus Nov 27, with date-specific tickets.",
+      "dickens_faq"
+     ],
+     [
+      "Old World hasn't announced its 2026 market hours yet.",
+      "oldworld_markt"
+     ]
+    ]
+   },
+   {
+    "type": "app",
+    "photo": "app",
+    "big": "Pip plans it around your family.",
+    "button": "Save this for December",
+    "screens": [
+     "yosTop",
+     "cTunnel"
+    ],
+    "screens_alt": "the trip header (kids 7 and 10) and a stop card where Pip says why: 'Yosemite's most famous view, timed for sunset.'",
+    "screens_note": "an example family trip: Yosemite, kids 7 and 10"
+   }
+  ],
+  "photo_alt": {
+   "cover": "Red half-timbered Danish-style houses with steep tiled roofs in Solvang, under a blue sky",
+   "dates": "The painted chapel with a bell tower at Old World Village in Huntington Beach",
+   "solvang": "A windmill and Danish flags above a red Danish-style building in Solvang",
+   "cambria": "A 1930s linen postcard of the lounge at Cambria Pines Lodge, where the Cambria Christmas Market is held",
+   "dickensbg": "Costumed performers at the Great Dickens Christmas Fair",
+   "oldworld": "German-style buildings with painted walls and blue awnings on a lane at Old World Village in Huntington Beach",
+   "kids": "A blue Victorian-style house with a white picket fence in Cambria",
+   "aiwrong": "A German-style restaurant building at Old World Village in Huntington Beach",
+   "app": "A street of shops in Cambria's West Village"
+  },
+  "places": [
+   [
+    "📍 Old World Village — Huntington Beach, CA, USA",
+    "Christmas Markt Nov 15 to Jan 3 (hours to be announced)"
+   ],
+   [
+    "📍 Cow Palace — Daly City, CA, USA",
+    "Great Dickens Christmas Fair: 5 weekends, Nov 21 to Dec 20, plus Nov 27; 10 AM to 6 PM"
+   ],
+   [
+    "📍 Solvang Park — Solvang, CA, USA",
+    "Julefest Nov 27 to Jan 3; light and music shows nightly at 5, 6, 7, 8 and 9 PM"
+   ],
+   [
+    "📍 Cambria Pines Lodge — Cambria, CA, USA",
+    "Cambria Christmas Market Nov 27 to Dec 31, select nights, 5 to 9 PM"
+   ]
+  ],
+  "caption_lines": [
+   "Two of them sell tickets online only: the Cambria Christmas Market and the Great Dickens Christmas Fair. Sold-out dates don't sell at the door."
+  ],
+  "wrong_caption": [
+   "Cambria's sold-out nights aren't sold at the door; tickets come only from the market's own site.",
+   "The Dickens Fair runs weekends only (plus the Friday after Thanksgiving), with date-specific tickets.",
+   "Old World hasn't announced its 2026 market hours yet."
+  ],
+  "question": "Which one is closest to you?",
+  "cta_end": "Get a plan fitted to your family: link in bio.",
+  "hashtags": [
+   "#ChristmasMarkets",
+   "#CaliforniaChristmas",
+   "#SoCalWithKids",
+   "#Solvang",
+   "#FamilyTravel"
+  ],
+  "tiktok_title": "California's Christmas markets, 2026",
+  "tiktok_desc": "Save the dates: 4 California Christmas markets for 2026, from Huntington Beach to Daly City. Every date checked Nov 10, 2026.",
+  "dropped": [
+   "Phoenix Club Christkindlmarkt: the club left Anaheim in 2022; no 2026 market found",
+   "Sacramento Turn Verein Christkindlmarkt: no 2026 date announced yet",
+   "Carmel Christkindlmarkt: it's in Carmel, Indiana, not California",
+   "Cambria closed dates: shown only as a graphic calendar on the market's site"
+  ],
+  "notes": {
+   "window": "Nov 10 to Dec 5, 2026 (most useful before Thanksgiving)",
+   "suggest": [
+    [
+     "Instagram carousel (9 slides)",
+     "Sun Nov 15, 2026, 9:00 AM PT",
+     "2026-11-15T09:00:00-08:00"
+    ],
+    [
+     "TikTok photo mode (9 slides)",
+     "Sun Nov 15, 2026, 6:00 PM PT",
+     null
+    ]
+   ],
+   "campaign": "2026-11-15-california-christmas-markets",
+   "recheck": [
+    "Old World Christmas Markt hours (TBA on Nov 10).",
+    "Cambria calendar: which nights are hotel guests only.",
+    "Dickens Fair Children's Tour page for 2026."
+   ]
+  }
+ },
+ "sources": [
+  [
+   "solv_julefest",
+   "https://solvangusa.com/things-to-do/solvang-julefest/",
+   "Solvang Julefest 2026 (official visitor site): Nov 27, 2026 to Jan 3, 2027; nightly light & music shows in Solvang Park at 5, 6, 7, 8 and 9 PM; Nisser Adventure clues at the Solvang Visitor Center; Tree Lighting Fri Dec 4, 5:30 PM; parade Sat Dec 5, 11 AM; Copenhagen Countdown Thu Dec 31, countdown at 3 PM",
+   "2026-11-10"
+  ],
+  [
+   "cambria_home",
+   "https://www.cambriachristmasmarket.com/",
+   "Cambria Christmas Market (official): Nov 27 - Dec 31, 2026, select dates, 5 PM - 9 PM, 2905 Burton Dr, Cambria (Cambria Pines Lodge); 3 million twinkling lights, a German-inspired artisan vendor market, visits from Santa, a train ride, fire pits, live music; cashless",
+   "2026-11-10"
+  ],
+  [
+   "cambria_faq",
+   "https://www.cambriachristmasmarket.com/faqs",
+   "Cambria Christmas Market FAQ: tickets are sold only through the official website; sold-out dates are not sold at the door; 'we recommend visiting on a weeknight to skip the crowds'",
+   "2026-11-10"
+  ],
+  [
+   "dickens_home",
+   "https://www.dickensfair.com/",
+   "The Great Dickens Christmas Fair (official): 5 weekends, 10 AM - 6 PM, Nov 21 - Dec 20, 2026, plus the Friday after Thanksgiving; over 4 acres of the Cow Palace exhibition halls turned into Victorian London",
+   "2026-11-10"
+  ],
+  [
+   "dickens_faq",
+   "https://dickensfair.com/faq/",
+   "Dickens Fair FAQ: tickets only through dickensfair.com; tickets are date-specific and daily attendance is limited; no on-site ticket sales at the Cow Palace",
+   "2026-11-10"
+  ],
+  [
+   "dickens_kids",
+   "https://dickensfair.com/childrens-tour-of-london/",
+   "Dickens Fair, Children's Tour of London: a miniature steam train at the Fair's 'Victoria Station'; a chimney sweep training school where kids may receive a bronze collectible coin (tour text linked to the 2025 PDF)",
+   "2026-11-10"
+  ],
+  [
+   "oldworld_markt",
+   "https://www.simplygermanusa.com/pages/christmas-markt",
+   "Simply German USA (a shop at Old World Village, oldworldhb.com contact): 'Christmas Markt 2026', Old World Village, Huntington Beach, Nov 15, 2026 to Jan 3, 2027; hours 'To be announced'; icicle lights and green-and-red market stall canopies",
+   "2026-11-10"
+  ],
+  [
+   "oldworld_home",
+   "https://www.oldworldhb.com/",
+   "Old World Huntington Beach (official): 7561 Center Ave, Huntington Beach; Old World Restaurant & Biergarten",
+   "2026-11-10"
+  ]
+ ],
+ "photos": {
+  "cover": {
+   "file": "cover.jpg",
+   "title": "File:Fachwerk Houses Solvang.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Fachwerk_Houses_Solvang.jpg",
+   "artist": "Ymblanter",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2015-11-01 01:08:17",
+   "desc": "Timber framed houses, 4th PI, Solvang, CA",
+   "source_size": "2736x3648",
+   "downloaded": "2026-11-10",
+   "dims": [
+    2736,
+    3648
+   ]
+  },
+  "dates": {
+   "file": "dates.jpg",
+   "title": "File:Old World Village church.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_World_Village_church.jpg",
+   "artist": "Dialh",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2021-07-06 12:40:27",
+   "desc": "A church in the Old World Village in Huntington Beach, California.",
+   "source_size": "4032x3024",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2880
+   ]
+  },
+  "solvang": {
+   "file": "solvang.jpg",
+   "title": "File:Solvang (48298363287).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Solvang_(48298363287).jpg",
+   "artist": "Anna Irene from Frankfurt, Deutschland",
+   "credit": "Solvang",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 2.0",
+   "attribution_required": "true",
+   "date": "2019-07-16 14:25",
+   "desc": "Danish Town in California https://usareisetipps.com/solvang-sehenswuerdigkeiten-hotels/\" rel=\"noreferrer nofollow\">usareisetipps.com/solvang-sehenswuerdigkeiten-hotels/",
+   "source_size": "2048x1536",
+   "downloaded": "2026-11-10",
+   "dims": [
+    2048,
+    1536
+   ]
+  },
+  "cambria": {
+   "file": "cambria.jpg",
+   "title": "File:Cambria Pines Lodge, Cambria, California (89787).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Cambria_Pines_Lodge,_Cambria,_California_(89787).jpg",
+   "artist": "Tichnor Brothers, Publisher",
+   "credit": "Boston Public Library Tichnor Brothers collection #89787",
+   "license": "Public domain",
+   "license_url": "",
+   "usage_terms": "Public domain",
+   "attribution_required": "false",
+   "date": "between circa 1930 and circa 1945date QS",
+   "desc": "Title: Cambria Pines Lodge, Cambria, California Subjects: Hotels Places: California > San Luis Obispo (county) > Cambria Notes: Title from item. Extent: 1 print (postcard) : linen texture, color ; 3 1/2 x 5 1/2 in. Accession #: 06_10_009480",
+   "source_size": "3272x2120",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3272,
+    2120
+   ]
+  },
+  "dickensbg": {
+   "file": "dickensbg.jpg",
+   "title": "File:At the Dickens Fair.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:At_the_Dickens_Fair.jpg",
+   "artist": "HarshLight",
+   "credit": "https://www.flickr.com/photos/harshlight/16265520622/",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2014-12-13 14:03:11",
+   "desc": "Performers at the Great Dickens Christmas Fair at the Cow Palace in Daly City.",
+   "source_size": "3456x5184",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3456,
+    5184
+   ]
+  },
+  "oldworld": {
+   "file": "oldworld.jpg",
+   "title": "File:Old World Village scene.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_World_Village_scene.jpg",
+   "artist": "Dialh",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2021-07-06 12:29:29",
+   "desc": "Scene inside the Old World Village in Huntington Beach, California. This image was taken on one of the paths coming in from the parking lot on the west side of the community.",
+   "source_size": "4032x2427",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2311
+   ]
+  },
+  "kids": {
+   "file": "kids.jpg",
+   "title": "File:Cambria, CA 05.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Cambria,_CA_05.jpg",
+   "artist": "Stilfehler",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2021-07-07 17:56:51",
+   "desc": "Antiques on Arlington, West Village",
+   "source_size": "2400x1800",
+   "downloaded": "2026-11-10",
+   "dims": [
+    2400,
+    1800
+   ]
+  },
+  "aiwrong": {
+   "file": "aiwrong.jpg",
+   "title": "File:Old World Village German restaurant.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Old_World_Village_German_restaurant.jpg",
+   "artist": "Dialh",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2021-07-06 12:31:05",
+   "desc": "A German restaurant and market in Old World Village in Huntington Beach, California.",
+   "source_size": "4032x3024",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2880
+   ]
+  },
+  "app": {
+   "file": "app.jpg",
+   "title": "File:West Village of Cambria - panoramio.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:West_Village_of_Cambria_-_panoramio.jpg",
+   "artist": "FlashBuddy",
+   "credit": "https://web.archive.org/web/20161024200250/http://www.panoramio.com/photo/77343681",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+   "attribution_required": "true",
+   "date": "19 August 2012 (original upload date)",
+   "desc": "West Village of Cambria",
+   "source_size": "4000x1580",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    1517
+   ]
+  }
+ },
+ "map": null,
+ "screens": {
+  "yosTop": {
+   "src": "reels-v3/screens/d-yos1-a.png",
+   "sx": 0,
+   "sy": 150,
+   "sw": 1206,
+   "sh": 560
+  },
+  "cTunnel": {
+   "src": "reels-v3/screens/d-yos1-e.png",
+   "sx": 30,
+   "sy": 1080,
+   "sw": 1146,
+   "sh": 700
+  }
+ },
+ "post_at": "2026-11-15T09:00:00-08:00"
+}

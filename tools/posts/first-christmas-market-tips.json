@@ -1,0 +1,456 @@
+{
+ "slug": "first-christmas-market-tips",
+ "folder": "kids-first-christmas-market-tips",
+ "module": "tips_first_market",
+ "post": {
+  "slug": "kids-first-christmas-market-tips",
+  "kind": "tips",
+  "series": "Pip's tips",
+  "series_line": "Save this for December.",
+  "title": "Kids' first Christmas market in Europe: 8 tips",
+  "hook": "Their first Christmas market: 8 tips",
+  "checked_on": "2026-11-10",
+  "slides": [
+   {
+    "type": "cover",
+    "photo": "cover",
+    "big": "Their first Christmas market",
+    "sub": "8 tips for Europe with kids",
+    "pip": "Each one checked. Save this for December.",
+    "pos45": "50% 55%",
+    "pos916": "55% 50%"
+   },
+   {
+    "type": "tip",
+    "photo": "t1",
+    "n": 1,
+    "big": "Go at 4, not 7.",
+    "pip": "Dec 5 sunset: Vienna 4:01, Munich 4:21. Lights before bedtime.",
+    "src": "usno",
+    "pos45": "45% 50%",
+    "pos916": "40% 50%"
+   },
+   {
+    "type": "tip",
+    "photo": "t2",
+    "n": 2,
+    "big": "Order the kids' punch.",
+    "pip": "Stall 48 at Vienna's Rathausplatz pours only alcohol-free drinks.",
+    "src": "wien_market",
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "tip",
+    "photo": "t3",
+    "n": 3,
+    "big": "Mugs come with a deposit.",
+    "pip": "Return it to that stall for your coins. Want to keep it? Ask first.",
+    "src": "orf_pfand",
+    "src2": "correctiv",
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "tip",
+    "photo": "t4",
+    "n": 4,
+    "big": "Bring a little cash.",
+    "pip": "Vienna's Rathausplatz market even has ATMs on site.",
+    "src": "wien_visit",
+    "pos45": "50% 20%",
+    "pos916": "50% 8%"
+   },
+   {
+    "type": "tip",
+    "photo": "t5",
+    "n": 5,
+    "big": "Grab the free kids' quiz.",
+    "pip": "Sheets and pens: at the stand opposite Vienna's Tree of Hearts.",
+    "src": "wien_kids",
+    "pos45": "50% 35%",
+    "pos916": "50% 40%"
+   },
+   {
+    "type": "tip",
+    "photo": "t6",
+    "n": 6,
+    "big": "Toddler blades are free to borrow.",
+    "pip": "Vienna's kids' rink lends double blades (EU 21-25) and helmets with a ticket.",
+    "src": "wien_kids",
+    "pos45": "50% 50%",
+    "pos916": "60% 50%"
+   },
+   {
+    "type": "tip",
+    "photo": "t7",
+    "n": 7,
+    "big": "Munich's kids' workshop is free.",
+    "pip": "Ages 6 to 12, Nov 26 to Dec 13. Sign-ups open 10 days ahead.",
+    "src": "muc_ckm",
+    "pos45": "50% 30%",
+    "pos916": "50% 35%"
+   },
+   {
+    "type": "tip",
+    "photo": "t8",
+    "n": 8,
+    "big": "Salzburg has a petting zoo, too.",
+    "pip": "Hellbrunn's Advent: train and petting zoo, weekends 11 to 6. Closed Mondays.",
+    "src": "hellbrunn_kids",
+    "src2": "hellbrunn_hours",
+    "pos45": "50% 55%",
+    "pos916": "50% 55%"
+   },
+   {
+    "type": "app",
+    "photo": "app",
+    "big": "Pip plans it around your family.",
+    "button": "Save this for December",
+    "screens": [
+     "dolomitesTop",
+     "nearDoloKid"
+    ]
+   }
+  ],
+  "photo_alt": {
+   "cover": "Munich's Christmas market from above at dusk, white stall roofs dusted with snow, a lit tree by the Neues Rathaus",
+   "t1": "Vienna's Rathaus Christmas market at night: the lit City Hall, the carousel and crowds between the stalls",
+   "t2": "A lit drinks and café stall at Vienna's Rathausplatz Christmas market",
+   "t3": "A red Christmas market mug from the Basel market, on a white table",
+   "t4": "A pretzel stall at the Schönbrunn Palace Christmas market in Vienna",
+   "t5": "The double-decker carousel at Vienna's Rathaus Christmas market, lit at night",
+   "t6": "A snowman figure and lit trees beside the ice rink in Vienna's Rathauspark during the Christmas market",
+   "t7": "Munich's Neues Rathaus at night with its tall Christmas tree and market stalls",
+   "t8": "Hellbrunn Palace lit up for its Advent market, with Christmas trees and light snow",
+   "app": "Treats at Salzburg's Christmas market, blurred behind real app screens"
+  },
+  "places": [
+   [
+    "📍 Wiener Christkindlmarkt — Vienna, Austria",
+    "Alcohol-free punch at stall 48, free kids' quiz, kids' rink with free double blades"
+   ],
+   [
+    "📍 Münchner Christkindlmarkt — Munich, Germany",
+    "Free Himmelswerkstatt for ages 6 to 12 in the Neues Rathaus, Nov 26 to Dec 13"
+   ],
+   [
+    "📍 Hellbrunner Adventzauber — Salzburg, Austria",
+    "Christmas train and petting zoo on weekends; closed Mondays"
+   ]
+  ],
+  "caption_lines": [
+   "1. Go at 4, not 7. On Dec 5 the sun sets at 4:01 in Vienna and 4:21 in Munich: lights before bedtime.",
+   "2. Order the kids' punch (Kinderpunsch). Stall 48 at Vienna's Rathausplatz pours only alcohol-free drinks.",
+   "3. Mugs come with a deposit. Return it to that stall for your coins; ask before keeping one.",
+   "4. Bring a little cash. Vienna's Rathausplatz market even has ATMs on site.",
+   "5. Grab the free kids' quiz at the stand opposite Vienna's Tree of Hearts.",
+   "6. Toddler blades are free to borrow: Vienna's kids' rink lends double blades (EU 21-25) and helmets with a ticket.",
+   "7. Munich's Himmelswerkstatt is free for ages 6 to 12. Sign-ups open 10 days ahead.",
+   "8. Salzburg's Hellbrunn Advent has a train and petting zoo on weekends. Closed Mondays."
+  ],
+  "question": "Which city would your kids pick: Vienna, Munich or Salzburg?",
+  "cta_end": "Get a plan fitted to your family: link in bio.",
+  "tiktok_desc": "Pip's tips: 8 checked tips for your kids' first Christmas market in Europe. Save this for December.",
+  "dropped": [
+   "Weekday afternoons are calmer than weekend evenings (no official source)",
+   "A carrier beats a stroller in crowded lanes (no official source)",
+   "Paid public toilets: only some staffed Vienna toilets charge, and the city is reviewing the fee (dropped to stay accurate)"
+  ],
+  "hashtags": [
+   "#ChristmasMarkets",
+   "#FamilyTravel",
+   "#TravelWithKids",
+   "#Vienna",
+   "#Munich"
+  ],
+  "tiktok_title": "Their first Christmas market: 8 tips",
+  "notes": {
+   "window": "Now through early December 2026 (save-and-send content; best before families plan)",
+   "suggest": [
+    [
+     "Instagram carousel (10 slides)",
+     "Tue Nov 10, 2026, 6:30 PM PT (the first post)",
+     "2026-11-10T18:30:00-08:00"
+    ],
+    [
+     "TikTok photo mode (10 slides)",
+     "Tue Nov 10, 2026, 6:30 PM PT",
+     null
+    ]
+   ],
+   "campaign": "2026-11-10-first-christmas-market-tips",
+   "recheck": [
+    "Vienna stall list: stall 48 still listed as alcohol-free.",
+    "Himmelswerkstatt dates on muenchen.de.",
+    "Hellbrunn kids' world hours."
+   ]
+  }
+ },
+ "sources": [
+  [
+   "usno",
+   "https://aa.usno.navy.mil/api/rstt/oneday?date=2026-12-05&coords=48.2082,16.3738&tz=1",
+   "US Naval Observatory: sun data for Vienna, Dec 5, 2026 (sunset 4:01 PM CET; Munich 4:21 PM, Salzburg 4:16 PM from the same service)",
+   "2026-11-10"
+  ],
+  [
+   "wien_market",
+   "https://christkindlmarkt.at/en/the-market/",
+   "Wiener Christkindlmarkt, stall list: No. 48 'Wichtelglück & Zauberpunsch', organic hot and cold drinks, exclusively non-alcoholic",
+   "2026-11-10"
+  ],
+  [
+   "wien_visit",
+   "https://www.christkindlmarkt.at/besuch/",
+   "Wiener Christkindlmarkt, your visit: dates and hours; ATMs (Geldautomaten) and accessible toilets on site",
+   "2026-11-10"
+  ],
+  [
+   "wien_kids",
+   "https://www.christkindlmarkt.at/en/children/",
+   "Wiener Christkindlmarkt, children: free quiz sheets and pens at the stand opposite the Tree of Hearts; kids' ice rink with free double blades (sizes 21-25) and helmets with a ticket; 12 m carousel; reindeer train",
+   "2026-11-10"
+  ],
+  [
+   "orf_pfand",
+   "https://wien.orf.at/stories/3183344",
+   "ORF Wien (Nov 22, 2022): Vienna Christmas markets charge a deposit (Häferlpfand) on punch mugs, to get them back",
+   "2026-11-10"
+  ],
+  [
+   "correctiv",
+   "https://correctiv.org/faktencheck/geruechtekiller/2023/12/15/darf-man-gluehweintassen-vom-weihnachtsmarkt-mitnehmen/",
+   "Correctiv fact check (Dec 15, 2023): keeping a deposit mug isn't allowed; ask the stall if you may take one",
+   "2026-11-10"
+  ],
+  [
+   "muc_ckm",
+   "https://www.muenchen.de/veranstaltungen/muenchner-christkindlmarkt-marienplatz",
+   "muenchen.de: Münchner Christkindlmarkt 2026; Himmelswerkstatt free for ages 6 to 12, Nov 26 to Dec 13, sign-up with Kindermuseum München from 10 days ahead",
+   "2026-11-10"
+  ],
+  [
+   "hellbrunn_kids",
+   "https://www.hellbrunneradventzauber.at/kinderweihnachtswelt/",
+   "Hellbrunner Adventzauber: Kinderweihnachtswelt (Christmas train and petting zoo, weekends and holidays 11 AM-6 PM)",
+   "2026-11-10"
+  ],
+  [
+   "hellbrunn_hours",
+   "https://www.hellbrunneradventzauber.at/oeffnungszeiten/",
+   "Hellbrunner Adventzauber: Nov 19 to Dec 24, 2026; closed Mondays except Dec 21",
+   "2026-11-10"
+  ]
+ ],
+ "photos": {
+  "cover": {
+   "file": "cover.jpg",
+   "title": "File:Münchner Christkindlmarkt 2.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchner_Christkindlmarkt_2.JPG",
+   "artist": "X",
+   "credit": "Own work",
+   "license": "Public domain",
+   "license_url": "",
+   "usage_terms": "Public domain",
+   "attribution_required": "false",
+   "date": "2010-12-05",
+   "desc": "Blick vom Alten Peter auf den Münchner Christkindlmarkt",
+   "source_size": "3174x2112",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3174,
+    2112
+   ]
+  },
+  "t1": {
+   "file": "t1.jpg",
+   "title": "File:At Vienna 2025 398.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:At_Vienna_2025_398.jpg",
+   "artist": "Photograph by Mike Peel (www.mikepeel.net).",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2025-12-08",
+   "desc": "",
+   "source_size": "8064x6048",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2880
+   ]
+  },
+  "t2": {
+   "file": "t2.jpg",
+   "title": "File:Wiener Christkindlmarkt am Rathausplatz 26.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Wiener_Christkindlmarkt_am_Rathausplatz_26.JPG",
+   "artist": "böhringer friedrich",
+   "credit": "Own work",
+   "license": "CC BY-SA 3.0 at",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0 at",
+   "attribution_required": "true",
+   "date": "2012-11-17",
+   "desc": "christkindlmarkt (advent market) in front of the town hall of Vienna.",
+   "source_size": "4288x2848",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2550
+   ]
+  },
+  "t3": {
+   "file": "t3.jpg",
+   "title": "File:Tasse - Basler Weihnachtsmarkt 2019 (valo139).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Tasse_-_Basler_Weihnachtsmarkt_2019_(valo139).jpg",
+   "artist": "Valo139",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2020-03-23",
+   "desc": "Tasse des Basler Weihnachtsmarkts 2019.",
+   "source_size": "5184x2920",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2163
+   ]
+  },
+  "t4": {
+   "file": "t4.jpg",
+   "title": "File:Booth with pretzels at Schönbrunn Palace, Vienna (8337512724).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Booth_with_pretzels_at_Sch%C3%B6nbrunn_Palace,_Vienna_(8337512724).jpg",
+   "artist": "Michal Osmenda from Brussels, Belgium",
+   "credit": "Booth with pretzels at Schönbrunn Palace, Vienna",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2012-12-31 14:32",
+   "desc": "Booth with pretzels at Schönbrunn Palace, Vienna",
+   "source_size": "3264x2448",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3264,
+    2448
+   ]
+  },
+  "t5": {
+   "file": "t5.jpg",
+   "title": "File:Carousel Ride Rathaus.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Carousel_Ride_Rathaus.jpg",
+   "artist": "Ooreoluwa4578420",
+   "credit": "Own work",
+   "license": "CC0",
+   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "usage_terms": "Creative Commons Zero, Public Domain Dedication",
+   "attribution_required": "false",
+   "date": "2024-12-24 16:52:18",
+   "desc": "Carousel Ride in front of Rathaus, Vienna Christmas Market.",
+   "source_size": "3060x4080",
+   "downloaded": "2026-11-10",
+   "dims": [
+    1920,
+    2560
+   ]
+  },
+  "t6": {
+   "file": "t6.jpg",
+   "title": "File:Rathauspark Dezember 2023 4.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Rathauspark_Dezember_2023_4.jpg",
+   "artist": "Geolina163",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2023-12-05 18:54:55",
+   "desc": "Christkindlmarkt auf dem Rathausplatz und dem Rathauspark, Dezember 2023",
+   "source_size": "2241x3642",
+   "downloaded": "2026-11-10",
+   "dims": [
+    2241,
+    3642
+   ]
+  },
+  "t7": {
+   "file": "t7.jpg",
+   "title": "File:Munich City Hall at night with Christmas Tree and Christmas market booths.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Munich_City_Hall_at_night_with_Christmas_Tree_and_Christmas_market_booths.jpg",
+   "artist": "User: (WT-shared) AlexE at wts wikivoyage",
+   "credit": "Own work",
+   "license": "Public domain",
+   "license_url": "",
+   "usage_terms": "Public domain",
+   "attribution_required": "false",
+   "date": "27 November 2011 (original upload date)",
+   "desc": "Picture of Munich City Hall at night with Christmas Tree and Christmas market booths taken on November 26, 2011.",
+   "source_size": "1936x2592",
+   "downloaded": "2026-11-10",
+   "dims": [
+    1936,
+    2592
+   ]
+  },
+  "t8": {
+   "file": "t8.jpg",
+   "title": "File:Adventzauber Hellbrunn 25.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Adventzauber_Hellbrunn_25.jpg",
+   "artist": "Werner100359",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2018-12-17 17:57:54",
+   "desc": "Christmas market in front of Hellbrunn palace",
+   "source_size": "3984x2656",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2560
+   ]
+  },
+  "app": {
+   "file": "app.jpg",
+   "title": "File:Christkindlmarkt fare.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Christkindlmarkt_fare.jpg",
+   "artist": "No machine-readable author provided. Ragesoss assumed (based on copyright claims).",
+   "credit": "No machine-readable source provided. Own work assumed (based on copyright claims).",
+   "license": "Public domain",
+   "license_url": "",
+   "usage_terms": "Public domain",
+   "attribution_required": "false",
+   "date": "23 December 2006 (according to Exif data",
+   "desc": "Assorted fare at Salzburg's Christkindlmarkt",
+   "source_size": "2592x1944",
+   "downloaded": "2026-11-10",
+   "dims": [
+    2592,
+    1944
+   ]
+  }
+ },
+ "map": null,
+ "screens": {
+  "dolomitesTop": {
+   "src": "reels-v3/screens/t-dolo-01-top.png",
+   "sx": 0,
+   "sy": 150,
+   "sw": 1206,
+   "sh": 560
+  },
+  "nearDoloKid": {
+   "src": "reels-v3/screens/hn-dolo-02-nearby.png",
+   "sx": 0,
+   "sy": 300,
+   "sw": 1206,
+   "sh": 620
+  }
+ },
+ "post_at": "2026-11-10T18:30:00-08:00"
+}

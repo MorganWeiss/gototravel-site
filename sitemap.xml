@@ -40,8 +40,12 @@
   <!-- trips -->
   <url><loc>https://gototravelapp.com/trips</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://gototravelapp.com/trips/big-sur-road-trip-from-la</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://gototravelapp.com/trips/christmas-markets-by-train-with-kids</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/california-christmas-markets</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/christmas-markets-train</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/first-christmas-market-tips</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/mammoth-thanksgiving</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://gototravelapp.com/trips/nyc-new-years-with-kids</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://gototravelapp.com/trips/thanksgiving-mammoth-lakes-with-kids</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/socal-holiday-nights</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://gototravelapp.com/trips/solvang-julefest</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <!-- /trips -->
 </urlset>

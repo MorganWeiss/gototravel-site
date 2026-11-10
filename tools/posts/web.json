@@ -1,0 +1,129 @@
+{
+ "_about": "Web-only notes for tools/build_posts.py: who each page is for, the intro, the hub card line, and the extra detail per slide (slide numbers as in the post's alt.txt). Every detail line names the source ids it comes from (the post's own SOURCES); nothing here may say more than those sources or contradict the post.",
+ "first-christmas-market-tips": {
+  "folder": "kids-first-christmas-market-tips",
+  "module": "tips_first_market",
+  "kind": "article",
+  "who": "For families with kids",
+  "where": "Vienna · Munich · Salzburg",
+  "intro": "Eight small things that make a first Christmas market easy with kids, from the markets in Vienna, Munich and Salzburg. Every tip was checked on Nov 10, 2026, and each one links to its source.",
+  "card": "Go at 4, order the kids' punch, borrow toddler blades: 8 checked tips for Vienna, Munich and Salzburg.",
+  "meta": "8 checked tips for your kids' first Christmas market in Europe: when to go, kids' punch, mug deposits, toddler skates and Munich's free workshop.",
+  "hero": {"desk": [0.5, 0.55], "mob": [0.5, 0.5], "text": "bottom"},
+  "toc": true,
+  "places_heading": "The three markets in these tips",
+  "slides": {
+   "2": {"details": [["On Dec 5, 2026 the sun sets at 4:01 PM in Vienna, 4:16 PM in Salzburg and 4:21 PM in Munich. Get there around 4 and the lights come on while you walk, well before bedtime.", ["usno"]]]},
+   "3": {"details": [["Ask for Kinderpunsch, the kids' punch. At the Wiener Christkindlmarkt on Rathausplatz, stall No. 48, Wichtelglück & Zauberpunsch, serves organic hot and cold drinks, and all of them are alcohol-free.", ["wien_market"]]], "places": [0]},
+   "4": {"details": [["Vienna's Christmas markets charge a deposit on punch mugs (the Häferlpfand), and you get it back when you return the mug. Keeping one isn't allowed unless the stall says yes, so ask if you'd like it as a souvenir.", ["orf_pfand", "correctiv"]]]},
+   "5": {"details": [["The Wiener Christkindlmarkt on Rathausplatz lists ATMs (Geldautomaten) on site, along with accessible toilets.", ["wien_visit"]]], "places": [0]},
+   "6": {"details": [["At the Wiener Christkindlmarkt, free quiz sheets and pens wait at the stand opposite the Tree of Hearts. The kids' area also has a 12 m carousel and a reindeer train.", ["wien_kids"]]], "places": [0]},
+   "7": {"places": [0]},
+   "8": {"details": [["The Himmelswerkstatt in Munich's Neues Rathaus is free for ages 6 to 12, from Nov 26 to Dec 13, 2026. Sign up with the Kindermuseum München: sign-ups open 10 days ahead.", ["muc_ckm"]]], "places": [1]},
+   "9": {"details": [["Hellbrunner Adventzauber runs Nov 19 to Dec 24, 2026, and is closed Mondays except Dec 21. Its kids' Christmas world, with a Christmas train and a petting zoo, is open weekends and holidays, 11 AM to 6 PM.", ["hellbrunn_kids", "hellbrunn_hours"]]], "places": [2]}
+  }
+ },
+ "mammoth-thanksgiving": {
+  "folder": "thanksgiving-mammoth-v2",
+  "module": "mammoth_v2",
+  "kind": "trip",
+  "who": "For families with kids",
+  "where": "From LA · 4 nights",
+  "intro": "Five days in the Eastern Sierra over Thanksgiving week, built on what's open in late November: tubing, a summit gondola, a free tree lighting and one road there, US-395. Every stop was checked on Nov 10, 2026.",
+  "card": "Tubing, a summit gondola and a free tree lighting over Thanksgiving week, 5 hours from LA.",
+  "meta": "Thanksgiving in Mammoth Lakes with kids, Nov 25 to 29, 2026: the drive up US-395, tubing, the summit gondola and a free tree lighting. Checked Nov 10.",
+  "hero": {"desk": [0.4, 0.5], "mob": [0.35, 0.5], "text": "bottom"},
+  "glance": true,
+  "copy": {"label": "Copy this trip", "noun": "trip"},
+  "pins": ["", "s-2", "s-2", "s-3"],
+  "slides": {
+   "2": {"details": [["The Alabama Hills National Scenic Area is west of Lone Pine, by Whitney Portal Road and Movie Road.", ["blm_alabama"]], ["In Bishop, Erick Schat's Bakkery bakes its Original Sheepherder Bread (since 1938) and has a sandwich bar.", ["schats"]]], "places": [0, 1]},
+   "3": {"details": [["Woolly's Tube Park is scheduled daily Nov 20 to 29, 2026, weather and conditions permitting, and a free Red Line shuttle runs every 20 minutes.", ["mm_tube"]], ["Mountainside Bar & Grill's Thanksgiving dinner on Nov 26 has carving stations.", ["mm_thanksgiving"]]], "places": [2, 3]},
+   "4": {"details": [["Scenic gondola rides go up to the 11,053-foot summit daily from Nov 13, 2026, weather permitting.", ["mm_gondola"]], ["The Holiday Tree Lighting in The Village runs 6 to 8:30 PM on Fri Nov 27.", ["mm_tree"]]], "places": [4, 5]},
+   "5": {"details": [["Bird and the Biscuit is closed Wednesdays and open 8 AM to 8 PM on Saturdays. Mammoth Rock 'N' Bowl opens at 4 PM.", ["vm_bird", "vm_bowl"]], ["Ski school takes kids 3 and up who are potty-trained, and kids 4 and under ski free with a ticket. But on Nov 9, 3 of 181 trails were open and there was no beginner terrain, so check the Mountain Report before you count on lessons.", ["mm_faq", "mm_report"]]], "places": [6]},
+   "6": {"details": [["Manzanar's visitor center is open Friday to Monday, 9 AM to 4:30 PM, and closed Tuesday to Thursday. The grounds are open sunrise to sunset, and Block 14 is open daily, 9 AM to 4:15 PM.", ["nps_manz"]]], "places": [7]},
+   "7": {"details": [["Mammoth is about 5 hours north of Los Angeles. In winter the Lakes Basin road and Highway 203 past Main Lodge close, and you should carry chains.", ["mm_discover", "vm_roads"]]]},
+   "8": {"details": [["Check-in is at 4 PM.", ["mm_mmi"]], ["The Village Lodge has studios to 3-bedroom condos with full kitchens, a heated pool and a game room.", ["mm_villagelodge"]]], "places": [8]}
+  },
+  "map_pad": {"top": 44, "right": 60, "bottom": 88, "left": 44}
+ },
+ "socal-holiday-nights": {
+  "folder": "socal-holiday-nights-2026",
+  "module": "socal_nights",
+  "kind": "article",
+  "who": "For families with kids",
+  "where": "LA · Orange County · San Diego",
+  "intro": "Eight holiday nights out from LA to San Diego, in date order, with every date taken from the event's own site on Nov 10, 2026.",
+  "card": "Eight holiday nights from LA to San Diego, in date order. Four are free to watch.",
+  "meta": "8 SoCal holiday nights with kids in 2026, in date order: The Grove, Zoo Lights, Enchanted, December Nights, three boat parades and Jungle Bells.",
+  "hero": {"desk": [0.45, 0.55], "mob": [0.42, 0.5], "text": "bottom"},
+  "copy": {"label": "Copy this list", "noun": "list"},
+  "slides": {
+   "2": {"details": [["Marina del Rey hadn't posted its parade start time when we checked. The 64th parade's theme is 'Hollywood Under The Stars', and it begins with a light show.", ["mdr"]]], "places": [4]},
+   "3": {"details": [["It's complimentary and open to the public, and space is limited. The start time wasn't posted yet when we checked.", ["grove"]]], "places": [0]},
+   "4": {"places": [3]},
+   "5": {"details": [["This is the 56th parade, and its full 2026 theme is Liberty Lights the Bay - Cheers to 250 Years.", ["sdbay"]]], "places": [5]},
+   "6": {"details": [["The boats set off from the tip of Lido Isle each night, Wed Dec 16 to Sun Dec 20, 2026.", ["newport"]], ["Marina Park, at 1600 W Balboa Blvd, is the largest public viewing area, with a nautical-themed playground.", ["newport"]]], "places": [6]},
+   "7": {"items": [["Select evenings Nov 20 to Jan 10; closed Nov 26, 30, Dec 1, 7, 14, 15, 16, 24, 25, 31 and Jan 4 to 7. Ticketed, with free parking; the box office is open 5:45 to 8:45 PM. The ice rink is a separate ticket, and Santa visits on select days for an extra fee.", ["lazoo"]], ["Nov 22 to Jan 9, its tenth season, with timed or Anytime tickets, the Giant Koi, and a Holiday Market Dec 2 to 6.", ["descanso"]], ["Dec 19, 2026 to Jan 3, 2027, except Dec 24 (Dec 18 is a member preview). Lights until 8 PM, included with all admission tickets and memberships.", ["jungle"]]], "places": [1, 2, 7]}
+  },
+  "caption_note": true
+ },
+ "california-christmas-markets": {
+  "folder": "california-christmas-markets-2026",
+  "module": "ca_markets",
+  "kind": "article",
+  "who": "For families with kids",
+  "where": "Huntington Beach to Daly City",
+  "intro": "Four California Christmas markets for 2026, from Huntington Beach to Daly City, with dates, hours and kid notes checked on Nov 10, 2026. Two of them sell tickets online only, the Cambria Christmas Market and the Great Dickens Christmas Fair, and sold-out dates don't sell at the door.",
+  "card": "Solvang, Cambria, the Dickens Fair and Old World: dates, hours and kid notes for 2026.",
+  "meta": "California Christmas markets 2026 with kids: Solvang, Cambria, the Dickens Fair and Old World. Dates, hours and kid notes, checked Nov 10, 2026.",
+  "hero": {"desk": [0.5, 0.62], "mob": [0.45, 0.5], "text": "top"},
+  "copy": {"label": "Copy this list", "noun": "list"},
+  "slides": {
+   "3": {"details": [["Julefest runs Nov 27, 2026 to Jan 3, 2027, and the Nisser Adventure clue sheets are at the Solvang Visitor Center.", ["solv_julefest"]]], "places": [2], "more": ["/trips/solvang-julefest", "Our Solvang Julefest weekend plan"]},
+   "4": {"details": [["At Cambria Pines Lodge, 2905 Burton Dr, on select dates Nov 27 to Dec 31, 2026, 5 to 9 PM: 3 million twinkling lights, a German-inspired artisan market, visits from Santa, a train ride, fire pits and live music. It's cashless.", ["cambria_home"]], ["Tickets come only from the market's own website, and the market itself suggests a weeknight to skip the crowds.", ["cambria_faq"]]], "places": [3]},
+   "5": {"details": [["Daily attendance is limited, and the Cow Palace doesn't sell tickets on site.", ["dickens_faq"]], ["For kids, the Children's Tour of London starts with a miniature steam train at the Fair's 'Victoria Station', then a chimney-sweep training school where kids may receive a bronze collectible coin. (When we checked, the tour page linked to its 2025 guide.)", ["dickens_kids"]]], "places": [1]},
+   "6": {"details": [["Old World Village is at 7561 Center Ave, Huntington Beach, home of the Old World Restaurant & Biergarten. Its Christmas Markt 2026 runs Nov 15, 2026 to Jan 3, 2027; the hours were 'to be announced' when we checked.", ["oldworld_home", "oldworld_markt"]]], "places": [0]}
+  }
+ },
+ "christmas-markets-train": {
+  "folder": "christmas-markets-by-train-v2",
+  "module": "markets_v2",
+  "kind": "trip",
+  "who": "For families with kids",
+  "where": "Vienna · Salzburg · Munich",
+  "intro": "Seven days, three cities, two direct trains: Vienna for 2 nights, about 2 h 25 by Railjet to Salzburg for 2 nights, then about 2 h by train to Munich for 2 nights. Fly into Vienna and home from Munich, and start on a Thursday so Salzburg lands on the weekend. Every date was checked on Nov 10, 2026.",
+  "card": "Vienna, Salzburg and Munich in 7 days, with two direct trains and a Christmas market in every city.",
+  "meta": "Christmas markets by train with kids: 7 days in Vienna, Salzburg and Munich, with market dates, kids' rinks, a petting zoo and the trains. Checked Nov 10.",
+  "hero": {"desk": [0.5, 0.5], "mob": [0.5, 0.5], "text": "bottom"},
+  "copy": {"label": "Copy this trip", "noun": "trip"},
+  "pins": ["s-2", "s-3", "s-4"],
+  "slides": {
+   "2": {"details": [["The Rathausplatz market is open Nov 13 to Dec 26, 2026, daily 10 AM to 10 PM (Dec 24 until 6:30 PM). In Rathauspark next door, the kids' Christmas world has a 12 m double-decker carousel, a reindeer train, a Ferris wheel and a kids' rink with free double-blade skates (sizes 21 to 25) and helmets with a ticket.", ["wien_ckm", "wien_kinder"]], ["Schönbrunn Palace's market runs Nov 6, 2026 to Jan 6, 2027: 10 AM to 9 PM until Dec 23, 10 AM to 4 PM on Dec 24, and 10 AM to 7 PM from Dec 25. Kids skate free on its Glice rink, and there's a carousel, a Ferris wheel, a kids' railway and a craft workshop.", ["wieninfo_schoen"]]], "places": [1, 0]},
+   "3": {"details": [["The Domplatz market runs Nov 19, 2026 to Jan 1, 2027: Monday to Thursday 10 AM to 8:30 PM, Friday 10 AM to 9 PM, Saturday 9 AM to 9 PM, and Sundays and holidays 9 AM to 8:30 PM.", ["salz_ckm"]], ["Hellbrunner Adventzauber runs Nov 19 to Dec 24, 2026: Tuesday to Friday 1 to 8 PM, weekends and holidays 10 AM to 8 PM, closed Mondays except Dec 21. Its kids' Christmas world, with a train and a petting zoo, is open weekends, 11 AM to 6 PM.", ["hellbrunn_hours", "hellbrunn_kids"]]], "places": [2, 3]},
+   "4": {"details": [["The Marienplatz market runs Nov 20 to Dec 24, 2026, closed Nov 22: Monday to Saturday 10 AM to 9 PM, Sunday 10 AM to 8 PM, and Dec 24 10 AM to 2 PM. The free Himmelswerkstatt for ages 6 to 12 runs Nov 26 to Dec 13; sign-ups open 10 days ahead.", ["muc_ckm"]], ["The Weihnachtsdorf in the Residenz's Kaiserhof is open Nov 16 to Dec 22, daily 11 AM to 9 PM, with a free fairy-tale forest. St. Nicholas visits Dec 6 and 7 from 5 PM.", ["muc_residenz"]]], "places": [4, 5]},
+   "5": {"details": [["Vienna to Salzburg: two Railjets an hour, and the Railjet Xpress takes 2 h 25 min. Munich to Salzburg takes from 1 h 40 min.", ["salzinfo_oebb"]], ["Until Dec 12, 2026, works in Germany make the direct Railjet Xpress Vienna to Salzburg to Munich (every two hours, as in the regular timetable) about 15 minutes slower, and two extra ICE pairs run.", ["oebb_works"]]]}
+  },
+  "map_pad": {"top": 44, "right": 60, "bottom": 88, "left": 44}
+ },
+ "solvang-julefest": {
+  "folder": "solvang-julefest-weekend",
+  "module": "solvang",
+  "kind": "trip",
+  "who": "For families with kids",
+  "where": "Solvang · 2.5 hours from LA",
+  "intro": "Solvang's Julefest runs Nov 27, 2026 to Jan 3, 2027: light shows every night, a nisse hunt for the kids, and æbleskiver. Every date here was checked on Nov 10, 2026 on Solvang's official visitor site.",
+  "card": "Light shows every night, a nisse hunt and æbleskiver: Solvang's Julefest, 2.5 hours from LA.",
+  "meta": "A Solvang Julefest weekend with kids, Nov 27 to Jan 3: nightly light shows, a nisse hunt, æbleskiver and where we'd stay. Checked Nov 10, 2026.",
+  "hero": {"desk": [0.2, 0.55], "mob": [0.12, 0.5], "text": "top"},
+  "getting_there": true,
+  "copy": {"label": "Copy this weekend", "noun": "weekend"},
+  "slides": {
+   "2": {"details": [["The shows run in Solvang Park, 1630 Mission Dr, every night of Julefest, Nov 27 to Jan 3. The tree lighting is Fri Dec 4 at 5:30 PM.", ["solv_julefest"]]], "places": [0]},
+   "3": {"details": [["The Julefest parade is Sat Dec 5, 11 AM to 1:30 PM.", ["solv_julefest"]]], "places": [1]},
+   "4": {"details": [["Solvang's official visitor site says Solvang Restaurant and Æbleskivehuset both serve them fresh. Solvang Restaurant is at 1672 Copenhagen Dr. Neither posts its hours where we could check, so look before you go.", ["solv_faq", "solv_rest"]]], "places": [2, 3]},
+   "5": {"details": [["Santa's Village opens Sat Nov 28 and runs weekends through Dec 20, noon to 4 PM. Elf The Musical plays Dec 11 and 12 at 6 PM at the Solvang Festival Theater.", ["solv_julefest"]]], "places": [4, 5]},
+   "6": {"details": [["Alisal Ranch is 2.8 miles by road from Solvang Park, and it lists December 2026 events. It doesn't publish riding ages, so ask before you plan a ride with little ones.", ["osrm_alisal", "alisal", "alisal_ride"]]], "places": [6]}
+  }
+ }
+}

@@ -1,0 +1,1042 @@
+{
+ "slug": "mammoth-thanksgiving",
+ "folder": "thanksgiving-mammoth-v2",
+ "module": "mammoth_v2",
+ "post": {
+  "slug": "thanksgiving-mammoth-v2",
+  "series": "Trips you can copy",
+  "title": "Thanksgiving in Mammoth Lakes with kids",
+  "hook": "Thanksgiving in the mountains, 5 hours from LA",
+  "dates": "Wed Nov 25 to Sun Nov 29, 2026",
+  "checked_on": "2026-11-10",
+  "mapcard": {
+   "cities": [
+    [
+     "m_la",
+     "Los Angeles",
+     "left",
+     "start"
+    ],
+    [
+     "m_mobius",
+     "Alabama Hills",
+     "left",
+     "stretch stop"
+    ],
+    [
+     "m_schats",
+     "Bishop",
+     "right",
+     "bakery lunch"
+    ],
+    [
+     "m_mbc",
+     "Mammoth Lakes",
+     "left",
+     "4 nights"
+    ]
+   ],
+   "route": "m_up",
+   "legs": [],
+   "pills": [
+    [
+     35.2,
+     -117.55,
+     "213 mi"
+    ],
+    [
+     36.95,
+     -117.8,
+     "62 mi"
+    ],
+    [
+     37.7,
+     -118.45,
+     "43 mi"
+    ]
+   ],
+   "areas": [
+    [
+     35.75,
+     -119.25,
+     "California"
+    ]
+   ],
+   "pad": {
+    "top": 120,
+    "right": 230,
+    "bottom": 110,
+    "left": 270
+   }
+  },
+  "slides": [
+   {
+    "type": "cover",
+    "photo": "cover",
+    "big": "Thanksgiving in the mountains, 5 hours from LA",
+    "sub": "Mammoth Lakes with kids · Nov 25 to 29",
+    "pip": "Built on what's open Thanksgiving week, not ski lessons.",
+    "source_ids": [
+     "mm_discover",
+     "mm_report"
+    ],
+    "pos45": "40% 50%",
+    "pos916": "35% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "day1",
+    "label": "Wed Nov 25 · the drive up 395",
+    "big": "Alabama Hills",
+    "dates": "Granite arches below the Sierra, west of Lone Pine",
+    "pips": [
+     "There's a porta potty at the Mobius Arch trailhead.",
+     "Lunch in Bishop: Schat's, home of Sheepherder Bread since 1938."
+    ],
+    "source_ids": [
+     "blm_alabama",
+     "schats"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "text_top": true
+   },
+   {
+    "type": "city",
+    "photo": "day2",
+    "label": "Thu Nov 26 · Thanksgiving",
+    "big": "Tubes, then turkey",
+    "dates": "Woolly's Tube Park · daily Nov 20 to 29, weather permitting",
+    "pips": [
+     "Tube riders must be 42 inches or taller.",
+     "Dinner seatings at Mountainside: 2:30, 5 or 7:30."
+    ],
+    "source_ids": [
+     "mm_tube",
+     "mm_thanksgiving"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "day3",
+    "label": "Fri Nov 27 · summit and lights",
+    "big": "Up to 11,053 feet",
+    "dates": "Panorama Gondola · daily from Nov 13, weather permitting",
+    "pips": [
+     "Two kids 12 and under ride free with each paying adult.",
+     "Village tree lighting: Santa and Woolly light it at 8. Free."
+    ],
+    "source_ids": [
+     "mm_gondola",
+     "mm_tree"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "55% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "day4",
+    "label": "Sat Nov 28 · a slow day",
+    "big": "Biscuits, a pool, bowling",
+    "dates": "Bird and the Biscuit · the inn's pool · Rock 'n' Bowl",
+    "pips": [
+     "Ski lessons only if beginner terrain opens: check the report.",
+     "The inn's heated pool and hot tubs run 8 AM to 10 PM."
+    ],
+    "source_ids": [
+     "mm_faq",
+     "mm_report",
+     "vm_bird",
+     "mm_mmi",
+     "vm_bowl"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "day5",
+    "label": "Sun Nov 29 · the drive home",
+    "big": "Manzanar",
+    "dates": "National Historic Site · on US-395 near Independence",
+    "pips": [
+     "Its visitor center opens Fri to Mon: that's why it's Sunday.",
+     "Block 14's rebuilt barracks are open daily, 9 to 4:15."
+    ],
+    "source_ids": [
+     "nps_manz"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "mapcard",
+    "photo": "mapbg",
+    "label": "The route",
+    "big": "One road: US-395",
+    "pip": "About 5 hours without stops. Carry chains in winter.",
+    "source_ids": [
+     "osrm_up",
+     "mm_discover",
+     "vm_roads"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "stay",
+    "photo": "staybg",
+    "label": "Where we'd stay",
+    "big": "Mammoth Mountain Inn",
+    "kicker": "Our editorial pick",
+    "lines": [
+     "Across from Main Lodge, steps from ski school and the gondola.",
+     "Heated pool and hot tubs, 8 AM to 10 PM, and a game room.",
+     "Thanksgiving dinner is upstairs at Mountainside."
+    ],
+    "addr": "10400 Minaret Rd, Mammoth Lakes",
+    "note": "Editorial picks. Nobody paid to be here.",
+    "pip": "Rather cook the turkey? The Village Lodge has condos with kitchens.",
+    "source_ids": [
+     "mm_mmi",
+     "mm_thanksgiving",
+     "mm_villagelodge"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "aiwrong",
+    "photo": "aiwrong",
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "items": [
+     [
+      "On Nov 9, 3 of 181 trails were open, with no beginner terrain.",
+      "mm_report"
+     ],
+     [
+      "The Village Gondola usually runs mid-December to mid-April.",
+      "mm_lodging"
+     ],
+     [
+      "Tioga Pass to Yosemite closes with the first big snow, usually in November.",
+      "nps_yose_winter"
+     ]
+    ]
+   },
+   {
+    "type": "app",
+    "photo": "app",
+    "big": "Pip plans it around your family.",
+    "button": "Copy this trip: link in bio",
+    "screens": [
+     "yosTop",
+     "cCooks"
+    ],
+    "screens_alt": "the trip header (kids 7 and 10) and a stop card where Pip says why: 'One flat mile with big views. Little legs approved.'",
+    "screens_note": "an example family trip: Yosemite, kids 7 and 10"
+   }
+  ],
+  "photo_alt": {
+   "cover": "Early-season snow on the grassy banks of a still lake in Mammoth at dusk, pine trees and a pink sky reflected in the water",
+   "day1": "The snowy Sierra Nevada framed under a small granite arch in the Alabama Hills near Lone Pine",
+   "day2": "A chairlift tower above groomed snow and snow-covered pines at Mammoth Mountain on a blue-sky day",
+   "day3": "The summit sign at the top of Mammoth Mountain, with the jagged Minarets behind",
+   "day4": "Tall pines and fresh snow on a sunny winter day in Mammoth Lakes",
+   "day5": "The white cemetery monument at Manzanar National Historic Site, with the Sierra Nevada behind",
+   "mapbg": "The Ritter Range above Mammoth's ski area",
+   "staybg": "A snowy lodge in Mammoth Lakes",
+   "aiwrong": "The Minarets in winter, seen from Mammoth Mountain above the clouds",
+   "app": "Twin Lakes in Mammoth Lakes"
+  },
+  "places": [
+   [
+    "📍 Alabama Hills — Lone Pine, CA, USA",
+    "Granite arches; porta potty at the Mobius Arch trailhead"
+   ],
+   [
+    "📍 Erick Schat's Bakkery — Bishop, CA, USA",
+    "Home of the Original Sheepherder Bread (1938)"
+   ],
+   [
+    "📍 Woolly's Tube Park — Mammoth Lakes, CA, USA",
+    "Daily Nov 20 to 29, weather permitting; riders 42 in. and up"
+   ],
+   [
+    "📍 Mountainside Bar & Grill — Mammoth Lakes, CA, USA",
+    "Thanksgiving carving stations; seatings 2:30, 5:00 and 7:30 PM"
+   ],
+   [
+    "📍 Panorama Gondola — Mammoth Lakes, CA, USA",
+    "Up to the 11,053-ft summit"
+   ],
+   [
+    "📍 The Village at Mammoth — Mammoth Lakes, CA, USA",
+    "Free tree lighting Fri Nov 27: Santa and Woolly light it at 8 PM"
+   ],
+   [
+    "📍 Bird and the Biscuit — Mammoth Lakes, CA, USA",
+    "Closed Wednesdays, so it's a Saturday lunch"
+   ],
+   [
+    "📍 Manzanar National Historic Site — Independence, CA, USA",
+    "Visitor center Fri to Mon; Block 14 daily 9 to 4:15"
+   ],
+   [
+    "📍 Mammoth Mountain Inn — Mammoth Lakes, CA, USA",
+    "Where we'd stay (editorial pick)"
+   ]
+  ],
+  "caption_lines": [
+   "Wed: 395, Alabama Hills, Bishop. Thu: tubing, Thanksgiving dinner. Fri: summit gondola, tree lighting. Sat: biscuits, pool, bowling. Sun: home via Manzanar."
+  ],
+  "wrong_caption": [
+   "Ski lessons aren't a given: on Nov 9, 3 of 181 trails were open and there was no beginner terrain.",
+   "The Village Gondola usually runs mid-December to mid-April.",
+   "Tioga Pass to Yosemite closes with the first big snow, usually in November."
+  ],
+  "question": "Turkey at a restaurant or cooked in the condo: which is your family?",
+  "cta_end": "Get this plan fitted to your family: link in bio.",
+  "hashtags": [
+   "#MammothLakes",
+   "#ThanksgivingTrip",
+   "#FamilyTravel",
+   "#EasternSierra",
+   "#SoCalWithKids"
+  ],
+  "tiktok_title": "Thanksgiving in the mountains, 5 hours from LA",
+  "tiktok_desc": "Trips you can copy: Thanksgiving in Mammoth Lakes with kids, Nov 25 to 29, built on what's actually open. Every stop checked Nov 10, 2026.",
+  "notes": {
+   "window": "Nov 11 to 17, 2026 (the earlier the better: Thanksgiving seatings fill)",
+   "suggest": [
+    [
+     "Instagram carousel (10 slides)",
+     "Wed Nov 11, 2026, 9:00 AM PT",
+     "2026-11-11T09:00:00-08:00"
+    ],
+    [
+     "TikTok photo mode (10 slides)",
+     "Wed Nov 11, 2026, 6:00 PM PT",
+     null
+    ]
+   ],
+   "campaign": "2026-11-11-mammoth-thanksgiving",
+   "recheck": [
+    "Mountain Report: if beginner terrain has opened, change AI-wrong item 1 and the Saturday line.",
+    "Woolly's Tube Park still scheduled Nov 20 to 29.",
+    "NPS Yosemite conditions: if Tioga Road has closed, say 'closed for the season'.",
+    "Thanksgiving dinner seatings still listed."
+   ]
+  }
+ },
+ "sources": [
+  [
+   "mm_discover",
+   "https://www.mammothmountain.com/discover",
+   "Mammoth Mountain: Discover ('approximately 5 hours north of Los Angeles')",
+   "2026-11-10"
+  ],
+  [
+   "mm_report",
+   "https://www.mammothmountain.com/on-the-mountain/mountain-report",
+   "Mammoth Mountain: Mountain Report (Mon Nov 9, 2026: 3 of 181 trails, no beginner terrain; Village Gondola, Woolly's and Tamarack closed that day)",
+   "2026-11-10"
+  ],
+  [
+   "mm_tube",
+   "https://www.mammothmountain.com/things-to-do/activities/tube-park",
+   "Mammoth Mountain: Woolly's Tube Park (scheduled daily Nov 20-29, 2026, weather and conditions permitting; riders 42 inches and up; free Red Line shuttle every 20 min)",
+   "2026-11-10"
+  ],
+  [
+   "mm_gondola",
+   "https://www.mammothmountain.com/tickets/scenic-gondola-rides",
+   "Mammoth Mountain: Scenic Gondola Rides (summit 11,053 ft; daily from Nov 13, 2026, weather permitting; up to two kids 12 and under free per paying adult)",
+   "2026-11-10"
+  ],
+  [
+   "mm_thanksgiving",
+   "https://www.mammothmountain.com/things-to-do/events/thanksgiving-dinners",
+   "Mammoth Mountain: Thanksgiving Dinners, Nov 26, 2026 (Mountainside Bar & Grill seatings 2:30, 5:00 and 7:30 PM; carving stations)",
+   "2026-11-10"
+  ],
+  [
+   "mm_tree",
+   "https://www.mammothmountain.com/things-to-do/events/holiday-tree-lighting",
+   "Mammoth Mountain: Holiday Tree Lighting in The Village, Fri Nov 27, 2026, 6-8:30 PM, free; Santa and Woolly light the tree at 8 PM",
+   "2026-11-10"
+  ],
+  [
+   "mm_faq",
+   "https://www.mammothmountain.com/about/mammoth-faq",
+   "Mammoth Mountain FAQ: ski school for kids 3+ and potty-trained; kids 4 and under ski free with a ticket",
+   "2026-11-10"
+  ],
+  [
+   "mm_lodging",
+   "https://www.mammothmountain.com/lodging",
+   "Mammoth Mountain: Lodging (the Village Gondola 'typically operates from mid-December through mid-April')",
+   "2026-11-10"
+  ],
+  [
+   "mm_mmi",
+   "https://www.mammothmountain.com/plan-your-trip/mammoth-hotels/mammoth-mountain-inn",
+   "Mammoth Mountain Inn, 10400 Minaret Rd: across from Main Lodge; heated pool and hot tubs 8 AM-10 PM; game room; check-in 4 PM",
+   "2026-11-10"
+  ],
+  [
+   "mm_villagelodge",
+   "https://www.mammothmountain.com/plan-your-trip/mammoth-hotels/the-village-lodge",
+   "The Village Lodge: studios to 3-bedroom condos with full kitchens, heated pool, game room",
+   "2026-11-10"
+  ],
+  [
+   "vm_roads",
+   "https://www.visitmammoth.com/travel-info/information-road-conditions/",
+   "Visit Mammoth: road conditions (Lakes Basin road and Hwy 203 past Main Lodge closed for winter; carry chains)",
+   "2026-11-10"
+  ],
+  [
+   "nps_yose_winter",
+   "https://www.nps.gov/yose/planyourvisit/wroads.htm",
+   "NPS Yosemite: Tioga Road closes due to snow, usually from sometime in November through late May or early June",
+   "2026-11-10"
+  ],
+  [
+   "nps_manz",
+   "https://www.nps.gov/manz/planyourvisit/hours.htm",
+   "NPS Manzanar: visitor center Fri-Mon 9-4:30, closed Tue-Thu; grounds sunrise to sunset; Block 14 daily 9-4:15",
+   "2026-11-10"
+  ],
+  [
+   "blm_alabama",
+   "https://www.blm.gov/visit/alabama-hills-national-scenic-area",
+   "BLM: Alabama Hills National Scenic Area (west of Lone Pine via Whitney Portal Rd and Movie Rd; porta potty at the Mobius Arch trailhead)",
+   "2026-11-10"
+  ],
+  [
+   "schats",
+   "https://www.schatsbakery.com/",
+   "Erick Schat's Bakkery, Bishop (Original Sheepherder Bread, 1938; sandwich bar)",
+   "2026-11-10"
+  ],
+  [
+   "vm_bird",
+   "https://www.visitmammoth.com/directory/bird-and-the-biscuit/",
+   "Visit Mammoth: Bird and the Biscuit (closed Wednesdays; Sat 8 AM-8 PM)",
+   "2026-11-10"
+  ],
+  [
+   "vm_bowl",
+   "https://www.visitmammoth.com/directory/mammoth-rock-n-bowl/",
+   "Visit Mammoth: Mammoth Rock 'N' Bowl (opens 4 PM)",
+   "2026-11-10"
+  ],
+  [
+   "osrm_up",
+   "https://router.project-osrm.org/route/v1/driving/-118.242921,34.053696;-118.125754,36.613553;-118.395709,37.367852;-118.983445,37.648438",
+   "OSRM route on OpenStreetMap data: LA to Alabama Hills 213 mi, to Bishop 62 mi, to Mammoth Lakes 43 mi (computed Nov 10, 2026)",
+   "2026-11-10"
+  ]
+ ],
+ "photos": {
+  "cover": {
+   "file": "cover.jpg",
+   "title": "File:Early snow in Mammoth (Explored) - Flickr - Just,n W,se.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Early_snow_in_Mammoth_(Explored)_-_Flickr_-_Just,n_W,se.jpg",
+   "artist": "Justin Wise from Los Angeles, USA",
+   "credit": "Early snow in Mammoth (Explored)",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "Taken on 16 November 2012, 17:29",
+   "desc": "Nikon D3s | 14-24mm f/2.8",
+   "source_size": "4256x2832",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2555
+   ]
+  },
+  "day1": {
+   "file": "day1.jpg",
+   "title": "File:Southern Sierras show under this small arch in the Alabama Hills, near Lone Pine, California.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Southern_Sierras_show_under_this_small_arch_in_the_Alabama_Hills,_near_Lone_Pine,_California.jpg",
+   "artist": "John Fowler from Placitas, NM, USA",
+   "credit": "Lathe Arch",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2013-02-24 10:03",
+   "desc": "The southern Sierras show under Lathe Arch in the Alabama Hills, near Lone Pine, California. Mount Whitney, the highest point in the contiguous United States, is directly below the thinnest part of the arch, while Lone Pine Peak is the tall",
+   "source_size": "5500x2580",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    1801
+   ]
+  },
+  "day2": {
+   "file": "day2.jpg",
+   "title": "File:Mammoth Mountain Eagle Express.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Mammoth_Mountain_Eagle_Express.JPG",
+   "artist": "Karissa Kunihira",
+   "credit": "Own work",
+   "license": "CC BY 3.0",
+   "license_url": "https://creativecommons.org/licenses/by/3.0",
+   "usage_terms": "Creative Commons Attribution 3.0",
+   "attribution_required": "true",
+   "date": "2012-03-23",
+   "desc": "Ein Blick aus dem Eagle Express Skilift am Mammoth Mountain.",
+   "source_size": "4320x3240",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2880
+   ]
+  },
+  "day3": {
+   "file": "day3.jpg",
+   "title": "File:Top of Mammoth ski area.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Top_of_Mammoth_ski_area.jpg",
+   "artist": "Carol M. Highsmith",
+   "credit": "This image is available from the United States Library of Congress's Prints and Photographs division under the digital ID highsm.23173.This tag does not indicate the copyright status of the attached w",
+   "license": "Public domain",
+   "license_url": "",
+   "usage_terms": "Public domain",
+   "attribution_required": "false",
+   "date": "Taken on 15 November 2012, 14:57",
+   "desc": "Top of Mammoth Mountain Ski Area",
+   "source_size": "7360x4912",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2563
+   ]
+  },
+  "day4": {
+   "file": "day4.jpg",
+   "title": "File:Forrest Surrounding Mammoth Lake in Winter.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Forrest_Surrounding_Mammoth_Lake_in_Winter.jpg",
+   "artist": "Lion Exchange",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2022-02-06",
+   "desc": "The Forrest surrounding Mammoth Lake in norther California during tree winter time. This was taken a few days after snowfall during the day.",
+   "source_size": "4032x3024",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2880
+   ]
+  },
+  "day5": {
+   "file": "day5.jpg",
+   "title": "File:Manzanar Internment Camp 661.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Manzanar_Internment_Camp_661.jpg",
+   "artist": "Gillfoto",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2019-10-07 15:09:29",
+   "desc": "This is a photo of a place or building that is listed on the California Historical Landmark listing in the United States. Its reference number is",
+   "source_size": "5965x3953",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2545
+   ]
+  },
+  "mapbg": {
+   "file": "mapbg.jpg",
+   "title": "File:Ritter Range & Mammoth Ski Area.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Ritter_Range_%26_Mammoth_Ski_Area.jpg",
+   "artist": "Fluffy89502",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2021-12-30",
+   "desc": "Part of the ski area on Mammoth Mountain with the Ritter Range in the background",
+   "source_size": "4032x2268",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2160
+   ]
+  },
+  "staybg": {
+   "file": "staybg.jpg",
+   "title": "File:Mammoth Lakes (January 2008) 15.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Mammoth_Lakes_(January_2008)_15.JPG",
+   "artist": "Nandaro",
+   "credit": "Own work",
+   "license": "CC BY-SA 3.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0",
+   "attribution_required": "true",
+   "date": "2008-01-21 11:31:49",
+   "desc": "Tamarack Lodge & Resort at Twin Lakes at Mammoth Mountain in Mammoth Lakes. This facility is on the eastern shore of Twin Lakes. On the right side of this photo, there is a cross-country skiing area in the winter.",
+   "source_size": "3072x2304",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3072,
+    2304
+   ]
+  },
+  "aiwrong": {
+   "file": "aiwrong.jpg",
+   "title": "File:Minarets from Mammoth Mountain.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Minarets_from_Mammoth_Mountain.jpg",
+   "artist": "US Forest Service, Region 5",
+   "credit": "https://www.flickr.com/photos/usfsregion5/8548463109/sizes/o/",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2009-03-29 11:34:55",
+   "desc": "The Minarets in the Sierra Nevada mountains of California in winter",
+   "source_size": "2380x1578",
+   "downloaded": "2026-11-10",
+   "dims": [
+    2380,
+    1578
+   ]
+  },
+  "app": {
+   "file": "app.jpg",
+   "title": "File:Twin Lakes - Mammoth Lakes Ca. (49022337976).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Twin_Lakes_-_Mammoth_Lakes_Ca._(49022337976).jpg",
+   "artist": "Joyce Cory on Flickr as docentjoyce",
+   "credit": "Twin Lakes - Mammoth Lakes Ca.",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "Taken on 28 August 2019, 09:23",
+   "desc": "Twin Lakes Elevation - 8,563 ft.",
+   "source_size": "4032x2910",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2771
+   ]
+  }
+ },
+ "map": {
+  "cities": [
+   {
+    "label": "Los Angeles",
+    "sub": "start",
+    "lat": 34.053696,
+    "lng": -118.242921
+   },
+   {
+    "label": "Alabama Hills",
+    "sub": "stretch stop",
+    "lat": 36.613553,
+    "lng": -118.125754
+   },
+   {
+    "label": "Bishop",
+    "sub": "bakery lunch",
+    "lat": 37.367852,
+    "lng": -118.395709
+   },
+   {
+    "label": "Mammoth Lakes",
+    "sub": "4 nights",
+    "lat": 37.648438,
+    "lng": -118.983445
+   }
+  ],
+  "legs": [],
+  "pills": [
+   "213 mi",
+   "62 mi",
+   "43 mi"
+  ],
+  "line": [
+   [
+    -118.24346,
+    34.05403
+   ],
+   [
+    -118.25469,
+    34.06729
+   ],
+   [
+    -118.30265,
+    34.08638
+   ],
+   [
+    -118.36557,
+    34.14001
+   ],
+   [
+    -118.40108,
+    34.18614
+   ],
+   [
+    -118.41008,
+    34.23391
+   ],
+   [
+    -118.50159,
+    34.32475
+   ],
+   [
+    -118.5062,
+    34.35938
+   ],
+   [
+    -118.49825,
+    34.3734
+   ],
+   [
+    -118.44913,
+    34.4057
+   ],
+   [
+    -118.44187,
+    34.4166
+   ],
+   [
+    -118.37158,
+    34.43758
+   ],
+   [
+    -118.33981,
+    34.46518
+   ],
+   [
+    -118.29012,
+    34.48097
+   ],
+   [
+    -118.28376,
+    34.49194
+   ],
+   [
+    -118.2519,
+    34.50464
+   ],
+   [
+    -118.20458,
+    34.49117
+   ],
+   [
+    -118.17313,
+    34.49313
+   ],
+   [
+    -118.14443,
+    34.48547
+   ],
+   [
+    -118.12736,
+    34.49264
+   ],
+   [
+    -118.11076,
+    34.51148
+   ],
+   [
+    -118.11428,
+    34.53217
+   ],
+   [
+    -118.13119,
+    34.54889
+   ],
+   [
+    -118.13437,
+    34.59424
+   ],
+   [
+    -118.15293,
+    34.61155
+   ],
+   [
+    -118.15342,
+    34.66846
+   ],
+   [
+    -118.16975,
+    34.6909
+   ],
+   [
+    -118.17182,
+    34.85699
+   ],
+   [
+    -118.15882,
+    34.98282
+   ],
+   [
+    -118.1606,
+    35.00887
+   ],
+   [
+    -118.1782,
+    35.0665
+   ],
+   [
+    -118.14889,
+    35.09278
+   ],
+   [
+    -118.05516,
+    35.21289
+   ],
+   [
+    -118.03315,
+    35.26998
+   ],
+   [
+    -117.98223,
+    35.3168
+   ],
+   [
+    -117.97087,
+    35.3428
+   ],
+   [
+    -117.98173,
+    35.3636
+   ],
+   [
+    -117.98488,
+    35.38804
+   ],
+   [
+    -117.97821,
+    35.43558
+   ],
+   [
+    -117.86675,
+    35.68078
+   ],
+   [
+    -117.87578,
+    35.85788
+   ],
+   [
+    -117.8984,
+    35.8969
+   ],
+   [
+    -117.91086,
+    35.95645
+   ],
+   [
+    -117.93206,
+    35.99839
+   ],
+   [
+    -117.97033,
+    36.1106
+   ],
+   [
+    -117.98049,
+    36.22332
+   ],
+   [
+    -118.02726,
+    36.28164
+   ],
+   [
+    -118.02754,
+    36.32036
+   ],
+   [
+    -118.02057,
+    36.33812
+   ],
+   [
+    -118.0364,
+    36.46432
+   ],
+   [
+    -118.03207,
+    36.5059
+   ],
+   [
+    -118.04413,
+    36.5265
+   ],
+   [
+    -118.05782,
+    36.59419
+   ],
+   [
+    -118.063,
+    36.60489
+   ],
+   [
+    -118.10409,
+    36.59486
+   ],
+   [
+    -118.12665,
+    36.60765
+   ],
+   [
+    -118.12485,
+    36.61134
+   ],
+   [
+    -118.11898,
+    36.59954
+   ],
+   [
+    -118.10144,
+    36.5951
+   ],
+   [
+    -118.063,
+    36.60489
+   ],
+   [
+    -118.06712,
+    36.61671
+   ],
+   [
+    -118.09692,
+    36.67385
+   ],
+   [
+    -118.1301,
+    36.70797
+   ],
+   [
+    -118.22826,
+    36.83592
+   ],
+   [
+    -118.24175,
+    36.89124
+   ],
+   [
+    -118.23068,
+    37.02508
+   ],
+   [
+    -118.23395,
+    37.05428
+   ],
+   [
+    -118.25412,
+    37.10913
+   ],
+   [
+    -118.28915,
+    37.15598
+   ],
+   [
+    -118.29029,
+    37.17345
+   ],
+   [
+    -118.34593,
+    37.22992
+   ],
+   [
+    -118.37206,
+    37.27992
+   ],
+   [
+    -118.39499,
+    37.33295
+   ],
+   [
+    -118.39565,
+    37.37421
+   ],
+   [
+    -118.46497,
+    37.37636
+   ],
+   [
+    -118.54747,
+    37.40819
+   ],
+   [
+    -118.57124,
+    37.44125
+   ],
+   [
+    -118.58399,
+    37.51362
+   ],
+   [
+    -118.62017,
+    37.52411
+   ],
+   [
+    -118.63792,
+    37.53639
+   ],
+   [
+    -118.63999,
+    37.55
+   ],
+   [
+    -118.6528,
+    37.55748
+   ],
+   [
+    -118.69904,
+    37.57202
+   ],
+   [
+    -118.75763,
+    37.5771
+   ],
+   [
+    -118.79116,
+    37.59126
+   ],
+   [
+    -118.81466,
+    37.61615
+   ],
+   [
+    -118.91551,
+    37.64157
+   ],
+   [
+    -118.9834,
+    37.64833
+   ]
+  ]
+ },
+ "screens": {
+  "yosTop": {
+   "src": "reels-v3/screens/d-yos1-a.png",
+   "sx": 0,
+   "sy": 150,
+   "sw": 1206,
+   "sh": 560
+  },
+  "cCooks": {
+   "src": "reels-v3/screens/d-yos1-d.png",
+   "sx": 30,
+   "sy": 410,
+   "sw": 1146,
+   "sh": 600
+  }
+ },
+ "post_at": "2026-11-11T09:00:00-08:00"
+}

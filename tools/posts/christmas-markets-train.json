@@ -1,0 +1,662 @@
+{
+ "slug": "christmas-markets-train",
+ "folder": "christmas-markets-by-train-v2",
+ "module": "markets_v2",
+ "post": {
+  "slug": "christmas-markets-by-train-v2",
+  "series": "Trips you can copy",
+  "title": "Christmas markets by train with kids",
+  "hook": "Three Christmas markets, two easy trains",
+  "hook_b": "you, me & 3 Christmas markets by train?",
+  "dates": "7 days, any week Nov 26 to Dec 13, 2026",
+  "checked_on": "2026-11-10",
+  "mapcard": {
+   "cities": [
+    [
+     "c_wienhbf",
+     "Vienna",
+     "right",
+     "2 nights"
+    ],
+    [
+     "c_salzhbf",
+     "Salzburg",
+     "left",
+     "2 nights"
+    ],
+    [
+     "c_muchbf",
+     "Munich",
+     "left",
+     "2 nights"
+    ]
+   ],
+   "areas": [
+    [
+     47.2,
+     14.7,
+     "Austria"
+    ],
+    [
+     48.85,
+     12.3,
+     "Germany"
+    ]
+   ],
+   "legs": [
+    [
+     "c_wienhbf",
+     "c_salzhbf",
+     "about 2 h 25 · Railjet",
+     0.22
+    ],
+    [
+     "c_salzhbf",
+     "c_muchbf",
+     "about 2 h · train",
+     0.25,
+     [
+      46,
+      -52
+     ]
+    ]
+   ],
+   "pad": {
+    "top": 150,
+    "right": 190,
+    "bottom": 150,
+    "left": 200
+   }
+  },
+  "slides": [
+   {
+    "type": "cover",
+    "photo": "cover",
+    "big": "Three Christmas markets, two easy trains",
+    "sub": "7 days with kids · Vienna, Salzburg, Munich",
+    "pip": "Both trains are direct, and both take under three hours.",
+    "source_ids": [
+     "salzinfo_oebb"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "vienna",
+    "label": "Vienna · nights 1 and 2",
+    "big": "Wiener Christkindlmarkt",
+    "dates": "City Hall · Nov 13 to Dec 26",
+    "pips": [
+     "A 12 m carousel and a kids' rink in the park next door.",
+     "Schönbrunn's palace market lets kids skate free."
+    ],
+    "source_ids": [
+     "wien_ckm",
+     "wien_kinder",
+     "wieninfo_schoen"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "salzburg",
+    "label": "Salzburg · nights 3 and 4",
+    "big": "Salzburger Christkindlmarkt",
+    "dates": "Domplatz · Nov 19 to Jan 1 · daily",
+    "pips": [
+     "Hellbrunn's Advent has a train and a petting zoo on weekends.",
+     "Start on a Thursday and Salzburg lands on the weekend."
+    ],
+    "source_ids": [
+     "salz_ckm",
+     "hellbrunn_kids",
+     "hellbrunn_hours"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "city",
+    "photo": "munich",
+    "label": "Munich · nights 5 and 6",
+    "big": "Münchner Christkindlmarkt",
+    "dates": "Marienplatz · Nov 20 to Dec 24 · closed Nov 22",
+    "pips": [
+     "Advent music from City Hall's balcony, Sun to Thu at 5:15.",
+     "St. Nicholas visits the Residenz village Dec 6 and 7 from 5."
+    ],
+    "source_ids": [
+     "muc_ckm",
+     "muc_residenz"
+    ],
+    "pos45": "88% 50%",
+    "pos916": "85% 50%"
+   },
+   {
+    "type": "mapcard",
+    "photo": "mapbg",
+    "label": "The route",
+    "big": "Two trains. That's all.",
+    "pip": "Fly into Vienna, home from Munich: no backtracking.",
+    "source_ids": [
+     "salzinfo_oebb",
+     "oebb_works"
+    ],
+    "pos45": "50% 50%",
+    "pos916": "50% 50%"
+   },
+   {
+    "type": "dates",
+    "photo": "dates",
+    "label": "Save the dates",
+    "big": "Market dates, 2026",
+    "pos45": "50% 50%",
+    "pos916": "50% 50%",
+    "rows": [
+     [
+      "City Hall market",
+      "Vienna · Rathausplatz",
+      "Nov 13 – Dec 26",
+      "Daily 10 AM – 10 PM",
+      [
+       "wien_ckm"
+      ]
+     ],
+     [
+      "Schönbrunn Palace",
+      "Vienna",
+      "Nov 6 – Jan 6",
+      "10 AM – 9 PM to Dec 23",
+      [
+       "wieninfo_schoen"
+      ]
+     ],
+     [
+      "Christkindlmarkt",
+      "Salzburg · Domplatz",
+      "Nov 19 – Jan 1",
+      "Daily, to 8:30 or 9 PM",
+      [
+       "salz_ckm"
+      ]
+     ],
+     [
+      "Hellbrunn Advent",
+      "Salzburg",
+      "Nov 19 – Dec 24",
+      "Closed Mondays",
+      [
+       "hellbrunn_hours"
+      ]
+     ],
+     [
+      "Christkindlmarkt",
+      "Munich · Marienplatz",
+      "Nov 20 – Dec 24",
+      "10 AM – 9 PM, Sun to 8",
+      [
+       "muc_ckm"
+      ]
+     ],
+     [
+      "Residenz village",
+      "Munich",
+      "Nov 16 – Dec 22",
+      "Daily 11 AM – 9 PM",
+      [
+       "muc_residenz"
+      ]
+     ]
+    ]
+   },
+   {
+    "type": "kids",
+    "photo": "kids",
+    "label": "Kids will love",
+    "big": "Made for small travelers",
+    "pos45": "39% 50%",
+    "pos916": "42% 50%",
+    "items": [
+     [
+      "train",
+      "Railjet family zone",
+      "A kids' cinema and game tables in the last 2nd-class car (21 or 31)"
+     ],
+     [
+      "skate",
+      "Vienna's kids' Christmas world",
+      "Reindeer train, Ferris wheel and a kids' rink in Rathauspark"
+     ],
+     [
+      "tree",
+      "Munich's fairy-tale forest",
+      "Free, in the Residenz Christmas village, Nov 16 to Dec 22"
+     ]
+    ],
+    "pip": "Check the timetable's detail view for the family zone.",
+    "source_ids": [
+     "oebb_family",
+     "wien_kinder",
+     "muc_residenz"
+    ]
+   },
+   {
+    "type": "aiwrong",
+    "photo": "aiwrong",
+    "pos45": "71% 50%",
+    "pos916": "69% 50%",
+    "zoom45": [
+     1.6,
+     0.75,
+     1.0
+    ],
+    "zoom916": [
+     1.45,
+     0.7,
+     1.0
+    ],
+    "items": [
+     [
+      "Through Dec 12, works in Germany slow the direct Railjet to Munich by about 15 minutes.",
+      "oebb_works"
+     ],
+     [
+      "Munich's free kids' workshop needs a sign-up, 10 days ahead.",
+      "muc_ckm"
+     ],
+     [
+      "Hellbrunn's trick fountains are closed until March 25.",
+      "hellbrunn_palace"
+     ]
+    ]
+   },
+   {
+    "type": "app",
+    "photo": "app",
+    "big": "Pip plans it around your family.",
+    "button": "Copy this trip: link in bio",
+    "screens": [
+     "dolomitesTop",
+     "cTreCime"
+    ],
+    "screens_alt": "the trip header (kids 6 and 9) and a stop card where Pip says why: 'Half the loop, sized for 6 and 9'"
+   }
+  ],
+  "photo_alt": {
+   "cover": "Schönbrunn Palace's Christmas market at blue hour: the lit golden palace, a tall Christmas tree and stalls in the courtyard",
+   "vienna": "Blue, white and gold painted baubles and glittering snowflake ornaments at a stall at Vienna's City Hall Christmas market",
+   "salzburg": "Salzburg Cathedral at night above the Christmas market on Domplatz, with a lit glass pyramid and garlands of lights",
+   "munich": "Munich from above at dusk: the Frauenkirche towers, the Neues Rathaus and the lit Christmas market stalls on Marienplatz",
+   "mapbg": "Vienna's City Hall and Christmas tree at night",
+   "dates": "The lit 'Willkommen im Weihnachtsdorf der Residenz' sign with a nutcracker, under a stone arch in Munich",
+   "kids": "A red ÖBB Railjet in winter sun near Jenbach, Austria, with mountains behind",
+   "aiwrong": "A lit pretzel stall at Salzburg's Christmas market, with carved wooden signs for flavors like Apfelbreze and Schokobreze",
+   "app": "Gold and glass Christmas ornaments at a Vienna market stall"
+  },
+  "places": [
+   [
+    "📍 Weihnachtsmarkt Schloss Schönbrunn — Vienna, Austria",
+    "Palace market, Nov 6 to Jan 6; kids skate free on its rink"
+   ],
+   [
+    "📍 Wiener Christkindlmarkt — Vienna, Austria",
+    "City Hall market, Nov 13 to Dec 26; kids' Christmas world with a 12 m carousel"
+   ],
+   [
+    "📍 Salzburger Christkindlmarkt — Salzburg, Austria",
+    "Under the cathedral on Domplatz, Nov 19 to Jan 1"
+   ],
+   [
+    "📍 Hellbrunner Adventzauber — Salzburg, Austria",
+    "Palace Advent with a train and a petting zoo on weekends; closed Mondays"
+   ],
+   [
+    "📍 Münchner Christkindlmarkt — Munich, Germany",
+    "Marienplatz, Nov 20 to Dec 24; balcony music Sun to Thu at 5:15 PM"
+   ],
+   [
+    "📍 Weihnachtsdorf im Kaiserhof der Residenz — Munich, Germany",
+    "Courtyard village with a free fairy-tale forest, Nov 16 to Dec 22"
+   ]
+  ],
+  "caption_lines": [
+   "Vienna, 2 nights → about 2 h 25 by Railjet → Salzburg, 2 nights → about 2 h by train → Munich, 2 nights. Fly into Vienna, home from Munich. Start on a Thursday and Salzburg lands on the weekend."
+  ],
+  "wrong_caption": [
+   "Through Dec 12, construction in Germany makes the direct Railjet Xpress to Munich about 15 minutes slower. Two extra ICE pairs run.",
+   "Munich's free kids' workshop (Himmelswerkstatt, ages 6 to 12) needs a sign-up, 10 days ahead.",
+   "Hellbrunn's trick fountains are closed until March 25, 2027. The Advent market is on."
+  ],
+  "question": "Which would your kids love most: the train, the rinks or the petting zoo?",
+  "cta_end": "Get this plan fitted to your family: link in bio.",
+  "hashtags": [
+   "#ChristmasMarkets",
+   "#EuropeByTrain",
+   "#FamilyTravel",
+   "#Vienna",
+   "#Salzburg"
+  ],
+  "tiktok_title": "Three Christmas markets, two easy trains",
+  "tiktok_desc": "Trips you can copy: Vienna, Salzburg and Munich by train with kids, 7 days. Every date checked Nov 10, 2026.",
+  "notes": {
+   "window": "Nov 12 to Dec 5, 2026 (people book December trips now)",
+   "suggest": [
+    [
+     "Instagram carousel (9 slides)",
+     "Tue Nov 17, 2026, 9:00 AM PT",
+     "2026-11-17T09:00:00-08:00"
+    ],
+    [
+     "TikTok photo mode (9 slides)",
+     "Tue Nov 17, 2026, 6:00 PM PT",
+     null
+    ],
+    [
+     "TikTok re-post with cover B (only if the first post is weak)",
+     "48 hours later, Thu Nov 19 or later",
+     null
+    ]
+   ],
+   "campaign": "2026-11-17-christmas-markets-train",
+   "recheck": [
+    "ÖBB timetable for your dates (the construction notice runs to Dec 12).",
+    "Himmelswerkstatt sign-up opens 10 days before each date.",
+    "Hellbrunn Advent hours (closed Mondays except Dec 21)."
+   ]
+  }
+ },
+ "sources": [
+  [
+   "wien_ckm",
+   "https://www.christkindlmarkt.at/",
+   "Wiener Christkindlmarkt (Rathausplatz): Nov 13 to Dec 26, 2026, daily 10 AM-10 PM (Dec 24 to 6:30 PM)",
+   "2026-11-10"
+  ],
+  [
+   "wien_kinder",
+   "https://www.christkindlmarkt.at/kinder/",
+   "Wiener Christkindlmarkt: kids' Christmas world in Rathauspark (12 m double-decker carousel, reindeer train, Ferris wheel, 110 m2 kids' rink, free double-blade skates sizes 21-25 and helmets with a ticket)",
+   "2026-11-10"
+  ],
+  [
+   "wieninfo_schoen",
+   "https://www.wien.info/de/aktuell/veranstaltungen/weihnachtsmarkt-schloss-schoenbrunn-1133662",
+   "Vienna Tourist Board: Weihnachtsmarkt Schloss Schönbrunn, Nov 6, 2026 to Jan 6, 2027 (10 AM-9 PM to Dec 23; Dec 24 10 AM-4 PM; Dec 25 to Jan 6 10 AM-7 PM); 'Glice-Eislaufplatz (für Kinder kostenfrei)', carousel, Ferris wheel, kids' railway, craft workshop",
+   "2026-11-10"
+  ],
+  [
+   "salzinfo_oebb",
+   "https://salzburg.info/en/travel-info/arrival-traffic/train/salzburg-by-oebb",
+   "Salzburg tourist board: by ÖBB (Vienna-Salzburg two Railjets an hour, Railjet Xpress 2 h 25 min; Munich-Salzburg from 1 h 40 min)",
+   "2026-11-10"
+  ],
+  [
+   "oebb_family",
+   "https://www.oebb.at/de/reiseplanung-services/im-zug/spezialabteile",
+   "ÖBB: Railjet family zone in the last 2nd-class car (car 21 or 31) with a kids' cinema (Kinderkino) and game tables; the timetable detail view shows which trains offer it",
+   "2026-11-10"
+  ],
+  [
+   "oebb_works",
+   "https://kundeninformation-pv.oebb.at/dam/kundeninformation/extern/OEBB/2026/2026_06/VorinfoDB14062026_Gesamt.pdf",
+   "ÖBB construction brochure: DB works June 14 to December 12, 2026; the Railjet Xpress Wien-Linz-Salzburg-München (every two hours, as in the regular timetable) takes about 15 min longer; 2 extra ICE pairs Wien-Salzburg-München",
+   "2026-11-10"
+  ],
+  [
+   "salz_ckm",
+   "https://www.christkindlmarkt.co.at/",
+   "Salzburger Christkindlmarkt: Nov 19, 2026 to Jan 1, 2027 (Mon-Thu 10-8:30, Fri 10-9, Sat 9-9, Sun/holiday 9-8:30)",
+   "2026-11-10"
+  ],
+  [
+   "hellbrunn_kids",
+   "https://www.hellbrunneradventzauber.at/kinderweihnachtswelt/",
+   "Hellbrunner Adventzauber: kids' Christmas world (train and petting zoo, weekends 11 AM-6 PM)",
+   "2026-11-10"
+  ],
+  [
+   "hellbrunn_hours",
+   "https://www.hellbrunneradventzauber.at/oeffnungszeiten/",
+   "Hellbrunner Adventzauber: Nov 19 to Dec 24, 2026 (Tue-Fri 1-8 PM, Sat/Sun/holiday 10 AM-8 PM; closed Mondays except Dec 21)",
+   "2026-11-10"
+  ],
+  [
+   "hellbrunn_palace",
+   "https://www.hellbrunn.at/en/info/opening-hours-prices-arrival",
+   "Schloss Hellbrunn: trick fountains and palace exhibition in winter break until Mar 25, 2027",
+   "2026-11-10"
+  ],
+  [
+   "muc_ckm",
+   "https://www.muenchen.de/veranstaltungen/muenchner-christkindlmarkt-marienplatz",
+   "muenchen.de: Münchner Christkindlmarkt 2026 (Nov 20 to Dec 24; closed Nov 22; Mon-Sat 10-9, Sun 10-8, Dec 24 10-2); Himmelswerkstatt for ages 6-12, Nov 26 to Dec 13, sign-up from 10 days ahead; balcony music Sun-Thu 5:15 PM",
+   "2026-11-10"
+  ],
+  [
+   "muc_residenz",
+   "https://www.muenchen.de/veranstaltungen/freizeit/weihnachtsmarkt-christkindlmarkt/weihnachtsdorf-der-residenz",
+   "muenchen.de: Weihnachtsdorf im Kaiserhof der Residenz (Nov 16 to Dec 22, daily 11 AM-9 PM; free fairy-tale forest; Nikolaus Dec 6 and 7 from 5 PM)",
+   "2026-11-10"
+  ]
+ ],
+ "photos": {
+  "cover": {
+   "file": "cover.jpg",
+   "title": "File:Schönbrunn Palace in Vienna at Christmas, Vienna, Austria. (16405939248).jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Sch%C3%B6nbrunn_Palace_in_Vienna_at_Christmas,_Vienna,_Austria._(16405939248).jpg",
+   "artist": "traveljunction",
+   "credit": "Schönbrunn Palace in Vienna at Christmas, Vienna, Austria.",
+   "license": "CC BY-SA 2.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 2.0",
+   "attribution_required": "true",
+   "date": "2014-12-30 12:38",
+   "desc": "COPYRIGHT AND CC INFORMATION **** If you like and want to use our photos you're welcome to but we require that you give us the required attribution on each image you use. An example of the required attribution is: Image by http://www.travel",
+   "source_size": "5184x3456",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2560
+   ]
+  },
+  "vienna": {
+   "file": "vienna.jpg",
+   "title": "File:Wiener Christkindlmarkt am Rathausplatz 22.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Wiener_Christkindlmarkt_am_Rathausplatz_22.JPG",
+   "artist": "böhringer friedrich",
+   "credit": "Own work",
+   "license": "CC BY-SA 3.0 at",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0 at",
+   "attribution_required": "true",
+   "date": "2012-11-17",
+   "desc": "christkindlmarkt (advent market) in front of the town hall of Vienna.",
+   "source_size": "4288x2848",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2550
+   ]
+  },
+  "salzburg": {
+   "file": "salzburg.jpg",
+   "title": "File:Christmas Market Salzburg Austria .jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Christmas_Market_Salzburg_Austria_.jpg",
+   "artist": "Salzburger Nockerl",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2018-12-02",
+   "desc": "Christmas Market in Salzburg in front of the Cathedral",
+   "source_size": "4000x2250",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2160
+   ]
+  },
+  "munich": {
+   "file": "munich.jpg",
+   "title": "File:Marienplatz Christkindlmarkt, 2013.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Marienplatz_Christkindlmarkt,_2013.jpg",
+   "artist": "Ashwin Chandrasekaran",
+   "credit": "Flickr: Marienplatz_Christkindlmarkt.jpg",
+   "license": "CC BY 2.0",
+   "license_url": "https://creativecommons.org/licenses/by/2.0",
+   "usage_terms": "Creative Commons Attribution 2.0",
+   "attribution_required": "true",
+   "date": "2013-12-07 11:23:23",
+   "desc": "View of Marienplatz Christkindlmarkt from Peterskirche, München",
+   "source_size": "5993x3984",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2553
+   ]
+  },
+  "mapbg": {
+   "file": "mapbg.jpg",
+   "title": "File:Wiener Christkindlmarkt und Christbaum.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Wiener_Christkindlmarkt_und_Christbaum.jpg",
+   "artist": "Burkhard Mücke",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2016-11-13 22:30:29",
+   "desc": "Wiener Christkindlmarkt 2016, mit Wiener Rathaus im Hintergrund",
+   "source_size": "4864x3648",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2880
+   ]
+  },
+  "dates": {
+   "file": "dates.jpg",
+   "title": "File:Residenz München Weihnachtsdorf 06.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Residenz_M%C3%BCnchen_Weihnachtsdorf_06.jpg",
+   "artist": "Burkhard Mücke",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2022-11-24 11:19:31",
+   "desc": "Weihnachtsdorf im Kaiserhof der Münchner Residenz, Residenzstraße Nr. 1",
+   "source_size": "5100x3022",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2275
+   ]
+  },
+  "kids": {
+   "file": "kids.jpg",
+   "title": "File:Railjet 860 approaches Jenbach, 30.12.2016.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Railjet_860_approaches_Jenbach,_30.12.2016.jpg",
+   "artist": "Liberaler Humanist",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2016-12-30 14:26:41",
+   "desc": "Railjet 860 approaches Jenbach",
+   "source_size": "5020x3347",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2560
+   ]
+  },
+  "aiwrong": {
+   "file": "aiwrong.jpg",
+   "title": "File:Salzburg - Altstadt - Christkindlmarkt- 2018 12 03-1.jpg",
+   "page": "https://commons.wikimedia.org/wiki/File:Salzburg_-_Altstadt_-_Christkindlmarkt-_2018_12_03-1.jpg",
+   "artist": "Eweht",
+   "credit": "Own work",
+   "license": "CC BY-SA 4.0",
+   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+   "usage_terms": "Creative Commons Attribution-Share Alike 4.0",
+   "attribution_required": "true",
+   "date": "2018-12-03 16:07:22",
+   "desc": "Motiv vom Christkindlmarkt 2018 in Salzburg: Auswahl an Brezen",
+   "source_size": "5184x3456",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2560
+   ]
+  },
+  "app": {
+   "file": "app.jpg",
+   "title": "File:Wiener Christkindlmarkt am Rathausplatz 19.JPG",
+   "page": "https://commons.wikimedia.org/wiki/File:Wiener_Christkindlmarkt_am_Rathausplatz_19.JPG",
+   "artist": "böhringer friedrich",
+   "credit": "Own work",
+   "license": "CC BY-SA 3.0 at",
+   "license_url": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+   "usage_terms": "Creative Commons Attribution-Share Alike 3.0 at",
+   "attribution_required": "true",
+   "date": "2012-11-17",
+   "desc": "christkindlmarkt (advent market) in front of the town hall of Vienna.",
+   "source_size": "4288x2848",
+   "downloaded": "2026-11-10",
+   "dims": [
+    3840,
+    2550
+   ]
+  }
+ },
+ "map": {
+  "cities": [
+   {
+    "label": "Vienna",
+    "sub": "2 nights",
+    "lat": 48.184988,
+    "lng": 16.377939
+   },
+   {
+    "label": "Salzburg",
+    "sub": "2 nights",
+    "lat": 47.813062,
+    "lng": 13.045853
+   },
+   {
+    "label": "Munich",
+    "sub": "2 nights",
+    "lat": 48.140725,
+    "lng": 11.556943
+   }
+  ],
+  "legs": [
+   "about 2 h 25 · Railjet",
+   "about 2 h · train"
+  ],
+  "pills": [],
+  "line": null
+ },
+ "screens": {
+  "dolomitesTop": {
+   "src": "reels-v3/screens/t-dolo-01-top.png",
+   "sx": 0,
+   "sy": 150,
+   "sw": 1206,
+   "sh": 560
+  },
+  "cTreCime": {
+   "src": "reels-v3/screens/d-dolo3-c.png",
+   "sx": 30,
+   "sy": 450,
+   "sw": 1146,
+   "sh": 660
+  }
+ },
+ "post_at": "2026-11-17T09:00:00-08:00"
+}

@@ -1,6 +1,8 @@
 /* Trip pages: the route on a map (MapLibre + OpenFreeMap tiles, no key), one numbered pin per stop in plan order and a
    square pin per place to stay. A pin scrolls to its stop. Without the map library (blocked, offline) the box stays
-   empty and the stop list below still carries the whole trip. */
+   empty and the stop list below still carries the whole trip. Pages built by build_posts.py may add data.line (the
+   road itself, drawn instead of the stop-to-stop line) and data.pad (map padding, to keep pins clear of the
+   attribution bar on phones). */
 (function () {
   "use strict";
   var box = document.getElementById("trip-map");
@@ -44,16 +46,18 @@
     }, [p.lng, p.lat]);
   });
 
+  // The route: a real road line when the page gives one (data.line, [lng, lat] pairs), else stop to stop in order.
+  var line = data.line && data.line.length > 1 ? data.line : pins.map(function (p) { return [p.lng, p.lat]; });
   map.on("load", function () {
-    if (pins.length > 1) {
+    if (line.length > 1) {
       map.addSource("route", {
         type: "geojson",
-        data: { type: "Feature", geometry: { type: "LineString", coordinates: pins.map(function (p) { return [p.lng, p.lat]; }) } }
+        data: { type: "Feature", geometry: { type: "LineString", coordinates: line } }
       });
       map.addLayer({ id: "route", type: "line", source: "route", paint: { "line-color": "#0F1A17", "line-width": 2, "line-dasharray": [2, 2], "line-opacity": 0.6 } });
     }
   });
-  map.fitBounds(bounds, { padding: 48, maxZoom: 13, duration: 0 });
+  map.fitBounds(bounds, { padding: data.pad || 48, maxZoom: 13, duration: 0 });
 
   // "Show day N on the map": zoom to that day's stops (a multi-city trip shows each city's pins on top of each other
   // at country zoom), and bring the map into view.
