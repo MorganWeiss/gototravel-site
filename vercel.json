@@ -9,6 +9,10 @@
   ],
   "rewrites": [
     {
+      "source": "/s/:token",
+      "destination": "/api/trip?token=:token"
+    },
+    {
       "source": "/join/:token",
       "destination": "/api/join?token=:token"
     },
